@@ -80,6 +80,12 @@ def collect():
             add(s.get("inset"))
     except Exception as ex:
         print("WARN events.json", ex)
+    # homepage news feed logos
+    try:
+        for it in json.loads(get(RAW + "weekender/feed.json")).get("items", []):
+            add(it.get("logo"), (360,))
+    except Exception as ex:
+        print("WARN feed.json", ex)
     # business logos (Featured Local Businesses row, search)
     try:
         for m in json.loads(get(RAW + "search/index.json")).get("members", []):
