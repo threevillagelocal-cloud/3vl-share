@@ -56,7 +56,7 @@ return {load:load,search:search,norm:norm,STOP:STOP,ok:function(){return !!data}
 window.tvlSS=SS;
 /* keyword search page: start fetching the index now, and keep BD's page hidden until our results are in (head code: html.tvl-w3) */
 var Q0='';try{Q0=decodeURIComponent(((location.search.match(/[?&]q=([^&]*)/)||[])[1]||'').replace(/\+/g,' ')).trim()}catch(e){}
-var SMARTQ=(location.pathname.replace(/\/+$/,'')==='/search_results')&&Q0.length>1;
+var SMARTQ=(location.pathname.replace(/\/+$/,'')==='/search_results')&&Q0.length>1&&location.search.indexOf('bd=1')<0;   /* &bd=1 = show BD's own list (used if the index cannot load) */
 if(SMARTQ){H.classList.add('tvl-w3');SS.load()}
 function main(){
 var path=location.pathname.replace(/\/+$/,'')||'/';
@@ -221,6 +221,7 @@ if(isResults||SMARTQ){
   if(SM){
     var dec=function(s){var t=document.createElement('textarea');t.innerHTML=s||'';return t.value};
     var wait=document.createElement('p');wait.className='p3-none';wait.textContent='Finding the best local matches...';
+    wait.style.visibility='hidden';setTimeout(function(){wait.style.visibility=''},600);   /* only mention it if it really takes a moment */
     var fillSmart=function(list){if(wait.parentNode)wait.parentNode.removeChild(wait);
     var vh='',rh='';list.forEach(function(m){var uid=String(m.id),b={n:dec(m.n),u:m.u,img:m.l||'',tel:m.ph||'',d:dec(m.d||''),st:dec(m.a||''),zip:m.z||'',reg:'NY',town:String(m.t||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0};
       if(b.vip){vips.push(b);vh+=vipCard(b,vips.length-1)}else{rh+=card(b,nRest++)}});
@@ -229,7 +230,7 @@ if(isResults||SMARTQ){
     try{if(window.gtag)window.gtag('event','smart_search_results',{search_term:q,results:list.length})}catch(e){}};
     hideChrome();new MutationObserver(function(){hideChrome()}).observe(document.body,{childList:true,subtree:true});
     if(SM.length)fillSmart(SM);else root.appendChild(wait);   /* [] = index still on its way (slow connection): show the page frame now, fill it when it lands */
-    api={fill:fillSmart,none:function(){wait.innerHTML='No local match for &ldquo;'+esc(q)+'&rdquo; yet. Try another word, or <a href="/categories">browse every category</a>.';if(!wait.parentNode)root.appendChild(wait);
+    api={fill:fillSmart,none:function(down){wait.style.visibility='';wait.innerHTML=(down?'We could not load the results just now. Please try again in a moment':'No local match for &ldquo;'+esc(q)+'&rdquo; yet. Try another word')+', or <a href="/categories">browse every category</a>.';if(!wait.parentNode)root.appendChild(wait);
       try{if(window.gtag)window.gtag('event','smart_search_results',{search_term:q,results:0})}catch(e){}}};
   }else{
   absorb();
@@ -254,10 +255,11 @@ if(isResults||SMARTQ){
     return new Promise(function(ok){var ui=null,fin=false,tm=0;
       function end(){if(fin)return;fin=true;clearTimeout(tm);var res=[];try{res=SS.search(Q0,48).map(function(x){return x.r.m})}catch(e){}
         if(!SS.ok()&&!ui){try{if(isResults)results(null)}catch(e){}ok();return}   /* index could not be loaded: leave BD's own page */
-        try{if(res.length){if(ui)ui.fill(res);else results(res)}else if(ui)ui.none();else if(isResults)results(null);else results([]).none()}catch(e){}
+        try{if(res.length){if(ui)ui.fill(res);else results(res)}else if(ui){if(!SS.ok()&&isResults){location.replace(location.pathname+location.search+'&bd=1');return}ui.none(!SS.ok())}else if(isResults)results(null);else results([]).none()}catch(e){}
         ok()}
-      tm=setTimeout(function(){if(!fin&&!ui){try{ui=results([])}catch(e){}ok()}},700);
-      var w=SS.load();if(w&&w.then)w.then(end,end);else end()})}
+      var w=SS.load();if(SS.ok())return end();
+      try{ui=results([])}catch(e){}ok();   /* index not here yet: put our page frame up right away, cards drop in when it lands */
+      if(w&&w.then)w.then(end,end);else end()})}
   results(null);return
 }
 
