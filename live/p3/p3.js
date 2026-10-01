@@ -7,18 +7,62 @@ var me=document.currentScript;var BASE=me?me.src.replace(/p3\.js.*$/,''):'';
    Works from the page HEAD or from widget 13; whichever copy arrives first runs, the other does nothing (10/1/2026). */
 var H=document.documentElement,cssOk=false,ran=false,mo=null;
 function parsed(){var m=document.getElementById('main-content');return document.readyState!=='loading'||!!(m&&m.nextElementSibling)}
-function tick(){if(ran||!cssOk||!parsed())return;ran=true;if(mo)mo.disconnect();try{main()}finally{H.classList.add('p3-done')}}
+function done(){H.classList.add('p3-done')}
+function tick(){if(ran||!cssOk||!parsed())return;ran=true;if(mo)mo.disconnect();var w;try{w=main()}finally{if(w&&w.then)w.then(done,done);else done()}}
 (function(){var href=BASE+'p3.css',l=null;[].forEach.call(document.querySelectorAll('link[rel="stylesheet"]'),function(x){if(x.href===href)l=x});
   function ok(){cssOk=true;tick()}
   if(l&&l.sheet)return ok();
   if(!l){l=document.createElement('link');l.rel='stylesheet';l.href=href;(document.head||H).appendChild(l)}
   l.addEventListener('load',ok);l.addEventListener('error',ok);setTimeout(ok,3000)})();
 if(!ran){mo=new MutationObserver(tick);mo.observe(H,{childList:true,subtree:true});document.addEventListener('DOMContentLoaded',tick)}
+/* ---------- SMART SEARCH ENGINE (shared: homepage search box in smartsearch.js + keyword results page below) ----------
+   Index = search/index.json, built nightly from BD members + Member Match + AI neighbor words (3vl-site-guard member-db). */
+var SS=(function(){
+var IDX='https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/search/index.json';
+var STOP={the:1,a:1,an:1,and:1,of:1,'for':1,near:1,me:1,'in':1,best:1,local:1,good:1,my:1,to:1,at:1,on:1,with:1,service:1,services:1,company:1,ny:1,no:1,not:1,wont:1,cant:1,dont:1,need:1,needs:1,help:1,want:1,find:1,get:1,someone:1,who:1,can:1,i:1,is:1,it:1,im:1,please:1};
+var TIER={vip:3,noticed:2,house:1,basic:0,claim:0};
+var data=null,loading=null;
+function track(n,o){try{if(window.gtag)window.gtag('event',n,o)}catch(e){}}
+function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function norm(s){return String(s||'').toLowerCase().replace(/&amp;/g,'&').replace(/[’']/g,'').replace(/[^a-z0-9&]+/g,' ').trim()}
+function stem(w){if(w.length<=4)return w;w=w.replace(/ies$/,'y').replace(/(ers|er|ing|es|s)$/,'');return w.length>=3?w:w}
+var SYN={ac:'hvac air conditioning',hvac:'hvac heating cooling air conditioning',lawyer:'attorney lawyer law',attorney:'attorney lawyer law',vet:'veterinarian veterinary animal hospital',doctor:'doctor physician medical',mechanic:'auto repair mechanic',car:'auto car',haircut:'hair salon barber haircut',barber:'barber hair',kids:'kids children',cpa:'accounting tax cpa',accountant:'accounting tax accountant',realtor:'real estate realtor',movers:'moving movers',daycare:'preschool childcare daycare',toothache:'dentist dental',tooth:'dentist dental',teeth:'dentist dental',hot:'water heater hot',wasp:'pest exterminator',bees:'pest exterminator',mice:'pest exterminator rodent',rats:'pest exterminator rodent',ants:'pest exterminator',termites:'pest exterminator termite',bugs:'pest exterminator',sprinkler:'irrigation sprinkler lawn',faucet:'plumber faucet',leak:'leak plumber roof',outlet:'electrician',breaker:'electrician',wiring:'electrician',lawn:'lawn landscaping',mow:'lawn landscaping',snow:'snow plowing removal',ticks:'tick mosquito spray',mosquitoes:'mosquito spray',taxes:'tax accounting'};
+function load(){if(data||loading)return loading;loading=fetch(IDX+'?v='+Math.floor(Date.now()/36e5)).then(function(r){return r.json()}).then(function(j){
+  data=(j.members||[]).map(function(m){return {m:m,name:norm(m.n),cat:norm(m.c+' '+(m.s||[]).join(' ')),terms:(m.k||[]).map(norm),desc:norm(m.d),town:norm(m.t)}});return data}).catch(function(){loading=null});return loading}
+function lev1(a,b){if(Math.abs(a.length-b.length)>1)return false;var i=0,j=0,e=0;while(i<a.length&&j<b.length){if(a[i]===b[j]){i++;j++;continue}if(++e>1)return false;if(a.length>b.length)i++;else if(b.length>a.length)j++;else{i++;j++}}return e+(a.length-i)+(b.length-j)<=1}
+/* strict = a word WE added (a SYN meaning, e.g. toothache -> dental): it must start a word. Loose matching (inside a word, one typo) is only for
+   what the visitor typed, and a typo match must keep the first letter, or "dental" pulls in "rental" and "accidental" (10/1/2026). */
+function wordHit(w,text,strict){if(!text)return 0;if(w.length<=3)return (' '+text+' ').indexOf(' '+w+' ')>-1?2:0;if((' '+text+' ').indexOf(' '+w)>-1)return 2;if(strict)return 0;if(w.length>=5&&text.indexOf(w)>-1)return 1;
+  if(w.length>=5){var ws=text.split(' '),sw=stem(w);for(var i=0;i<ws.length;i++)if(ws[i].length>=4&&ws[i].charAt(0)===w.charAt(0)&&lev1(sw,stem(ws[i])))return 1}return 0}
+function has(text,q){return q.length<=3?(' '+text+' ').indexOf(' '+q+' ')>-1:q.length<=4?(' '+text).indexOf(' '+q)>-1:text.indexOf(q)>-1}
+function score(r,q,words){var s=0,sh=q.length<=3;
+  if(r.name===q)s+=400;else if(!sh&&r.name.indexOf(q)===0)s+=220;else if(sh?has(r.name,q):(' '+r.name).indexOf(' '+q)>-1)s+=sh?180:150;
+  if(q.length>2){for(var i=0;i<r.terms.length;i++){if(r.terms[i]===q){s+=160;break}if(has(r.terms[i],q)){s+=90;break}}
+    if(has(r.cat,q))s+=110}
+  var all=true,hits=0;words.forEach(function(w){var best=0;[w].concat(SYN[w]?SYN[w].split(' '):[]).forEach(function(v){var st=v!==w,ws=stem(v),b=Math.max(wordHit(ws,r.name,st)*45,wordHit(ws,r.cat,st)*35);
+    for(var i=0;i<r.terms.length&&b<60;i++)b=Math.max(b,wordHit(ws,r.terms[i],st)*30);
+    if(!b)b=wordHit(ws,r.desc,st)*8+wordHit(ws,r.town,st)*10;if(b>best)best=b});
+    if(best)hits++;else all=false;s+=best});r._all=all;
+  if(words.length>1&&all)s+=40;if(!all&&words.length>1)s*=.55;
+  return s}
+function search(qraw,max){var q=norm(qraw);if(q.length<2||!data)return [];
+  var words=q.split(' ').filter(function(w){return w&&!STOP[w]});if(!words.length)words=[q];
+  var out=[];data.forEach(function(r){var s=score(r,q,words);if(s>=28)out.push({r:r,s:s})});
+  if(words.length>1&&out.some(function(x){return x.r._all}))out=out.filter(function(x){return x.r._all});
+  out.sort(function(a,b){return b.s-a.s||(TIER[b.r.m.p]||0)-(TIER[a.r.m.p]||0)||(b.r.m.l?1:0)-(a.r.m.l?1:0)||a.r.m.n.localeCompare(b.r.m.n)});
+  if(out.length){var top=out[0].s;out=out.filter(function(x){return x.s>=top*.3})}   /* drop the long tail of faint matches */
+  return out.slice(0,max||7)}
+return {load:load,search:search,norm:norm,STOP:STOP}})();
+window.tvlSS=SS;
+/* keyword search page: start fetching the index now, and keep BD's page hidden until our results are in (head code: html.tvl-w3) */
+var Q0='';try{Q0=decodeURIComponent(((location.search.match(/[?&]q=([^&]*)/)||[])[1]||'').replace(/\+/g,' ')).trim()}catch(e){}
+var SMARTQ=(location.pathname.replace(/\/+$/,'')==='/search_results')&&Q0.length>1;
+if(SMARTQ){H.classList.add('tvl-w3');SS.load()}
 function main(){
 var path=location.pathname.replace(/\/+$/,'')||'/';
 var SEARCH_ON=true;   /* business results: approved + live 9/26 */
 var isResults=SEARCH_ON&&!!document.querySelector('.member_results.search_result');
-if(path!=='/categories'&&path!=='/blog'&&!isResults)return;
+if(path!=='/categories'&&path!=='/blog'&&!isResults&&!SMARTQ)return;
 function $(s,r){return (r||document).querySelector(s)}function $$(s,r){return [].slice.call((r||document).querySelectorAll(s))}
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function mount(html,anchor){var d=document.createElement('div');d.id='p3';d.className='p3';d.innerHTML=html;anchor.parentNode.insertBefore(d,anchor);document.documentElement.classList.add('p3-on');return d}
@@ -61,9 +105,11 @@ function iconFor(slug){var k='star';for(var i=0;i<MAP.length;i++){if(slug.indexO
 var COLORS=['#006fbb','#d9534f','#0f866c','#f0ad4e','#8e5bd6','#205081','#3aa0e8'];
 
 /* ---------- BUSINESS RESULTS (search + category pages) ---------- */
-if(isResults){
+if(isResults||SMARTQ){
+  /* SM = our smart matches for a keyword search (same engine as the search box), or null to restyle BD's own list (category pages) */
+  var results=function(SM){
   var VIP=['71','78','112','115','122','137','138','142','151','217','228','240','299','364','474','484','499','528','552'];
-  var q=(location.search.match(/[?&]q=([^&]*)/)||[])[1];q=q?decodeURIComponent(q.replace(/\+/g,' ')):'';
+  var q=Q0;
   var h1=$('h1');var catName=!q&&h1?h1.textContent.trim():'';
   function read(it){var g=function(p){var m=it.querySelector('[itemprop="'+p+'"]');return m?(m.getAttribute('content')||m.getAttribute('href')||''):''};
     var uid=(it.querySelector('.postItem')||{getAttribute:function(){return ''}}).getAttribute('data-userid')||'';
@@ -90,7 +136,8 @@ if(isResults){
   var h='<header class="p3-phero" style="background-image:url(\''+BASE+'img/village-hero.jpg\')"><div class="p3-phin"><span class="p3-kick">THREE VILLAGE LOCAL</span><h1 class="p3-h1">'+title+'</h1>'+
     '<p class="p3-sub">Local businesses rated by your neighbors. Call, get directions or see the full profile.</p></div><span class="p3-credit">Photo: Iracaz, CC BY-SA 3.0</span></header>'+
     '<div class="p3-vlist" id="p3vl"></div><h2 class="p3-more" id="p3more" hidden>More local businesses</h2><div class="p3-rgrid" id="p3rg"></div>';
-  var first=$('.member_results.search_result');var root=mount(h,first.closest('[itemprop="mainEntity"]')||first);
+  var first=$('.member_results.search_result');
+  var root=mount(h,first?(first.closest('[itemprop="mainEntity"]')||first):($('.content_w_sidebar.member_results [itemprop="mainEntity"]')||$('.content_w_sidebar.member_results .grid-container')||$('.member_results_header')));
   /* specialty row under the hero on category + specialty pages (data: search/subcats.json, published nightly by 3vl-site-guard member-db) */
   (function(){var segs=path.split('/').filter(Boolean);if(q||segs.length!==1)return;var cur=segs[0];
     try{fetch('https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/search/subcats.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(d){
@@ -117,17 +164,19 @@ if(isResults){
   function hideChrome(){$$('.feature_results_header,.post-search-result-count-container,.member-search-result-count-container,.member-search-result-filters,.views,.sort-members-select').forEach(function(e){if(!root.contains(e))e.style.display='none'});
     if(h1&&!root.contains(h1))(h1.closest('.feature_results_header')||h1).style.display='none';
     var more=document.querySelector('.clickToLoadMoreContainer');
+    if(SM){if(more)more.style.display='none';$$('.no-results-members,.member_results_header,.content_w_sidebar.member_results .pagination-container,.content_w_sidebar.member_results ul.pagination').forEach(function(e){if(!root.contains(e))e.style.display='none'});
+      $$('.member_results.search_result:not([data-p3])').forEach(function(it){it.setAttribute('data-p3','1');it.style.display='none'});return}
     if(more&&more.parentNode!==root){root.appendChild(more);more.classList.add('p3-loadmore')}}
   hideChrome();document.addEventListener('DOMContentLoaded',hideChrome);window.addEventListener('load',hideChrome);
   /* seamless auto-load: when the end of our list comes near, press BD's load-more for the visitor */
-  var sent=document.createElement('div');sent.className='p3-sentinel';sent.innerHTML='<span>Loading more businesses&hellip;</span>';root.appendChild(sent);
-  var busy=false;
+  if(!SM){var sent=document.createElement('div');sent.className='p3-sentinel';sent.innerHTML='<span>Loading more businesses&hellip;</span>';root.appendChild(sent);
+  }var busy=false;
   function loadMore(){var btn=document.querySelector('.clickToLoadMoreBtn'),cont=btn&&btn.closest('.clickToLoadMoreContainer');
     var cur=+((document.querySelector('.current__amount__js')||{}).textContent||0),tot=+((document.querySelector('.total__js')||{}).textContent||0);
     if(!btn||(tot&&cur>=tot)||(cont&&getComputedStyle(cont).display==='none')||btn.offsetParent===null&&cont&&cont.style.display==='none'){sent.style.display='none';return}
     if(busy||/loadingMore/.test(btn.className))return;busy=true;sent.classList.add('is-on');btn.click();
     setTimeout(function(){busy=false},1500)}
-  if('IntersectionObserver' in window)new IntersectionObserver(function(es){if(es[0].isIntersecting)loadMore()},{rootMargin:'0px 0px 900px 0px'}).observe(sent);
+  if(!SM&&'IntersectionObserver' in window)new IntersectionObserver(function(es){if(es[0].isIntersecting)loadMore()},{rootMargin:'0px 0px 900px 0px'}).observe(sent);
 
   /* value panel from vip_meta.json (public listing details) */
   var META=null;
@@ -169,8 +218,18 @@ if(isResults){
     MORE.hidden=!(vips.length&&nRest);wireImgs(root);fillSides();hideChrome();eqSoon();
     if(typeof sent!=='undefined'){sent.classList.remove('is-on');root.appendChild(sent);busy=false;
       var r=sent.getBoundingClientRect();if(r.top<innerHeight+900)setTimeout(loadMore,400)}}
+  if(SM){
+    var dec=function(s){var t=document.createElement('textarea');t.innerHTML=s||'';return t.value};
+    var vh='',rh='';SM.forEach(function(m){var uid=String(m.id),b={n:dec(m.n),u:m.u,img:m.l||'',tel:m.ph||'',d:dec(m.d||''),st:dec(m.a||''),zip:m.z||'',reg:'NY',town:String(m.t||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0};
+      if(b.vip){vips.push(b);vh+=vipCard(b,vips.length-1)}else{rh+=card(b,nRest++)}});
+    if(vh)VL.insertAdjacentHTML('beforeend',vh);if(rh)RG.insertAdjacentHTML('beforeend',rh);
+    MORE.hidden=!(vips.length&&nRest);wireImgs(root);fillSides();hideChrome();eqSoon();
+    new MutationObserver(function(){hideChrome()}).observe(document.body,{childList:true,subtree:true});
+    try{if(window.gtag)window.gtag('event','smart_search_results',{search_term:q,results:SM.length})}catch(e){}
+  }else{
   absorb();
   new MutationObserver(function(){absorb()}).observe(document.body,{childList:true,subtree:true});
+  }
 
   /* interactions + tracking (GA4 vip_card_click) */
   function track(act,w){try{if(window.gtag)window.gtag('event','vip_card_click',{action:act,business:w.getAttribute('data-name'),business_id:w.getAttribute('data-uid'),page:location.pathname+location.search})}catch(e){}}
@@ -183,6 +242,12 @@ if(isResults){
   root.addEventListener('click',function(e){var a=e.target.closest('[data-act]');if(!a)return;var w=a.closest('.p3-vwrap');if(!w)return;
     var b=vips[+w.getAttribute('data-i')],act=a.getAttribute('data-act');track(act,w);
     if(act==='save_contact'){e.preventDefault();vcf(b)}});
+  };
+  if(SMARTQ){
+    var go=function(){var res=SS.search(Q0,48);if(res.length)results(res.map(function(x){return x.r.m}));else if(isResults)results(null)};
+    return new Promise(function(ok){var fin=false,end=function(){if(fin)return;fin=true;try{go()}catch(e){try{if(isResults&&!document.getElementById('p3'))results(null)}catch(x){}}ok()};
+      var w=SS.load();if(w&&w.then)w.then(end,end);else end();setTimeout(end,4000)})}
+  results(null);return
 }
 
 /* ---------- CATEGORIES ---------- */
