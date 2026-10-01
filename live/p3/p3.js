@@ -52,7 +52,7 @@ function search(qraw,max){var q=norm(qraw);if(q.length<2||!data)return [];
   out.sort(function(a,b){return b.s-a.s||(TIER[b.r.m.p]||0)-(TIER[a.r.m.p]||0)||(b.r.m.l?1:0)-(a.r.m.l?1:0)||a.r.m.n.localeCompare(b.r.m.n)});
   if(out.length){var top=out[0].s;out=out.filter(function(x){return x.s>=top*.3})}   /* drop the long tail of faint matches */
   return out.slice(0,max||7)}
-return {load:load,search:search,norm:norm,STOP:STOP}})();
+return {load:load,search:search,norm:norm,STOP:STOP,ok:function(){return !!data}}})();
 window.tvlSS=SS;
 /* keyword search page: start fetching the index now, and keep BD's page hidden until our results are in (head code: html.tvl-w3) */
 var Q0='';try{Q0=decodeURIComponent(((location.search.match(/[?&]q=([^&]*)/)||[])[1]||'').replace(/\+/g,' ')).trim()}catch(e){}
@@ -107,7 +107,7 @@ var COLORS=['#006fbb','#d9534f','#0f866c','#f0ad4e','#8e5bd6','#205081','#3aa0e8
 /* ---------- BUSINESS RESULTS (search + category pages) ---------- */
 if(isResults||SMARTQ){
   /* SM = our smart matches for a keyword search (same engine as the search box), or null to restyle BD's own list (category pages) */
-  var results=function(SM){
+  var results=function(SM){var api=null;
   var VIP=['71','78','112','115','122','137','138','142','151','217','228','240','299','364','474','484','499','528','552'];
   var q=Q0;
   var h1=$('h1');var catName=!q&&h1?h1.textContent.trim():'';
@@ -220,12 +220,17 @@ if(isResults||SMARTQ){
       var r=sent.getBoundingClientRect();if(r.top<innerHeight+900)setTimeout(loadMore,400)}}
   if(SM){
     var dec=function(s){var t=document.createElement('textarea');t.innerHTML=s||'';return t.value};
-    var vh='',rh='';SM.forEach(function(m){var uid=String(m.id),b={n:dec(m.n),u:m.u,img:m.l||'',tel:m.ph||'',d:dec(m.d||''),st:dec(m.a||''),zip:m.z||'',reg:'NY',town:String(m.t||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0};
+    var wait=document.createElement('p');wait.className='p3-none';wait.textContent='Finding the best local matches...';
+    var fillSmart=function(list){if(wait.parentNode)wait.parentNode.removeChild(wait);
+    var vh='',rh='';list.forEach(function(m){var uid=String(m.id),b={n:dec(m.n),u:m.u,img:m.l||'',tel:m.ph||'',d:dec(m.d||''),st:dec(m.a||''),zip:m.z||'',reg:'NY',town:String(m.t||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0};
       if(b.vip){vips.push(b);vh+=vipCard(b,vips.length-1)}else{rh+=card(b,nRest++)}});
     if(vh)VL.insertAdjacentHTML('beforeend',vh);if(rh)RG.insertAdjacentHTML('beforeend',rh);
     MORE.hidden=!(vips.length&&nRest);wireImgs(root);fillSides();hideChrome();eqSoon();
-    new MutationObserver(function(){hideChrome()}).observe(document.body,{childList:true,subtree:true});
-    try{if(window.gtag)window.gtag('event','smart_search_results',{search_term:q,results:SM.length})}catch(e){}
+    try{if(window.gtag)window.gtag('event','smart_search_results',{search_term:q,results:list.length})}catch(e){}};
+    hideChrome();new MutationObserver(function(){hideChrome()}).observe(document.body,{childList:true,subtree:true});
+    if(SM.length)fillSmart(SM);else root.appendChild(wait);   /* [] = index still on its way (slow connection): show the page frame now, fill it when it lands */
+    api={fill:fillSmart,none:function(){wait.innerHTML='No local match for &ldquo;'+esc(q)+'&rdquo; yet. Try another word, or <a href="/categories">browse every category</a>.';if(!wait.parentNode)root.appendChild(wait);
+      try{if(window.gtag)window.gtag('event','smart_search_results',{search_term:q,results:0})}catch(e){}}};
   }else{
   absorb();
   new MutationObserver(function(){absorb()}).observe(document.body,{childList:true,subtree:true});
@@ -242,11 +247,17 @@ if(isResults||SMARTQ){
   root.addEventListener('click',function(e){var a=e.target.closest('[data-act]');if(!a)return;var w=a.closest('.p3-vwrap');if(!w)return;
     var b=vips[+w.getAttribute('data-i')],act=a.getAttribute('data-act');track(act,w);
     if(act==='save_contact'){e.preventDefault();vcf(b)}});
-  };
+  return api};
   if(SMARTQ){
-    var go=function(){var res=SS.search(Q0,48);if(res.length)results(res.map(function(x){return x.r.m}));else if(isResults)results(null)};
-    return new Promise(function(ok){var fin=false,end=function(){if(fin)return;fin=true;try{go()}catch(e){try{if(isResults&&!document.getElementById('p3'))results(null)}catch(x){}}ok()};
-      var w=SS.load();if(w&&w.then)w.then(end,end);else end();setTimeout(end,4000)})}
+    /* same matches as the search box. If the index is slow, show our page frame with a 'finding matches' line after 0.7s rather than a blank
+       page, and NEVER BD's 'no results' (its literal keyword search is what failed on toothache / leaky faucet). */
+    return new Promise(function(ok){var ui=null,fin=false,tm=0;
+      function end(){if(fin)return;fin=true;clearTimeout(tm);var res=[];try{res=SS.search(Q0,48).map(function(x){return x.r.m})}catch(e){}
+        if(!SS.ok()&&!ui){try{if(isResults)results(null)}catch(e){}ok();return}   /* index could not be loaded: leave BD's own page */
+        try{if(res.length){if(ui)ui.fill(res);else results(res)}else if(ui)ui.none();else if(isResults)results(null);else results([]).none()}catch(e){}
+        ok()}
+      tm=setTimeout(function(){if(!fin&&!ui){try{ui=results([])}catch(e){}ok()}},700);
+      var w=SS.load();if(w&&w.then)w.then(end,end);else end()})}
   results(null);return
 }
 
