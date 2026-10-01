@@ -56,7 +56,7 @@ function score(r,q,words){var s=0,sh=q.length<=3;
   if(words.length>1&&all)s+=40;if(!all&&words.length>1)s*=.55;
   return s}
 /* whole phrases that mean one thing; swapped in before the words are looked at */
-var PHRASE=[['air conditioning','hvac'],['air conditioner','hvac'],['central air','hvac'],['hot water','water heater'],['dry cleaners','dry cleaning'],['dry cleaner','dry cleaning'],['eye doctor','optometrist'],['eye exam','optometrist'],['real estate agent','realtor'],['oil change','oil change auto']];
+var PHRASE=[['air conditioning','hvac'],['air conditioner','hvac'],['central air','hvac'],['hot water','water heater'],['dry cleaners','drycleaner'],['dry cleaner','drycleaner'],['dry cleaning','drycleaner'],['eye doctor','optometrist'],['eye exam','optometrist'],['real estate agent','realtor'],['oil change','oil change auto']];
 function search(qraw,max){var q=norm(qraw);if(q.length<2||!data)return [];
   PHRASE.forEach(function(p){if((' '+q+' ').indexOf(' '+p[0]+' ')>-1)q=(' '+q+' ').replace(' '+p[0]+' ',' '+p[1]+' ').trim()});
   var words=q.split(' ').filter(function(w){return w&&w!=='&'&&!STOP[w]});if(!words.length)words=[q];
@@ -66,7 +66,7 @@ function search(qraw,max){var q=norm(qraw);if(q.length<2||!data)return [];
     else{   /* nobody matches every word: keep a partial match only if the words it does match are the telling ones (rare words), so
                "appliance repair" does not list every auto repair shop and "dry cleaning" does not list every cleaner */
       var N=data.length,idf=words.map(function(w,i){var df=0;out.forEach(function(x){if(x.hit[i])df++});return Math.log((N+1)/(df+1))}),tot=idf.reduce(function(a,b){return a+b},0)||1;
-      out=out.filter(function(x){var g=0;x.hit.forEach(function(h,i){if(h)g+=idf[i]});return g/tot>=.65})}}
+      out=out.filter(function(x){var g=0;x.hit.forEach(function(h,i){if(h)g+=idf[i]});return g/tot>=.6})}}
   if(out.some(function(x){return !x.weak}))out=out.filter(function(x){return !x.weak});
   out.sort(function(a,b){return b.s-a.s||(TIER[b.r.m.p]||0)-(TIER[a.r.m.p]||0)||(b.r.m.l?1:0)-(a.r.m.l?1:0)||a.r.m.n.localeCompare(b.r.m.n)});
   if(out.length){var top=out[0].s;out=out.filter(function(x){return x.s>=top*.3})}   /* drop the long tail of faint matches */
