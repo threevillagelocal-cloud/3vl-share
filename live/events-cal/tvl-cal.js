@@ -35,7 +35,7 @@ var EV=[],BY={};
 
 /* hide BD's plain versions of these pages */
 function hideNative(){
-  var hideTxt=/^(Upcoming Community Events|Check Out Our Events Calendar|Upcoming Events)$/;
+  var hideTxt=/^(Upcoming Community Events|Check Out Our Events Calendar|Upcoming Events|Three Village Events)$/;   /* BD's own page headings (the last one is the SEO page h1, 10/1/2026) */
   document.querySelectorAll('h1,h2,h3').forEach(function(h){if(!R.contains(h)&&hideTxt.test((h.textContent||'').trim())){(h.closest('.feature_results_header')||h).style.display='none'}});
   var cal=document.getElementById('calendar');if(cal){var m=cal.closest('.module');(m||cal).style.display='none'}
   ['.post-search-result-count-container','.views','.grid-container','.feature-events .pagination','.content_w_sidebar .pagination-container'].forEach(function(s){document.querySelectorAll(s).forEach(function(el){if(!R.contains(el))el.style.display='none'})});
