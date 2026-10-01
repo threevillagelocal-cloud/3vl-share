@@ -45,8 +45,11 @@ function hideNative(){
   document.documentElement.classList.add('tvc-on')}
 
 function load(){
-  FEED.then(function(d){
-    var list=d.result||d||[];
+  /* the event list is written into the page (#tvl-cal-feed, daily by 3vl-site-guard) so the calendar draws at once;
+     BD's live list is still checked and the calendar redraws only if something changed since then */
+  var INLINE=null;try{INLINE=JSON.parse((document.getElementById('tvl-cal-feed')||{}).textContent||'null')}catch(e){}
+  function sig(l){return l.map(function(x){return x.id+'|'+x.start+'|'+(x.end||'')}).join(',')}
+  function build(list){EV=[];BY={};
     list.forEach(function(x){var m=META[x.id]||{},s=new Date(+x.start),e=new Date(+x.end||+x.start);
       var url=String(x.url||'');if(url.indexOf('//')===0)url=location.protocol+url;
       var allday=s.getHours()===0&&s.getMinutes()===0;
@@ -55,7 +58,9 @@ function load(){
     EV.sort(function(a,b){return a.s-b.s});
     EV.forEach(function(ev){var d0=day(ev.s),d1=day(ev.e),span=Math.round((d1-d0)/864e5);if(span<0)span=0;if(span>62)span=62;
       for(var i=0;i<=span;i++){var k=key(new Date(d0.getTime()+i*864e5+3600e3));(BY[k]=BY[k]||[]).push(ev)}});
-    hideNative();render()}).catch(function(){R.innerHTML='';H.classList.add('tvc-done')})}
+    hideNative();render()}
+  var drawn=false;if(INLINE&&INLINE.length){build(INLINE);drawn=true}
+  FEED.then(function(d){var list=d.result||d||[];if(drawn&&sig(list)===sig(INLINE))return;build(list);drawn=true}).catch(function(){if(!drawn){R.innerHTML='';H.classList.add('tvc-done')}})}
 
 function pass(ev){return (!S.tag||ev.tags.indexOf(S.tag)>=0)&&(!S.free||ev.free)}
 function evsOn(d){var l=(BY[key(d)]||[]).filter(pass);return key(d)===key(T0)?l.filter(function(ev){return ev.e>=NOW}):l}  /* today: hide events that already ended */
