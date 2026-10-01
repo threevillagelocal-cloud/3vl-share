@@ -5,7 +5,7 @@ if(window.__tvc)return;window.__tvc=1;
 /* Start the moment the page content has been read (not after the whole page loads), and ask for the event list right away,
    so BD's plain layout is never shown. Works from the page HEAD or from the block on the page (10/1/2026). */
 var H=document.documentElement,ran=false,mo=null;
-var FEED=fetch('/event-calendar-json',{credentials:'same-origin'}).then(function(r){return r.json()});FEED.catch(function(){});
+var FEED=window.__tvlFeed||fetch('/event-calendar-json',{credentials:'same-origin'}).then(function(r){return r.json()});FEED.catch(function(){});   /* the HEAD code may have asked for it already */
 function parsed(){var m=document.getElementById('main-content');return document.readyState!=='loading'||!!(m&&m.nextElementSibling)}
 function tick(){if(ran||!parsed())return;ran=true;if(mo)mo.disconnect();boot()}
 function boot(){
