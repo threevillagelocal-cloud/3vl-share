@@ -319,13 +319,18 @@ if(path==='/blog'){
     if(!a)return null;var ex=p?p.textContent.replace(/View More/,'').replace(/\s+/g,' ').trim():'';
     return {t:a.textContent.trim(),h:a.getAttribute('href'),img:img?img.getAttribute('src').replace('news-pictures-thumbnails','news-pictures'):'',thumb:img?img.getAttribute('src'):'',d:d?d.textContent.replace('Posted','').trim():'',ex:ex}}
   function hide(it){it.style.display='none';it.setAttribute('data-p3','1');var n=it.nextElementSibling;while(n&&(n.tagName==='HR'||/^clearfix$/.test(n.className))){n.style.display='none';n=n.nextElementSibling}}
-  function card(p,i){return '<a class="p3-bcard" href="'+esc(p.h)+'" style="--i:'+(i%9)+'"><div class="p3-bimg"><img src="'+esc(p.img)+'" alt="'+esc(p.t)+'" loading="lazy" onerror="if(this.src!==this.dataset.t){this.src=this.dataset.t}" data-t="'+esc(p.thumb)+'"></div><div class="p3-bb"><p class="p3-date">'+esc(dfmt(p.d))+'</p><h3>'+esc(p.t)+'</h3><p>'+esc(p.ex.slice(0,120))+(p.ex.length>120?'&hellip;':'')+'</p></div></a>'}
+  /* our small WebP copies (3vl-share/t/gen.py, same naming as sm() in weekender.js); a missing copy falls back to BD's full photo, then its thumbnail */
+  function fnv(s){s=unescape(encodeURIComponent(s));for(var h=0x811c9dc5,i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),0x01000193)>>>0;return ('0000000'+h.toString(16)).slice(-8)}
+  function sm(u,w){u=String(u||'');if(!u)return u;if(u.charAt(0)==='/'&&u.charAt(1)!=='/')u=location.origin+u;return /^https?:/i.test(u)?'https://threevillagelocal-cloud.github.io/3vl-share/t/'+fnv(u)+'-'+w+'.webp':u}
+  window.__p3be=function(im){var d=im.dataset,n=+(d.e||0);im.removeAttribute('srcset');d.e=n+1;if(n===0)im.src=d.f;else if(n===1&&d.t)im.src=d.t};
+  function pic(p,extra){return '<img src="'+esc(sm(p.img,800))+'" srcset="'+esc(sm(p.img,360))+' 360w, '+esc(sm(p.img,800))+' 800w" sizes="(max-width:700px) 92vw, (max-width:1100px) 46vw, 380px" alt="'+esc(p.t)+'" '+extra+' onerror="__p3be(this)" data-f="'+esc(p.img)+'" data-t="'+esc(p.thumb)+'">'}
+  function card(p,i){return '<a class="p3-bcard" href="'+esc(p.h)+'" style="--i:'+(i%9)+'"><div class="p3-bimg">'+pic(p,'loading="lazy"')+'</div><div class="p3-bb"><p class="p3-date">'+esc(dfmt(p.d))+'</p><h3>'+esc(p.t)+'</h3><p>'+esc(p.ex.slice(0,120))+(p.ex.length>120?'&hellip;':'')+'</p></div></a>'}
   function ts(p){var m=(p.d||'').match(/(\d+)\/(\d+)\/(\d+)/);return m?new Date(+m[3],+m[1]-1,+m[2]).getTime():0}
   var posts=items.map(read).filter(Boolean).sort(function(a,b){return ts(b)-ts(a)});   /* BD pins featured posts first; lead with the newest */
   var lead=posts[0],rest=posts.slice(1);
-  var mos=posts.slice(0,6).map(function(p){return '<span style="background-image:url(\''+esc(p.img)+'\')"></span>'}).join('');
+  var mos=posts.slice(0,6).map(function(p){return '<span style="background-image:url(\''+esc(sm(p.img,360))+'\'),url(\''+esc(p.thumb)+'\')"></span>'}).join('');
   var h='<header class="p3-hero"><div class="p3-mosaic">'+mos+'</div><div class="p3-hin"><span class="p3-kick">THREE VILLAGE LOCAL</span><h1 class="p3-h1">Local <em>Stories</em></h1><p class="p3-sub">Neighbors, businesses, events and the news that matters in Stony Brook, Setauket and Port Jefferson.</p></div></header>'+
-    '<a class="p3-lead" href="'+esc(lead.h)+'"><div class="p3-limg"><img src="'+esc(lead.img)+'" alt="'+esc(lead.t)+'" onerror="if(this.src!==this.dataset.t){this.src=this.dataset.t}" data-t="'+esc(lead.thumb)+'"></div><div class="p3-lb"><p class="p3-date"><span class="p3-new">&#9679; LATEST</span> '+esc(dfmt(lead.d))+'</p><h2>'+esc(lead.t)+'</h2><p>'+esc(lead.ex)+'</p><span class="p3-go">Read the story &rarr;</span></div></a>'+
+    '<a class="p3-lead" href="'+esc(lead.h)+'"><div class="p3-limg"><img src="'+esc(sm(lead.img,800))+'" alt="'+esc(lead.t)+'" fetchpriority="high" onerror="__p3be(this)" data-f="'+esc(lead.img)+'" data-t="'+esc(lead.thumb)+'"></div><div class="p3-lb"><p class="p3-date"><span class="p3-new">&#9679; LATEST</span> '+esc(dfmt(lead.d))+'</p><h2>'+esc(lead.t)+'</h2><p>'+esc(lead.ex)+'</p><span class="p3-go">Read the story &rarr;</span></div></a>'+
     '<div class="p3-bgrid" id="p3grid">'+rest.map(card).join('')+'</div>';
   var root=mount(h,items[0].closest('[itemprop="mainEntity"]')||items[0]);
   items.forEach(hide);
