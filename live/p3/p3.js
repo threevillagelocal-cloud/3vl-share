@@ -331,10 +331,12 @@ if(path==='/blog'){
   var lead=posts[0],rest=posts.slice(1);
   var mos=posts.slice(0,6).map(function(p){return '<span style="background-image:url(\''+esc(p.thumb||p.img)+'\')"></span>'}).join('');
   var h='<header class="p3-hero"><div class="p3-mosaic">'+mos+'</div><div class="p3-hin"><span class="p3-kick">THREE VILLAGE LOCAL</span><h1 class="p3-h1">Local <em>Stories</em></h1><p class="p3-sub">Neighbors, businesses, events and the news that matters in Stony Brook, Setauket and Port Jefferson.</p></div></header>'+
-    '<a class="p3-lead" href="'+esc(lead.h)+'"><div class="p3-limg"><img src="'+esc(sm(lead.img,800))+'" alt="'+esc(lead.t)+'" fetchpriority="high" onerror="__p3be(this)" data-f="'+esc(lead.img)+'" data-t="'+esc(lead.thumb)+'"></div><div class="p3-lb"><p class="p3-date"><span class="p3-new">&#9679; LATEST</span> '+esc(dfmt(lead.d))+'</p><h2>'+esc(lead.t)+'</h2><p>'+esc(lead.ex)+'</p><span class="p3-go">Read the story &rarr;</span></div></a>'+
+    '<a class="p3-lead" href="'+esc(lead.h)+'"><div class="p3-limg"><img src="'+esc(lead.thumb||lead.img)+'" data-hi="'+esc(sm(lead.img,800))+'" alt="'+esc(lead.t)+'" fetchpriority="high" onerror="__p3be(this)" data-f="'+esc(lead.img)+'" data-t="'+esc(lead.thumb)+'"></div><div class="p3-lb"><p class="p3-date"><span class="p3-new">&#9679; LATEST</span> '+esc(dfmt(lead.d))+'</p><h2>'+esc(lead.t)+'</h2><p>'+esc(lead.ex)+'</p><span class="p3-go">Read the story &rarr;</span></div></a>'+
     '<div class="p3-bgrid" id="p3grid">'+rest.map(function(p,i){return card(p,i,1)}).join('')+'</div>';
   var root=mount(h,items[0].closest('[itemprop="mainEntity"]')||items[0]);
   items.forEach(hide);
+  /* lead photo: BD's thumbnail is already on its way, so it shows first; the sharper 800px copy replaces it once loaded */
+  (function(li){if(!li||!li.dataset.hi)return;var hi=new Image();hi.onload=function(){li.src=hi.src};hi.src=li.dataset.hi})($('.p3-limg img',root));
   function hideTop(){$$('.feature_results_header,.post-search-result-count-container,.views').forEach(function(e){if(!root.contains(e))e.style.display='none'})}
   hideTop();document.addEventListener('DOMContentLoaded',hideTop);window.addEventListener('load',hideTop);
   /* BD loads more posts as you scroll: turn each new one into a card */
