@@ -284,6 +284,9 @@ if(isResults||SMARTQ){
 
 /* ---------- CATEGORIES ---------- */
 if(path==='/categories'){
+  /* 10/2/2026 (owner): no "Join Our Community" box in this page's side column, and always two VIP banners on desktop.
+     vipads.js shows its second banner only when the page is taller than 2400px; on wide screens this page is a bit shorter, so catFit() below pads the grid to reach it. */
+  (function(){var st=document.createElement('style');st.textContent='.member-join-offer{display:none!important}';document.head.appendChild(st)})();
   var panels=$$('.categories-panel');if(!panels.length)return;
   var cats=panels.map(function(p,i){var a=$('.topClass',p);var subs=$$('.sub-level-link > a.sub-category',p).map(function(x){return {n:x.textContent.trim(),h:x.getAttribute('href')}});
     return {n:a.textContent.trim(),h:a.getAttribute('href'),slug:(a.getAttribute('href')||'').replace('/',''),subs:subs,c:COLORS[i%COLORS.length]}});
@@ -298,6 +301,8 @@ if(path==='/categories'){
     '<p class="p3-none" id="p3none"></p>';
   var anchor=$('.category_filter_module')||panels[0];var root=mount(h,anchor);
   $$('.category_filter_module,.categories-panel').forEach(function(e){e.style.display='none'});
+  var catFit=function(){if(innerWidth<992)return;root.style.paddingBottom='';var d=2410-document.documentElement.scrollHeight;if(d>0)root.style.paddingBottom=d+'px'};
+  catFit();if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',catFit);
   $$('h1,h2').forEach(function(x){if(/Businesses by Category/.test(x.textContent)&&!root.contains(x))x.style.display='none'});
   var none=$('#p3none');
   $('#p3q').addEventListener('input',function(){var q=this.value.toLowerCase().trim(),n=0;$$('.p3-ctile').forEach(function(t){var ok=!q||t.getAttribute('data-n').indexOf(q)>=0;t.style.display=ok?'':'none';if(ok)n++});
