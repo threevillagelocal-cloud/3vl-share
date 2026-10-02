@@ -1,0 +1,30 @@
+# Three Village Local
+
+> Three Village Local (threevillagelocal.com) is the free local guide to Setauket, East Setauket, Stony Brook, Port Jefferson and the rest of the Three Village area on the North Shore of Long Island, New York. It lists local businesses, this week's events, restaurant specials, homes for sale and community stories, and is updated every day.
+
+Three Village Local is run locally and is free for residents to use. Businesses can add a free listing or a paid featured listing. Event details come from the organizers (libraries, historical societies, chambers of commerce, village groups); always confirm times with the organizer before you go.
+
+## Main pages
+
+- [Home: what's happening now](https://www.threevillagelocal.com/): today's events, top things to do this week, restaurant specials, local weather and news
+- [Find a local business](https://www.threevillagelocal.com/categories): every listed business, grouped by category (restaurants, home services, health, attorneys, real estate, shops and more)
+- [Restaurants](https://www.threevillagelocal.com/restaurant): restaurants, cafes and bars in the Three Village area
+- [Events](https://www.threevillagelocal.com/events): upcoming local events, each with date, time, place and organizer
+- [Events calendar](https://www.threevillagelocal.com/events-calendar): the same events in a month view
+- [Local stories](https://www.threevillagelocal.com/blog): event guides, business spotlights and community news
+- [Homes for sale this week](https://www.threevillagelocal.com/locallistings): new real estate listings in Setauket, Stony Brook and nearby, updated every Friday
+- [Three Village Farmers & Artisans Market](https://www.threevillagelocal.com/three-village-farmers-market): dates, hours and location
+
+## For local businesses
+
+- [Get listed](https://www.threevillagelocal.com/join): free and paid listing options
+- [Send us an event or a special](https://www.threevillagelocal.com/promotion): free to submit
+
+## Apps and contact
+
+- [Free app for iPhone and Android](https://www.threevillagelocal.com/app)
+- [Contact Three Village Local](https://www.threevillagelocal.com/about/contact)
+
+## Optional
+
+- [Sitemap](https://www.threevillagelocal.com/filedata/cache/xml-sitemaps/sitemap.xml)
