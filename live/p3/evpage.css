@@ -1,0 +1,70 @@
+/* Three Village Local: event detail pages + "next step" block (see evpage.js). Live since 10/2/2026. */
+html.tvl-we:not(.ev-on) #ev{opacity:0}
+#ev{--navy:#1b2f45;--navy2:#0f1f31;--gold:#f2a93b;--ink:#1d2b3a;--mut:#5b6b7c;--line:#dde5ee;font-family:'tvl-rc','Radio Canada',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);margin:0 0 24px}
+#ev *{box-sizing:border-box}
+.ev-hero{position:relative;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#1b2f45 0%,#0f1f31 60%,#27405c 100%);min-height:340px;display:flex;align-items:flex-end;box-shadow:0 14px 34px rgba(15,31,49,.18)}
+.ev-hero.ev-noimg{min-height:230px;background:radial-gradient(circle at 85% 0%,rgba(242,169,59,.28),transparent 46%),linear-gradient(135deg,#1b2f45 0%,#0f1f31 70%)}
+#ev .ev-hero img.ev-himg{position:absolute!important;inset:0;top:0;left:0;width:100%!important;height:100%!important;object-fit:cover;display:block;margin:0!important;border-radius:0!important;max-width:none!important}
+.ev-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,31,49,.08) 0%,rgba(15,31,49,.38) 42%,rgba(15,31,49,.93) 100%)}
+.ev-noimg .ev-shade{display:none}
+.ev-hin{position:relative;z-index:2;padding:26px 28px 26px;width:100%}
+.ev-chip{display:inline-block;background:var(--gold);color:#1b2f45;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin:0 0 12px}
+.ev-chip.ev-past{background:rgba(255,255,255,.2);color:#fff}
+#ev .ev-h1 h1{color:#fff;font-size:38px;line-height:1.12;font-weight:800;margin:0 0 10px;letter-spacing:-.01em;text-shadow:0 2px 14px rgba(0,0,0,.35);overflow-wrap:break-word}
+#ev .ev-venue{color:rgba(255,255,255,.92);font-size:16px;margin:0;line-height:1.4}
+#ev .ev-venue i{color:var(--gold);margin-right:4px}
+#ev .ev-venue b{color:#fff;font-weight:700}
+.ev-actions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0;align-items:center}
+#ev .ev-btn{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--navy);border:1px solid var(--line);border-radius:999px;font:700 15px/1 'tvl-rc','Radio Canada',system-ui,sans-serif;padding:13px 18px;text-decoration:none;cursor:pointer;box-shadow:0 2px 8px rgba(15,31,49,.06);transition:transform .15s,box-shadow .15s}
+#ev .ev-btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(15,31,49,.12)}
+#ev .ev-btn.ev-primary{background:var(--gold);border-color:var(--gold);color:#1b2f45;padding:14px 22px;font-size:16px}
+#ev .ev-btn i{color:#c9302c}
+.ev-cal:empty{display:none}
+#ev .ev-cal .add-to-calendar-widget{float:none!important;margin:0}
+#ev .ev-cal .btn-add-to-calendar-dropdown{background:#fff;color:var(--navy);border:1px solid var(--line);border-radius:999px;font:700 15px/1 'tvl-rc','Radio Canada',system-ui,sans-serif;padding:13px 18px;box-shadow:0 2px 8px rgba(15,31,49,.06);height:auto;text-transform:none}
+#ev .ev-cal .dropdown-menu{border-radius:14px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(15,31,49,.16);padding:8px}
+.ev-body{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin:18px 0 0;box-shadow:0 6px 20px rgba(15,31,49,.05);font-size:17px;line-height:1.6}
+.ev-body .the-post-description>:first-child{margin-top:0}
+.ev-body .the-post-description>p:last-of-type{margin-bottom:0}
+.ev-facts{background:#f6f9fc;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:14px;padding:18px 20px;margin:0 0 18px}
+.ev-facts p{margin:0 0 9px}
+.ev-facts p:last-child{margin-bottom:0}
+.ev-body a{color:#0b63b6;font-weight:600}
+.ev-body img{max-width:100%;height:auto;border-radius:14px}
+/* next step block (also on blog posts) */
+.ev-next{--navy:#1b2f45;--gold:#f2a93b;--line:#dde5ee;background:linear-gradient(160deg,#1b2f45,#0f1f31);border-radius:20px;padding:26px 26px 22px;margin:22px 0 0;color:#fff;font-family:'tvl-rc','Radio Canada',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;clear:both;box-sizing:border-box}
+.ev-next *{box-sizing:border-box}
+.ev-next .ev-kick{color:var(--gold);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 6px}
+.ev-next h2{color:#fff!important;font-size:26px;line-height:1.2;font-weight:800;margin:0 0 16px!important;border:0;padding:0}
+.ev-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ev-card{display:flex;flex-direction:column;background:#fff;border-radius:16px;overflow:hidden;text-decoration:none!important;color:#1d2b3a!important;transition:transform .15s}
+.ev-card:hover{transform:translateY(-2px)}
+.ev-cimg{display:block;aspect-ratio:16/10;background:#e6edf4;overflow:hidden}
+.ev-next .ev-cimg img{position:static!important;width:100%!important;height:100%!important;object-fit:cover;display:block;margin:0!important;border-radius:0!important;max-width:none!important}
+.ev-cb{display:block;padding:12px 14px 14px}
+.ev-cdate{display:block;color:#b36b00;font-weight:800;font-size:12px;letter-spacing:.05em;text-transform:uppercase;margin:0 0 5px}
+.ev-card b{display:block;font-size:16px;line-height:1.3;font-weight:700;color:#1b2f45}
+.ev-card small{display:block;color:#5b6b7c;font-size:13px;margin-top:4px;line-height:1.35}
+.ev-links{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+.ev-links a{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.3);color:#fff!important;border-radius:999px;padding:11px 16px;font-weight:700;font-size:14px;text-decoration:none!important}
+.ev-links a:first-child{background:var(--gold);border-color:var(--gold);color:#1b2f45!important}
+.ev-links a span{font-weight:400}
+@media (max-width:767px){
+  .ev-hero{min-height:300px;border-radius:16px}
+  .ev-hero.ev-noimg{min-height:200px}
+  .ev-hin{padding:20px 18px}
+  #ev .ev-h1 h1{font-size:27px}
+  #ev .ev-venue{font-size:15px}
+  #ev .ev-btn.ev-primary{width:100%;justify-content:center}
+  .ev-actions{gap:8px}
+  #ev .ev-btn,#ev .ev-cal .btn-add-to-calendar-dropdown{padding:12px 14px;font-size:14px}
+  .ev-body{padding:18px 16px;border-radius:16px;font-size:16px}
+  .ev-next{padding:20px 16px 18px;border-radius:16px}
+  .ev-next h2{font-size:22px}
+  .ev-cards{grid-template-columns:1fr;gap:10px}
+  .ev-card{flex-direction:row;align-items:stretch}
+  .ev-cimg{flex:0 0 112px;aspect-ratio:auto;min-height:92px}
+  .ev-cb{padding:10px 12px}
+  .ev-card b{font-size:15px}
+  .ev-links a{flex:1 1 100%;justify-content:center}
+}
