@@ -5,8 +5,11 @@ html.tvl-we:not(.ev-on) #ev{opacity:0}
 .ev-hero{position:relative;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#1b2f45 0%,#0f1f31 60%,#27405c 100%);min-height:340px;display:flex;align-items:flex-end;box-shadow:0 14px 34px rgba(15,31,49,.18)}
 .ev-hero.ev-noimg{min-height:230px;background:radial-gradient(circle at 85% 0%,rgba(242,169,59,.28),transparent 46%),linear-gradient(135deg,#1b2f45 0%,#0f1f31 70%)}
 #ev .ev-hero img.ev-himg{position:absolute!important;inset:0;top:0;left:0;width:100%!important;height:100%!important;object-fit:cover;display:block;margin:0!important;border-radius:0!important;max-width:none!important}
-.ev-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,31,49,.08) 0%,rgba(15,31,49,.38) 42%,rgba(15,31,49,.93) 100%)}
+.ev-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,31,49,.08) 0%,rgba(15,31,49,.45) 38%,rgba(15,31,49,.95) 100%)}
 .ev-noimg .ev-shade{display:none}
+.ev-hero.ev-split{display:block;min-height:0}
+#ev .ev-hero.ev-split img.ev-himg{position:static!important;width:100%!important;height:auto!important;max-height:560px;object-fit:contain;background:#0f1f31}
+.ev-split .ev-shade{display:none}
 .ev-hin{position:relative;z-index:2;padding:26px 28px 26px;width:100%}
 .ev-chip{display:inline-block;background:var(--gold);color:#1b2f45;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin:0 0 12px}
 .ev-chip.ev-past{background:rgba(255,255,255,.2);color:#fff}
