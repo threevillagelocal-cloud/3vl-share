@@ -96,6 +96,7 @@ def collect():
     try:
         for u in re.findall(r'class="search_result_image[^"]*"[^>]*src="([^"]+)"', get(SITE + "/blog")):
             add(u, (360,))
+            add(u.replace("news-pictures-thumbnails", "news-pictures"), (360, 800))   # /blog cards (p3.js)
     except Exception as ex:
         print("WARN blog", ex)
     # /locallistings: house photos + agent headshots. The cards point at our copies and carry
