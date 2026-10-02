@@ -11,7 +11,7 @@ from PIL import Image, ImageOps
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://www.threevillagelocal.com"
 RAW = "https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/"
-SIZES = (360, 800)
+SIZES = (160, 360, 800)
 UA = {"User-Agent": "Mozilla/5.0 (compatible; 3VL-thumbs/1.0; +https://www.threevillagelocal.com)"}
 MAN = os.path.join(HERE, "manifest.json")
 TODAY = datetime.date.today().isoformat()
@@ -50,7 +50,7 @@ def collect():
     """{url: set(sizes)} for every photo the site currently shows."""
     want = {}
 
-    def add(u, sizes=SIZES):
+    def add(u, sizes=(360, 800)):
         u = norm(u)
         if u and not skip(u):
             want.setdefault(u, set()).update(sizes)
@@ -98,6 +98,16 @@ def collect():
             add(u, (360,))
     except Exception as ex:
         print("WARN blog", ex)
+    # /locallistings: house photos + agent headshots. The cards point at our copies and carry
+    # data-o (original) + data-w (copy width), written by 3vl-assets site/ll_photos.py
+    try:
+        for tag in re.findall(r'<img[^>]+data-o="[^>]+>', get(SITE + "/locallistings")):
+            o = re.search(r'data-o="([^"]+)"', tag)
+            w = re.search(r'data-w="(\d+)"', tag)
+            if o and w and int(w.group(1)) in SIZES:
+                add(o.group(1), (int(w.group(1)),))
+    except Exception as ex:
+        print("WARN locallistings", ex)
     return want
 
 
