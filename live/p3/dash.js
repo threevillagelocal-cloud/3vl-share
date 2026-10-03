@@ -15,6 +15,9 @@ var CSS=''
 +'body.tvl-dash .member-account-information{border-radius:14px;background:#f6f9fc;border:1px solid #e3e9f0}'
 +'body.tvl-dash .dashboard_home_title,body.tvl-dash .hr-account-member-dashboard{display:none!important}'
 +'#td-hero{position:relative;overflow:hidden;border-radius:22px;padding:26px 26px 24px;margin:0 0 16px;color:#fff;background:radial-gradient(circle at 92% 0,rgba(242,169,59,.32),transparent 46%),linear-gradient(140deg,#1b2f45,#0f1f31);font-family:"tvl-rc","Radio Canada",system-ui,sans-serif}'
++'#td-hero .td-bg{position:absolute;inset:-30px;background-size:cover;background-position:center;filter:blur(16px) brightness(.42) saturate(1.15);transform:scale(1.05)}'
++'#td-hero .td-shade{position:absolute;inset:0;background:linear-gradient(110deg,rgba(15,31,49,.92) 0%,rgba(15,31,49,.72) 45%,rgba(15,31,49,.35) 100%)}'
++'#td-hero .td-in{position:relative;z-index:1}'
 +'#td-hero .td-k{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#f2a93b;margin:0 0 6px}'
 +'#td-hero h1{font-size:30px;line-height:1.15;margin:0 0 8px;color:#fff;font-weight:800}'
 +'#td-hero .td-plan{display:inline-block;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);margin:0 8px 14px 0}'
@@ -42,6 +45,18 @@ var CSS=''
 +'#td-badge textarea{width:100%;height:58px;font:12px/1.4 monospace;border:1px solid #dde5ee;border-radius:10px;padding:8px;color:#5b6b7c;background:#f8fafc;resize:none}'
 +'#td-badge button{margin-top:8px;font-weight:700;font-size:14px;padding:9px 16px;border-radius:10px;border:0;background:#1b2f45;color:#fff;cursor:pointer}'
 +'body.tvl-dash .dashboard-promote-banner{display:none!important}'
++'.td-sp{position:relative;overflow:hidden;border-radius:20px;padding:22px;background:linear-gradient(140deg,#1b2f45,#0f1f31);color:#fff;font-family:"tvl-rc","Radio Canada",system-ui,sans-serif}'
++'.td-sp:after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(242,169,59,.32),transparent 70%)}'
++'.td-sp>*{position:relative;z-index:1}'
++'.td-sp .td-spic{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:14px;font-size:22px;margin-bottom:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}'
++'.td-sp .td-k{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#f2a93b;margin:0 0 4px}'
++'.td-sp b{display:block;font-size:21px;line-height:1.2;margin:0 0 6px}.td-sp p{font-size:16px;line-height:1.45;color:#cfdbe7;margin:0 0 14px}'
++'.td-sp a.td-spb{display:inline-block;font-weight:700;font-size:16px;padding:12px 20px;border-radius:12px;text-decoration:none!important;background:#f2a93b;color:#1b2f45!important}'
++'.td-sp.locked{background:#f6f8fa;color:#1b2f45;border:1px solid #e3e9f0}.td-sp.locked:after{display:none}'
++'.td-sp.locked .td-spic{background:#fff;border-color:#e3e9f0}.td-sp.locked .td-k{color:#8a96a3}.td-sp.locked p{color:#55636f}'
++'.td-sp.locked a.td-spb{background:#006fbb;color:#fff!important}'
++'.td-sp .td-pill{display:inline-block;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;background:#fff3dc;color:#9a5d00;margin:0 0 10px}'
++'.td-sp .td-free{font-size:14px;margin:12px 0 0}.td-sp .td-free a{color:#006fbb;font-weight:700}'
 +'@media(max-width:767px){#td-quick{grid-template-columns:1fr 1fr}#td-hero h1{font-size:24px}#td-badge{flex-direction:column;align-items:flex-start}}';
 function run(){
   var title=$('.dashboard_home_title'),side=$('.member_admin_sidemenu');if(!title||!side||$('#td-hero'))return false;
@@ -53,15 +68,25 @@ function run(){
   var plan=(info.match(/Plan:\s*([^\n]+?)(?:\s{2,}|Change|$)/)||[])[1]||'';plan=plan.trim();
   var vip=/vip/i.test(plan),pub=$$('a',side).filter(function(a){return /View Public Listing/i.test(a.textContent)})[0];
   var hero=document.createElement('div');hero.id='td-hero';
-  hero.innerHTML='<p class="td-k">Your Three Village Local dashboard</p><h1>Welcome back, '+esc(name)+'</h1>'+
+  /* background: the member's own photo or logo (already on the page in the sidebar, so no extra download), blurred and darkened */
+  var pic=$('img',side),src=pic&&(pic.currentSrc||pic.getAttribute('src'))||'';
+  hero.innerHTML=(src&&!/profile-holder|default/i.test(src)?'<div class="td-bg" style="background-image:url(\''+esc(src)+'\')"></div><div class="td-shade"></div>':'')+'<div class="td-in"><p class="td-k">Your Three Village Local dashboard</p><h1>Welcome back, '+esc(name)+'</h1>'+
     (plan?'<span class="td-plan'+(vip?' vip':'')+'">'+(vip?'&#11088; ':'')+esc(plan)+'</span>':'')+
-    '<div class="td-btns">'+(pub?'<a class="g" href="'+esc(pub.getAttribute('href'))+'" target="_blank">View my listing &rarr;</a>':'')+'<a href="/account/contact">Edit my business info</a>'+(vip?'':'<a href="/join">See plans</a>')+'</div>';
+    '<div class="td-btns">'+(pub?'<a class="g" href="'+esc(pub.getAttribute('href'))+'" target="_blank">View my listing &rarr;</a>':'')+'<a href="/account/contact">Edit my business info</a>'+(vip?'':'<a href="/join">See plans</a>')+'</div></div>';
   title.parentNode.insertBefore(hero,title);
   var q=document.createElement('div');q.id='td-quick';
   q.innerHTML=[['&#9998;','Business info','Name, phone, hours, website','/account/contact'],['&#128247;','Photos and logo','What neighbors see first','/account/profile'],['&#128221;','About my business','Your story and services','/account/about'],
     ['&#128205;','Service areas','Where you work','/account/locations'],['&#128232;','Leads','Messages from neighbors','/account/leads'],['&#11088;','Reviews','What customers say','/account/recommendations']]
     .map(function(x){return '<a href="'+x[3]+'"><span class="i">'+x[0]+'</span><span><b>'+x[1]+'</b><small>'+x[2]+'</small></span></a>'}).join('');
   var row=$('.dashboard-publish-content');var dc3=$('#dc3');
+  /* Smart Publisher card (replaces the old "Got something to promote?" card): open for Getting Noticed + VIP, locked for everyone else */
+  var paid=/\bsession-plan-level-(1|2|8)\b/.test(document.body.className);
+  var old=dc3&&$$('.dc3-c',dc3).filter(function(c){return !c.classList.contains('mm')})[0];
+  if(old){var sp=document.createElement('div');sp.className='td-sp'+(paid?'':' locked');
+    sp.innerHTML=paid
+      ?'<div class="td-spic">&#10024;</div><p class="td-k">New &middot; 3VL Smart Publisher</p><b>Promote something in minutes</b><p>Tell us the basics about your event, special or news. We write it, design it and publish it on Three Village Local when you choose.</p><a class="td-spb" href="/promotion#pr3-form">Open Smart Publisher</a>'
+      :'<div class="td-spic">&#128274;</div><p class="td-k">3VL Smart Publisher</p><span class="td-pill">Getting Noticed and VIP members</span><b>Your own page about your event or special, written for you</b><p>Give us the basics, our smart publishing tool writes and designs the page, and it goes live on Three Village Local when you choose, with an option to promote it on our social media.</p><a class="td-spb" href="/join">See the plans</a><p class="td-free">Free members can still send us a tip anytime: <a href="/promotion#pr3-form">submit a promotion</a> and our team decides what to feature.</p>';
+    old.parentNode.replaceChild(sp,old)}
   (dc3||title).insertAdjacentElement('afterend',q);
   /* publishing tiles: only the post types the site uses */
   $$('.dashboard-publish-content a').forEach(function(a){if(DEAD.test(a.textContent.trim())){var c=a.closest('[class*="col-"]');(c||a).style.display='none'}});
