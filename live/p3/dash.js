@@ -7,7 +7,7 @@ if(window.__tvlDash)return;
 if(location.pathname.replace(/\/+$/,'')!=='/account/home')return;
 function $(s,r){return (r||document).querySelector(s)}function $$(s,r){return [].slice.call((r||document).querySelectorAll(s))}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-var DEAD=/^(SoundCloud Post|Classified|Website - Digital Product|Product|Video|Discussion|Property)s?$/i;   /* sections the site does not use (set to noindex 10/1/2026) */
+var DEAD=/^(SoundCloud Posts?|Classifieds?|Website - Digital Products?|Products?|Videos?|Discussions?|Property|Properties)$/i;   /* sections the site does not use (set to noindex 10/1/2026) */
 var CSS=''
 +'body.tvl-dash .member_admin_sidemenu{border-radius:20px;border:1px solid #e3e9f0;background:#fff;box-shadow:0 10px 28px rgba(27,47,69,.06);padding:18px 16px}'
 +'body.tvl-dash .member_admin_sidemenu h4{font-size:17px;color:#1b2f45}'
@@ -69,7 +69,7 @@ function run(){
   $$('.dashboard-module').forEach(function(m){var h=$('.panel-heading',m);if(h&&/Manage Listing/i.test(h.textContent))m.classList.add('td-mod-manage')});
   $$('.dashboard-module').filter(function(m){return !m.classList.contains('td-mod-manage')}).forEach(function(m){m.className=m.className.replace(/\bcol-md-4\b/,'col-md-6')});
   /* sidebar: hide counters for the unused post types */
-  $$('a',side).forEach(function(a){var t=a.textContent.replace(/\d+/g,'').trim();if(DEAD.test(t)){var li=a.closest('li')||a;li.style.display='none'}});
+  $$('a',side).forEach(function(a){var t=a.textContent.replace(/\d+/g,'').trim();if(DEAD.test(t)){var li=a.closest('.panel,li')||a;li.style.display='none'}});
   /* badge: compact card with a copy button */
   var ban=$('.dashboard-promote-banner');
   if(ban){var img=$('img',ban),ta=$('textarea',ban);
