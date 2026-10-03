@@ -390,9 +390,21 @@ var mm='';
 if(basic){mm=done
  ?'<div class="dc3-c mm"><div class="dc3-ic">&#9989;</div><p class="dc3-k">Member Match</p><b>Thanks, you are all set</b><p>Your private Member Match details help our AI-driven search send neighbors your way. Update them anytime.</p><a class="dc3-b" href="/member-match?edit=1">Update my answers</a></div>'
  :'<div class="dc3-c mm"><div class="dc3-ic">&#10024;</div><p class="dc3-k">New &middot; 2 minutes</p><b>Get matched with neighbors</b><p>Answer 7 quick questions so our new AI-driven search can send leads your way on the free plan. Private, never shown on your profile.</p><a class="dc3-b" href="/member-match?edit=1">Fill out Member Match</a></div>';}
-var promo='<div class="dc3-c"><div class="dc3-ic">&#128227;</div><p class="dc3-k">Free for members</p><b>Got something you want to promote?</b><p>Send us a special, an event or big news and we will help put it in front of Three Village.</p><a class="dc3-b" href="/promotion#pr3-form">Submit a promotion</a></div>';
+/* 3VL Smart Publisher (live 10/3/2026): paid plans (VIP 1/8, Getting Noticed 2) open it; others get the free tip form plus the upgrade line */
+var spm=document.body.className.match(/session-plan-level-(\d+)/),spp=spm?spm[1]:'',spPaid=spp==='1'||spp==='8'||spp==='2';
+var promo=spPaid
+ ?'<div class="dc3-c"><div class="dc3-ic">&#10024;</div><p class="dc3-k">New &middot; 3VL Smart Publisher</p><b>Promote something in minutes</b><p>Tell us the basics about your event, special or news. We write it, design it and publish it on Three Village Local when you choose. '+(spp==='2'?'1 page a month on your plan.':'One every two weeks on your plan.')+'</p><a class="dc3-b" href="/smart-publisher">Open Smart Publisher</a></div>'
+ :'<div class="dc3-c"><div class="dc3-ic">&#128227;</div><p class="dc3-k">Free for members</p><b>Got something you want to promote?</b><p>Send us a special, an event or big news and we will help put it in front of Three Village. Want us to write and publish a full page for you? That is 3VL Smart Publisher, included with Getting Noticed and VIP.</p><a class="dc3-b" href="/checkout/2">Upgrade now</a> <a href="/join" style="margin-left:12px;font-weight:700">See the plans</a><p style="margin:10px 0 0;font-size:14px">Or <a href="/promotion#pr3-form">send us a free tip</a> and our team decides what to feature.</p></div>';
 var box=document.createElement('div');box.id='dc3';box.innerHTML=mm+promo;
 h.insertAdjacentElement('afterend',box);
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
 })();
+
+/* NEWSLETTER (owner 10/3/2026): BD's sidebar "Join Our Newsletter" box opened a pop-up; it now links to the /newsletter page */
+(function(){function nl(){[].forEach.call(document.querySelectorAll('.module.newsletter-sign-up-form'),function(m){if(m.getAttribute('data-nl'))return;m.setAttribute('data-nl','1');
+  var h=m.querySelector('h2');if(h)h.textContent='Three Village Weekly';
+  var a=m.querySelector('a[data-target="#newsletter_subscribe_modal"]');if(!a)return;a.removeAttribute('data-toggle');a.removeAttribute('data-target');a.setAttribute('href','/newsletter');a.innerHTML='Sign up free &rarr;';
+  if(!m.querySelector('.p3-nlsub')){var p=document.createElement('p');p.className='p3-nlsub';p.textContent='The best of Three Village in your inbox every'+String.fromCharCode(160)+'week.';a.parentNode.insertBefore(p,a)}
+  a.addEventListener('click',function(){try{gtag('event','newsletter_link_click',{from:'sidebar'})}catch(e){}})})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',nl);else nl();window.addEventListener('load',nl)})();

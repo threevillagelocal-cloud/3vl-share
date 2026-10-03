@@ -1,4 +1,4 @@
-/* Three Village Local: member dashboard (/account/home) in the premium look (10/2/2026).
+﻿/* Three Village Local: member dashboard (/account/home) in the premium look (10/2/2026).
    Restyles BD's own dashboard in place: welcome header, quick actions, cleaner publishing tiles (only the post types the
    site uses), card panels, and a compact "add our badge to your website" box instead of the 950px badge.
    Loaded by p3.js on /account/home. Safe to fail: if anything is missing, BD's own layout stays. */
@@ -54,7 +54,8 @@ var CSS=''
 +'.td-sp a.td-spb{display:inline-block;font-weight:700;font-size:16px;padding:12px 20px;border-radius:12px;text-decoration:none!important;background:#f2a93b;color:#1b2f45!important}'
 +'.td-sp.locked{background:#f6f8fa;color:#1b2f45;border:1px solid #e3e9f0}.td-sp.locked:after{display:none}'
 +'.td-sp.locked .td-spic{background:#fff;border-color:#e3e9f0}#dc3 .td-sp.locked .td-k{color:#8a96a3}#dc3 .td-sp.locked b{color:#1b2f45}#dc3 .td-sp.locked p{color:#55636f}'
-+'.td-sp.locked a.td-spb{background:#006fbb;color:#fff!important}'
++'.td-sp.locked a.td-spb{background:#f2a93b;color:#1b2f45!important;box-shadow:0 8px 20px rgba(242,169,59,.35)}'
++'.td-sp a.td-spl{display:inline-block;margin-left:14px;font-size:16px;font-weight:700;color:#1b2f45!important;text-decoration:none!important}'
 +'.td-sp .td-pill{display:inline-block;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;background:#fff3dc;color:#9a5d00;margin:0 0 10px}'
 +'#dc3 .td-sp p.td-free{font-size:14px;margin:12px 0 0}.td-sp .td-free a{color:#006fbb;font-weight:700}'
 +'@media(max-width:767px){#td-quick{grid-template-columns:1fr 1fr}#td-hero h1{font-size:24px}#td-badge{flex-direction:column;align-items:flex-start}}';
@@ -84,8 +85,8 @@ function run(){
   var old=dc3&&$$('.dc3-c',dc3).filter(function(c){return !c.classList.contains('mm')})[0];
   if(old){var sp=document.createElement('div');sp.className='td-sp'+(paid?'':' locked');
     sp.innerHTML=paid
-      ?'<div class="td-spic">&#10024;</div><p class="td-k">New &middot; 3VL Smart Publisher</p><b>Promote something in minutes</b><p>Tell us the basics about your event, special or news. We write it, design it and publish it on Three Village Local when you choose.</p><a class="td-spb" href="/promotion#pr3-form">Open Smart Publisher</a>'
-      :'<div class="td-spic">&#128274;</div><p class="td-k">3VL Smart Publisher</p><span class="td-pill">Getting Noticed and VIP members</span><b>Your own page about your event or special, written for you</b><p>Give us the basics, our smart publishing tool writes and designs the page, and it goes live on Three Village Local when you choose, with an option to promote it on our social media.</p><a class="td-spb" href="/join">See the plans</a><p class="td-free">Free members can still send us a tip anytime: <a href="/promotion#pr3-form">submit a promotion</a> and our team decides what to feature.</p>';
+      ?'<div class="td-spic">&#10024;</div><p class="td-k">New &middot; 3VL Smart Publisher</p><b>Promote something in minutes</b><p>Tell us the basics about your event, special or news. We write it, design it and publish it on Three Village Local when you choose.</p><a class="td-spb" href="/smart-publisher">Open Smart Publisher</a>'
+      :'<div class="td-spic">&#128274;</div><p class="td-k">3VL Smart Publisher</p><span class="td-pill">Getting Noticed and VIP members</span><b>Your own page about your event or special, written for you</b><p>Give us the basics, our smart publishing tool writes and designs the page, and it goes live on Three Village Local when you choose, with an option to promote it on our social media.</p><a class="td-spb" href="/checkout/2">Upgrade now</a> <a class="td-spl" href="/join">See the plans &rarr;</a><p class="td-free">Free members can still send us a tip anytime: <a href="/promotion#pr3-form">submit a promotion</a> and our team decides what to feature.</p>';
     old.parentNode.replaceChild(sp,old)}
   (dc3||title).insertAdjacentElement('afterend',q);
   /* publishing tiles: only the post types the site uses */

@@ -37,7 +37,7 @@ function nextBlock(host,opts){
   if(!host||$('#ev-next'))return;
   var sec=document.createElement('section');sec.id='ev-next';sec.className='ev-next';
   sec.innerHTML='<p class="ev-kick">'+esc(opts.kick)+'</p><h2>'+esc(opts.title)+'</h2><div class="ev-cards" id="ev-cards"></div>'+
-    '<div class="ev-links"><a href="/events-calendar" data-ev="calendar">Full calendar <span>&rarr;</span></a><a href="/categories" data-ev="business">Find a local business <span>&rarr;</span></a><a href="/app" data-ev="app">Get the free app <span>&rarr;</span></a></div>';
+    '<div class="ev-links"><a href="/events-calendar" data-ev="calendar">Full calendar <span>&rarr;</span></a><a href="/categories" data-ev="business">Find a local business <span>&rarr;</span></a><a href="/app" data-ev="app">Get the free app <span>&rarr;</span></a><a href="/newsletter" data-ev="newsletter">Get Three Village Weekly <span>&rarr;</span></a></div>';
   host.appendChild(sec);
   sec.addEventListener('click',function(ev){var a=ev.target.closest('a');if(a)try{if(window.gtag)window.gtag('event','next_step_click',{target:a.getAttribute('data-ev')||'event',from:isEvent?'event':'post'})}catch(e){}});
   fetch(FEED+'?v='+Math.floor(Date.now()/9e5)).then(function(r){return r.json()}).then(function(d){

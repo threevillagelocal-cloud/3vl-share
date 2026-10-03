@@ -421,3 +421,6 @@ html.p3-on .content_w_sidebar{display:flex;flex-wrap:wrap}
 #p3#p3 .p3-spc.on span{background:#c99d4a;color:#1b2f45}
 #p3#p3 .p3-smore{background:#f3ede0;border-color:#e6d6b3;color:#8a6a2a}
 @media (max-width:767px){#p3#p3 .p3-specs{margin:10px 0 14px}#p3#p3 .p3-spc,#p3#p3 .p3-smore{padding:8px 12px;font-size:13.5px}}
+
+/* sidebar newsletter box (10/3/2026) */
+.module.newsletter-sign-up-form .p3-nlsub{margin:-4px 0 12px;text-align:center;font-size:14px;line-height:1.45;color:#5b6b7c}
