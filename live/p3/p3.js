@@ -195,7 +195,9 @@ if(isResults||SMARTQ){
     if(!btn||(tot&&cur>=tot)||(cont&&getComputedStyle(cont).display==='none')||btn.offsetParent===null&&cont&&cont.style.display==='none'){sent.style.display='none';return}
     if(busy||/loadingMore/.test(btn.className))return;busy=true;sent.classList.add('is-on');btn.click();
     setTimeout(function(){busy=false},1500)}
-  if(!SM&&'IntersectionObserver' in window)new IntersectionObserver(function(es){if(es[0].isIntersecting)loadMore()},{rootMargin:'0px 0px 900px 0px'}).observe(sent);
+  var inView=false;if(!SM&&'IntersectionObserver' in window)new IntersectionObserver(function(es){inView=es[0].isIntersecting;if(inView)loadMore()},{rootMargin:'0px 0px 900px 0px'}).observe(sent);
+  /* 10/4/2026 heartbeat: while the end of the list is on screen keep asking BD for the next page (a press made before BD's loader was ready was lost, and pages that never scroll gave no second chance); loadMore() itself stops when everything is loaded */
+  if(!SM){var hb=setInterval(function(){if(sent.style.display==='none'){clearInterval(hb);return}if(inView||sent.getBoundingClientRect().top<innerHeight+900)loadMore()},1200)}  /* reached OR scrolled past the end of the list */
 
   /* value panel from vip_meta.json (public listing details) */
   var META=null;
