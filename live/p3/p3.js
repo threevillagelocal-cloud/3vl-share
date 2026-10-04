@@ -133,7 +133,7 @@ if(isResults||SMARTQ){
   function read(it){var g=function(p){var m=it.querySelector('[itemprop="'+p+'"]');return m?(m.getAttribute('content')||m.getAttribute('href')||''):''};
     var uid=(it.querySelector('.postItem')||{getAttribute:function(){return ''}}).getAttribute('data-userid')||'';
     var u=(it.querySelector('[itemtype$="LocalBusiness"] link[itemprop="url"]')||{}).href||'';
-    return {n:g('name'),u:u.replace(/#.*$/,''),img:g('image'),tel:g('telephone'),d:g('description'),st:g('streetAddress'),zip:g('postalCode'),reg:g('addressRegion'),town:(g('addressLocality')||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0}}
+    return {n:g('name'),u:u.replace(/#.*$/,''),img:g('image'),tel:g('telephone'),d:g('description'),st:g('streetAddress'),zip:g('postalCode'),reg:g('addressRegion'),town:(g('addressLocality')||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0||/(^| )level_(1|8)( |$)/.test(((it.closest&&it.closest('.member_results'))||it).className||'')}}
   function fmtTel(t){t=(t||'').replace(/[^\d]/g,'').slice(-10);return t.length===10?t.slice(0,3)+'-'+t.slice(3,6)+'-'+t.slice(6):''}
   function maps(b){return 'https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(b.n+' '+(b.st||'')+' '+b.town)}
   function addr(b){return [b.st,b.town].filter(function(x){return x&&!/^n\/?a$/i.test(x)}).join(', ')||'Three Village'}
@@ -210,7 +210,7 @@ if(isResults||SMARTQ){
     L.push('<a class="p3-vrev" data-act="review" href="'+esc(u.replace(/\/$/,''))+'/writeareview">&#9733; '+(m.reviews?'Review':'First review')+'</a>');
     return h+'<div class="p3-vlinks">'+L.join('')+'</div>'}
   function fillSides(){if(!META)return;$$('.p3-vside:not(.is-filled)',root).forEach(function(a){var m=META[a.getAttribute('data-uid')];a.classList.add('is-filled');if(m){a.innerHTML=side(m,a.getAttribute('data-u'));a.parentNode.classList.add('has-side')}});eqSoon()}
-  fetch(BASE+'vip_meta.json').then(function(r){return r.json()}).then(function(M){META=M;fillSides()}).catch(function(){});
+  fetch('https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/search/vip_meta.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).catch(function(){return fetch(BASE+'vip_meta.json').then(function(r){return r.json()})}).then(function(M){META=M;fillSides()}).catch(function(){});  /* nightly from 3vl-site-guard member-db (10/4/2026) */
 
   /* logos: trim baked-in white margins so they fill the box */
   function trim(img){try{var w=img.naturalWidth,h=img.naturalHeight;if(!w||!h)return;var c=document.createElement('canvas'),k=Math.min(1,600/Math.max(w,h));c.width=Math.round(w*k);c.height=Math.round(h*k);
@@ -242,7 +242,7 @@ if(isResults||SMARTQ){
     var wait=document.createElement('p');wait.className='p3-none';wait.textContent='Finding the best local matches...';
     wait.style.visibility='hidden';setTimeout(function(){wait.style.visibility=''},600);   /* only mention it if it really takes a moment */
     var fillSmart=function(list){if(wait.parentNode)wait.parentNode.removeChild(wait);
-    var vh='',rh='';list.forEach(function(m){var uid=String(m.id),b={n:dec(m.n),u:m.u,img:m.l||'',tel:m.ph||'',d:dec(m.d||''),st:dec(m.a||''),zip:m.z||'',reg:'NY',town:String(m.t||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0};
+    var vh='',rh='';list.forEach(function(m){var uid=String(m.id),b={n:dec(m.n),u:m.u,img:m.l||'',tel:m.ph||'',d:dec(m.d||''),st:dec(m.a||''),zip:m.z||'',reg:'NY',town:String(m.t||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0||m.p==='vip'};
       if(b.vip){vips.push(b);vh+=vipCard(b,vips.length-1)}else{rh+=card(b,nRest++)}});
     if(vh)VL.insertAdjacentHTML('beforeend',vh);if(rh)RG.insertAdjacentHTML('beforeend',rh);
     MORE.hidden=!(vips.length&&nRest);wireImgs(root);fillSides();hideChrome();eqSoon();
