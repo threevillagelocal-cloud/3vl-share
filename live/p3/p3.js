@@ -128,6 +128,8 @@ if(isResults||SMARTQ){
   /* SM = our smart matches for a keyword search (same engine as the search box), or null to restyle BD's own list (category pages) */
   var results=function(SM){var api=null;
   var VIP=['71','78','112','115','122','137','138','142','151','217','228','240','299','364','474','484','499','528','552','684'];  /* 684 Victor Stabile VIP 10/4/2026 */
+  /* courtesy (free) VIPs give their top spot to paying members: when a page already has 3 paying VIPs they show as regular cards (owner 10/4/2026: max 3 VIPs per category, paid first) */
+  var COMP=['71'],VMAX=3,paidV=-1;  /* 71 Team Passamenti (courtesy VIP) */
   var q=Q0;
   var h1=$('h1');var catName=!q&&h1?h1.textContent.trim():'';
   function read(it){var g=function(p){var m=it.querySelector('[itemprop="'+p+'"]');return m?(m.getAttribute('content')||m.getAttribute('href')||''):''};
@@ -233,7 +235,9 @@ if(isResults||SMARTQ){
   /* convert every BD result, including the ones BD loads as you scroll */
   function absorb(){var items=$$('.member_results.search_result:not([data-p3])');if(!items.length)return;
     var vh='',rh='';
+    if(paidV<0){paidV=0;items.forEach(function(it){var x=read(it);if(x.vip&&COMP.indexOf(x.uid)<0)paidV++})}
     items.forEach(function(it){it.setAttribute('data-p3','1');it.style.display='none';var b=read(it);if(!b.n)return;
+      if(b.vip&&COMP.indexOf(b.uid)>=0&&!SM&&paidV>=VMAX)b.vip=false;
       if(b.vip){vips.push(b);vh+=vipCard(b,vips.length-1)}else{rh+=card(b,nRest++)}});
     if(vh)VL.insertAdjacentHTML('beforeend',vh);if(rh)RG.insertAdjacentHTML('beforeend',rh);
     MORE.hidden=!(vips.length&&nRest);wireImgs(root);fillSides();hideChrome();eqSoon();
