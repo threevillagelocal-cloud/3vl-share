@@ -129,7 +129,7 @@ if(isResults||SMARTQ){
   var results=function(SM){var api=null;
   var VIP=['71','78','112','115','122','137','138','142','151','217','228','240','299','364','474','484','499','528','552','684'];
   /* top-spot limit per category: listed ids yield their featured spot when the page already has VMAX other featured members */
-  var COMP=['71'],VMAX=3,paidV=-1;
+  var VMAX=3;
   var q=Q0;
   var h1=$('h1');var catName=!q&&h1?h1.textContent.trim():'';
   function read(it){var g=function(p){var m=it.querySelector('[itemprop="'+p+'"]');return m?(m.getAttribute('content')||m.getAttribute('href')||''):''};
@@ -201,6 +201,9 @@ if(isResults||SMARTQ){
   /* 10/4/2026 heartbeat: while the end of the list is on screen keep asking BD for the next page (a press made before BD's loader was ready was lost, and pages that never scroll gave no second chance); loadMore() itself stops when everything is loaded */
   if(!SM){var hb=setInterval(function(){if(sent.style.display==='none'){clearInterval(hb);return}if(inView||sent.getBoundingClientRect().top<innerHeight+900)loadMore()},1200)}  /* reached OR scrolled past the end of the list */
 
+  /* top-spot limit: a featured member whose vip_meta priority is 0 shows as a regular card when VMAX others are featured here */
+  function yieldSpots(){if(SM||!META)return;var ws=[].slice.call(VL.querySelectorAll('.p3-vwrap')),hi=ws.filter(function(w){var m=META[w.getAttribute('data-uid')];return !m||m.pri!==0});
+    if(hi.length<VMAX)return;ws.forEach(function(w){var m=META[w.getAttribute('data-uid')];if(m&&m.pri===0){var b=vips[+w.getAttribute('data-i')];if(b){RG.insertAdjacentHTML('afterbegin',card(b,0));w.parentNode.removeChild(w)}}})}
   /* value panel from vip_meta.json (public listing details) */
   var META=null;
   function yrs(y){var n=new Date().getFullYear()-(+y);return n>0?n:0}
@@ -214,7 +217,7 @@ if(isResults||SMARTQ){
     L.push('<a class="p3-vrev" data-act="review" href="'+esc(u.replace(/\/$/,''))+'/writeareview">&#9733; '+(m.reviews?'Review':'First review')+'</a>');
     return h+'<div class="p3-vlinks">'+L.join('')+'</div>'}
   function fillSides(){if(!META)return;$$('.p3-vside:not(.is-filled)',root).forEach(function(a){var m=META[a.getAttribute('data-uid')];a.classList.add('is-filled');if(m){a.innerHTML=side(m,a.getAttribute('data-u'));a.parentNode.classList.add('has-side')}});eqSoon()}
-  fetch('https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/search/vip_meta.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).catch(function(){return fetch(BASE+'vip_meta.json').then(function(r){return r.json()})}).then(function(M){META=M;fillSides()}).catch(function(){});  /* nightly from 3vl-site-guard member-db (10/4/2026) */
+  fetch('https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/search/vip_meta.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).catch(function(){return fetch(BASE+'vip_meta.json').then(function(r){return r.json()})}).then(function(M){META=M;yieldSpots();fillSides()}).catch(function(){});  /* nightly from 3vl-site-guard member-db (10/4/2026) */
 
   /* logos: trim baked-in white margins so they fill the box */
   function trim(img){try{var w=img.naturalWidth,h=img.naturalHeight;if(!w||!h)return;var c=document.createElement('canvas'),k=Math.min(1,600/Math.max(w,h));c.width=Math.round(w*k);c.height=Math.round(h*k);
@@ -235,11 +238,9 @@ if(isResults||SMARTQ){
   /* convert every BD result, including the ones BD loads as you scroll */
   function absorb(){var items=$$('.member_results.search_result:not([data-p3])');if(!items.length)return;
     var vh='',rh='';
-    if(paidV<0){paidV=0;items.forEach(function(it){var x=read(it);if(x.vip&&COMP.indexOf(x.uid)<0)paidV++})}
     items.forEach(function(it){it.setAttribute('data-p3','1');it.style.display='none';var b=read(it);if(!b.n)return;
-      if(b.vip&&COMP.indexOf(b.uid)>=0&&!SM&&paidV>=VMAX)b.vip=false;
       if(b.vip){vips.push(b);vh+=vipCard(b,vips.length-1)}else{rh+=card(b,nRest++)}});
-    if(vh)VL.insertAdjacentHTML('beforeend',vh);if(rh)RG.insertAdjacentHTML('beforeend',rh);
+    if(vh)VL.insertAdjacentHTML('beforeend',vh);if(rh)RG.insertAdjacentHTML('beforeend',rh);if(vh&&META)yieldSpots();
     MORE.hidden=!(vips.length&&nRest);wireImgs(root);fillSides();hideChrome();eqSoon();
     if(typeof sent!=='undefined'){sent.classList.remove('is-on');root.appendChild(sent);busy=false;
       var r=sent.getBoundingClientRect();if(r.top<innerHeight+900)setTimeout(loadMore,400)}}
