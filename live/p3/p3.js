@@ -185,7 +185,7 @@ if(isResults||SMARTQ){
     var more=document.querySelector('.clickToLoadMoreContainer');
     if(SM){if(more)more.style.display='none';$$('.no-results-members,.member_results_header,.content_w_sidebar.member_results .pagination-container,.content_w_sidebar.member_results ul.pagination').forEach(function(e){if(!root.contains(e))e.style.display='none'});
       $$('.member_results.search_result:not([data-p3])').forEach(function(it){it.setAttribute('data-p3','1');it.style.display='none'});return}
-    if(more&&more.parentNode!==root){root.appendChild(more);more.classList.add('p3-loadmore')}}
+    if(more){more.style.cssText='position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden'}}  /* 10/4/2026: keep BD's load-more box where BD's lazy loader looks for it (.grid-container .clickToLoadMoreContainer); moving it into #p3 made BD drop every next page */
   hideChrome();document.addEventListener('DOMContentLoaded',hideChrome);window.addEventListener('load',hideChrome);
   /* seamless auto-load: when the end of our list comes near, press BD's load-more for the visitor */
   if(!SM){var sent=document.createElement('div');sent.className='p3-sentinel';sent.innerHTML='<span>Loading more businesses&hellip;</span>';root.appendChild(sent);
