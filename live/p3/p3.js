@@ -127,7 +127,7 @@ var COLORS=['#006fbb','#d9534f','#0f866c','#f0ad4e','#8e5bd6','#205081','#3aa0e8
 if(isResults||SMARTQ){
   /* SM = our smart matches for a keyword search (same engine as the search box), or null to restyle BD's own list (category pages) */
   var results=function(SM){var api=null;
-  var VIP=['71','78','112','115','122','137','138','142','151','217','228','240','299','364','474','484','499','528','552'];
+  var VIP=['71','78','112','115','122','137','138','142','151','217','228','240','299','364','474','484','499','528','552','684'];  /* 684 Victor Stabile VIP 10/4/2026 */
   var q=Q0;
   var h1=$('h1');var catName=!q&&h1?h1.textContent.trim():'';
   function read(it){var g=function(p){var m=it.querySelector('[itemprop="'+p+'"]');return m?(m.getAttribute('content')||m.getAttribute('href')||''):''};
