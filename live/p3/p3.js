@@ -298,7 +298,8 @@ if(path==='/categories'){
   var cats=panels.map(function(p,i){var a=$('.topClass',p);var subs=$$('.sub-level-link > a.sub-category',p).map(function(x){return {n:x.textContent.trim(),h:x.getAttribute('href')}});
     return {n:a.textContent.trim(),h:a.getAttribute('href'),slug:(a.getAttribute('href')||'').replace('/',''),subs:subs,c:COLORS[i%COLORS.length]}});
   /* 10/5/2026 (owner): the five Home Services groups are reached through the /home-services hub, not as their own tiles here */
-  var HS_GROUPS=['landscaping-property-maintenance','contractor','restoration','plumbing-electric-repairs','cleaning-organizing'];
+  var HS_GROUPS=['landscaping-property-maintenance','contractor','restoration','plumbing-electric-repairs','cleaning-organizing',
+    'wealth-management-financial-planning','mortgages-home-loans','accounting-tax','insurance'];   /* + the /financial-services groups */
   var allCats=cats;cats=cats.filter(function(c){return HS_GROUPS.indexOf(c.slug)<0});
   cats.forEach(function(c,i){c.c=COLORS[i%COLORS.length]});
   var quick=['Restaurants','Contractor','Home Services','Health & Wellness','Attorney','Real Estate','Beauty & Personal Care','Pet Services'].map(function(n){

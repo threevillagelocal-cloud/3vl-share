@@ -424,3 +424,6 @@ html.p3-on .content_w_sidebar{display:flex;flex-wrap:wrap}
 
 /* sidebar newsletter box (10/3/2026) */
 .module.newsletter-sign-up-form .p3-nlsub{margin:-4px 0 12px;text-align:center;font-size:14px;line-height:1.45;color:#5b6b7c}
+
+/* owner 10/5/2026: no "Join Our Community" box and no "Find Businesses" search box in any side column, sitewide */
+.member-join-offer,.module[class*="sidebar-search-member"]{display:none!important}
