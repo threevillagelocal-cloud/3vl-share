@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Home Services Hub Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#006fbb;--ink:#1b2f45;--ink2:#205081;--mut:#66717e;--line:#e3e9f0;--cream:#eef4fa;--gold:#f0ad4e}
+*{box-sizing:border-box}
+body{margin:0;background:#f6f9fc;color:var(--ink);font-family:'Radio Canada',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0;overflow-wrap:normal;word-break:normal;hyphens:none}
+.note{background:#fff8e6;border-bottom:1px solid #f3dfae;font-size:14px;padding:10px 16px;text-align:center;color:#6b5418}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.hero{padding:34px 0 22px}
+.crumb{font-size:13px;color:var(--mut);margin-bottom:10px}
+.crumb a{color:var(--blue);text-decoration:none}
+.hero h1{font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.5px;line-height:1.08}
+.hero h1 span{background:linear-gradient(transparent 68%,rgba(240,173,78,.55) 68%)}
+.hero p{margin-top:10px;font-size:17px;color:#45566a;max-width:640px;line-height:1.45}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(330px,100%),1fr));gap:20px;padding:10px 0 40px}
+.tile{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;box-shadow:0 2px 10px rgba(27,47,69,.05);transition:transform .15s,box-shadow .15s}
+.tile:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(27,47,69,.12)}
+.ph{position:relative;aspect-ratio:900/594;background:#dde6ef}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph .cnt{position:absolute;left:12px;bottom:12px;background:#fff;color:var(--ink);font-weight:600;font-size:13px;border-radius:999px;padding:5px 11px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.bd{padding:16px 18px 18px;display:flex;flex-direction:column;gap:12px;flex:1}
+.bd h2{font-size:22px;line-height:1.15}
+.bd h2 small{display:block;font-size:15px;font-weight:600;color:var(--blue);margin-top:3px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:12.5px;background:var(--cream);color:var(--ink2);border-radius:999px;padding:4px 10px;white-space:nowrap}
+.feat{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
+.feat b{font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--mut);font-weight:600;white-space:nowrap}
+.logos{display:flex;gap:8px;flex-wrap:wrap}
+.logos img{width:44px;height:44px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:10px;padding:3px}
+.go{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--blue);color:#fff;font-weight:600;border-radius:10px;padding:11px 14px;font-size:15px}
+.ask{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:46px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.ask h3{font-size:20px}
+.ask p{color:var(--mut);margin-top:4px}
+.ask a{background:var(--gold);color:var(--ink);font-weight:700;text-decoration:none;border-radius:10px;padding:11px 16px;white-space:nowrap}
+@media(max-width:400px){.grid{grid-template-columns:1fr}.hero h1{font-size:29px}}
+</style>
+</head>
+<body>
+<div class="note">Preview only. Nothing on the live site has changed yet.</div>
+<div class="wrap">
+  <header class="hero">
+    <div class="crumb"><a href="#">Find a Local Business</a> &rsaquo; Home Services</div>
+    <h1>Home pros you can <span>trust</span>, right here in Three Village</h1>
+    <p>Pick what you need. Every business here serves Setauket, Stony Brook, Port Jefferson and the neighborhoods around them.</p>
+  </header>
+
+  <main class="grid">
+    <a class="tile" href="#">
+      <div class="ph"><img src="hs/land-v1.webp" alt="Freshly mowed lawn at sunset"><span class="cnt">9 local businesses</span></div>
+      <div class="bd">
+        <h2>Landscaping &amp; Property Maintenance</h2>
+        <div class="chips"><span>Landscaping</span><span>Lawn Care</span><span>Tree Care</span><span>Snow Removal</span><span>Pressure Washing</span><span>Pools</span><span>Home Watch</span></div>
+        <div class="feat"><b>Featured</b><div class="logos">
+          <img src="https://www.threevillagelocal.com/pictures/profile/pimage-474-268-photo.webp" alt="Chris's Complete Landscaping">
+          <img src="https://www.threevillagelocal.com/logos/profile/limage-528-438-photo.webp" alt="Rolling Hills Property Services">
+          <img src="https://www.threevillagelocal.com/logos/profile/limage-142-413-photo.png" alt="Aronica Plant Healthcare">
+        </div></div>
+        <span class="go">See landscapers &amp; more &rarr;</span>
+      </div>
+    </a>
+
+    <a class="tile" href="#">
+      <div class="ph"><img src="hs/contr-v1.webp" alt="Bright remodeled kitchen"><span class="cnt">11 local businesses</span></div>
+      <div class="bd">
+        <h2>Contractors &amp; Remodeling</h2>
+        <div class="chips"><span>General Contractors</span><span>Kitchens &amp; Baths</span><span>Interior Design</span><span>Flooring</span><span>Floor Refinishing</span><span>Painters</span><span>Masonry</span></div>
+        <div class="feat"><b>Featured</b><div class="logos">
+          <img src="https://www.threevillagelocal.com/logos/profile/limage-115-32-photo.webp" alt="KGR Contracting">
+          <img src="https://www.threevillagelocal.com/logos/profile/limage-554-249-photo.webp" alt="Savera Wood Floor Refinishing">
+        </div></div>
+        <span class="go">See contractors &rarr;</span>
+      </div>
+    </a>
+
+    <a class="tile" href="#">
+      <div class="ph"><img src="hs/resto-v1.webp" alt="Flood barrier protecting a home"><span class="cnt">3 local businesses</span></div>
+      <div class="bd">
+        <h2>Restoration<small>Flood, Fire &amp; Mold</small></h2>
+        <div class="chips"><span>Water Damage</span><span>Fire &amp; Smoke</span><span>Storm Damage</span><span>Mold Removal</span><span>24/7 Emergency</span></div>
+        <div class="feat"><b>Featured</b><div class="logos">
+          <img src="https://www.threevillagelocal.com/logos/profile/limage-151-193-photo.png" alt="Magic Home Restoration">
+        </div></div>
+        <span class="go">See restoration pros &rarr;</span>
+      </div>
+    </a>
+
+    <a class="tile" href="#">
+      <div class="ph"><img src="hs/repair-v1.webp" alt="Electrician at work"><span class="cnt">6 local businesses</span></div>
+      <div class="bd">
+        <h2>Plumbing, Electric &amp; Repairs</h2>
+        <div class="chips"><span>Plumbers</span><span>Heating</span><span>Electricians</span><span>Locksmiths</span><span>Alarms &amp; Security</span><span>Handyman</span></div>
+        <div class="feat"><b>Featured</b><div class="logos" style="color:var(--mut);font-size:13px">Your business here</div></div>
+        <span class="go">See plumbers &amp; electricians &rarr;</span>
+      </div>
+    </a>
+
+    <a class="tile" href="#">
+      <div class="ph"><img src="hs/clean-v1.webp" alt="House cleaner vacuuming"><span class="cnt">5 local businesses</span></div>
+      <div class="bd">
+        <h2>Cleaning &amp; Organizing</h2>
+        <div class="chips"><span>House Cleaning</span><span>Carpet Cleaning</span><span>Organizers</span><span>Home Staging</span><span>Junk Removal</span></div>
+        <div class="feat"><b>Featured</b><div class="logos" style="color:var(--mut);font-size:13px">Your business here</div></div>
+        <span class="go">See cleaners &amp; organizers &rarr;</span>
+      </div>
+    </a>
+  </main>
+
+  <section class="ask">
+    <div><h3>Own a home services business in Three Village?</h3><p>Get your business in front of local homeowners.</p></div>
+    <a href="#">List your business</a>
+  </section>
+</div>
+</body>
+</html>
