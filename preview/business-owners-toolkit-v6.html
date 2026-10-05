@@ -32,11 +32,25 @@ body:has(#bx-top) .post-detail-body h1{position:absolute!important;width:1px!imp
 .bx .bx-lead2{font-size:18px;font-weight:600;color:#13233a;line-height:1.45;margin:0 2px 18px!important}
 .bx-js .bx-row{opacity:0;transform:translateY(18px) scale(.985);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .2s}
 .bx-js .bx-row.bx-in{opacity:1;transform:none}
-.bx-row:hover{transform:translateY(-2px)!important;box-shadow:0 10px 24px rgba(19,35,58,.1)}
+.bx-row{position:relative;overflow:hidden}
+.bx-row:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#3d8bff,#1f5fae);transform:scaleY(0);transform-origin:center;transition:transform .3s ease}
+.bx-row:after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(31,95,174,.08),transparent);transform:skewX(-18deg);pointer-events:none}
+.bx-row:hover,.bx-row:focus-within{transform:translateY(-4px) scale(1.012)!important;box-shadow:0 16px 34px rgba(19,35,58,.14);border-color:#bcd3ee;background:#fbfdff}
+.bx-row:hover:before,.bx-row:focus-within:before{transform:scaleY(1)}
+.bx-row:hover:after{animation:bxshine .9s ease}
+@keyframes bxshine{to{left:130%}}
+.bx-row:hover .bx-logo{animation:bxbounce .55s ease;border-color:#8ec5ff;box-shadow:0 6px 16px rgba(31,95,174,.18)}
+@keyframes bxbounce{0%{transform:scale(1) rotate(0)}35%{transform:scale(1.14) rotate(-6deg)}65%{transform:scale(.97) rotate(3deg)}100%{transform:scale(1) rotate(0)}}
+.bx-row:hover .bx-info b{color:#1f5fae}
+.bx-btns a{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.bx-row:hover .bx-call{box-shadow:0 0 0 0 rgba(31,95,174,.5);animation:bxpulse 1.2s ease infinite}
+@keyframes bxpulse{0%{box-shadow:0 0 0 0 rgba(31,95,174,.45)}70%{box-shadow:0 0 0 10px rgba(31,95,174,0)}100%{box-shadow:0 0 0 0 rgba(31,95,174,0)}}
+.bx-btns a:hover{transform:translateY(-2px)}
+.bx-row:active{transform:scale(.99)!important}
 .bx-in .bx-logo{animation:bxpop .6s ease both;animation-delay:inherit}
 @keyframes bxpop{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
 .bx-fav{animation:bxglow 2.6s ease-in-out infinite}@keyframes bxglow{50%{color:#d08a00}}
-@media (prefers-reduced-motion:reduce){.bx-js .bx-row{opacity:1;transform:none;transition:none}.bx-in .bx-logo,.bx-fav{animation:none}}
+@media (prefers-reduced-motion:reduce){.bx-js .bx-row{opacity:1;transform:none;transition:none}.bx-in .bx-logo,.bx-fav,.bx-row:hover .bx-logo,.bx-row:hover .bx-call,.bx-row:hover:after{animation:none}.bx-row:hover{transform:none!important}}
 .bx-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
 .bx-nav a{font-size:13.5px;font-weight:600;color:var(--b);background:#eef4fb;border-radius:999px;padding:7px 13px;text-decoration:none;white-space:nowrap}
 .bx-grp{margin:0 0 24px;scroll-margin-top:80px}
