@@ -297,8 +297,12 @@ if(path==='/categories'){
   var panels=$$('.categories-panel');if(!panels.length)return;
   var cats=panels.map(function(p,i){var a=$('.topClass',p);var subs=$$('.sub-level-link > a.sub-category',p).map(function(x){return {n:x.textContent.trim(),h:x.getAttribute('href')}});
     return {n:a.textContent.trim(),h:a.getAttribute('href'),slug:(a.getAttribute('href')||'').replace('/',''),subs:subs,c:COLORS[i%COLORS.length]}});
+  /* 10/5/2026 (owner): the five Home Services groups are reached through the /home-services hub, not as their own tiles here */
+  var HS_GROUPS=['landscaping-property-maintenance','contractor','restoration','plumbing-electric-repairs','cleaning-organizing'];
+  var allCats=cats;cats=cats.filter(function(c){return HS_GROUPS.indexOf(c.slug)<0});
+  cats.forEach(function(c,i){c.c=COLORS[i%COLORS.length]});
   var quick=['Restaurants','Contractor','Home Services','Health & Wellness','Attorney','Real Estate','Beauty & Personal Care','Pet Services'].map(function(n){
-    var m=cats.filter(function(c){return c.n.toLowerCase().indexOf(n.toLowerCase().split(' ')[0])===0})[0];return m?{n:n,h:m.h}:null}).filter(Boolean);
+    var m=allCats.filter(function(c){return c.n.toLowerCase().indexOf(n.toLowerCase().split(' ')[0])===0})[0];return m?{n:n,h:m.h}:null}).filter(Boolean);
   var h='<header class="p3-phero" style="background-image:url(\''+BASE+'img/cafe-hero.jpg\')"><div class="p3-phin"><span class="p3-kick">THREE VILLAGE LOCAL</span><h1 class="p3-h1">Explore <em>Three Village</em></h1>'+
     '<p class="p3-sub">The local businesses your neighbors trust, all in one place.</p>'+
     '<form class="p3-search p3-hsearch" action="/search_results" method="get"><span>&#128269;</span><input id="p3q" name="q" autocomplete="off" placeholder="What are you looking for? Try &quot;pizza&quot;, &quot;plumber&quot;, &quot;dentist&quot;&hellip;"></form></div>'+
