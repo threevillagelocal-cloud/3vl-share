@@ -80,13 +80,13 @@ function run(){
     ['&#128205;','Service areas','Where you work','/account/locations'],['&#128232;','Leads','Messages from neighbors','/account/leads'],['&#11088;','Reviews','What customers say','/account/recommendations']]
     .map(function(x){return '<a href="'+x[3]+'"><span class="i">'+x[0]+'</span><span><b>'+x[1]+'</b><small>'+x[2]+'</small></span></a>'}).join('');
   var row=$('.dashboard-publish-content');var dc3=$('#dc3');
-  /* Smart Publisher card (replaces the old "Got something to promote?" card): open for Getting Noticed + VIP, locked for everyone else */
+  /* Smart Publisher card (replaces the old "Got something to promote?" card): open for Featured + VIP, locked for everyone else */
   var paid=/\bsession-plan-level-(1|2|8)\b/.test(document.body.className);
   var old=dc3&&$$('.dc3-c',dc3).filter(function(c){return !c.classList.contains('mm')})[0];
   if(old){var sp=document.createElement('div');sp.className='td-sp'+(paid?'':' locked');
     sp.innerHTML=paid
       ?'<div class="td-spic">&#10024;</div><p class="td-k">New &middot; 3VL Smart Publisher</p><b>Promote something in minutes</b><p>Tell us the basics about your event, special or news. We write it, design it and publish it on Three Village Local when you choose.</p><a class="td-spb" href="/smart-publisher">Open Smart Publisher</a>'
-      :'<div class="td-spic">&#128274;</div><p class="td-k">3VL Smart Publisher</p><span class="td-pill">Getting Noticed and VIP members</span><b>Your own page about your event or special, written for you</b><p>Give us the basics, our smart publishing tool writes and designs the page, and it goes live on Three Village Local when you choose, with an option to promote it on our social media.</p><a class="td-spb" href="/checkout/2">Upgrade now</a> <a class="td-spl" href="/join">See the plans &rarr;</a><p class="td-free">Free members can still send us a tip anytime: <a href="/promotion#pr3-form">submit a promotion</a> and our team decides what to feature.</p>';
+      :'<div class="td-spic">&#128274;</div><p class="td-k">3VL Smart Publisher</p><span class="td-pill">Featured and VIP members</span><b>Your own page about your event or special, written for you</b><p>Give us the basics, our smart publishing tool writes and designs the page, and it goes live on Three Village Local when you choose, with an option to promote it on our social media.</p><a class="td-spb" href="/checkout/2">Upgrade now</a> <a class="td-spl" href="/join">See the plans &rarr;</a><p class="td-free">Free members can still send us a tip anytime: <a href="/promotion#pr3-form">submit a promotion</a> and our team decides what to feature.</p>';
     old.parentNode.replaceChild(sp,old)}
   (dc3||title).insertAdjacentElement('afterend',q);
   /* publishing tiles: only the post types the site uses */
