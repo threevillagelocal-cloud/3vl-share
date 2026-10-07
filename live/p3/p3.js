@@ -26,44 +26,46 @@ function track(n,o){try{if(window.gtag)window.gtag('event',n,o)}catch(e){}}
 function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function norm(s){return String(s||'').toLowerCase().replace(/&amp;/g,'&').replace(/[’']/g,'').replace(/[^a-z0-9&]+/g,' ').trim()}
 function stem(w){if(w.length<=4)return w;var t=w.replace(/ies$/,'y').replace(/(ers|er|ing|es|s)$/,'');return t.length>=4?t:w}   /* never stem down to a stub (dining -> din) */
-var SYN={ac:'hvac',hvac:'hvac heating',lawyer:'attorney lawyer law',attorney:'attorney lawyer law',vet:'veterinarian veterinary',doctor:'doctor physician medical',mechanic:'mechanic auto',car:'auto car',haircut:'hair salon barber haircut',barber:'barber hair',kids:'kids children',cpa:'accounting tax cpa',accountant:'accounting tax accountant',realtor:'real estate realtor',movers:'moving movers',daycare:'preschool childcare daycare',toothache:'dentist dental',tooth:'dentist dental',teeth:'dentist dental',wasp:'pest exterminator',wasps:'pest exterminator',bees:'pest exterminator',mice:'pest exterminator rodent',rats:'pest exterminator rodent',ants:'pest exterminator',termites:'pest exterminator termite',bugs:'pest exterminator',sprinkler:'irrigation sprinkler lawn',faucet:'plumber faucet',leak:'leak plumber',leaky:'leak plumber',outlet:'electrician',breaker:'electrician',wiring:'electrician',lawn:'lawn landscaping',mow:'lawn landscaping',snow:'snow plowing',ticks:'tick mosquito',mosquitoes:'mosquito',taxes:'tax accounting',groomer:'grooming groomer',grooming:'grooming groomer',sushi:'sushi japanese',optometrist:'optometrist optometry eye',glasses:'eyeglasses optometrist glasses',therapist:'therapist therapy counseling',gym:'gym fitness',dj:'dj'};
+var SYN={ac:'hvac',hvac:'hvac furnace boiler =heating',lawyer:'attorney lawyer law',attorney:'attorney lawyer law',vet:'veterinarian veterinary',doctor:'doctor physician',mechanic:'mechanic auto',car:'auto car',haircut:'hair salon barber haircut',barber:'barber barbershop haircut',kids:'kids children',cpa:'accounting tax cpa',accountant:'accounting accountant bookkeeping cpa',exterminator:'pest exterminator',dermatologist:'dermatology dermatologist',pediatrician:'pediatric pediatrician',drycleaner:'drycleaner laundry',carpenter:'carpenter carpentry contractor remodeling',carpentry:'carpentry contractor remodeling',realtor:'real estate realtor',movers:'moving movers',daycare:'preschool childcare daycare',toothache:'dentist dental',tooth:'dentist dental',teeth:'dentist dental',wasp:'pest exterminator',wasps:'pest exterminator',bees:'pest exterminator',mice:'pest exterminator rodent',rats:'pest exterminator rodent',ants:'pest exterminator',termites:'pest exterminator termite',bugs:'pest exterminator',sprinkler:'irrigation sprinkler lawn',faucet:'plumber faucet',leak:'leak plumber',leaky:'leak plumber',outlet:'electrician',breaker:'electrician',wiring:'electrician',lawn:'lawn landscaping',mow:'lawn landscaping',snow:'snow plowing',ticks:'tick mosquito',mosquitoes:'mosquito',taxes:'tax accounting',groomer:'grooming groomer',grooming:'grooming groomer',sushi:'sushi japanese',optometrist:'optometrist optometry eye',glasses:'eyeglasses optometrist glasses',therapist:'therapist therapy counseling',gym:'gym fitness',dj:'dj'};
 function load(){if(data||loading)return loading;loading=fetch(IDX+'?v='+Math.floor(Date.now()/36e5)).then(function(r){return r.json()}).then(function(j){
-  data=(j.members||[]).map(function(m){return {m:m,name:norm(m.n),cat:norm(m.c+' '+(m.s||[]).join(' ')),terms:(m.k||[]).map(norm),desc:norm(m.d),town:norm(m.t)}});return data}).catch(function(){loading=null});return loading}
+  data=(j.members||[]).map(function(m){return {m:m,name:norm(m.n),cat:norm(m.c+' '+(m.s||[]).join(' ')),spec:norm((m.s||[]).join(' '))||norm(m.c),terms:(m.k||[]).map(norm),desc:norm(m.d),town:norm(m.t)}});return data}).catch(function(){loading=null});return loading}
 function lev1(a,b){if(Math.abs(a.length-b.length)>1)return false;var i=0,j=0,e=0;while(i<a.length&&j<b.length){if(a[i]===b[j]){i++;j++;continue}if(++e>1)return false;if(a.length>b.length)i++;else if(b.length>a.length)j++;else{i++;j++}}return e+(a.length-i)+(b.length-j)<=1}
 /* How a query word can hit a field: 2 = strong (the whole word, or the word plus a normal ending: plumb+ing, dent+ist, sign+s),
    1 = loose (some other prefix like sign|ature, inside a word, or one typo), 0 = no hit.
    strict = a word WE added (a SYN meaning, e.g. toothache -> dental): only a strong hit counts.
    Loose hits exist so results appear while someone is still typing and for typos; they are dropped whenever a strong match exists
    (otherwise "signs" lists Signature realtors, "pilates" lists restaurants with "plates", "dental" pulls "rental") - 10/1/2026. */
+var NOTYPO={carpent:1,carpenter:1,moving:1,mover:1,movers:1,mowing:1,carpet:1};   /* one letter from another trade: no typo matching (owner audit 10/6/2026) */
 var SUF=/^(|s|es|e|ed|er|ers|ing|ings|ist|ists|istry|ry|ery|al|y|ies|or|ors|ian|ians|ant|ants|ment|ic|ics|man|men|age)$/;
 function pre(w,text){var t=' '+text+' ',i=-1,best=0;while((i=t.indexOf(' '+w,i+1))>-1){var j=i+1+w.length,k=t.indexOf(' ',j);if(SUF.test(t.slice(j,k)))return 2;best=1}return best}
 function wordHit(w,text,strict){if(!text)return 0;if(w.length<=3)return (' '+text+' ').indexOf(' '+w+' ')>-1?2:0;
   var p=pre(w,text);if(p===2)return 2;if(strict)return 0;if(p===1)return 1;if(w.length>=5&&text.indexOf(w)>-1)return 1;
-  if(w.length>=5){var ws=text.split(' '),sw=stem(w),f2=w.slice(0,2);for(var i=0;i<ws.length;i++)if(ws[i].length>=4&&ws[i].slice(0,2)===f2&&lev1(sw,stem(ws[i])))return 1}return 0}
+  if(w.length>=5&&!NOTYPO[w]){var ws=text.split(' '),sw=stem(w),f2=w.slice(0,2);for(var i=0;i<ws.length;i++)if(ws[i].length>=4&&ws[i].slice(0,2)===f2&&lev1(sw,stem(ws[i])))return 1}return 0}
 function has(text,q){return q.length<=3?(' '+text+' ').indexOf(' '+q+' ')>-1:q.length<=4?(' '+text).indexOf(' '+q)>-1:text.indexOf(q)>-1}
 /* r._all = every query word hit something; r._weak = some word only hit loosely, or only in the description/town; r._hit = which words hit */
 function score(r,q,words){var s=0,sh=q.length<=3;
   if(r.name===q)s+=400;else if(!sh&&r.name.indexOf(q)===0)s+=220;else if(sh?has(r.name,q):(' '+r.name).indexOf(' '+q)>-1)s+=sh?180:150;
   if(q.length>2){for(var i=0;i<r.terms.length;i++){if(r.terms[i]===q){s+=160;break}if(has(r.terms[i],q)){s+=90;break}}
     if(has(r.cat,q))s+=110}
-  var all=true,weak=false,hit=[],catAll=true;words.forEach(function(w){var best=0,cls=0,cw=0;[w].concat(SYN[w]?SYN[w].split(' '):[]).forEach(function(v){var st=v!==w,ws=stem(v),c=0;
-    var hn=wordHit(ws,r.name,st),hc=wordHit(ws,r.cat,st),b=Math.max(hn*45,hc*35);c=Math.max(hn,hc);if(hc===2)cw=1;
+  var all=true,weak=false,hit=[],catAll=true,grpAll=true;words.forEach(function(w){var best=0,cls=0,cw=0;[w].concat(SYN[w]?SYN[w].split(' '):[]).forEach(function(v){var ex=v.charAt(0)==='=';if(ex)v=v.slice(1);var st=v!==w,ws=ex?v:stem(v),c=0,_g=0;   /* '=word' in SYN: match the exact word, unstemmed ('=heating' must not hit 'heat therapy') */
+    var hn=wordHit(ws,r.name,st),hc=wordHit(ws,r.cat,st),b=Math.max(hn*45,hc*35);c=Math.max(hn,hc);if(wordHit(ws,r.spec,st)===2)cw=1;if(hc===2)cw=cw||.5;
     for(var i=0;i<r.terms.length&&b<60;i++){var ht=wordHit(ws,r.terms[i],st);if(ht*30>b)b=ht*30;if(ht>c)c=ht}
     if(!b){b=wordHit(ws,r.desc,st)*8+wordHit(ws,r.town,st)*10;c=b?.5:0}   /* description/town only: a few points, but it does not count as matching the word */
     if(b>best)best=b;if(c>cls)cls=c});
-    hit.push(cls>=1);if(cls>=1){if(cls<2)weak=true}else{all=false;if(best)weak=true}if(!cw)catAll=false;s+=best});
-  r._all=all;r._weak=weak;r._hit=hit;r._cat=catAll||(q.length>2&&has(r.cat,q));
+    hit.push(cls>=1);if(cls>=1){if(cls<2)weak=true}else{all=false;if(best)weak=true}if(cw!==1)catAll=false;if(!cw)grpAll=false;s+=best});
+  r._all=all;r._weak=weak;r._hit=hit;r._cat=catAll||(q.length>2&&has(r.spec,q));r._grp=grpAll||(q.length>2&&has(r.cat,q));   /* own specialties, not the group name ("Plumbing, Electric & Repairs" made electricians count for plumber) */
   if(words.length>1&&all)s+=40;if(!all&&words.length>1)s*=.55;
   return s}
 /* whole phrases that mean one thing; swapped in before the words are looked at */
-var PHRASE=[['air conditioning','hvac'],['air conditioner','hvac'],['central air','hvac'],['hot water','water heater'],['dry cleaners','drycleaner'],['dry cleaner','drycleaner'],['dry cleaning','drycleaner'],['eye doctor','optometrist'],['eye exam','optometrist'],['real estate agent','realtor'],['oil change','oil change auto']];
+var PHRASE=[['air conditioning','hvac'],['air conditioner','hvac'],['central air','hvac'],['hot water','water heater'],['dry cleaners','drycleaner'],['dry cleaner','drycleaner'],['dry cleaning','drycleaner'],['eye doctor','optometrist'],['eye exam','optometrist'],['real estate agent','realtor'],['oil change','oil change auto'],['moving company','movers'],['moving','movers']];
 function search(qraw,max){var q=norm(qraw);if(q.length<2||!data)return [];
   PHRASE.forEach(function(p){if((' '+q+' ').indexOf(' '+p[0]+' ')>-1)q=(' '+q+' ').replace(' '+p[0]+' ',' '+p[1]+' ').trim()});
   var words=q.split(' ').filter(function(w){return w&&w!=='&'&&!STOP[w]});if(!words.length)words=[q];
-  var out=[];data.forEach(function(r){var s=score(r,q,words);if(s>=28)out.push({r:r,s:s,all:r._all,weak:r._weak,hit:r._hit,cat:r._cat})});
+  var out=[];data.forEach(function(r){var s=score(r,q,words);if(s>=28)out.push({r:r,s:s,all:r._all,weak:r._weak,hit:r._hit,cat:r._cat,grp:r._grp})});
   /* owner 10/6/2026: "contractor" listed National Janitorial Cleaning Contractor's first (word in its NAME). When the words match a
      business CATEGORY, that category's businesses come first; name-only matches from other categories sink to the bottom. */
-  if(out.some(function(x){return x.cat}))out.forEach(function(x){if(x.cat)x.s+=300;else x.s*=.5});
+  if(out.some(function(x){return x.cat}))out.forEach(function(x){if(x.cat)x.s+=300;else x.s*=x.grp?.5:.35});   /* own specialty first; same group (e.g. electricians for plumber) only if strong */
+  else if(out.some(function(x){return x.grp}))out.forEach(function(x){if(x.grp)x.s+=300;else x.s*=.35});   /* doctor: no specialty says doctor, the group name does */
   if(words.length>1){
     if(out.some(function(x){return x.all}))out=out.filter(function(x){return x.all});
     else{   /* nobody matches every word: keep a partial match only if the words it does match are the telling ones (rare words), so
