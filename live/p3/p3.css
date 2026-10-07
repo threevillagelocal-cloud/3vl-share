@@ -432,3 +432,49 @@ html.p3-on .content_w_sidebar{display:flex;flex-wrap:wrap}
 .member_profile.level_1 .member-profile-header::before,.member_profile.level_8 .member-profile-header::before{content:"\2605 VIP";position:absolute;top:26px;right:-50px;width:200px;transform:rotate(45deg);text-align:center;padding:9px 0;background:linear-gradient(135deg,#ffd76a,#f0ad2e);color:#13294b;font:800 15px/1 'Radio Canada',sans-serif;letter-spacing:.16em;box-shadow:0 6px 16px rgba(240,173,46,.45);z-index:5;pointer-events:none}
 .member_profile.level_1 .member-profile-header h1::after,.member_profile.level_8 .member-profile-header h1::after{content:"\2605  VIP Member";display:table;margin:10px auto 0;padding:7px 16px;border-radius:999px;background:linear-gradient(135deg,#ffd76a,#f0ad2e);color:#13294b;font:800 14px/1 'Radio Canada',sans-serif;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 6px 16px rgba(240,173,46,.35)}
 .member_profile.level_2 .member-profile-header h1::after{content:"Featured Business";display:table;margin:8px auto 0;padding:4px 11px;border-radius:999px;background:#eaf2fd;border:1px solid #c7dbf6;color:#1d5fbf;font:700 11px/1 'Radio Canada',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+/* VIP + Featured profile layer (owner 10/7/2026): VIP = most premium + animated; badges row with VIP / Featured + Verified.
+   Badges are built by vip.js into .p3-tiers under the name. Animations respect prefers-reduced-motion. */
+@keyframes p3vSheen{0%{background-position:-160% 0}55%,100%{background-position:260% 0}}
+@keyframes p3vGlow{0%,100%{box-shadow:0 0 0 2px rgba(240,173,46,.45),0 16px 38px rgba(19,41,75,.10)}50%{box-shadow:0 0 0 2px rgba(240,173,46,.9),0 18px 46px rgba(240,173,46,.22)}}
+@keyframes p3vRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes p3vPop{0%{opacity:0;transform:scale(.6)}70%{transform:scale(1.08)}100%{opacity:1;transform:none}}
+@keyframes p3vDrift{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+
+/* old hidden plan/verified images column and the h1 pseudo pills are replaced by .p3-tiers */
+.member_profile.level_1 .member-badges,.member_profile.level_8 .member-badges,.member_profile.level_2 .member-badges{display:none!important}
+.member_profile.p3-hastiers .member-profile-header h1::after{content:none!important;display:none!important}
+
+/* badges row */
+.p3-tiers{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px;justify-content:inherit}
+.p3-tier{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:999px;font:800 13px/1 'Radio Canada',sans-serif;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;animation:p3vPop .6s cubic-bezier(.2,.8,.2,1) both}
+.p3-tier svg{width:15px;height:15px;flex:none}
+.p3-tier.vip{color:#13294b;background:linear-gradient(110deg,#f0ad2e 0%,#ffd76a 35%,#fff6d6 50%,#ffd76a 65%,#f0ad2e 100%);background-size:250% 100%;box-shadow:0 6px 16px rgba(240,173,46,.38);animation:p3vPop .6s cubic-bezier(.2,.8,.2,1) both,p3vSheen 3.6s ease-in-out 1s infinite}
+.p3-tier.feat{color:#1d5fbf;background:#eaf2fd;border:1px solid #c7dbf6}
+.p3-tier.ver{color:#0f6b4f;background:#e8f7f0;border:1px solid #bfe6d4;animation-delay:.15s}
+.p3-tier.ver svg circle{fill:#16a36a}
+@media (max-width:767px){.p3-tiers{justify-content:center}}
+
+/* VIP header card: slow gold glow + shimmering ribbon */
+.member_profile.level_1 .member-profile-header,.member_profile.level_8 .member-profile-header{animation:p3vGlow 4.5s ease-in-out infinite;border-radius:24px}
+.member_profile.level_1 .member-profile-header::before,.member_profile.level_8 .member-profile-header::before{background:linear-gradient(110deg,#f0ad2e 0%,#ffd76a 35%,#fff6d6 50%,#ffd76a 65%,#f0ad2e 100%)!important;background-size:250% 100%!important;animation:p3vSheen 3.6s ease-in-out infinite}
+
+/* about-section building blocks (classes set in each member's about_me) */
+.p3v-hero{position:relative;overflow:hidden}
+.p3v-hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.10) 45%,transparent 60%);background-size:250% 100%;animation:p3vSheen 6s ease-in-out 1.2s infinite}
+.p3v-hero .p3v-in>*{animation:p3vRise .8s cubic-bezier(.2,.8,.2,1) both}
+.p3v-hero .p3v-in>*:nth-child(2){animation-delay:.12s}.p3v-hero .p3v-in>*:nth-child(3){animation-delay:.24s}
+.p3v-hero .p3v-in>*:nth-child(4){animation-delay:.36s}.p3v-hero .p3v-in>*:nth-child(5){animation-delay:.48s}
+.p3v-line{height:3px;width:64px;border-radius:3px;background:linear-gradient(90deg,#ffd76a,#f0ad2e,#ffd76a);background-size:200% 100%;animation:p3vDrift 3s linear infinite alternate}
+.p3v-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.p3v-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(19,41,75,.13)}
+.p3v-js .p3v-reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.p3v-js .p3v-reveal.p3v-on{opacity:1;transform:none}
+.p3v-reveal.p3v-on .p3v-card{animation:p3vRise .6s cubic-bezier(.2,.8,.2,1) both}
+.p3v-reveal.p3v-on .p3v-card:nth-child(2){animation-delay:.08s}.p3v-reveal.p3v-on .p3v-card:nth-child(3){animation-delay:.16s}
+.p3v-reveal.p3v-on .p3v-card:nth-child(4){animation-delay:.24s}.p3v-reveal.p3v-on .p3v-card:nth-child(5){animation-delay:.32s}.p3v-reveal.p3v-on .p3v-card:nth-child(6){animation-delay:.40s}
+.p3v-photo{transition:transform .4s ease}.p3v-photo:hover{transform:scale(1.04) rotate(-1deg)}
+
+@media (prefers-reduced-motion:reduce){
+ .p3-tier,.p3-tier.vip,.member_profile .member-profile-header,.member_profile .member-profile-header::before,.p3v-hero::after,.p3v-hero .p3v-in>*,.p3v-line,.p3v-reveal.p3v-on .p3v-card{animation:none!important}
+ .p3v-reveal{opacity:1;transform:none;transition:none}
+}
