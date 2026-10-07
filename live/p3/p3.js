@@ -46,13 +46,13 @@ function score(r,q,words){var s=0,sh=q.length<=3;
   if(r.name===q)s+=400;else if(!sh&&r.name.indexOf(q)===0)s+=220;else if(sh?has(r.name,q):(' '+r.name).indexOf(' '+q)>-1)s+=sh?180:150;
   if(q.length>2){for(var i=0;i<r.terms.length;i++){if(r.terms[i]===q){s+=160;break}if(has(r.terms[i],q)){s+=90;break}}
     if(has(r.cat,q))s+=110}
-  var all=true,weak=false,hit=[];words.forEach(function(w){var best=0,cls=0;[w].concat(SYN[w]?SYN[w].split(' '):[]).forEach(function(v){var st=v!==w,ws=stem(v),c=0;
-    var hn=wordHit(ws,r.name,st),hc=wordHit(ws,r.cat,st),b=Math.max(hn*45,hc*35);c=Math.max(hn,hc);
+  var all=true,weak=false,hit=[],catAll=true;words.forEach(function(w){var best=0,cls=0,cw=0;[w].concat(SYN[w]?SYN[w].split(' '):[]).forEach(function(v){var st=v!==w,ws=stem(v),c=0;
+    var hn=wordHit(ws,r.name,st),hc=wordHit(ws,r.cat,st),b=Math.max(hn*45,hc*35);c=Math.max(hn,hc);if(hc===2)cw=1;
     for(var i=0;i<r.terms.length&&b<60;i++){var ht=wordHit(ws,r.terms[i],st);if(ht*30>b)b=ht*30;if(ht>c)c=ht}
     if(!b){b=wordHit(ws,r.desc,st)*8+wordHit(ws,r.town,st)*10;c=b?.5:0}   /* description/town only: a few points, but it does not count as matching the word */
     if(b>best)best=b;if(c>cls)cls=c});
-    hit.push(cls>=1);if(cls>=1){if(cls<2)weak=true}else{all=false;if(best)weak=true}s+=best});
-  r._all=all;r._weak=weak;r._hit=hit;
+    hit.push(cls>=1);if(cls>=1){if(cls<2)weak=true}else{all=false;if(best)weak=true}if(!cw)catAll=false;s+=best});
+  r._all=all;r._weak=weak;r._hit=hit;r._cat=catAll||(q.length>2&&has(r.cat,q));
   if(words.length>1&&all)s+=40;if(!all&&words.length>1)s*=.55;
   return s}
 /* whole phrases that mean one thing; swapped in before the words are looked at */
@@ -60,7 +60,10 @@ var PHRASE=[['air conditioning','hvac'],['air conditioner','hvac'],['central air
 function search(qraw,max){var q=norm(qraw);if(q.length<2||!data)return [];
   PHRASE.forEach(function(p){if((' '+q+' ').indexOf(' '+p[0]+' ')>-1)q=(' '+q+' ').replace(' '+p[0]+' ',' '+p[1]+' ').trim()});
   var words=q.split(' ').filter(function(w){return w&&w!=='&'&&!STOP[w]});if(!words.length)words=[q];
-  var out=[];data.forEach(function(r){var s=score(r,q,words);if(s>=28)out.push({r:r,s:s,all:r._all,weak:r._weak,hit:r._hit})});
+  var out=[];data.forEach(function(r){var s=score(r,q,words);if(s>=28)out.push({r:r,s:s,all:r._all,weak:r._weak,hit:r._hit,cat:r._cat})});
+  /* owner 10/6/2026: "contractor" listed National Janitorial Cleaning Contractor's first (word in its NAME). When the words match a
+     business CATEGORY, that category's businesses come first; name-only matches from other categories sink to the bottom. */
+  if(out.some(function(x){return x.cat}))out.forEach(function(x){if(x.cat)x.s+=300;else x.s*=.5});
   if(words.length>1){
     if(out.some(function(x){return x.all}))out=out.filter(function(x){return x.all});
     else{   /* nobody matches every word: keep a partial match only if the words it does match are the telling ones (rare words), so
