@@ -427,3 +427,8 @@ html.p3-on .content_w_sidebar{display:flex;flex-wrap:wrap}
 
 /* owner 10/5/2026: no "Join Our Community" box and no "Find Businesses" search box in any side column, sitewide */
 .member-join-offer,.module[class*="sidebar-search-member"]{display:none!important}
+/* Profile tier badges (owner 10/6/2026): VIP = gold corner ribbon + gold pill (elite); Featured = small blue oval only; free = nothing */
+.member_profile.level_1 .member-profile-header,.member_profile.level_8 .member-profile-header{position:relative;overflow:hidden}
+.member_profile.level_1 .member-profile-header::before,.member_profile.level_8 .member-profile-header::before{content:"\2605 VIP";position:absolute;top:26px;right:-50px;width:200px;transform:rotate(45deg);text-align:center;padding:9px 0;background:linear-gradient(135deg,#ffd76a,#f0ad2e);color:#13294b;font:800 15px/1 'Radio Canada',sans-serif;letter-spacing:.16em;box-shadow:0 6px 16px rgba(240,173,46,.45);z-index:5;pointer-events:none}
+.member_profile.level_1 .member-profile-header h1::after,.member_profile.level_8 .member-profile-header h1::after{content:"\2605  VIP Member";display:table;margin:10px auto 0;padding:7px 16px;border-radius:999px;background:linear-gradient(135deg,#ffd76a,#f0ad2e);color:#13294b;font:800 14px/1 'Radio Canada',sans-serif;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 6px 16px rgba(240,173,46,.35)}
+.member_profile.level_2 .member-profile-header h1::after{content:"Featured Business";display:table;margin:8px auto 0;padding:4px 11px;border-radius:999px;background:#eaf2fd;border:1px solid #c7dbf6;color:#1d5fbf;font:700 11px/1 'Radio Canada',sans-serif;letter-spacing:.08em;text-transform:uppercase}
