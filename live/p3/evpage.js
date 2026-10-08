@@ -69,8 +69,8 @@ function buildEvent(){
   hero.innerHTML=(photo?'<img class="ev-himg" src="'+esc(sm(photo,800))+'" data-o="'+esc(photo)+'" onerror="__tvlEvImg(this)" alt="'+esc(title)+'" fetchpriority="high">':'')+'<div class="ev-shade"></div>'+
     '<div class="ev-hin"><span class="ev-chip'+(past?' ev-past':'')+'">'+esc(past?'This event has passed':when(s,e))+'</span><div class="ev-h1"></div>'+
     (venue||addr?'<p class="ev-venue"><i class="fa fa-map-marker"></i> '+(venue?'<b>'+esc(venue)+'</b>':'')+(addr&&!(venue&&addr.indexOf(venue)===0)?' <span>'+esc(addr)+'</span>':'')+'</p>':'')+'</div>';
-  /* flyers and posters (square or tall artwork, usually full of text) are shown whole with the title underneath, not cropped behind it */
-  var him=$('.ev-himg',hero);if(him){var fit=function(){if(him.naturalWidth&&him.naturalHeight/him.naturalWidth>0.9)hero.classList.add('ev-split')};him.addEventListener('load',fit);if(him.complete)fit()}
+  /* flyers and posters (square or tall artwork, usually full of text) and designed banners (post content has a data-ev-art marker, e.g. Smart Publisher pages) are shown whole with the title underneath, not cropped behind it */
+  var him=$('.ev-himg',hero),art=!!$('[data-ev-art]',pc);if(him){var fit=function(){if(art||(him.naturalWidth&&him.naturalHeight/him.naturalWidth>0.9))hero.classList.add('ev-split')};him.addEventListener('load',fit);if(him.complete)fit()}
   if(h1){h1.className='';$('.ev-h1',hero).appendChild(h1)}else $('.ev-h1',hero).innerHTML='<h1>'+esc(title)+'</h1>';
   var act=document.createElement('div');act.className='ev-actions';
   var dir=addr||ev.location?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent((venue?venue+', ':'')+(addr||ev.location)):'';
