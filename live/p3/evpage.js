@@ -70,7 +70,11 @@ function buildEvent(){
     '<div class="ev-hin"><span class="ev-chip'+(past?' ev-past':'')+'">'+esc(past?'This event has passed':when(s,e))+'</span><div class="ev-h1"></div>'+
     (venue||addr?'<p class="ev-venue"><i class="fa fa-map-marker"></i> '+(venue?'<b>'+esc(venue)+'</b>':'')+(addr&&!(venue&&addr.indexOf(venue)===0)?' <span>'+esc(addr)+'</span>':'')+'</p>':'')+'</div>';
   /* flyers and posters (square or tall artwork, usually full of text) and designed banners (post content has a data-ev-art marker, e.g. Smart Publisher pages) are shown whole with the title underneath, not cropped behind it */
-  var him=$('.ev-himg',hero),art=!!$('[data-ev-art]',pc);if(him){var fit=function(){if(art||(him.naturalWidth&&him.naturalHeight/him.naturalWidth>0.9))hero.classList.add('ev-split')};him.addEventListener('load',fit);if(him.complete)fit()}
+  /* designed banners are full of small text: show them sharp. data-ev-art="<url>" = a full-size (2x) copy of the banner; otherwise use the
+     original image rather than the small 800px copy */
+  var him=$('.ev-himg',hero),artEl=$('[data-ev-art]',pc),art=!!artEl;
+  if(him&&art){var aSrc=artEl.getAttribute('data-ev-art')||'';him.setAttribute('src',aSrc.indexOf('http')===0?aSrc:(him.getAttribute('data-o')||him.getAttribute('src')))}
+  if(him){var fit=function(){if(art||(him.naturalWidth&&him.naturalHeight/him.naturalWidth>0.9))hero.classList.add('ev-split')};him.addEventListener('load',fit);if(him.complete)fit()}
   if(h1){h1.className='';$('.ev-h1',hero).appendChild(h1)}else $('.ev-h1',hero).innerHTML='<h1>'+esc(title)+'</h1>';
   var act=document.createElement('div');act.className='ev-actions';
   var dir=addr||ev.location?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent((venue?venue+', ':'')+(addr||ev.location)):'';
