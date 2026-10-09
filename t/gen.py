@@ -109,6 +109,15 @@ def collect():
                 add(o.group(1), (int(w.group(1)),))
     except Exception as ex:
         print("WARN locallistings", ex)
+    # /this-weekend (3vl-site-guard answer_pages.py): every card and the highlights carry data-o + data-w
+    try:
+        for tag in re.findall(r'<img[^>]+data-o="[^>]+>', get(SITE + "/this-weekend")):
+            o = re.search(r'data-o="([^"]+)"', tag)
+            w = re.search(r'data-w="(\d+)"', tag)
+            if o and w and int(w.group(1)) in SIZES:
+                add(html.unescape(o.group(1)), (int(w.group(1)),))   # same URL answer_pages hashes
+    except Exception as ex:
+        print("WARN this-weekend", ex)
     return want
 
 
