@@ -506,3 +506,9 @@ html.pf-on .member_profile .pf-fgrid .pf-fact a.pf-link:hover,html.pf-on .member
  html.pf-on .member_profile .pf-fgrid .pf-fact:last-child{border-bottom:1px solid #e3eaf3!important}
  html.pf-on .member_profile .pf-fgrid .pf-fact .col-sm-8{font-size:15.5px!important}
 }
+/* Business details: equal-height cards, centered content, logos fill their card (owner 10/9/2026) */
+html.pf-on .member_profile .pf-fgrid{align-items:stretch!important;grid-auto-rows:1fr}
+html.pf-on .member_profile .pf-fgrid .pf-fact{display:flex!important;flex-direction:column;justify-content:center;min-height:124px}
+html.pf-on .member_profile .pf-fgrid .pf-fact.pf-wide{min-height:0}
+html.pf-on .member_profile .pf-fgrid .pf-fact img{max-width:100%!important;max-height:78px!important;margin:6px 0 0!important}
+@media(max-width:767px){html.pf-on .member_profile .pf-fgrid{grid-auto-rows:auto}html.pf-on .member_profile .pf-fgrid .pf-fact{min-height:0}}
