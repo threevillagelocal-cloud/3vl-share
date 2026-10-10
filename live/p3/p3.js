@@ -140,13 +140,13 @@ if(isResults||SMARTQ){
   function read(it){var g=function(p){var m=it.querySelector('[itemprop="'+p+'"]');return m?(m.getAttribute('content')||m.getAttribute('href')||''):''};
     var uid=(it.querySelector('.postItem')||{getAttribute:function(){return ''}}).getAttribute('data-userid')||'';
     var u=(it.querySelector('[itemtype$="LocalBusiness"] link[itemprop="url"]')||{}).href||'';
-    return {n:g('name'),u:u.replace(/#.*$/,''),img:g('image'),tel:g('telephone'),d:g('description'),st:g('streetAddress'),zip:g('postalCode'),reg:g('addressRegion'),town:(g('addressLocality')||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0||/(^| )level_(1|8)( |$)/.test(((it.closest&&it.closest('.member_results'))||it).className||'')}}
+    return {n:g('name'),u:u.replace(/#.*$/,''),img:g('image'),tel:g('telephone'),d:g('description'),st:g('streetAddress'),zip:g('postalCode'),reg:g('addressRegion'),town:(g('addressLocality')||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0||/(^| )level_(1|8)( |$)/.test(((it.closest&&it.closest('.member_results'))||it).className||''),feat:/(^| )level_2( |$)/.test(((it.closest&&it.closest('.member_results'))||it).className||'')}}
   function fmtTel(t){t=(t||'').replace(/[^\d]/g,'').slice(-10);return t.length===10?t.slice(0,3)+'-'+t.slice(3,6)+'-'+t.slice(6):''}
   function maps(b){return 'https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(b.n+' '+(b.st||'')+' '+b.town)}
   function addr(b){return [b.st,b.town].filter(function(x){return x&&!/^n\/?a$/i.test(x)}).join(', ')||'Three Village'}
   var vips=[];
   function vipCard(b,idx){var tel=fmtTel(b.tel),t=tel.replace(/-/g,'');
-    return '<div class="p3-vwrap" data-i="'+idx+'" data-uid="'+esc(b.uid)+'" data-name="'+esc(b.n)+'"><div class="p3-vcard"><span class="p3-ftab">&#9733; FEATURED</span>'+
+    return '<div class="p3-vwrap" data-i="'+idx+'" data-uid="'+esc(b.uid)+'" data-name="'+esc(b.n)+'"><div class="p3-vcard"><span class="p3-ftab">&#9733; VIP MEMBER</span>'+
       '<div class="p3-vmedia"><a class="p3-vart" data-act="profile" href="'+esc(b.u)+'" data-uid="'+esc(b.uid)+'" title="View full profile"><img src="'+esc(b.img)+'" alt="'+esc(b.n)+'" loading="lazy"></a><a class="p3-vprof" data-act="profile" href="'+esc(b.u)+'">View profile &rarr;</a></div>'+
       '<div class="p3-vbody"><a class="p3-vname" data-act="profile" href="'+esc(b.u)+'">'+esc(b.n)+'</a>'+
       '<p class="p3-vloc">&#128205; '+esc(addr(b))+'</p><p class="p3-vd">'+esc(b.d)+'</p>'+
@@ -155,7 +155,7 @@ if(isResults||SMARTQ){
       '<button type="button" class="p3-vcf" data-act="save_contact" title="Save to your phone contacts">&#128100; Save</button></div></div>'+
       '<aside class="p3-vside" data-uid="'+esc(b.uid)+'" data-u="'+esc(b.u)+'"></aside></div></div>'}
   function card(b,i){var tel=fmtTel(b.tel);
-    return '<div class="p3-rcard" style="--i:'+(i%12)+'"><a class="p3-rtop" href="'+esc(b.u)+'"><img src="'+esc(b.img)+'" alt="" loading="lazy"><div><b>'+esc(b.n)+'</b><small>&#128205; '+esc(b.town||'Three Village')+'</small></div></a>'+
+    return '<div class="p3-rcard'+(b.feat?' p3-rfeat':'')+'" style="--i:'+(i%12)+'"><a class="p3-rtop" href="'+esc(b.u)+'"><img src="'+esc(b.img)+'" alt="" loading="lazy"><div>'+(b.feat?'<span class="p3-rtag">&#10003; Featured Business</span>':'')+'<b>'+esc(b.n)+'</b><small>&#128205; '+esc(b.town||'Three Village')+'</small></div></a>'+
       '<p class="p3-rd">'+esc(b.d.slice(0,140))+(b.d.length>140?'&hellip;':'')+'</p><div class="p3-racts">'+(tel?'<a class="p3-call" href="tel:'+tel.replace(/-/g,'')+'">&#128222; Call</a>':'')+
       '<a href="'+maps(b)+'" target="_blank" rel="noopener">&#128205; Map</a><a class="p3-view" href="'+esc(b.u)+'">View profile &rarr;</a></div></div>'}
   var title=q?'Results for <em>&ldquo;'+esc(q)+'&rdquo;</em>':'<em>'+esc(catName||'Local Businesses')+'</em>';
@@ -254,7 +254,7 @@ if(isResults||SMARTQ){
     var wait=document.createElement('p');wait.className='p3-none';wait.textContent='Finding the best local matches...';
     wait.style.visibility='hidden';setTimeout(function(){wait.style.visibility=''},600);   /* only mention it if it really takes a moment */
     var fillSmart=function(list){if(wait.parentNode)wait.parentNode.removeChild(wait);
-    var vh='',rh='';list.forEach(function(m){var uid=String(m.id),b={n:dec(m.n),u:m.u,img:m.l||'',tel:m.ph||'',d:dec(m.d||''),st:dec(m.a||''),zip:m.z||'',reg:'NY',town:String(m.t||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0||m.p==='vip'};
+    var vh='',rh='';list.forEach(function(m){var uid=String(m.id),b={n:dec(m.n),u:m.u,img:m.l||'',tel:m.ph||'',d:dec(m.d||''),st:dec(m.a||''),zip:m.z||'',reg:'NY',town:String(m.t||'').replace('Setauket- East Setauket','East Setauket'),uid:uid,vip:VIP.indexOf(uid)>=0||m.p==='vip',feat:m.p==='noticed'};
       if(b.vip){vips.push(b);vh+=vipCard(b,vips.length-1)}else{rh+=card(b,nRest++)}});
     if(vh)VL.insertAdjacentHTML('beforeend',vh);if(rh)RG.insertAdjacentHTML('beforeend',rh);
     MORE.hidden=!(vips.length&&nRest);wireImgs(root);fillSides();hideChrome();eqSoon();
