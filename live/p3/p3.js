@@ -314,6 +314,8 @@ if(path==='/categories'){
     '<form class="p3-search p3-hsearch" action="/search_results" method="get"><span>&#128269;</span><input id="p3q" name="q" autocomplete="off" placeholder="What are you looking for? Try &quot;pizza&quot;, &quot;plumber&quot;, &quot;dentist&quot;&hellip;"></form></div>'+
     '<span class="p3-credit">Photo: Shixart1985, CC BY 2.0</span></header>'+
     '<div class="p3-chips">'+quick.map(function(q){return '<a class="p3-chip" href="'+esc(q.h)+'">'+esc(q.n)+'</a>'}).join('')+'</div>'+
+    /* 10/10/2026 (owner): The Back Office hub for business owners gets its own button on this page */
+    '<a class="p3-bo" href="/back-office"><img src="https://threevillagelocal-cloud.github.io/3vl-share/site/back-office/t3-accounting-540.webp" alt="" width="540" height="360" loading="lazy"><span class="p3-bo-t"><em>For business owners</em><b>The Back Office</b><small>Accountants, payroll, benefits, insurance, lending, legal, IT and more</small></span><span class="p3-bo-go">&rarr;</span></a>'+
     '<div class="p3-cgrid">'+cats.map(function(c,i){return '<a class="p3-ctile" href="'+esc(c.h)+'" data-n="'+esc((c.n+' '+c.subs.map(function(s){return s.n}).join(' ')).toLowerCase())+'" style="--c:'+c.c+';--i:'+(i%12)+'"><span class="p3-cic">'+iconFor(c.slug)+'</span><span class="p3-ctx"><b>'+esc(c.n).replace(/\//g,'/<wbr>')+'</b><small>'+(c.subs.length?c.subs.length+' specialt'+(c.subs.length===1?'y':'ies'):'Browse all')+'</small></span><em>&rarr;</em></a>'}).join('')+'</div>'+
     '<p class="p3-none" id="p3none"></p>';
   var anchor=$('.category_filter_module')||panels[0];var root=mount(h,anchor);

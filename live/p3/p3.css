@@ -512,3 +512,13 @@ html.pf-on .member_profile .pf-fgrid .pf-fact{display:flex!important;flex-direct
 html.pf-on .member_profile .pf-fgrid .pf-fact.pf-wide{min-height:0}
 html.pf-on .member_profile .pf-fgrid .pf-fact img{max-width:100%!important;max-height:78px!important;margin:6px 0 0!important}
 @media(max-width:767px){html.pf-on .member_profile .pf-fgrid{grid-auto-rows:auto}html.pf-on .member_profile .pf-fgrid .pf-fact{min-height:0}}
+/* /categories: The Back Office button (owner 10/10/2026) */
+.p3-bo{display:flex;align-items:center;gap:18px;margin:16px 0 6px;padding:10px 18px 10px 10px;background:#fff;border:1px solid #dfe7f1;border-radius:18px;box-shadow:0 8px 22px rgba(19,35,58,.07);text-decoration:none!important;color:#13233a!important;transition:transform .2s,box-shadow .2s}
+.p3-bo:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(19,35,58,.12)}
+.p3-bo img{flex:none;width:132px!important;height:84px!important;object-fit:cover;border-radius:12px;margin:0!important;max-width:none}
+.p3-bo-t{display:flex;flex-direction:column;min-width:0;flex:1}
+.p3-bo-t em{font-style:normal;align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:#1f5fae;border-radius:999px;padding:3px 10px;margin-bottom:5px}
+.p3-bo-t b{font-size:22px;line-height:1.15;font-weight:800}
+.p3-bo-t small{font-size:14px;color:#4a586b;margin-top:2px;line-height:1.35}
+.p3-bo-go{flex:none;width:40px;height:40px;border-radius:50%;background:#13233a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px}
+@media(max-width:600px){.p3-bo{gap:12px;padding:8px 12px 8px 8px}.p3-bo img{width:88px!important;height:72px!important}.p3-bo-t b{font-size:18px}.p3-bo-t small{font-size:12.5px}.p3-bo-go{display:none}}
