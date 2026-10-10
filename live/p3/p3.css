@@ -482,8 +482,8 @@ html.p3-on .content_w_sidebar{display:flex;flex-wrap:wrap}
 /* Featured (plan 2) cards on category + search pages (owner 10/9/2026: CMIT showed no Featured badge) */
 .p3-rcard.p3-rfeat{border-color:#9cc0ea;background:linear-gradient(180deg,#f5f9ff 0%,#fff 55%);box-shadow:inset 0 0 0 1px #9cc0ea,0 8px 20px rgba(29,95,191,.10)}
 .p3-rtag{display:inline-block;margin:0 0 6px;padding:4px 10px;border-radius:999px;font:800 11px/1 'Radio Canada','tvl-rc',sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#1d5fbf;background:#eaf2fd;border:1px solid #c7dbf6;white-space:nowrap}
-/* VIP cards stand clearly above Featured (owner 10/9/2026): gold shimmering VIP MEMBER tab, stronger gold frame + glow */
-.p3-ftab{background:linear-gradient(110deg,#f0ad2e 0%,#ffd76a 35%,#fff6d6 50%,#ffd76a 65%,#f0ad2e 100%)!important;background-size:250% 100%!important;color:#13294b!important;font-size:10.5px!important;padding:5px 12px 5px 14px!important;animation:p3vSheen 3.6s ease-in-out 1s infinite}
-.p3-vcard{border-width:2.5px!important;border-color:#f0ad2e!important;box-shadow:0 0 0 4px rgba(255,206,84,.22),0 16px 36px rgba(240,173,46,.28),0 4px 12px rgba(27,47,69,.08)!important}
-.p3-vcard:hover{box-shadow:0 0 0 5px rgba(255,206,84,.3),0 22px 44px rgba(240,173,46,.36),0 6px 16px rgba(27,47,69,.1)!important}
-@media (prefers-reduced-motion:reduce){.p3-ftab{animation:none}}
+/* VIP cards stand clearly above Featured (owner 10/9/2026). Brand rule 10/4: frame stays navy/blue, gold only as the small tab highlight */
+#p3#p3 .p3-vcard{border:3px solid #1b2f45!important;box-shadow:0 0 0 5px rgba(142,197,255,.38),0 18px 40px rgba(27,47,69,.24),0 4px 12px rgba(27,47,69,.08)!important}
+#p3#p3 .p3-vcard:hover{box-shadow:0 0 0 6px rgba(142,197,255,.5),0 24px 46px rgba(27,47,69,.28),0 6px 16px rgba(27,47,69,.1)!important}
+#p3#p3 .p3-vcard .p3-ftab{background:linear-gradient(110deg,#f0ad2e 0%,#ffd76a 35%,#fff6d6 50%,#ffd76a 65%,#f0ad2e 100%);background-size:250% 100%;color:#13294b;font-size:11px;padding:6px 14px 6px 14px;animation:p3vSheen 3.6s ease-in-out 1s infinite}
+@media (prefers-reduced-motion:reduce){#p3#p3 .p3-vcard .p3-ftab{animation:none}}
