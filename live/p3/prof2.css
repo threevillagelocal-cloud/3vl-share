@@ -143,3 +143,6 @@ html.pv2-on .member_profile>.col-md-9>*:not(#pv2),html.pv2-on .pf-coverimg{displ
 #pv2 .pv-igg a,#pv2s .pv-igg a{position:relative}
 .pv-igb{position:absolute;right:6px;top:6px;width:22px;height:22px;border-radius:7px;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center}
 .pv-igb svg{width:14px!important;height:14px!important;stroke:#fff;fill:none;stroke-width:2.2}
+/* narrow phones: never split words */
+#pv2 .pv-act,#pv2 .pv-igh,#pv2 .pv-socb a,#pv2 .pv-h{word-break:normal;overflow-wrap:normal;hyphens:none}#pv2 .pv-igh a,#pv2 .pv-socb a{white-space:nowrap}#pv2 .pv-igh>div{min-width:0}#pv2 .pv-igh b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:380px){#pv2 .pv-acts{gap:6px}#pv2 .pv-act{font-size:11px;padding:12px 2px;letter-spacing:-.1px}#pv2 .pv-igh>a{display:none}#pv2 .pv-socb a{font-size:14px;padding:12px 8px}}
