@@ -1,0 +1,205 @@
+{
+ "uid": "137",
+ "tier": "vip",
+ "name": "Southard Estate Planning",
+ "short": "Southard Estate Planning",
+ "tagline": "Your estate plan is about your family.",
+ "category": "Estate Planning Attorney",
+ "town": "Setauket",
+ "labels": {
+  "quote": "Send a message",
+  "quoteShort": "Message",
+  "gallery": "Around the office",
+  "services": "How Southard helps"
+ },
+ "theme": {
+  "accent": "#c9a97a",
+  "ink": "#1d3051",
+  "deep": "#141d2e",
+  "accent2": "#8a6d45"
+ },
+ "hero": {
+  "img": "img/137-hero",
+  "alt": "White water lily blooming among lily pads on a Long Island pond",
+  "pos": "40% 50%"
+ },
+ "logo": "https://threevillagelocal-cloud.github.io/3vl-share/live/p3/vip/img/137-logo.webp",
+ "phone": "6318181725",
+ "website": "https://southardestateplanning.com/",
+ "instagram": "southardestateplanning",
+ "facebook": "https://www.facebook.com/profile.php?id=61550713821925",
+ "maps": "Southard Estate Planning, 175 Main St Suite 5, Setauket, NY 11733",
+ "hours": {
+  "mon": [
+   "08:30",
+   "16:30"
+  ],
+  "tue": [
+   "08:30",
+   "16:30"
+  ],
+  "wed": [
+   "08:30",
+   "16:30"
+  ],
+  "thu": [
+   "08:30",
+   "16:30"
+  ],
+  "fri": [
+   "08:30",
+   "16:30"
+  ],
+  "sat": null,
+  "sun": null
+ },
+ "facts": [
+  "17+ years in estate planning",
+  "Admitted in NY, CA & GA",
+  "Office on Main St, Setauket",
+  "Meet in person, by phone or video",
+  "Checks, e-checks & credit cards"
+ ],
+ "intro": "Katherine A. Southard, Esq. helps individuals and families build estate plans around their real lives: family relationships, health care wishes, assets and children. Her goal is to make estate planning accessible to everyone, regardless of net worth, with a clear plan you understand and feel confident in.",
+ "services": [
+  {
+   "t": "Wills & trusts",
+   "d": "Decide who makes decisions, keep your affairs private and help your family avoid probate."
+  },
+  {
+   "t": "Powers of attorney",
+   "d": "Choose who handles your financial decisions if you cannot."
+  },
+  {
+   "t": "Health care planning",
+   "d": "Health care directives, living wills and HIPAA releases."
+  },
+  {
+   "t": "Guardianship for children",
+   "d": "Name who would care for your kids if something happens."
+  },
+  {
+   "t": "Probate & estate administration",
+   "d": "Guidance for families settling a loved one's estate."
+  }
+ ],
+ "why": [
+  {
+   "t": "Personal plans",
+   "d": "Each plan is customized to your family's dynamics and needs."
+  },
+  {
+   "t": "Clear guidance",
+   "d": "She explains what every document means and why it matters."
+  },
+  {
+   "t": "Your schedule",
+   "d": "A private client portal plus in-person, phone or video meetings."
+  },
+  {
+   "t": "Ongoing review",
+   "d": "Plans are reviewed over time, with a team of experts when needed."
+  }
+ ],
+ "gallery": [
+  {
+   "img": "img/137-g1",
+   "w": [
+    800,
+    1600
+   ],
+   "alt": "Black Lab office visitor wearing a Southard Estate Planning visitor's pass"
+  },
+  {
+   "img": "img/137-g2",
+   "w": [
+    800,
+    1600
+   ],
+   "alt": "Southard Estate Planning gift boxes tied with black ribbon"
+  },
+  {
+   "img": "img/137-g3",
+   "w": [
+    800,
+    1440
+   ],
+   "alt": "Fluffy black dog visiting the office with a visitor's pass"
+  },
+  {
+   "img": "img/137-g4",
+   "w": [
+    800,
+    1600
+   ],
+   "alt": "Southard Estate Planning card with a thank-you loaf of bread"
+  },
+  {
+   "img": "img/137-g5",
+   "w": [
+    800,
+    1440
+   ],
+   "alt": "Smiling French bulldog office visitor on a blue chair"
+  },
+  {
+   "img": "img/137-g6",
+   "w": [
+    800,
+    1440
+   ],
+   "alt": "Heckerling Institute on Estate Planning conference entrance"
+  }
+ ],
+ "feed": [
+  {
+   "img": "img/137-ig0",
+   "link": "https://www.instagram.com/p/Ddg23FWRTIC/",
+   "date": "2026-09-20"
+  },
+  {
+   "img": "img/137-ig1",
+   "link": "https://www.instagram.com/p/DdWmGKxQb70/",
+   "date": "2026-09-16"
+  },
+  {
+   "img": "img/137-ig2",
+   "link": "https://www.instagram.com/p/DdJf8RLxOaP/",
+   "date": "2026-09-11"
+  },
+  {
+   "img": "img/137-ig3",
+   "link": "https://www.instagram.com/p/DdCRY5mlOFj/",
+   "date": "2026-09-08"
+  },
+  {
+   "img": "img/137-ig4",
+   "link": "https://www.instagram.com/p/DcgbpNNxAr0/",
+   "date": "2026-08-26"
+  },
+  {
+   "img": "img/137-ig5",
+   "link": "https://www.instagram.com/p/Db_BqrqRhPN/",
+   "date": "2026-08-13"
+  },
+  {
+   "img": "img/137-ig6",
+   "link": "https://www.instagram.com/p/DblTH0Bxp3c/",
+   "date": "2026-08-03"
+  },
+  {
+   "img": "img/137-ig7",
+   "link": "https://www.instagram.com/p/DZNceUnRF_9/",
+   "date": "2026-06-05"
+  },
+  {
+   "img": "img/137-ig8",
+   "link": "https://www.instagram.com/p/DZGDr8bJqn0/",
+   "date": "2026-06-02"
+  }
+ ],
+ "cta": {
+  "title": "Ready to protect your family?",
+  "text": "Start with a confidential consultation with Southard Estate Planning."
+ }
+}
