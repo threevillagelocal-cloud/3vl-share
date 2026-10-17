@@ -53,9 +53,9 @@ html.pv2-on .member_profile>.col-md-9>*:not(#pv2),html.pv2-on .pf-coverimg{displ
 
 /* gallery rail + lightbox */
 #pv2 .pv-rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
-#pv2 .pv-rail button{flex:0 0 78%;max-width:420px;aspect-ratio:4/3;height:auto!important;width:auto;min-width:0;border:0!important;padding:0!important;margin:0!important;border-radius:18px!important;box-shadow:none!important;overflow:hidden;scroll-snap-align:start;cursor:zoom-in;background:var(--soft);position:relative}
+#pv2 .pv-rail .pv-gi{flex:0 0 78%;max-width:420px;aspect-ratio:4/3;height:auto!important;width:auto;min-width:0;border:0!important;padding:0!important;margin:0!important;border-radius:18px!important;box-shadow:none!important;overflow:hidden;scroll-snap-align:start;cursor:zoom-in;background:var(--soft);position:relative}
 #pv2 .pv-rail img{display:block;border-radius:0!important;width:100%!important;height:100%!important;max-width:none;object-fit:cover;border:0!important;padding:0!important;transition:transform .5s}
-#pv2 .pv-rail button:hover img{transform:scale(1.04)}
+#pv2 .pv-rail .pv-gi:hover img{transform:scale(1.04)}
 #pv2 .pv-count{font-size:13px;color:var(--mut);font-weight:600;margin-left:auto}
 .pv-lb{position:fixed;inset:0;z-index:100000;background:rgba(8,11,16,.94);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s}
 .pv-lb.on{opacity:1}
@@ -140,3 +140,6 @@ html.pv2-on .member_profile>.col-md-9>*:not(#pv2),html.pv2-on .pf-coverimg{displ
 @media(prefers-reduced-motion:reduce){#pv2 *,.pv-lb{animation:none!important;transition:none!important}#pv2.pv-ready .pv-up{opacity:1;transform:none}}
 
 #pv2s *{box-sizing:border-box}#pv2s a{text-decoration:none!important}#pv2s img{width:100%!important;height:100%!important;max-width:none;object-fit:cover;border:0!important;padding:0!important}
+#pv2 .pv-igg a,#pv2s .pv-igg a{position:relative}
+.pv-igb{position:absolute;right:6px;top:6px;width:22px;height:22px;border-radius:7px;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center}
+.pv-igb svg{width:14px!important;height:14px!important;stroke:#fff;fill:none;stroke-width:2.2}
