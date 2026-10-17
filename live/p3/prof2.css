@@ -71,24 +71,32 @@ html.pv2-on .member_profile>.col-md-9>*:not(#pv2),html.pv2-on .pf-coverimg{displ
 #pv2 .pv-w p{font-size:14.5px;color:#cdd6e1}
 
 /* instagram feed */
-#pv2 .pv-ig{border:1px solid var(--line);border-radius:22px;padding:18px;background:#fff}
-#pv2 .pv-igh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-#pv2 .pv-igh .ic{width:44px;height:44px;border-radius:12px;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%);display:flex;align-items:center;justify-content:center}
-#pv2 .pv-igh .ic svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2}
-#pv2 .pv-igh b{display:block;font-size:16px}
-#pv2 .pv-igh span{font-size:13px;color:var(--mut)}
-#pv2 .pv-igh a{margin-left:auto;background:var(--ink);color:#fff!important;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px}
-#pv2 .pv-igg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-#pv2 .pv-igg a{display:block;aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--soft)}
-#pv2 .pv-igg img{width:100%!important;height:100%!important;max-width:none;object-fit:cover;border:0!important;padding:0!important;transition:transform .4s,filter .4s}
-#pv2 .pv-igg a:hover img{transform:scale(1.06);filter:brightness(1.05)}
+#pv2 .pv-ig,#pv2s .pv-ig{border:1px solid var(--line);border-radius:22px;padding:18px;background:#fff}
+#pv2 .pv-igh,#pv2s .pv-igh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+#pv2 .pv-igh .ic,#pv2s .pv-igh .ic{width:44px;height:44px;border-radius:12px;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%);display:flex;align-items:center;justify-content:center}
+#pv2 .pv-igh .ic svg,#pv2s .pv-igh .ic svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2}
+#pv2 .pv-igh b,#pv2s .pv-igh b{display:block;font-size:16px}
+#pv2 .pv-igh span,#pv2s .pv-igh span{font-size:13px;color:var(--mut)}
+#pv2 .pv-igh a,#pv2s .pv-igh a{margin-left:auto;background:var(--ink);color:#fff!important;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px}
+#pv2 .pv-igg,#pv2s .pv-igg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+#pv2 .pv-igg a,#pv2s .pv-igg a{display:block;aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--soft)}
+#pv2 .pv-igg img,#pv2s .pv-igg img{width:100%!important;height:100%!important;max-width:none;object-fit:cover;border:0!important;padding:0!important;transition:transform .4s,filter .4s}
+#pv2 .pv-igg a:hover img,#pv2s .pv-igg a:hover img{transform:scale(1.06);filter:brightness(1.05)}
 
-#pv2 .pv-socb{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
-#pv2 .pv-socb a{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:14px;font-weight:800;font-size:15px;color:#fff!important}
-#pv2 .pv-socb a svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2}
-#pv2 .pv-socb a.fb svg{fill:#fff;stroke:none}
-#pv2 .pv-socb .ig{background:linear-gradient(45deg,#f09433,#dc2743 50%,#bc1888)}
-#pv2 .pv-socb .fb{background:#1877f2}
+#pv2 .pv-socb,#pv2s .pv-socb{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+#pv2 .pv-socb a,#pv2s .pv-socb a{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:14px;font-weight:800;font-size:15px;color:#fff!important}
+#pv2 .pv-socb a svg,#pv2s .pv-socb a svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2}
+#pv2 .pv-socb a.fb svg,#pv2s .pv-socb a.fb svg{fill:#fff;stroke:none}
+#pv2 .pv-socb .ig,#pv2s .pv-socb .ig{background:linear-gradient(45deg,#f09433,#dc2743 50%,#bc1888)}
+#pv2 .pv-socb .fb,#pv2s .pv-socb .fb{background:#1877f2}
+
+/* side column copy (desktop); inline copy shows on phones/tablets */
+#pv2s{--ink:#13233a;--mut:#5b6b7c;--line:#e6ebf2;--soft:#f6f8fb;color:var(--ink);display:none;font-family:'tvl-rc','Radio Canada',system-ui,sans-serif;margin-bottom:20px}
+#pv2s .pv-sec{margin:0}
+#pv2s .pv-h{font-size:20px;font-weight:800;margin:0 0 10px;color:#13233a}
+@media(min-width:992px){#pv2s{display:block}#pv2 .pv-socm{display:none}}
+#pv2s .pv-ig{padding:14px}#pv2s .pv-igh .ic{width:38px;height:38px}#pv2s .pv-igh b{font-size:14px}#pv2s .pv-igh>a{display:none}
+#pv2s .pv-igg{gap:4px}#pv2s .pv-socb{grid-template-columns:1fr}
 
 /* hours + reviews */
 #pv2 .pv-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -130,3 +138,5 @@ html.pv2-on .member_profile>.col-md-9>*:not(#pv2),html.pv2-on .pf-coverimg{displ
 .pv-sticky{display:flex}
 }
 @media(prefers-reduced-motion:reduce){#pv2 *,.pv-lb{animation:none!important;transition:none!important}#pv2.pv-ready .pv-up{opacity:1;transform:none}}
+
+#pv2s *{box-sizing:border-box}#pv2s a{text-decoration:none!important}#pv2s img{width:100%!important;height:100%!important;max-width:none;object-fit:cover;border:0!important;padding:0!important}

@@ -47,7 +47,7 @@ function render(d){
      '<a data-a="instagram" target="_blank" rel="noopener" href="https://www.instagram.com/'+esc(d.instagram)+'/">Follow</a></div><div class="pv-igg">'+
      d.feed.slice(0,9).map(function(f){return '<a data-a="ig_post" target="_blank" rel="noopener" href="'+esc(f.link)+'"><img src="'+BASE+'vip/'+f.img+'-400.webp" loading="lazy" decoding="async" alt="Instagram post from @'+esc(d.instagram)+'"></a>'}).join('')+'</div>'+
      '<div class="pv-socb"><a class="ig" data-a="instagram" target="_blank" rel="noopener" href="https://www.instagram.com/'+esc(d.instagram)+'/">'+ic('ig')+'Instagram</a>'+(d.facebook?'<a class="fb" data-a="facebook" target="_blank" rel="noopener" href="'+esc(d.facebook)+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a>':'')+'</div></div></section>';
-  h+=SOC;
+  h+=SOC.replace('pv-sec pv-up','pv-sec pv-up pv-socm');
   if(d.services)h+='<section class="pv-sec pv-up"><h2 class="pv-h">What they do</h2><div class="pv-svcs">'+d.services.map(function(s){return '<div class="pv-svc"><b>'+esc(s.t)+'</b><p>'+esc(s.d)+'</p></div>'}).join('')+'</div></section>';
   if(d.gallery&&d.gallery.length)h+='<section class="pv-sec pv-up"><h2 class="pv-h">Recent work <span class="pv-count">Swipe &rarr;</span></h2><div class="pv-rail">'+
      d.gallery.map(function(g,i){return '<button type="button" data-i="'+i+'" aria-label="Open photo: '+esc(g.alt)+'">'+img(g.img,[g.w[0]],'(max-width:760px) 78vw, 420px',g.alt,true)+'</button>'}).join('')+'</div></section>';
@@ -60,7 +60,8 @@ function render(d){
   if(d.cta)h+='<section class="pv-cta pv-up"><h2>'+esc(d.cta.title)+'</h2><p>'+esc(d.cta.text)+'</p><div class="row"><a class="a1" data-a="quote" href="'+quote+'">Get a quote</a><a class="a2" data-a="call" href="tel:'+tel+'">Call '+telF+'</a></div></section>';
   var box=document.createElement('div');box.id='pv2';box.innerHTML=h;
   box.style.cssText='--ac:'+(T.accent||'#f2c94c')+';--ink:'+(T.ink||'#13233a')+';--deep:'+(T.deep||'#141c26')+';--ac2:'+(T.accent2||'#2f8a4c');
-  col.insertBefore(box,col.firstChild);document.documentElement.classList.add('pv2-on');
+  col.insertBefore(box,col.firstChild);
+  var side=document.querySelector('.member_profile .sidebar-section');if(side&&SOC){var sd=document.createElement('div');sd.id='pv2s';sd.innerHTML=SOC.replace(' pv-up','');sd.style.cssText=box.style.cssText;side.insertBefore(sd,side.firstChild)}document.documentElement.classList.add('pv2-on');
   var sb=document.createElement('div');sb.className='pv-sticky';sb.style.setProperty('--pv-ac',T.accent||'#f2c94c');
   sb.innerHTML='<a class="pri" data-a="call" href="tel:'+tel+'">Call</a><a data-a="quote" href="'+quote+'">Quote</a><a data-a="directions" target="_blank" rel="noopener" href="'+dir+'">Directions</a>';document.body.appendChild(sb);
   /* clicks */
