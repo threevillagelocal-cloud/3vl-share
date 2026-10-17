@@ -1,6 +1,6 @@
 /* 3VL premium business profile v2 (prototype, loads only with ?v=2 for now). Colors come from each business's theme. */
-html.pv2-on .member_profile>.col-md-9>*:not(#pv2){display:none!important}
-#pv2{--ac:#f2c94c;--ink:#13233a;--deep:#141c26;--ac2:#2f8a4c;--mut:#5b6b7c;--line:#e6ebf2;--soft:#f6f8fb;font-family:'tvl-rc','Radio Canada',system-ui,sans-serif;color:var(--ink);line-height:1.5;margin:0 0 30px;overflow-x:clip}
+html.pv2-on .member_profile>.col-md-9>*:not(#pv2),html.pv2-on .pf-coverimg{display:none!important}
+#pv2{--ac:#f2c94c;--ink:#13233a;--deep:#141c26;--ac2:#2f8a4c;--mut:#5b6b7c;--line:#e6ebf2;--soft:#f6f8fb;font-family:'tvl-rc','Radio Canada',system-ui,sans-serif;color:var(--ink);line-height:1.5;margin:0 0 30px}
 #pv2 *{box-sizing:border-box}
 #pv2 h1,#pv2 h2,#pv2 h3{font-family:inherit;margin:0;color:var(--ink);letter-spacing:-.02em;word-break:normal;overflow-wrap:normal}
 #pv2 p{margin:0}
@@ -13,11 +13,11 @@ html.pv2-on .member_profile>.col-md-9>*:not(#pv2){display:none!important}
 #pv2 .pv-hero{position:relative;border-radius:24px;overflow:hidden;min-height:440px;display:flex;align-items:flex-end;background:var(--deep);isolation:isolate}
 #pv2 .pv-hero>img{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none;object-fit:cover;z-index:-2;border:0!important;padding:0!important;border-radius:0!important;animation:pvZoom 14s ease-out both}
 @keyframes pvZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
-#pv2 .pv-hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,14,20,.05) 0%,rgba(10,14,20,.15) 38%,rgba(10,14,20,.82) 100%)}
+#pv2 .pv-hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,14,20,0) 0%,rgba(10,14,20,0) 45%,rgba(10,14,20,.8) 100%)}
 #pv2 .pv-hin{padding:26px 26px 24px;width:100%;color:#fff}
 #pv2 .pv-top{position:absolute;left:18px;right:18px;top:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
-#pv2 .pv-tier{background:var(--ac);color:#111;font-weight:800;font-size:13px;letter-spacing:.14em;padding:8px 14px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
-#pv2 .pv-open{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.94);color:var(--ink);font-weight:700;font-size:13px;padding:8px 13px;border-radius:999px}
+#pv2 .pv-tier{white-space:nowrap;flex:0 0 auto;background:var(--ac);color:#111;font-weight:800;font-size:13px;letter-spacing:.1em;padding:8px 14px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+#pv2 .pv-open{white-space:nowrap;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.94);color:var(--ink);font-weight:700;font-size:13px;padding:8px 13px;border-radius:999px}
 #pv2 .pv-open i{width:9px;height:9px;border-radius:50%;background:#9aa6b2}
 #pv2 .pv-open.on i{background:#1fbf5c;animation:pvPing 2s infinite}
 @keyframes pvPing{0%{box-shadow:0 0 0 0 rgba(31,191,92,.6)}70%{box-shadow:0 0 0 9px rgba(31,191,92,0)}100%{box-shadow:0 0 0 0 rgba(31,191,92,0)}}
@@ -53,8 +53,8 @@ html.pv2-on .member_profile>.col-md-9>*:not(#pv2){display:none!important}
 
 /* gallery rail + lightbox */
 #pv2 .pv-rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
-#pv2 .pv-rail button{flex:0 0 78%;max-width:420px;aspect-ratio:4/3;border:0;padding:0;border-radius:18px;overflow:hidden;scroll-snap-align:start;cursor:zoom-in;background:var(--soft);position:relative}
-#pv2 .pv-rail img{width:100%!important;height:100%!important;max-width:none;object-fit:cover;border:0!important;padding:0!important;transition:transform .5s}
+#pv2 .pv-rail button{flex:0 0 78%;max-width:420px;aspect-ratio:4/3;height:auto!important;width:auto;min-width:0;border:0!important;padding:0!important;margin:0!important;border-radius:18px!important;box-shadow:none!important;overflow:hidden;scroll-snap-align:start;cursor:zoom-in;background:var(--soft);position:relative}
+#pv2 .pv-rail img{display:block;border-radius:0!important;width:100%!important;height:100%!important;max-width:none;object-fit:cover;border:0!important;padding:0!important;transition:transform .5s}
 #pv2 .pv-rail button:hover img{transform:scale(1.04)}
 #pv2 .pv-count{font-size:13px;color:var(--mut);font-weight:600;margin-left:auto}
 .pv-lb{position:fixed;inset:0;z-index:100000;background:rgba(8,11,16,.94);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s}

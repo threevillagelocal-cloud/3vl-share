@@ -19,8 +19,8 @@ function t12(s){var h=+s.slice(0,2),m=s.slice(3);return (h%12||12)+(m==='00'?'':
 function nowET(){var p={};new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
   return {d:DAYS.indexOf(p.weekday.toLowerCase().slice(0,3)),m:(+p.hour%24)*60+(+p.minute)}}
 function openState(h){if(!h)return null;var n=nowET(),k=DAYS[n.d],t=h[k];function mm(s){return +s.slice(0,2)*60+(+s.slice(3))}
-  if(t&&n.m>=mm(t[0])&&n.m<mm(t[1]))return {on:true,txt:'Open now · until '+t12(t[1])};
-  for(var i=0;i<8;i++){var dd=(n.d+i)%7,x=h[DAYS[dd]];if(!x)continue;if(i===0&&n.m<mm(x[0]))return {on:false,txt:'Closed · opens '+t12(x[0])};if(i>0)return {on:false,txt:'Closed · opens '+(i===1?'tomorrow':DN[DAYS[dd]].slice(0,3))+' '+t12(x[0])}}
+  if(t&&n.m>=mm(t[0])&&n.m<mm(t[1]))return {on:true,txt:'Open now · til '+t12(t[1])};
+  for(var i=0;i<8;i++){var dd=(n.d+i)%7,x=h[DAYS[dd]];if(!x)continue;if(i===0&&n.m<mm(x[0]))return {on:false,txt:'Opens today '+t12(x[0])};if(i>0)return {on:false,txt:'Opens '+(i===1?'tomorrow':DN[DAYS[dd]].slice(0,3))+' '+t12(x[0])}}
   return {on:false,txt:'Closed'}}
 
 fetch(BASE+'vip/'+uid+'.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(d){if(d)render(d)}).catch(function(){});
