@@ -1,0 +1,210 @@
+{
+ "uid": "115",
+ "tier": "vip",
+ "name": "KGR Contracting Corp.",
+ "short": "KGR Contracting",
+ "tagline": "Building with Vision, Quality & Pride.",
+ "category": "Contractors & Remodeling",
+ "town": "Port Jefferson Station",
+ "theme": {
+  "accent": "#f2c94c",
+  "ink": "#13233a",
+  "deep": "#141c26",
+  "accent2": "#2f8a4c"
+ },
+ "hero": {
+  "img": "img/115-hero",
+  "alt": "Kitchen remodel by KGR Contracting with white shaker cabinets and a large island",
+  "pos": "50% 55%"
+ },
+ "logo": "https://www.threevillagelocal.com/logos/profile/limage-115-32-photo.webp",
+ "phone": "6313329931",
+ "website": "https://www.kgrcontracting.com/",
+ "instagram": "kgrcontractingcorp",
+ "facebook": "https://facebook.com/KGRcontractingcorp",
+ "maps": "KGR Contracting Corp, Port Jefferson Station, NY",
+ "hours": {
+  "mon": [
+   "08:00",
+   "18:00"
+  ],
+  "tue": [
+   "08:00",
+   "18:00"
+  ],
+  "wed": [
+   "08:00",
+   "18:00"
+  ],
+  "thu": [
+   "08:00",
+   "18:00"
+  ],
+  "fri": [
+   "08:00",
+   "18:00"
+  ],
+  "sat": [
+   "10:00",
+   "15:00"
+  ],
+  "sun": null
+ },
+ "facts": [
+  "Licensed & insured",
+  "Kitchen & bath specialists",
+  "Financing available",
+  "Visa, Mastercard, check & cash",
+  "Serving Three Village & Suffolk"
+ ],
+ "intro": "KGR Contracting helps Long Island homeowners transform the spaces they live in every day. From kitchens and bathrooms to decks, renovations and whole-home projects, KGR brings craftsmanship, project management and clear communication from concept to completion.",
+ "services": [
+  {
+   "t": "Kitchen remodeling",
+   "d": "Better flow, better function, better everyday living."
+  },
+  {
+   "t": "Bathroom remodeling",
+   "d": "Clean design and thoughtful details, top to bottom."
+  },
+  {
+   "t": "Decks & outdoor living",
+   "d": "Make more of the space outside."
+  },
+  {
+   "t": "Residential renovations",
+   "d": "Managed from first plan to final walkthrough."
+  },
+  {
+   "t": "Whole-home improvements",
+   "d": "Multiple rooms under one coordinated plan."
+  }
+ ],
+ "why": [
+  {
+   "t": "Planning",
+   "d": "Thoughtful preparation turns ideas into realistic, well-executed projects."
+  },
+  {
+   "t": "Communication",
+   "d": "You stay informed throughout the whole renovation."
+  },
+  {
+   "t": "Craftsmanship",
+   "d": "Careful workmanship and attention to the finished details."
+  },
+  {
+   "t": "Project management",
+   "d": "All the moving parts kept organized from start to finish."
+  }
+ ],
+ "gallery": [
+  {
+   "img": "img/115-hero",
+   "w": [
+    900,
+    1600
+   ],
+   "alt": "Kitchen with island seating"
+  },
+  {
+   "img": "img/115-g1",
+   "w": [
+    800,
+    1600
+   ],
+   "alt": "Open kitchen renovation"
+  },
+  {
+   "img": "img/115-g2",
+   "w": [
+    800,
+    1600
+   ],
+   "alt": "Glass walk-in shower with niche"
+  },
+  {
+   "img": "img/115-g3",
+   "w": [
+    800,
+    1600
+   ],
+   "alt": "Bathroom with wood vanity and mosaic floor"
+  },
+  {
+   "img": "img/115-g5",
+   "w": [
+    800,
+    1440
+   ],
+   "alt": "Tiled tub surround"
+  },
+  {
+   "img": "img/115-g6",
+   "w": [
+    800,
+    1440
+   ],
+   "alt": "Covered back porch"
+  },
+  {
+   "img": "img/115-g4",
+   "w": [
+    800,
+    1600
+   ],
+   "alt": "KGR Contracting trailer on a job site"
+  }
+ ],
+ "feed": [
+  {
+   "img": "img/115-ig0",
+   "link": "https://www.instagram.com/p/DdLO4uxgDcX/",
+   "date": "2026-09-12"
+  },
+  {
+   "img": "img/115-ig1",
+   "link": "https://www.instagram.com/p/DdLOunMAFk1/",
+   "date": "2026-09-12"
+  },
+  {
+   "img": "img/115-ig2",
+   "link": "https://www.instagram.com/p/DdLMzS9DdAL/",
+   "date": "2026-09-12"
+  },
+  {
+   "img": "img/115-ig3",
+   "link": "https://www.instagram.com/p/DdLMbDcjRcm/",
+   "date": "2026-09-12"
+  },
+  {
+   "img": "img/115-ig4",
+   "link": "https://www.instagram.com/p/DdLK9majUdI/",
+   "date": "2026-09-12"
+  },
+  {
+   "img": "img/115-ig5",
+   "link": "https://www.instagram.com/p/DdLKa5XjTYW/",
+   "date": "2026-09-12"
+  },
+  {
+   "img": "img/115-ig6",
+   "link": "https://www.instagram.com/p/DdLKPV6jVJw/",
+   "date": "2026-09-12"
+  },
+  {
+   "img": "img/115-ig7",
+   "link": "https://www.instagram.com/p/DdLJ7JEDQlw/",
+   "date": "2026-09-12"
+  },
+  {
+   "img": "img/115-ig8",
+   "link": "https://www.instagram.com/p/DdLJB-ojZOT/",
+   "date": "2026-09-12"
+  }
+ ],
+ "cta": {
+  "title": "Ready to improve your home?",
+  "text": "Kitchen, bathroom, deck or a bigger renovation: start with a conversation."
+ }
+}

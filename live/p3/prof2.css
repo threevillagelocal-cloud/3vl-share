@@ -1,0 +1,125 @@
+/* 3VL premium business profile v2 (prototype, loads only with ?v=2 for now). Colors come from each business's theme. */
+html.pv2-on .member_profile>.col-md-9>*:not(#pv2){display:none!important}
+#pv2{--ac:#f2c94c;--ink:#13233a;--deep:#141c26;--ac2:#2f8a4c;--mut:#5b6b7c;--line:#e6ebf2;--soft:#f6f8fb;font-family:'tvl-rc','Radio Canada',system-ui,sans-serif;color:var(--ink);line-height:1.5;margin:0 0 30px;overflow-x:clip}
+#pv2 *{box-sizing:border-box}
+#pv2 h1,#pv2 h2,#pv2 h3{font-family:inherit;margin:0;color:var(--ink);letter-spacing:-.02em;word-break:normal;overflow-wrap:normal}
+#pv2 p{margin:0}
+#pv2 a{text-decoration:none!important}
+#pv2 .pv-sec{margin-top:26px}
+#pv2 .pv-h{font-size:26px;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+#pv2 .pv-h:before{content:"";width:6px;height:26px;border-radius:3px;background:var(--ac)}
+
+/* hero */
+#pv2 .pv-hero{position:relative;border-radius:24px;overflow:hidden;min-height:440px;display:flex;align-items:flex-end;background:var(--deep);isolation:isolate}
+#pv2 .pv-hero>img{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none;object-fit:cover;z-index:-2;border:0!important;padding:0!important;border-radius:0!important;animation:pvZoom 14s ease-out both}
+@keyframes pvZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+#pv2 .pv-hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,14,20,.05) 0%,rgba(10,14,20,.15) 38%,rgba(10,14,20,.82) 100%)}
+#pv2 .pv-hin{padding:26px 26px 24px;width:100%;color:#fff}
+#pv2 .pv-top{position:absolute;left:18px;right:18px;top:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+#pv2 .pv-tier{background:var(--ac);color:#111;font-weight:800;font-size:13px;letter-spacing:.14em;padding:8px 14px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+#pv2 .pv-open{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.94);color:var(--ink);font-weight:700;font-size:13px;padding:8px 13px;border-radius:999px}
+#pv2 .pv-open i{width:9px;height:9px;border-radius:50%;background:#9aa6b2}
+#pv2 .pv-open.on i{background:#1fbf5c;animation:pvPing 2s infinite}
+@keyframes pvPing{0%{box-shadow:0 0 0 0 rgba(31,191,92,.6)}70%{box-shadow:0 0 0 9px rgba(31,191,92,0)}100%{box-shadow:0 0 0 0 rgba(31,191,92,0)}}
+#pv2 .pv-id{display:flex;align-items:center;gap:16px}
+#pv2 .pv-logo{flex:0 0 78px;height:78px;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center;padding:6px;box-shadow:0 10px 24px rgba(0,0,0,.35)}
+#pv2 .pv-logo img{max-width:100%!important;max-height:100%!important;width:auto!important;height:auto!important;border:0!important;padding:0!important;object-fit:contain}
+#pv2 .pv-hero h1{color:#fff;font-size:38px;line-height:1.05;font-weight:800;text-shadow:0 3px 16px rgba(0,0,0,.4)}
+#pv2 .pv-meta{margin-top:6px;font-size:15px;color:#e8eef6;font-weight:600}
+#pv2 .pv-tag{margin-top:14px;font-size:20px;font-weight:700;color:#fff}
+#pv2 .pv-tag b{color:var(--ac)}
+
+/* action buttons */
+#pv2 .pv-acts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+#pv2 .pv-act{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:14px 6px;border-radius:16px;background:#fff;border:1px solid var(--line);color:var(--ink)!important;font-weight:700;font-size:14px;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 18px rgba(19,35,58,.06)}
+#pv2 .pv-act:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(19,35,58,.12)}
+#pv2 .pv-act svg{width:24px;height:24px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#pv2 .pv-act.pri{background:var(--deep);border-color:var(--deep);color:#fff!important}
+#pv2 .pv-act.pri svg{stroke:var(--ac)}
+
+/* facts */
+#pv2 .pv-facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+#pv2 .pv-facts span{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;background:var(--soft);border:1px solid var(--line);font-weight:700;font-size:14px}
+#pv2 .pv-facts span:before{content:"✓";color:var(--ac2);font-weight:900}
+#pv2 .pv-intro{font-size:17px;color:#33414f;margin-top:18px}
+
+/* services */
+#pv2 .pv-svcs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+#pv2 .pv-svc{padding:18px;border-radius:18px;background:#fff;border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}
+#pv2 .pv-svc:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(19,35,58,.1)}
+#pv2 .pv-svc:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--ac)}
+#pv2 .pv-svc b{display:block;font-size:17px;margin-bottom:4px}
+#pv2 .pv-svc p{font-size:14.5px;color:var(--mut)}
+
+/* gallery rail + lightbox */
+#pv2 .pv-rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+#pv2 .pv-rail button{flex:0 0 78%;max-width:420px;aspect-ratio:4/3;border:0;padding:0;border-radius:18px;overflow:hidden;scroll-snap-align:start;cursor:zoom-in;background:var(--soft);position:relative}
+#pv2 .pv-rail img{width:100%!important;height:100%!important;max-width:none;object-fit:cover;border:0!important;padding:0!important;transition:transform .5s}
+#pv2 .pv-rail button:hover img{transform:scale(1.04)}
+#pv2 .pv-count{font-size:13px;color:var(--mut);font-weight:600;margin-left:auto}
+.pv-lb{position:fixed;inset:0;z-index:100000;background:rgba(8,11,16,.94);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s}
+.pv-lb.on{opacity:1}
+.pv-lb img{max-width:94vw;max-height:84vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.pv-lb button{position:absolute;border:0;background:rgba(255,255,255,.14);color:#fff;width:52px;height:52px;border-radius:50%;font-size:26px;cursor:pointer}
+.pv-lb .x{top:18px;right:18px}.pv-lb .p{left:14px;top:50%}.pv-lb .n{right:14px;top:50%}
+
+/* why */
+#pv2 .pv-why{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+#pv2 .pv-w{padding:20px;border-radius:18px;background:var(--deep);color:#fff}
+#pv2 .pv-w em{font-style:normal;display:block;font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--ac);margin-bottom:6px}
+#pv2 .pv-w b{display:block;font-size:19px;margin-bottom:6px;color:#fff}
+#pv2 .pv-w p{font-size:14.5px;color:#cdd6e1}
+
+/* instagram feed */
+#pv2 .pv-ig{border:1px solid var(--line);border-radius:22px;padding:18px;background:#fff}
+#pv2 .pv-igh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+#pv2 .pv-igh .ic{width:44px;height:44px;border-radius:12px;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%);display:flex;align-items:center;justify-content:center}
+#pv2 .pv-igh .ic svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2}
+#pv2 .pv-igh b{display:block;font-size:16px}
+#pv2 .pv-igh span{font-size:13px;color:var(--mut)}
+#pv2 .pv-igh a{margin-left:auto;background:var(--ink);color:#fff!important;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px}
+#pv2 .pv-igg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+#pv2 .pv-igg a{display:block;aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--soft)}
+#pv2 .pv-igg img{width:100%!important;height:100%!important;max-width:none;object-fit:cover;border:0!important;padding:0!important;transition:transform .4s,filter .4s}
+#pv2 .pv-igg a:hover img{transform:scale(1.06);filter:brightness(1.05)}
+
+/* hours + reviews */
+#pv2 .pv-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#pv2 .pv-card{border:1px solid var(--line);border-radius:20px;padding:18px;background:#fff}
+#pv2 .pv-hrs div{display:flex;justify-content:space-between;padding:7px 10px;border-radius:10px;font-size:15px}
+#pv2 .pv-hrs div.today{background:var(--soft);font-weight:800}
+#pv2 .pv-hrs div span:last-child{color:var(--mut)}
+#pv2 .pv-hrs div.today span:last-child{color:var(--ink)}
+#pv2 .pv-rev p{color:var(--mut);font-size:15px;margin:6px 0 14px}
+#pv2 .pv-btn{display:block;text-align:center;font-weight:800;padding:13px;border-radius:999px;margin-top:8px;border:2px solid var(--ink);color:var(--ink)!important}
+#pv2 .pv-btn.pri{background:var(--ac);border-color:var(--ac);color:#111!important}
+
+/* final cta */
+#pv2 .pv-cta{margin-top:26px;border-radius:24px;padding:28px 24px;background:var(--deep);color:#fff;text-align:center;position:relative;overflow:hidden}
+#pv2 .pv-cta:before{content:"";position:absolute;inset:0;background:radial-gradient(500px 220px at 50% 0%,rgba(242,201,76,.22),transparent)}
+#pv2 .pv-cta h2{color:#fff;font-size:28px;position:relative}
+#pv2 .pv-cta p{color:#cdd6e1;margin:8px 0 18px;position:relative}
+#pv2 .pv-cta .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;position:relative}
+#pv2 .pv-cta a{padding:14px 24px;border-radius:999px;font-weight:800}
+#pv2 .pv-cta a.a1{background:var(--ac);color:#111!important}
+#pv2 .pv-cta a.a2{background:#fff;color:var(--ink)!important}
+
+/* sticky mobile bar */
+.pv-sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;display:none;gap:8px;background:rgba(20,28,38,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:8px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.35);transform:translateY(130%);transition:transform .3s}
+.pv-sticky.on{transform:none}
+.pv-sticky a{flex:1;text-align:center;color:#fff!important;font-weight:800;font-size:15px;padding:12px 6px;border-radius:999px;text-decoration:none!important;font-family:'tvl-rc','Radio Canada',system-ui,sans-serif}
+.pv-sticky a.pri{background:var(--pv-ac,#f2c94c);color:#111!important}
+
+/* reveal */
+#pv2.pv-ready .pv-up{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+#pv2.pv-ready .pv-up.in{opacity:1;transform:none}
+
+@media(max-width:760px){
+#pv2 .pv-hero{min-height:500px;border-radius:0 0 24px 24px;margin:0 -15px}
+#pv2 .pv-hero h1{font-size:32px}
+#pv2 .pv-acts{gap:8px}
+#pv2 .pv-act{font-size:12.5px;padding:12px 4px}
+#pv2 .pv-svcs,#pv2 .pv-why,#pv2 .pv-two{grid-template-columns:1fr}
+.pv-sticky{display:flex}
+}
+@media(prefers-reduced-motion:reduce){#pv2 *,.pv-lb{animation:none!important;transition:none!important}#pv2.pv-ready .pv-up{opacity:1;transform:none}}
