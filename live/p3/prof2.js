@@ -43,13 +43,15 @@ function render(d){
      (d.website?'<a class="pv-act" data-a="website" target="_blank" rel="noopener" href="'+esc(d.website)+'">'+ic('web')+'Website</a>':'')+'</div>';
   if(d.facts&&d.facts.length)h+='<div class="pv-facts pv-up">'+d.facts.map(function(f){return '<span>'+esc(f)+'</span>'}).join('')+'</div>';
   if(d.intro)h+='<p class="pv-intro pv-up">'+esc(d.intro)+'</p>';
+  var SOC='';if(d.instagram&&d.feed&&d.feed.length)SOC='<section class="pv-sec pv-up"><h2 class="pv-h">Follow along on social</h2><div class="pv-ig"><div class="pv-igh"><span class="ic">'+ic('ig')+'</span><div><b>@'+esc(d.instagram)+'</b><span>Their latest posts</span></div>'+
+     '<a data-a="instagram" target="_blank" rel="noopener" href="https://www.instagram.com/'+esc(d.instagram)+'/">Follow</a></div><div class="pv-igg">'+
+     d.feed.slice(0,9).map(function(f){return '<a data-a="ig_post" target="_blank" rel="noopener" href="'+esc(f.link)+'"><img src="'+BASE+'vip/'+f.img+'-400.webp" loading="lazy" decoding="async" alt="Instagram post from @'+esc(d.instagram)+'"></a>'}).join('')+'</div>'+
+     '<div class="pv-socb"><a class="ig" data-a="instagram" target="_blank" rel="noopener" href="https://www.instagram.com/'+esc(d.instagram)+'/">'+ic('ig')+'Instagram</a>'+(d.facebook?'<a class="fb" data-a="facebook" target="_blank" rel="noopener" href="'+esc(d.facebook)+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a>':'')+'</div></div></section>';
+  h+=SOC;
   if(d.services)h+='<section class="pv-sec pv-up"><h2 class="pv-h">What they do</h2><div class="pv-svcs">'+d.services.map(function(s){return '<div class="pv-svc"><b>'+esc(s.t)+'</b><p>'+esc(s.d)+'</p></div>'}).join('')+'</div></section>';
   if(d.gallery&&d.gallery.length)h+='<section class="pv-sec pv-up"><h2 class="pv-h">Recent work <span class="pv-count">Swipe &rarr;</span></h2><div class="pv-rail">'+
      d.gallery.map(function(g,i){return '<button type="button" data-i="'+i+'" aria-label="Open photo: '+esc(g.alt)+'">'+img(g.img,[g.w[0]],'(max-width:760px) 78vw, 420px',g.alt,true)+'</button>'}).join('')+'</div></section>';
   if(d.why)h+='<section class="pv-sec pv-up"><h2 class="pv-h">Why neighbors choose them</h2><div class="pv-why">'+d.why.map(function(w,i){return '<div class="pv-w"><em>0'+(i+1)+'</em><b>'+esc(w.t)+'</b><p>'+esc(w.d)+'</p></div>'}).join('')+'</div></section>';
-  if(d.instagram&&d.feed&&d.feed.length)h+='<section class="pv-sec pv-up"><div class="pv-ig"><div class="pv-igh"><span class="ic">'+ic('ig')+'</span><div><b>@'+esc(d.instagram)+'</b><span>Latest from Instagram</span></div>'+
-     '<a data-a="instagram" target="_blank" rel="noopener" href="https://www.instagram.com/'+esc(d.instagram)+'/">Follow</a></div><div class="pv-igg">'+
-     d.feed.slice(0,9).map(function(f){return '<a data-a="ig_post" target="_blank" rel="noopener" href="'+esc(f.link)+'"><img src="'+BASE+'vip/'+f.img+'-400.webp" loading="lazy" decoding="async" alt="Instagram post from @'+esc(d.instagram)+'"></a>'}).join('')+'</div></div></section>';
   if(d.hours){var today=DAYS[nowET().d];h+='<section class="pv-sec pv-two pv-up"><div class="pv-card pv-hrs"><h2 class="pv-h">Hours</h2>'+
      ['mon','tue','wed','thu','fri','sat','sun'].map(function(k){var x=d.hours[k];return '<div'+(k===today?' class="today"':'')+'><span>'+DN[k]+'</span><span>'+(x?t12(x[0])+' - '+t12(x[1]):'Closed')+'</span></div>'}).join('')+'</div>'+
      '<div class="pv-card pv-rev"><h2 class="pv-h">Reviews</h2><p>Worked with '+esc(d.short||d.name)+'? Your review helps neighbors choose with confidence.</p>'+

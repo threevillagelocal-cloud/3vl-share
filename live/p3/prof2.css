@@ -83,6 +83,13 @@ html.pv2-on .member_profile>.col-md-9>*:not(#pv2),html.pv2-on .pf-coverimg{displ
 #pv2 .pv-igg img{width:100%!important;height:100%!important;max-width:none;object-fit:cover;border:0!important;padding:0!important;transition:transform .4s,filter .4s}
 #pv2 .pv-igg a:hover img{transform:scale(1.06);filter:brightness(1.05)}
 
+#pv2 .pv-socb{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+#pv2 .pv-socb a{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:14px;font-weight:800;font-size:15px;color:#fff!important}
+#pv2 .pv-socb a svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2}
+#pv2 .pv-socb a.fb svg{fill:#fff;stroke:none}
+#pv2 .pv-socb .ig{background:linear-gradient(45deg,#f09433,#dc2743 50%,#bc1888)}
+#pv2 .pv-socb .fb{background:#1877f2}
+
 /* hours + reviews */
 #pv2 .pv-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 #pv2 .pv-card{border:1px solid var(--line);border-radius:20px;padding:18px;background:#fff}
