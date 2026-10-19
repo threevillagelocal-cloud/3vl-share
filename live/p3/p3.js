@@ -451,3 +451,18 @@ document.documentElement.classList.add('p3v-js');
 function go(){badges();reveals()}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();window.addEventListener('load',go);
 })();
+
+/* Google rating badge beside the header email/Facebook/Instagram icons, every page (owner 10/18/2026).
+   Rating is typed here: update it if the Google rating changes. Phones hide that icon row, so it shows on computers + iPads. */
+(function(){if(window.__tvlgr)return;window.__tvlgr=1;
+var RATING='5.0',URL='https://maps.google.com/?cid=15405294417866042762';
+var CSS='.list-social-links .tvl-gr{margin-right:10px}.tvl-gr{display:inline-flex;align-items:center;gap:7px;padding:6px 13px 6px 9px;border-radius:999px;background:#fff;border:1px solid #e3e8ef;box-shadow:0 4px 14px rgba(19,41,75,.10);text-decoration:none!important;font-family:"tvl-rc","Radio Canada",system-ui,sans-serif;line-height:1;vertical-align:middle;transition:transform .2s,box-shadow .2s}'+
+ '.tvl-gr:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(19,41,75,.16)}.tvl-gr svg{width:18px;height:18px;flex:none}.tvl-gr b{font-size:16px;font-weight:800;color:#13294b}'+
+ '.tvl-grs{color:#fbbc05!important;font-size:15px;letter-spacing:1px}.tvl-gr em{font-style:normal;font-size:12.5px;font-weight:600;color:#5b6b7c;padding-left:7px;border-left:1px solid #e3e8ef}';
+var G='<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.7 13.3l7.9 6.1C12.5 13.6 17.8 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 7l7.5 5.8c4.4-4 6.8-10 6.8-17.3z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.7 10.7l7.8-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.2 0-11.5-4.1-13.4-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg>';
+function add(){var s=document.querySelector('.list-social-links');if(!s)return false;if(s.querySelector('.tvl-gr'))return true;
+  var st=document.createElement('style');st.textContent=CSS;(document.head||document.documentElement).appendChild(st);
+  s.insertAdjacentHTML('afterbegin','<a class="tvl-gr" href="'+URL+'" target="_blank" rel="noopener" aria-label="Rated '+RATING+' on Google">'+G+'<b>'+RATING+'</b><span class="tvl-grs">&#9733;&#9733;&#9733;&#9733;&#9733;</span><em>Rated on Google</em></a>');
+  s.querySelector('.tvl-gr').addEventListener('click',function(){try{if(window.gtag)gtag('event','google_badge_click')}catch(e){}});return true}
+if(!add()){var n=0,iv=setInterval(function(){if(add()||++n>40)clearInterval(iv)},150);document.addEventListener('DOMContentLoaded',add)}
+})();
