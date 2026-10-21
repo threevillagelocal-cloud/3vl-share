@@ -433,7 +433,7 @@ var CHECK='<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="
 var STAR='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.2l2 4.3 4.7.5-3.5 3.2 1 4.6L8 11.5 3.8 13.8l1-4.6L1.3 6l4.7-.5z" fill="#13294b"/></svg>';
 function badges(){
   var mp=document.querySelector('.member_profile');if(!mp||mp.classList.contains('p3-hastiers'))return;
-  var vip=mp.classList.contains('level_1')||mp.classList.contains('level_8'),feat=mp.classList.contains('level_2');
+  var vip=mp.classList.contains('level_1')||mp.classList.contains('level_8')||mp.classList.contains('level_9'),feat=mp.classList.contains('level_2');
   var h1=mp.querySelector('.member-profile-header h1');if(!h1||(!vip&&!feat))return;
   var ver=!!document.querySelector('img[alt="Verified Member"]');
   var b=document.createElement('div');b.className='p3-tiers';
@@ -465,4 +465,82 @@ function add(){var s=document.querySelector('.list-social-links');if(!s)return f
   s.insertAdjacentHTML('afterbegin','<a class="tvl-gr" href="'+URL+'" target="_blank" rel="noopener" aria-label="Rated '+RATING+' on Google">'+G+'<b>'+RATING+'</b><span class="tvl-grs">&#9733;&#9733;&#9733;&#9733;&#9733;</span><em>Rated on Google</em></a>');
   s.querySelector('.tvl-gr').addEventListener('click',function(){try{if(window.gtag)gtag('event','google_badge_click')}catch(e){}});return true}
 if(!add()){var n=0,iv=setInterval(function(){if(add()||++n>40)clearInterval(iv)},150);document.addEventListener('DOMContentLoaded',add)}
+})();
+
+/* Restaurant Partner checkout (/checkout/restaurant-partner = BD plan 9, owner 10/20/2026): premium look the whole way through.
+   Restyles BD's own sign-up form in place; the form fields, payment and submit are BD's and untouched. */
+(function(){
+if(window.__p3rp)return;
+var path=location.pathname.replace(/\/+$/,'');
+if(path!=='/checkout/restaurant-partner'&&path!=='/checkout/9')return;
+window.__p3rp=1;
+var H=document.documentElement;H.classList.add('rpco');
+var css='html.rpco:not(.rpco-on) .checkout-page-body{opacity:0}'
++'html.rpco .checkout-page-body{transition:opacity .35s}'
++'.rpco body,.rpco #main-content{background:#f4f7fb}'
++'.rpco .checkout-title{display:none!important}'
++'.rpco .checkout-page-body{width:100%;max-width:880px;margin:0 auto!important;float:none!important;font-family:"Radio Canada",system-ui,sans-serif}'
++'#rpco-hero{position:relative;overflow:hidden;margin:18px 0 22px;border-radius:28px;padding:38px 40px 34px;color:#fff;background:radial-gradient(circle at 92% 8%,rgba(255,197,61,.35),transparent 42%),linear-gradient(125deg,#0b2246 0%,#13336a 55%,#1d4f91 100%);box-shadow:0 30px 70px rgba(13,35,70,.28)}'
++'#rpco-hero .rk{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;padding:7px 14px;border-radius:999px;background:rgba(255,197,61,.16);border:1px solid rgba(255,197,61,.55);color:#ffd76a;font-weight:800;font-size:13px;letter-spacing:.04em}'
++'#rpco-hero h1{margin:0 0 10px;color:#fff;font-size:40px;line-height:1.08;font-weight:800}'
++'#rpco-hero h1 span{color:#ffc53d}'
++'#rpco-hero .rs{margin:0 0 22px;color:#d7e5f8;font-size:17px;line-height:1.5;max-width:620px}'
++'#rpco-hero .rg{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:stretch}'
++'#rpco-hero ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}'
++'#rpco-hero li{position:relative;padding:12px 14px 12px 50px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:#e7effa;font-size:14.5px;line-height:1.35}'
++'#rpco-hero li b{display:block;color:#fff;font-size:15.5px}'
++'#rpco-hero li i{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:15px;background:linear-gradient(135deg,#ffd76a,#e0a51b)}'
++'#rpco-hero .rp{border-radius:20px;padding:22px 20px;background:#fff;color:#13233a;text-align:center;box-shadow:0 18px 40px rgba(0,0,0,.25);display:flex;flex-direction:column;justify-content:center}'
++'#rpco-hero .rp em{font-style:normal;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#966e22}'
++'#rpco-hero .rp b{display:block;margin:6px 0 2px;font-size:52px;line-height:1;color:#0f2a52}'
++'#rpco-hero .rp b small{font-size:18px;color:#5d6876}'
++'#rpco-hero .rp p{margin:6px 0 0;color:#5d6876;font-size:13.5px;line-height:1.45}'
++'#rpco-hero .rp .rv{margin-top:12px;padding-top:12px;border-top:1px dashed #e3e8ef;color:#13233a;font-weight:700}'
++'#rpco-hero .rp .rv s{color:#8a94a3;font-weight:600}'
++'.rpco .checkout-page-body .well{background:#fff!important;border:1px solid #e3e8ef!important;border-radius:26px!important;padding:30px 34px!important;box-shadow:0 18px 44px rgba(13,35,70,.08)!important}'
++'.rpco p.account-menu-title{display:flex!important;align-items:center;gap:12px;margin:8px 0 18px!important;padding:0 0 12px!important;border-bottom:1px solid #eef1f6!important;color:#0f2a52!important;font-size:21px!important;font-weight:800!important}'
++'.rpco p.account-menu-title .rn{flex:0 0 auto;width:32px;height:32px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#0f2a52;color:#ffc53d;font-size:15px}'
++'.rpco .checkout-page-body label{color:#13233a!important;font-weight:700}'
++'.rpco .checkout-page-body .form-control{border-radius:12px!important;border:1px solid #d5dce6!important;height:46px;box-shadow:none!important}'
++'.rpco .checkout-page-body .form-control:focus{border-color:#1d5fbf!important;box-shadow:0 0 0 4px rgba(29,95,191,.14)!important}'
++'.rpco .monthly_billing label{display:flex!important;align-items:center;gap:12px;width:100%;margin:0!important;padding:16px 18px;border-radius:16px;border:2px solid #ffc53d;background:linear-gradient(135deg,#fff8e6,#fff);color:#13233a!important;font-size:15px!important;line-height:1.4}'
++'.rpco .monthly_billing input{margin:0!important;position:static!important;accent-color:#0f2a52;width:18px;height:18px}'
++'.rpco .promo-code-input,.rpco .promo-code-input-title{display:none!important}'
++'.rpco .checkout-page-body [type=submit],.rpco .checkout-page-body .btn-success,.rpco .checkout-page-body .btn-primary{border:0!important;border-radius:999px!important;padding:17px 22px!important;font-size:18px!important;font-weight:800!important;color:#2a1c00!important;background:linear-gradient(135deg,#ffd76a,#f0ad2e)!important;box-shadow:0 14px 30px rgba(240,173,46,.4)!important;opacity:1!important}'
++'#rpco-trust{margin:16px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;color:#5d6876;font-size:13.5px}'
++'#rpco-trust span{white-space:nowrap}'
++'#rpco-talk{margin:20px 0 40px;text-align:center;color:#5d6876;font-size:15px}'
++'#rpco-talk a{color:#1d5fbf;font-weight:800}'
++'@media (max-width:760px){#rpco-hero{padding:26px 20px 22px;border-radius:22px;margin:10px 0 16px}#rpco-hero h1{font-size:30px}#rpco-hero .rs{font-size:15.5px}#rpco-hero .rg{grid-template-columns:1fr}#rpco-hero .rp{order:-1}'
++'.rpco .checkout-page-body .well{padding:20px 16px!important;border-radius:20px!important}.rpco p.account-menu-title{font-size:18px!important}}';
+var st=document.createElement('style');st.textContent=css;(document.head||H).appendChild(st);
+var shown=false;function show(){if(!shown){shown=true;H.classList.add('rpco-on')}}
+setTimeout(show,3000);
+var BACK=/\/for-[a-z0-9-]+/.test(document.referrer)?document.referrer.split('#')[0]+'#tvs-book':'/preview-restaurants#tvs-book';
+function build(){
+  var form=document.querySelector('form[name="whmcs_signup_paid"]');if(!form)return false;
+  var body=form.closest('.checkout-page-body');if(!body||document.getElementById('rpco-hero'))return true;
+  var hero=document.createElement('div');hero.id='rpco-hero';
+  hero.innerHTML='<p class="rk">&#9733; Only 5 restaurants &middot; first come, first served</p>'
+   +'<h1>Claim your <span>Restaurant Partner</span> spot.</h1>'
+   +'<p class="rs">Premium local marketing to your neighbors in Stony Brook, Setauket and Port Jefferson. Sign up below and we get to work this week.</p>'
+   +'<div class="rg"><ul>'
+   +'<li><i>&#128276;</i><b>Monthly push notification</b>On the lock screen of every Three Village Local mobile app user</li>'
+   +'<li><i>&#127869;&#65039;</i><b>Weekly specials, everywhere</b>Our website, the mobile app, Instagram and Facebook</li>'
+   +'<li><i>&#127909;</i><b>Your promo video</b>Filmed at your restaurant, edited by us, yours to keep</li>'
+   +'<li><i>&#11088;</i><b>VIP listing + 6 more partner perks</b>Newsletter, Eat &amp; Drink, posts and a Reel, events, decal</li>'
+   +'</ul><div class="rp"><em>Three Village Local Restaurant Partner</em><b>$399<small>/mo</small></b><p>6-month partnership, then month to month</p><p class="rv">Over <s>$1,000/mo</s> in marketing value</p></div></div>';
+  body.parentNode.insertBefore(hero,body);
+  var nums={'Enter Email and Create Password':['1','Create your login'],'Select a Payment Option':['2','Your plan'],'Enter Billing Information':['3','Secure payment']};
+  [].forEach.call(document.querySelectorAll('.checkout-page-body p.account-menu-title'),function(p){var k=p.textContent.trim(),v=nums[k];if(v)p.innerHTML='<span class="rn">'+v[0]+'</span>'+v[1]});
+  var radio=document.querySelector('.monthly_billing input[name="member_type"]');
+  if(radio&&radio.parentNode){var l=radio.parentNode;[].slice.call(l.childNodes).forEach(function(n){if(n!==radio)l.removeChild(n)});
+    l.insertAdjacentHTML('beforeend','<span><b>Restaurant Partner &middot; $399 per month</b><br>6-month partnership, then month to month. You approve every post before it goes out.</span>')}
+  var btn=[].filter.call(form.querySelectorAll('button,input[type=submit]'),function(b){return /Create My Profile/i.test(b.textContent||b.value)})[0];
+  if(btn){if(btn.tagName==='INPUT')btn.value='Claim my spot · $399/mo';else btn.textContent='Claim my spot · $399/mo';
+    btn.insertAdjacentHTML('afterend','<div id="rpco-trust"><span>&#128274; Secure card processing by Stripe</span><span>&#10003; You approve every post</span><span>&#10003; We call you within one business day</span></div>')}
+  body.insertAdjacentHTML('afterend','<p id="rpco-talk">Rather talk it through first? <a href="'+BACK+'">Book a quick call</a> or email <a href="mailto:hello@threevillagelocal.com">hello@threevillagelocal.com</a></p>');
+  try{if(window.gtag)gtag('event','rp_checkout_view')}catch(e){}
+  show();return true}
+if(!build()){var n=0,iv=setInterval(function(){if(build()||++n>60)clearInterval(iv)},100);document.addEventListener('DOMContentLoaded',build)}
 })();
