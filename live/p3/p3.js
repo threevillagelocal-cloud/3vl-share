@@ -585,9 +585,24 @@ function find(){var all=[].filter.call(document.querySelectorAll('input[type=rad
   if(all.length)return all[0];
   var t=[].filter.call(document.querySelectorAll('label,.card,.well,li,div'),function(e){return e.children.length<12&&/Three Village Local Restaurant Partner/.test(e.textContent)});
   return t.length?(t[t.length-1].querySelector('input')||null):null}
+/* owner 10/20/2026: only Restaurant-category members ever see this plan. Category comes from the nightly search index
+   (member id from the dashboard's "Member ID #"), falling back to their public listing's category link. */
+function isRestaurant(cb){
+  var m=(document.body.innerText.match(/Member ID #(\d+)/)||[])[1];if(!m){cb(false);return}
+  var IDX='https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/search/index.json';
+  function viaListing(){var a=[].filter.call(document.querySelectorAll('a'),function(x){return /View Public Listing/i.test(x.textContent)})[0];
+    if(!a||!window.fetch){cb(false);return}
+    fetch(a.href,{credentials:'same-origin'}).then(function(r){return r.text()}).then(function(t){cb(/href="[^"]*\/restaurant"/.test(t))}).catch(function(){cb(false)})}
+  if(!window.fetch){cb(false);return}
+  fetch(IDX).then(function(r){return r.json()}).then(function(d){var me=(d.members||[]).filter(function(x){return String(x.id)===m})[0];
+    if(me)cb(me.c==='Restaurant');else viaListing()}).catch(viaListing)}
+var checked=false;
 function run(){var inp=find();if(!inp)return false;var b=box(inp);
-  if(!rp){b.style.display='none';return true}
-  if(document.getElementById('rpu-hero'))return true;
+  if(checked)return true;checked=true;b.style.display='none';
+  isRestaurant(function(ok){if(!ok)return;b.style.display='';if(rp)focus(inp,b)});
+  return true}
+function focus(inp,b){
+  if(document.getElementById('rpu-hero'))return;
   if(!inp.checked)inp.click();if(!inp.checked){inp.checked=true;inp.dispatchEvent(new Event('change',{bubbles:true}))}
   /* only Restaurant Partner for restaurants arriving from our links: hide the other plans and the dividers between them */
   [].forEach.call(document.querySelectorAll('input[type=radio][name="'+inp.name+'"]'),function(o){if(o!==inp){var c=box(o);c.style.display='none';var n=c.nextElementSibling;if(n&&n.tagName==='HR')n.style.display='none'}});
@@ -607,6 +622,7 @@ function run(){var inp=find();if(!inp)return false;var b=box(inp);
    +'<ul><li>Monthly push to every mobile app user</li><li>Weekly specials on every channel</li><li>Your promo video</li><li>VIP listing + 6 more perks</li></ul>';
   var form=inp.form||b.parentNode;form.parentNode.insertBefore(h,form);
   try{if(window.gtag)gtag('event','rp_upgrade_view')}catch(e){}
-  return true}
+}
+
 if(!run()){var n=0,iv=setInterval(function(){if(run()||++n>60)clearInterval(iv)},150);document.addEventListener('DOMContentLoaded',run)}
 })();
