@@ -74,6 +74,7 @@ function buildEvent(){
      original image rather than the small 800px copy */
   var him=$('.ev-himg',hero),artEl=$('[data-ev-art]',pc),art=!!artEl;
   if(him&&art){var aSrc=artEl.getAttribute('data-ev-art')||'';him.setAttribute('src',aSrc.indexOf('http')===0?aSrc:(him.getAttribute('data-o')||him.getAttribute('src')))}
+  if(art)hero.classList.add('ev-art');   /* designed banners already show date/venue: compact title strip (owner 10/21/2026) */
   if(him){var fit=function(){if(art||(him.naturalWidth&&him.naturalHeight/him.naturalWidth>0.9))hero.classList.add('ev-split')};him.addEventListener('load',fit);if(him.complete)fit()}
   if(h1){h1.className='';$('.ev-h1',hero).appendChild(h1)}else $('.ev-h1',hero).innerHTML='<h1>'+esc(title)+'</h1>';
   var act=document.createElement('div');act.className='ev-actions';
