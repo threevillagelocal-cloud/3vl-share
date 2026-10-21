@@ -529,7 +529,7 @@ function build(){
   var body=form.closest('.checkout-page-body');if(!body||document.getElementById('rpco-hero'))return true;
   var hero=document.createElement('div');hero.id='rpco-hero';
   hero.innerHTML='<p class="rk">&#9733; Only 5 restaurants &middot; first come, first served</p>'
-   +'<h1>Welcome to <span>premium local marketing.</span></h1>'
+   +'<h1>Welcome to your <span>front-row seat.</span></h1>'
    +'<p class="rs">You are claiming one of only 5 Restaurant Partner spots: your restaurant in front of your neighbors in Stony Brook, Setauket and Port Jefferson, every week. Finish below and we get to work this week.</p>'
    +'<div class="rg"><ul>'
    +'<li><i>&#128276;</i><b>Monthly push notification</b>On the lock screen of every Three Village Local mobile app user</li>'
@@ -560,7 +560,7 @@ if(!build()){var n=0,iv=setInterval(function(){if(build()||++n>60)clearInterval(
 })();
 /* Restaurant Partner upgrade (owner 10/20/2026): restaurants already on Three Village Local log in and upgrade at /account/upgrade.
    Invitation and restaurant-page links add ?rp=1 (or the restaurant pages leave a flag): then the Restaurant Partner option is
-   preselected under a "Welcome to premium local marketing" banner. Without the flag the option is hidden (it is only for restaurants). */
+   preselected under a "Welcome to your front-row seat" banner. Without the flag the option is hidden (it is only for restaurants). */
 (function(){
 if(window.__p3ru)return;window.__p3ru=1;
 var path=location.pathname.replace(/\/+$/,''),K='3vl_rp';
@@ -617,7 +617,7 @@ function focus(inp,b){
    +'#rpu-hero li{color:#e7effa;font-size:14px}#rpu-hero li:before{content:"\\2605 ";color:#ffc53d}@media (max-width:640px){#rpu-hero ul{grid-template-columns:1fr}#rpu-hero h2{font-size:24px}}';
   document.head.appendChild(st);
   var h=document.createElement('div');h.id='rpu-hero';
-  h.innerHTML='<em>&#9733; Three Village Local Restaurant Partner &middot; only 5 restaurants</em><h2>Welcome to <span>premium local marketing.</span></h2>'
+  h.innerHTML='<em>&#9733; Three Village Local Restaurant Partner &middot; only 5 restaurants</em><h2>Welcome to your <span>front-row seat.</span></h2>'
    +'<p>Your listing stays exactly as it is and moves up to Restaurant Partner: $399 a month, 6-month partnership. Choose it below and confirm.</p>'
    +'<ul><li>Monthly push to every mobile app user</li><li>Weekly specials on every channel</li><li>Your promo video</li><li>VIP listing + 6 more perks</li></ul>';
   var form=inp.form||b.parentNode;form.parentNode.insertBefore(h,form);
