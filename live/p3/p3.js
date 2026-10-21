@@ -579,7 +579,8 @@ if(path==='/login'&&/rp%3D1|rp=1/.test(location.search)){
 if(path!=='/account/upgrade')return;
 var rp=/[?&]rp=1/.test(location.search)||flag()==='1';
 if(/[?&]rp=1/.test(location.search)){try{localStorage.setItem(K,'1')}catch(e){}}
-function box(inp){return inp.closest('.radio,.checkbox,.card,.well,li,.col-md-4,.col-md-6,.col-sm-6,.col-lg-4,label')||inp.parentNode}
+/* the plan card = the biggest wrapper that still holds only this one plan's radio */
+function box(inp){var e=inp;while(e.parentElement&&e.parentElement.querySelectorAll('input[type=radio]').length<2&&e.parentElement.tagName!=='FORM')e=e.parentElement;return e}
 function find(){var all=[].filter.call(document.querySelectorAll('input[type=radio],input[type=checkbox]'),function(i){return i.value==='9'});
   if(all.length)return all[0];
   var t=[].filter.call(document.querySelectorAll('label,.card,.well,li,div'),function(e){return e.children.length<12&&/Three Village Local Restaurant Partner/.test(e.textContent)});
@@ -587,7 +588,12 @@ function find(){var all=[].filter.call(document.querySelectorAll('input[type=rad
 function run(){var inp=find();if(!inp)return false;var b=box(inp);
   if(!rp){b.style.display='none';return true}
   if(document.getElementById('rpu-hero'))return true;
-  inp.checked=true;inp.dispatchEvent(new Event('change',{bubbles:true}));inp.dispatchEvent(new Event('click',{bubbles:true}));
+  if(!inp.checked)inp.click();if(!inp.checked){inp.checked=true;inp.dispatchEvent(new Event('change',{bubbles:true}))}
+  /* only Restaurant Partner for restaurants arriving from our links: hide the other plans and the dividers between them */
+  [].forEach.call(document.querySelectorAll('input[type=radio][name="'+inp.name+'"]'),function(o){if(o!==inp){var c=box(o);c.style.display='none';var n=c.nextElementSibling;if(n&&n.tagName==='HR')n.style.display='none'}});
+  var go=[].filter.call((inp.form||document).querySelectorAll('button,input[type=submit],a.btn'),function(x){return /Continue/i.test(x.textContent||x.value)})[0];
+  if(go){var gt='Continue to Restaurant Partner →';if(go.tagName==='INPUT')go.value=gt;else go.textContent=gt;
+    go.style.cssText+=';border:0;border-radius:999px;padding:17px 22px;font-size:18px;font-weight:800;color:#2a1c00;background:linear-gradient(135deg,#ffd76a,#f0ad2e);box-shadow:0 14px 30px rgba(240,173,46,.4)'}
   b.style.cssText+=';border:2px solid #ffc53d;border-radius:18px;background:linear-gradient(135deg,#fff8e6,#fff);box-shadow:0 14px 34px rgba(240,173,46,.25)';
   var st=document.createElement('style');st.textContent='#rpu-hero{margin:0 0 20px;padding:26px 26px 22px;border-radius:24px;color:#fff;font-family:"Radio Canada",system-ui,sans-serif;background:radial-gradient(circle at 92% 8%,rgba(255,197,61,.35),transparent 42%),linear-gradient(125deg,#0b2246 0%,#13336a 55%,#1d4f91 100%);box-shadow:0 24px 54px rgba(13,35,70,.25)}'
    +'#rpu-hero em{display:inline-block;font-style:normal;margin:0 0 10px;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,197,61,.55);color:#ffd76a;font-weight:800;font-size:12.5px}'
