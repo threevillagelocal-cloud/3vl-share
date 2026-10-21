@@ -480,7 +480,7 @@ var css='html.rpco:not(.rpco-on) .checkout-page-body{opacity:0}'
 +'.rpco body,.rpco #main-content{background:#f4f7fb}'
 +'.rpco .checkout-title{display:none!important}'
 +'.rpco .checkout-page-body{width:100%;max-width:880px;margin:0 auto!important;float:none!important;font-family:"Radio Canada",system-ui,sans-serif}'
-+'#rpco-hero{position:relative;overflow:hidden;margin:18px 0 22px;border-radius:28px;padding:38px 40px 34px;color:#fff;background:radial-gradient(circle at 92% 8%,rgba(255,197,61,.35),transparent 42%),linear-gradient(125deg,#0b2246 0%,#13336a 55%,#1d4f91 100%);box-shadow:0 30px 70px rgba(13,35,70,.28)}'
++'#rpco-hero{position:relative;overflow:hidden;max-width:880px;box-sizing:border-box;margin:18px auto 22px;border-radius:28px;padding:38px 40px 34px;color:#fff;background:radial-gradient(circle at 92% 8%,rgba(255,197,61,.35),transparent 42%),linear-gradient(125deg,#0b2246 0%,#13336a 55%,#1d4f91 100%);box-shadow:0 30px 70px rgba(13,35,70,.28)}'
 +'#rpco-hero .rk{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;padding:7px 14px;border-radius:999px;background:rgba(255,197,61,.16);border:1px solid rgba(255,197,61,.55);color:#ffd76a;font-weight:800;font-size:13px;letter-spacing:.04em}'
 +'#rpco-hero h1{margin:0 0 10px;color:#fff;font-size:40px;line-height:1.08;font-weight:800}'
 +'#rpco-hero h1 span{color:#ffc53d}'
@@ -505,7 +505,8 @@ var css='html.rpco:not(.rpco-on) .checkout-page-body{opacity:0}'
 +'.rpco .checkout-page-body .form-control:focus{border-color:#1d5fbf!important;box-shadow:0 0 0 4px rgba(29,95,191,.14)!important}'
 +'.rpco .monthly_billing label{display:flex!important;align-items:center;gap:12px;width:100%;margin:0!important;padding:16px 18px;border-radius:16px;border:2px solid #ffc53d;background:linear-gradient(135deg,#fff8e6,#fff);color:#13233a!important;font-size:15px!important;line-height:1.4}'
 +'.rpco .monthly_billing input{margin:0!important;position:static!important;accent-color:#0f2a52;width:18px;height:18px}'
-+'.rpco .promo-code-input,.rpco .promo-code-input-title{display:none!important}'
++'.rpco .promo-code-input,.rpco .promo-code-input-title,.rpco .promo-code-group{display:none!important}'
++'.rpco .order-summ-module{width:100%!important;float:none!important;padding:0!important}'
 +'.rpco .checkout-page-body [type=submit],.rpco .checkout-page-body .btn-success,.rpco .checkout-page-body .btn-primary{border:0!important;border-radius:999px!important;padding:17px 22px!important;font-size:18px!important;font-weight:800!important;color:#2a1c00!important;background:linear-gradient(135deg,#ffd76a,#f0ad2e)!important;box-shadow:0 14px 30px rgba(240,173,46,.4)!important;opacity:1!important}'
 +'#rpco-trust{margin:16px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;color:#5d6876;font-size:13.5px}'
 +'#rpco-trust span{white-space:nowrap}'
@@ -535,10 +536,12 @@ function build(){
   [].forEach.call(document.querySelectorAll('.checkout-page-body p.account-menu-title'),function(p){var k=p.textContent.trim(),v=nums[k];if(v)p.innerHTML='<span class="rn">'+v[0]+'</span>'+v[1]});
   var radio=document.querySelector('.monthly_billing input[name="member_type"]');
   if(radio&&radio.parentNode){var l=radio.parentNode;[].slice.call(l.childNodes).forEach(function(n){if(n!==radio)l.removeChild(n)});
-    l.insertAdjacentHTML('beforeend','<span><b>Restaurant Partner &middot; $399 per month</b><br>6-month partnership, then month to month. You approve every post before it goes out.</span>')}
-  var btn=[].filter.call(form.querySelectorAll('button,input[type=submit]'),function(b){return /Create My Profile/i.test(b.textContent||b.value)})[0];
-  if(btn){if(btn.tagName==='INPUT')btn.value='Claim my spot · $399/mo';else btn.textContent='Claim my spot · $399/mo';
-    btn.insertAdjacentHTML('afterend','<div id="rpco-trust"><span>&#128274; Secure card processing by Stripe</span><span>&#10003; You approve every post</span><span>&#10003; We call you within one business day</span></div>')}
+    l.insertAdjacentHTML('beforeend','<span style="font-weight:400"><b>Restaurant Partner &middot; $399 per month</b><br>6-month partnership, then month to month. You approve every post before it goes out.</span>')}
+  /* BD resets the button text (and can redraw it) after load on phones, so keep re-applying for a while */
+  function fixBtn(){var b=[].filter.call(form.querySelectorAll('input[type=submit].submitter,button.submitter,input[type=submit]'),function(x){return x.offsetWidth>0})[0];if(!b)return;
+    var t='Claim my spot · $399/mo';if(b.tagName==='INPUT'){if(b.value!==t)b.value=t}else if(b.textContent!==t)b.textContent=t;
+    if(!document.getElementById('rpco-trust'))b.insertAdjacentHTML('afterend','<div id="rpco-trust"><span>&#128274; Secure card processing by Stripe</span><span>&#10003; You approve every post</span><span>&#10003; We call you within one business day</span></div>')}
+  fixBtn();var fb=0,fi=setInterval(function(){fixBtn();if(++fb>40)clearInterval(fi)},250);window.addEventListener('load',fixBtn);
   body.insertAdjacentHTML('afterend','<p id="rpco-talk">Rather talk it through first? <a href="'+BACK+'">Book a quick call</a> or email <a href="mailto:hello@threevillagelocal.com">hello@threevillagelocal.com</a></p>');
   try{if(window.gtag)gtag('event','rp_checkout_view')}catch(e){}
   show();return true}
