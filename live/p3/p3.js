@@ -560,6 +560,16 @@ if(window.__p3ru)return;window.__p3ru=1;
 var path=location.pathname.replace(/\/+$/,''),K='3vl_rp';
 function flag(){try{return localStorage.getItem(K)}catch(e){return null}}
 if(/^\/(for-[a-z0-9-]+|restaurants|preview-restaurants)$/.test(path)){try{localStorage.setItem(K,'1')}catch(e){}return}
+if(path==='/login'&&/rp%3D1|rp=1/.test(location.search)){
+  var lb=function(){var f=document.querySelector('form[name^="member_login"]');if(!f||document.getElementById('rpl'))return !!f;
+    var d=document.createElement('div');d.id='rpl';
+    d.setAttribute('style','margin:0 0 18px;padding:20px 22px;border-radius:20px;color:#fff;font-family:Radio Canada,system-ui,sans-serif;background:linear-gradient(125deg,#0b2246,#1d4f91);box-shadow:0 18px 40px rgba(13,35,70,.22)');
+    d.innerHTML='<p style="margin:0 0 4px;color:#ffc53d;font-weight:800;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase">&#9733; Three Village Local Restaurant Partner</p>'
+      +'<p style="margin:0 0 6px;color:#fff;font-size:21px;font-weight:800;line-height:1.2">Log in to upgrade your listing.</p>'
+      +'<p style="margin:0;color:#d7e5f8;font-size:14.5px;line-height:1.5">Use the email you claimed your listing with. Forgot your password? Use the reset link below the form, then you will land right on the upgrade.</p>';
+    f.parentNode.insertBefore(d,f);return true};
+  if(!lb()){var ln=0,li=setInterval(function(){if(lb()||++ln>40)clearInterval(li)},150)}
+  return}
 if(path!=='/account/upgrade')return;
 var rp=/[?&]rp=1/.test(location.search)||flag()==='1';
 if(/[?&]rp=1/.test(location.search)){try{localStorage.setItem(K,'1')}catch(e){}}
@@ -577,7 +587,7 @@ function run(){var inp=find();if(!inp)return false;var b=box(inp);
    +'#rpu-hero em{display:inline-block;font-style:normal;margin:0 0 10px;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,197,61,.55);color:#ffd76a;font-weight:800;font-size:12.5px}'
    +'#rpu-hero h2{margin:0 0 8px;color:#fff;font-size:30px;line-height:1.1;font-weight:800}#rpu-hero h2 span{color:#ffc53d}'
    +'#rpu-hero p{margin:0;color:#d7e5f8;font-size:15.5px;line-height:1.5}#rpu-hero ul{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}'
-   +'#rpu-hero li{color:#e7effa;font-size:14px}#rpu-hero li:before{content:"\2605 ";color:#ffc53d}@media (max-width:640px){#rpu-hero ul{grid-template-columns:1fr}#rpu-hero h2{font-size:24px}}';
+   +'#rpu-hero li{color:#e7effa;font-size:14px}#rpu-hero li:before{content:"\\2605 ";color:#ffc53d}@media (max-width:640px){#rpu-hero ul{grid-template-columns:1fr}#rpu-hero h2{font-size:24px}}';
   document.head.appendChild(st);
   var h=document.createElement('div');h.id='rpu-hero';
   h.innerHTML='<em>&#9733; Three Village Local Restaurant Partner &middot; only 5 restaurants</em><h2>Welcome to <span>premium local marketing.</span></h2>'
