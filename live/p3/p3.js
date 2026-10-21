@@ -561,7 +561,7 @@ var path=location.pathname.replace(/\/+$/,''),K='3vl_rp';
 function flag(){try{return localStorage.getItem(K)}catch(e){return null}}
 if(/^\/(for-[a-z0-9-]+|restaurants|preview-restaurants)$/.test(path)){try{localStorage.setItem(K,'1')}catch(e){}return}
 if(path==='/login'&&/rp%3D1|rp=1/.test(location.search)){
-  var lb=function(){var f=document.querySelector('form[name^="member_login"]');if(!f||document.getElementById('rpl'))return !!f;
+  var lb=function(){var f=[].filter.call(document.querySelectorAll('form[name^="member_login"]'),function(x){return x.offsetParent!==null})[0];if(!f||document.getElementById('rpl'))return !!f;
     var d=document.createElement('div');d.id='rpl';
     d.setAttribute('style','margin:0 0 18px;padding:20px 22px;border-radius:20px;color:#fff;font-family:Radio Canada,system-ui,sans-serif;background:linear-gradient(125deg,#0b2246,#1d4f91);box-shadow:0 18px 40px rgba(13,35,70,.22)');
     d.innerHTML='<p style="margin:0 0 4px;color:#ffc53d;font-weight:800;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase">&#9733; Three Village Local Restaurant Partner</p>'
