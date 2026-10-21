@@ -508,6 +508,10 @@ var css='html.rpco:not(.rpco-on) .checkout-page-body{opacity:0}'
 +'.rpco .promo-code-input,.rpco .promo-code-input-title,.rpco .promo-code-group{display:none!important}'
 +'.rpco .order-summ-module{width:100%!important;float:none!important;padding:0!important}'
 +'.rpco .checkout-page-body [type=submit],.rpco .checkout-page-body .btn-success,.rpco .checkout-page-body .btn-primary{border:0!important;border-radius:999px!important;padding:17px 22px!important;font-size:18px!important;font-weight:800!important;color:#2a1c00!important;background:linear-gradient(135deg,#ffd76a,#f0ad2e)!important;box-shadow:0 14px 30px rgba(240,173,46,.4)!important;opacity:1!important}'
++'#rpco-hero .ra{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14)}'
++'#rpco-hero .ra p{margin:0;color:#cfe0f7;font-size:13px;line-height:1.35}#rpco-hero .ra b{display:block;color:#ffc53d;font-size:18px}'
++'@media (max-width:760px){#rpco-hero .ra{grid-template-columns:1fr 1fr}}'
++'.rpco .checkout-page-body h3{color:#0f2a52}'
 +'#rpco-trust{margin:16px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;color:#5d6876;font-size:13.5px}'
 +'#rpco-trust span{white-space:nowrap}'
 +'#rpco-talk{margin:20px 0 40px;text-align:center;color:#5d6876;font-size:15px}'
@@ -523,14 +527,15 @@ function build(){
   var body=form.closest('.checkout-page-body');if(!body||document.getElementById('rpco-hero'))return true;
   var hero=document.createElement('div');hero.id='rpco-hero';
   hero.innerHTML='<p class="rk">&#9733; Only 5 restaurants &middot; first come, first served</p>'
-   +'<h1>Claim your <span>Restaurant Partner</span> spot.</h1>'
-   +'<p class="rs">Premium local marketing to your neighbors in Stony Brook, Setauket and Port Jefferson. Sign up below and we get to work this week.</p>'
+   +'<h1>Welcome to <span>premium local marketing.</span></h1>'
+   +'<p class="rs">You are claiming one of only 5 Restaurant Partner spots: your restaurant in front of your neighbors in Stony Brook, Setauket and Port Jefferson, every week. Finish below and we get to work this week.</p>'
    +'<div class="rg"><ul>'
    +'<li><i>&#128276;</i><b>Monthly push notification</b>On the lock screen of every Three Village Local mobile app user</li>'
    +'<li><i>&#127869;&#65039;</i><b>Weekly specials, everywhere</b>Our website, the mobile app, Instagram and Facebook</li>'
    +'<li><i>&#127909;</i><b>Your promo video</b>Filmed at your restaurant, edited by us, yours to keep</li>'
    +'<li><i>&#11088;</i><b>VIP listing + 6 more partner perks</b>Newsletter, Eat &amp; Drink, posts and a Reel, events, decal</li>'
-   +'</ul><div class="rp"><em>Three Village Local Restaurant Partner</em><b>$399<small>/mo</small></b><p>6-month partnership, then month to month</p><p class="rv">Over <s>$1,000/mo</s> in marketing value</p></div></div>';
+   +'</ul><div class="rp"><em>Three Village Local Restaurant Partner</em><b>$399<small>/mo</small></b><p>6-month partnership, then month to month</p><p class="rv">Over <s>$1,000/mo</s> in marketing value</p></div></div>'
+   +'<div class="ra"><p><b>45,000+</b>website page visits a month</p><p><b>100,000+</b>Facebook and Instagram views a month</p><p><b>You cook.</b>Text us a photo, we handle the rest</p><p><b>You approve</b>every post before it goes out</p></div>';
   body.parentNode.insertBefore(hero,body);
   var nums={'Enter Email and Create Password':['1','Create your login'],'Select a Payment Option':['2','Your plan'],'Enter Billing Information':['3','Secure payment']};
   [].forEach.call(document.querySelectorAll('.checkout-page-body p.account-menu-title'),function(p){var k=p.textContent.trim(),v=nums[k];if(v)p.innerHTML='<span class="rn">'+v[0]+'</span>'+v[1]});
@@ -546,4 +551,40 @@ function build(){
   try{if(window.gtag)gtag('event','rp_checkout_view')}catch(e){}
   show();return true}
 if(!build()){var n=0,iv=setInterval(function(){if(build()||++n>60)clearInterval(iv)},100);document.addEventListener('DOMContentLoaded',build)}
+})();
+/* Restaurant Partner upgrade (owner 10/20/2026): restaurants already on Three Village Local log in and upgrade at /account/upgrade.
+   Invitation and restaurant-page links add ?rp=1 (or the restaurant pages leave a flag): then the Restaurant Partner option is
+   preselected under a "Welcome to premium local marketing" banner. Without the flag the option is hidden (it is only for restaurants). */
+(function(){
+if(window.__p3ru)return;window.__p3ru=1;
+var path=location.pathname.replace(/\/+$/,''),K='3vl_rp';
+function flag(){try{return localStorage.getItem(K)}catch(e){return null}}
+if(/^\/(for-[a-z0-9-]+|restaurants|preview-restaurants)$/.test(path)){try{localStorage.setItem(K,'1')}catch(e){}return}
+if(path!=='/account/upgrade')return;
+var rp=/[?&]rp=1/.test(location.search)||flag()==='1';
+if(/[?&]rp=1/.test(location.search)){try{localStorage.setItem(K,'1')}catch(e){}}
+function box(inp){return inp.closest('.radio,.checkbox,.card,.well,li,.col-md-4,.col-md-6,.col-sm-6,.col-lg-4,label')||inp.parentNode}
+function find(){var all=[].filter.call(document.querySelectorAll('input[type=radio],input[type=checkbox]'),function(i){return i.value==='9'});
+  if(all.length)return all[0];
+  var t=[].filter.call(document.querySelectorAll('label,.card,.well,li,div'),function(e){return e.children.length<12&&/Three Village Local Restaurant Partner/.test(e.textContent)});
+  return t.length?(t[t.length-1].querySelector('input')||null):null}
+function run(){var inp=find();if(!inp)return false;var b=box(inp);
+  if(!rp){b.style.display='none';return true}
+  if(document.getElementById('rpu-hero'))return true;
+  inp.checked=true;inp.dispatchEvent(new Event('change',{bubbles:true}));inp.dispatchEvent(new Event('click',{bubbles:true}));
+  b.style.cssText+=';border:2px solid #ffc53d;border-radius:18px;background:linear-gradient(135deg,#fff8e6,#fff);box-shadow:0 14px 34px rgba(240,173,46,.25)';
+  var st=document.createElement('style');st.textContent='#rpu-hero{margin:0 0 20px;padding:26px 26px 22px;border-radius:24px;color:#fff;font-family:"Radio Canada",system-ui,sans-serif;background:radial-gradient(circle at 92% 8%,rgba(255,197,61,.35),transparent 42%),linear-gradient(125deg,#0b2246 0%,#13336a 55%,#1d4f91 100%);box-shadow:0 24px 54px rgba(13,35,70,.25)}'
+   +'#rpu-hero em{display:inline-block;font-style:normal;margin:0 0 10px;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,197,61,.55);color:#ffd76a;font-weight:800;font-size:12.5px}'
+   +'#rpu-hero h2{margin:0 0 8px;color:#fff;font-size:30px;line-height:1.1;font-weight:800}#rpu-hero h2 span{color:#ffc53d}'
+   +'#rpu-hero p{margin:0;color:#d7e5f8;font-size:15.5px;line-height:1.5}#rpu-hero ul{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}'
+   +'#rpu-hero li{color:#e7effa;font-size:14px}#rpu-hero li:before{content:"\2605 ";color:#ffc53d}@media (max-width:640px){#rpu-hero ul{grid-template-columns:1fr}#rpu-hero h2{font-size:24px}}';
+  document.head.appendChild(st);
+  var h=document.createElement('div');h.id='rpu-hero';
+  h.innerHTML='<em>&#9733; Three Village Local Restaurant Partner &middot; only 5 restaurants</em><h2>Welcome to <span>premium local marketing.</span></h2>'
+   +'<p>Your listing stays exactly as it is and moves up to Restaurant Partner: $399 a month, 6-month partnership. Choose it below and confirm.</p>'
+   +'<ul><li>Monthly push to every mobile app user</li><li>Weekly specials on every channel</li><li>Your promo video</li><li>VIP listing + 6 more perks</li></ul>';
+  var form=inp.form||b.parentNode;form.parentNode.insertBefore(h,form);
+  try{if(window.gtag)gtag('event','rp_upgrade_view')}catch(e){}
+  return true}
+if(!run()){var n=0,iv=setInterval(function(){if(run()||++n>60)clearInterval(iv)},150);document.addEventListener('DOMContentLoaded',run)}
 })();
