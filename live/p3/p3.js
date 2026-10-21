@@ -536,7 +536,7 @@ function build(){
    +'<li><i>&#127869;&#65039;</i><b>Weekly specials, everywhere</b>Our website, the mobile app, Instagram and Facebook</li>'
    +'<li><i>&#127909;</i><b>Your promo video</b>Filmed at your restaurant, edited by us, yours to keep</li>'
    +'<li><i>&#11088;</i><b>VIP listing + 6 more partner perks</b>Newsletter, Eat &amp; Drink, posts and a Reel, events, decal</li>'
-   +'</ul><div class="rp"><em>Three Village Local Restaurant Partner</em><b>$399<small>/mo</small></b><p>6-month partnership, then month to month</p><p class="rv">Over <s>$1,000/mo</s> in marketing value</p></div></div>'
+   +'</ul><div class="rp"><em>Three Village Local Restaurant Partner</em><b>$399<small>/mo</small></b><p>6-month partnership, then month to month</p><p class="rv">Over <s>$1,000/mo</s> in value</p></div></div>'
    +'<div class="ra"><p><b>45,000+</b>website page visits a month</p><p><b>100,000+</b>Facebook and Instagram views a month</p><p><b>You cook.</b>Text us a photo, we handle the rest</p><p><b>You approve</b>every post before it goes out</p></div>';
   body.parentNode.insertBefore(hero,body);
   /* claim link (?claim=): BD's "You Are Claiming" box sits in the hidden title block, so show their listing in the hero instead */
