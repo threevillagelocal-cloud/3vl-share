@@ -508,6 +508,8 @@ var css='html.rpco:not(.rpco-on) .checkout-page-body{opacity:0}'
 +'.rpco .promo-code-input,.rpco .promo-code-input-title,.rpco .promo-code-group{display:none!important}'
 +'.rpco .order-summ-module{width:100%!important;float:none!important;padding:0!important}'
 +'.rpco .checkout-page-body [type=submit],.rpco .checkout-page-body .btn-success,.rpco .checkout-page-body .btn-primary{border:0!important;border-radius:999px!important;padding:17px 22px!important;font-size:18px!important;font-weight:800!important;color:#2a1c00!important;background:linear-gradient(135deg,#ffd76a,#f0ad2e)!important;box-shadow:0 14px 30px rgba(240,173,46,.4)!important;opacity:1!important}'
++'#rpco-hero .rc{display:flex;align-items:center;gap:12px;margin:0 0 16px;padding:10px 16px 10px 10px;border-radius:16px;background:#fff;width:max-content;max-width:100%;box-sizing:border-box;box-shadow:0 10px 24px rgba(0,0,0,.2)}'
++'#rpco-hero .rc img{width:48px;height:48px;border-radius:12px;object-fit:cover}#rpco-hero .rc p{margin:0;color:#13233a;line-height:1.2}#rpco-hero .rc span{display:block;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#966e22}#rpco-hero .rc b{font-size:18px}'
 +'#rpco-hero .ra{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14)}'
 +'#rpco-hero .ra p{margin:0;color:#cfe0f7;font-size:13px;line-height:1.35}#rpco-hero .ra b{display:block;color:#ffc53d;font-size:18px}'
 +'@media (max-width:760px){#rpco-hero .ra{grid-template-columns:1fr 1fr}}'
@@ -537,6 +539,10 @@ function build(){
    +'</ul><div class="rp"><em>Three Village Local Restaurant Partner</em><b>$399<small>/mo</small></b><p>6-month partnership, then month to month</p><p class="rv">Over <s>$1,000/mo</s> in marketing value</p></div></div>'
    +'<div class="ra"><p><b>45,000+</b>website page visits a month</p><p><b>100,000+</b>Facebook and Instagram views a month</p><p><b>You cook.</b>Text us a photo, we handle the rest</p><p><b>You approve</b>every post before it goes out</p></div>';
   body.parentNode.insertBefore(hero,body);
+  /* claim link (?claim=): BD's "You Are Claiming" box sits in the hidden title block, so show their listing in the hero instead */
+  var cb=document.querySelector('.claim-listing-blurb');
+  if(cb){var nm=cb.querySelector('b'),im=cb.querySelector('img');
+    hero.querySelector('.rk').insertAdjacentHTML('afterend','<div class="rc">'+(im?'<img src="'+im.getAttribute('src')+'" alt="">':'')+'<p><span>Upgrading your listing</span><b>'+(nm?nm.textContent.trim():'')+'</b></p></div>')}
   var nums={'Enter Email and Create Password':['1','Create your login'],'Select a Payment Option':['2','Your plan'],'Enter Billing Information':['3','Secure payment']};
   [].forEach.call(document.querySelectorAll('.checkout-page-body p.account-menu-title'),function(p){var k=p.textContent.trim(),v=nums[k];if(v)p.innerHTML='<span class="rn">'+v[0]+'</span>'+v[1]});
   var radio=document.querySelector('.monthly_billing input[name="member_type"]');
