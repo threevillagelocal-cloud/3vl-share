@@ -75,7 +75,7 @@ def collect():
         d = json.loads(get(RAW + "weekender/live/events.json"))
         for e in d.get("events", []):
             add(e.get("img"))
-        for s in d.get("specials", []) or []:
+        for s in (d.get("specials", []) or []) + (d.get("specialsAll", []) or []):   # specialsAll: /eat-drink/ pages and /restaurant-specials
             add(s.get("img"))
             add(s.get("inset"))
     except Exception as ex:
