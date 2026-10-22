@@ -524,3 +524,90 @@ html.pf-on .member_profile .pf-fgrid .pf-fact img{max-width:100%!important;max-h
 @media(max-width:600px){.p3-bo{gap:12px;padding:8px 12px 8px 8px}.p3-bo img{width:88px!important;height:72px!important}.p3-bo-t b{font-size:18px}.p3-bo-t small{font-size:12.5px}.p3-bo-go{display:none}}
 /* Sidebar VIP banners a bit smaller on desktop (owner 10/21/2026) */
 @media (min-width:992px){.vipx-unit{max-width:84%!important;margin-left:auto!important;margin-right:auto!important}}
+/* Eat & Drink landing pages (/eat-drink/<slug>): one page per homepage Eat & Drink feature. Plain HTML from the page content, styled here. */
+.edp{--ink:#1b2f45;--navy:#13233a;--gold:#ffc53d;--blue:#006fbb;--line:#e3e9f0;--mut:#5b6979;--cream:#f3f7fb;max-width:1120px;margin:0 auto;padding:4px 0 44px;color:var(--ink);font-family:'tvl-rc','Radio Canada',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:17px;line-height:1.6;word-break:normal;overflow-wrap:break-word;hyphens:none;text-align:left}
+.edp *,.edp *:before,.edp *:after{box-sizing:border-box}
+.edp img{max-width:100%;margin:0!important;display:block;border:0}
+.edp a{text-decoration:none!important}
+.edp p{margin:0}
+.edp-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:8px 0 16px}
+.edp-back{display:inline-flex;align-items:center;gap:9px;padding:8px 18px 8px 8px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink)!important;font-weight:700;font-size:15px;line-height:1.2;box-shadow:0 4px 14px rgba(19,35,58,.07);transition:transform .2s,box-shadow .2s}
+.edp-back:hover{transform:translateX(-3px);box-shadow:0 8px 22px rgba(19,35,58,.12)}
+.edp-back b{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-size:15px}
+.edp-crumb{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.edp-hero{position:relative;border-radius:26px;overflow:hidden;min-height:460px;display:flex;align-items:flex-end;background:#2a3a4d;box-shadow:0 24px 50px rgba(19,35,58,.18);isolation:isolate}
+.edp-hero-s{min-height:340px}
+.edp-hero picture{position:absolute;inset:0}
+.edp-hero-img{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover;animation:edpZoom 1.8s cubic-bezier(.2,.7,.2,1) both}
+.edp-wrap .edp-hero-img{filter:saturate(.55)}
+.edp-hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0) 38%,rgba(0,0,0,.42) 64%,rgba(0,0,0,.8) 100%)}
+.edp-hin{position:relative;z-index:2;padding:30px 34px 32px;color:#fff;max-width:860px}
+.edp-chip{display:inline-block;padding:5px 11px;border-radius:8px;background:var(--gold);color:#1b2f45;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;line-height:1.25}
+.edp .edp-h1{margin:12px 0 8px;padding:0;font-family:inherit;font-size:48px;line-height:1.04;font-weight:800;letter-spacing:-.02em;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.35);text-transform:none}
+.edp-biz{font-size:19px;font-weight:700;color:#fff}
+.edp-biz span{opacity:.88;font-weight:600}
+.edp-when{display:inline-block;margin-top:14px!important;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.3);font-size:14.5px;font-weight:700;color:#fff;line-height:1.35}
+.edp-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:26px;margin-top:26px;align-items:start}
+.edp-grid-1{grid-template-columns:minmax(0,1fr);max-width:820px}
+.edp-main,.edp-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 30px;box-shadow:0 10px 30px rgba(19,35,58,.06)}
+.edp-kick{margin-bottom:8px!important;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.edp-main p+p{margin-top:14px}
+.edp-lede{font-size:19.5px;line-height:1.55;color:var(--navy);font-weight:500}
+.edp-inset{margin:24px 0 6px;display:flex;align-items:center;gap:20px}
+.edp-inset img{width:210px;height:auto;border-radius:16px;border:5px solid #fff!important;box-shadow:0 14px 30px rgba(19,35,58,.22);transform:rotate(-2deg);transition:transform .35s cubic-bezier(.3,1.4,.5,1)}
+.edp-inset:hover img{transform:rotate(0) scale(1.03)}
+.edp-inset figcaption{font-size:14px;color:var(--mut);font-style:italic}
+.edp-main .edp-note{margin-top:20px;padding-top:14px;border-top:1px dashed #d5dee8;font-size:13.5px;color:var(--mut)}
+.edp-card{position:sticky;top:96px;padding:24px}
+.edp .edp-card h2{margin:0 0 10px;padding:0;font-family:inherit;font-size:21px;font-weight:800;color:var(--ink);text-transform:none;letter-spacing:0}
+.edp-dl{margin:0 0 18px}
+.edp-dl div{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:11px 0;border-top:1px solid var(--line)}
+.edp-dl dt{font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);padding-top:3px}
+.edp-dl dd{margin:0;font-size:15.5px;line-height:1.45;font-weight:600;color:var(--ink)}
+.edp-dl a{color:var(--blue)!important;font-weight:800}
+.edp-btns{display:flex;flex-direction:column;gap:9px}
+.edp-btns-row{flex-direction:row;flex-wrap:wrap;margin-top:20px}
+.edp-btn{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-radius:14px;background:var(--cream);border:1px solid #dbe5f0;color:var(--ink)!important;font-weight:700;font-size:15px;line-height:1.3;transition:transform .2s,background .2s,box-shadow .2s}
+.edp-btn:hover{transform:translateY(-2px);background:#e7eff8;box-shadow:0 8px 18px rgba(19,35,58,.09)}
+.edp-btn i{font-style:normal;font-weight:800;opacity:.55}
+.edp-btn-p{background:var(--ink);border-color:var(--ink);color:#fff!important}
+.edp-btn-p:hover{background:#26425f}
+.edp-btn-p i{color:var(--gold);opacity:1}
+.edp-more{margin-top:40px}
+.edp-more-h{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:16px}
+.edp .edp-more h2{margin:0;padding:0;font-family:inherit;font-size:27px;font-weight:800;color:var(--ink);letter-spacing:-.01em;text-transform:none}
+.edp-all{display:inline-flex;padding:9px 17px;border-radius:999px;background:var(--blue);color:#fff!important;font-weight:800;font-size:14px;white-space:nowrap;box-shadow:0 6px 16px rgba(0,111,187,.25);transition:transform .2s}
+.edp-all:hover{transform:translateY(-2px)}
+.edp-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.edp-mc{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;color:var(--ink)!important;transition:transform .25s,box-shadow .25s}
+.edp-mc:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(19,35,58,.13)}
+.edp-mc img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.edp-mc-b{display:flex;flex-direction:column;align-items:flex-start;gap:5px;padding:12px 14px 15px}
+.edp-mc .edp-chip{font-size:10.5px;padding:3px 8px}
+.edp-mc b{font-size:16.5px;line-height:1.25;font-weight:800}
+.edp-mc small{font-size:13px;color:var(--mut);font-weight:600;line-height:1.3}
+.edp-up{animation:edpUp .75s cubic-bezier(.2,.7,.2,1) both}
+.edp-d1{animation-delay:.08s}.edp-d2{animation-delay:.16s}.edp-d3{animation-delay:.24s}
+@keyframes edpUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes edpZoom{from{transform:scale(1.08)}to{transform:none}}
+@media (max-width:991px){.edp-grid{grid-template-columns:minmax(0,1fr)}.edp-card{position:static}}
+@media (max-width:760px){
+.edp{font-size:16px;padding-bottom:32px}
+.edp-top{margin:4px 0 12px}.edp-crumb{display:none}
+.edp-hero{min-height:430px;border-radius:20px}.edp-hero-s{min-height:320px}
+.edp-hin{padding:20px 18px 22px}
+.edp .edp-h1{font-size:32px;line-height:1.08}
+.edp-biz{font-size:16.5px}
+.edp-grid{gap:16px;margin-top:16px}
+.edp-main,.edp-card{padding:20px 18px;border-radius:18px}
+.edp-lede{font-size:18px}
+.edp-inset{gap:14px}.edp-inset img{width:140px}
+.edp-more{margin-top:30px}
+.edp-more-h{flex-direction:column;align-items:flex-start;gap:10px}
+.edp .edp-more h2{font-size:23px}
+.edp-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -15px;padding:2px 15px 10px;scrollbar-width:none}
+.edp-row::-webkit-scrollbar{display:none}
+.edp-mc{flex:0 0 72%;scroll-snap-align:start}
+.edp-btns-row .edp-btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){.edp-up,.edp-hero-img{animation:none}.edp-back,.edp-btn,.edp-mc,.edp-inset img,.edp-all{transition:none}}
