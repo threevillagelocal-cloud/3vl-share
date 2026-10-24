@@ -1,0 +1,184 @@
+{
+ "uid": "484",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "J33 Art Studios Inc.",
+ "short": "J33 Art Studios",
+ "first": "Jennifer",
+ "category": "Local Artist · Pyrography & Paintings",
+ "kicker": "Jennifer Bardram · The Snarky Pyro",
+ "sub": "Pyrography, paintings and custom art from Long Island",
+ "pills": [
+  "🎨 Commissions welcome"
+ ],
+ "theme": {
+  "navy": "#212121",
+  "navy2": "#3B2F63",
+  "blue": "#8A6DEC",
+  "sky": "#F3EFFD",
+  "gold": "#F6C453",
+  "fonts": "https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Raleway:wght@400;600;700&display=swap",
+  "hf": "'Amatic SC', cursive",
+  "hw": "700",
+  "hls": ".03em",
+  "bf": "Raleway, system-ui, sans-serif"
+ },
+ "hero": {
+  "img": "img/484-hero.webp",
+  "alt": "Jennifer Bardram holding her harbor sunset painting",
+  "pos": "50% 40%"
+ },
+ "logo": "img/484-logo.webp",
+ "phone": "6314037913",
+ "phone_label": "Call Jennifer",
+ "maps": "J33 Art Studios, Port Jefferson NY",
+ "website": "https://www.j33art.com/",
+ "instagram": "j33_art",
+ "facebook": "https://www.facebook.com/J33Art",
+ "contact_cta": {
+  "k": "Want a custom piece?",
+  "t": "Ask about a commission"
+ },
+ "actions": [
+  {
+   "t": "Shop art",
+   "i": "web",
+   "u": "https://www.j33art.com/",
+   "a": "website",
+   "pri": 1
+  },
+  {
+   "t": "Commission",
+   "i": "msg",
+   "u": "/j33-art-studios-inc/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Instagram",
+   "i": "ig",
+   "u": "https://www.instagram.com/j33_art/",
+   "a": "instagram"
+  },
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16314037913",
+   "a": "call"
+  }
+ ],
+ "ticker": [
+  "Original pyrography",
+  "Harbor and nautical paintings",
+  "Custom commissions",
+  "Gallery North Outdoor Art Show",
+  "Art League of Long Island",
+  "Featured in the Three Village Herald",
+  "Author of A Midnight Snack"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Art burned, painted and *made right here.*",
+  "text": "Jennifer Bardram is the Long Island artist behind J33 Art Studios, known online as The Snarky Pyro. She burns detailed designs into wood, then brings them to life with color: coral reefs, sunflowers, poppies, sharks and the harbor scenes we all know. You'll find her booth at Gallery North's Outdoor Art Show and the Art League of Long Island, and her work in homes all over Three Village.",
+  "quote": "Local art made by a neighbor. The kind of piece people ask about every time they walk in the room.",
+  "by": "Three Village Local"
+ },
+ "gallery_k": "The work",
+ "gallery_t": "From the *studio*",
+ "gallery": [
+  {
+   "img": "img/484-g1.webp",
+   "alt": "A wall of J33 pyrography pieces at an art show"
+  },
+  {
+   "img": "img/484-g2.webp",
+   "alt": "Pyrography coral reef in color on a wood slice"
+  },
+  {
+   "img": "img/484-g3.webp",
+   "alt": "Painting of a harbor sunset with a sailboat"
+  },
+  {
+   "img": "img/484-g4.webp",
+   "alt": "Pyrography sunflower and butterfly on a wood round"
+  },
+  {
+   "img": "img/484-g5.webp",
+   "alt": "Jennifer holding a sold shark pyrography piece"
+  },
+  {
+   "img": "img/484-g6.webp",
+   "alt": "Pyrography poppies in color on a wood plank"
+  },
+  {
+   "img": "img/484-g7.webp",
+   "alt": "J33 booth tent at an outdoor art show"
+  },
+  {
+   "img": "img/484-g8.webp",
+   "alt": "Painting of two sailboats in soft blue"
+  },
+  {
+   "img": "img/484-g9.webp",
+   "alt": "Visitors browsing J33 art at an outdoor show"
+  },
+  {
+   "img": "img/484-g10.webp",
+   "alt": "Pyrography American flag burned on wood"
+  }
+ ],
+ "services_k": "What she makes",
+ "services_t": "Art for your *walls and gifts*",
+ "services": [
+  {
+   "t": "Original pyrography",
+   "d": "Hand wood-burned art, often finished with paint washes, on wood slices and planks."
+  },
+  {
+   "t": "Paintings and mixed media",
+   "d": "Oil, ink and watercolor, including Long Island harbor and nautical scenes."
+  },
+  {
+   "t": "Custom commissions",
+   "d": "Custom portraits and one-of-a-kind pieces made for you."
+  },
+  {
+   "t": "Prints and digital art",
+   "d": "Hand-drawn digital illustrations and prints."
+  }
+ ],
+ "reviews": {
+  "t": "Own a J33 piece?",
+  "text": "Share a review and help other neighbors discover local art.",
+  "url": "https://www.facebook.com/J33Art",
+  "btn": "See J33 on Facebook"
+ },
+ "faq_t": "Art *FAQ*",
+ "faq": [
+  [
+   "Can I order a custom piece?",
+   "Yes. Jennifer takes custom portraits and commissions. Send a message to get started."
+  ],
+  [
+   "Where can I buy her art?",
+   "Online at j33art.com, and at her booth during local art shows like Gallery North's Outdoor Art Show."
+  ],
+  [
+   "What is pyrography?",
+   "It's the art of burning a design into wood with a heated tool. Jennifer often adds color washes to finish each piece."
+  ]
+ ],
+ "final": {
+  "k": "J33 Art Studios",
+  "t": "Bring home *local art.*",
+  "text": "Shop the collection or start a custom piece.",
+  "btn": "Ask about a commission"
+ },
+ "side_sub": "Pyrography, paintings & commissions",
+ "side_contact": "Ask about a commission",
+ "sticky_contact": "Commission",
+ "sticky_extra": {
+  "t": "Shop",
+  "u": "https://www.j33art.com/",
+  "a": "website"
+ }
+}
