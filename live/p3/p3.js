@@ -64,7 +64,8 @@ function search(qraw,max){var q=norm(qraw);if(q.length<2||!data)return [];
   var out=[];data.forEach(function(r){var s=score(r,q,words);if(s>=28)out.push({r:r,s:s,all:r._all,weak:r._weak,hit:r._hit,cat:r._cat,grp:r._grp})});
   /* owner 10/6/2026: "contractor" listed National Janitorial Cleaning Contractor's first (word in its NAME). When the words match a
      business CATEGORY, that category's businesses come first; name-only matches from other categories sink to the bottom. */
-  if(out.some(function(x){return x.cat}))out.forEach(function(x){if(x.cat)x.s+=300;else x.s*=x.grp?.5:.35});   /* own specialty first; same group (e.g. electricians for plumber) only if strong */
+  /* owner 10/24/2026: "estate" listed basic realtors (word in their NAME) above VIP Raupp Law: inside the matching category, VIPs come first */
+  if(out.some(function(x){return x.cat}))out.forEach(function(x){if(x.cat)x.s+=300+(TIER[x.r.m.p]||0)*60;else x.s*=x.grp?.5:.35});   /* own specialty first; same group (e.g. electricians for plumber) only if strong */
   else if(out.some(function(x){return x.grp}))out.forEach(function(x){if(x.grp)x.s+=300;else x.s*=.35});   /* doctor: no specialty says doctor, the group name does */
   if(words.length>1){
     if(out.some(function(x){return x.all}))out=out.filter(function(x){return x.all});
