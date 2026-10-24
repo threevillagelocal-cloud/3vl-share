@@ -17,14 +17,14 @@
   "navy2": "#0C537D",
   "blue": "#0A77A4",
   "sky": "#E8F4F8",
-  "gold": "#26A572",
+  "gold": "#5BE0A6",
   "fonts": "https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@400;600;700&display=swap",
   "bf": "'Open Sans', system-ui, sans-serif"
  },
  "hero": {
   "img": "img/299-hero.webp",
   "alt": "Mark Freeley with his two rescue dogs on a dock by the water",
-  "pos": "50% 45%"
+  "pos": "50% 18%"
  },
  "headshot": "img/299-head.webp",
  "headshot_alt": "Mark T. Freeley, personal injury lawyer",
