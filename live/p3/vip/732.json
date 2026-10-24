@@ -1,0 +1,94 @@
+{
+ "uid": "732",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "LGA Marketing",
+ "short": "LGA Marketing",
+ "first": "LGA",
+ "category": "Social Media Marketing",
+ "kicker": "Launch. Growth. Authority. · North Shore",
+ "sub": "Social media strategy, content creation and promotion for local businesses",
+ "pills": ["📱 Free 30-minute strategy call"],
+ "theme": {
+  "navy": "#141413",
+  "navy2": "#33322E",
+  "blue": "#5C6D4D",
+  "sky": "#F2F5EC",
+  "gold": "#B9C8A8",
+  "ink": "#1A1A18",
+  "soft": "#FAF9F4",
+  "line": "#E4EAD9",
+  "fonts": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Inter:wght@400;600;700&display=swap",
+  "hf": "'Playfair Display', Georgia, serif",
+  "hw": "600",
+  "hcase": "none",
+  "hls": "0",
+  "bf": "Inter, system-ui, sans-serif",
+  "h1s": "60px",
+  "h2s": "40px",
+  "h1m": "42px",
+  "h2m": "30px"
+ },
+ "hero": {
+  "img": "img/732-hero.webp",
+  "alt": "LGA Marketing brand background in charcoal and sage",
+  "pos": "50% 50%"
+ },
+ "logo": "img/732-logo.png",
+ "website": "https://lgasocialmedia.com/",
+ "contact_url": "https://lgasocialmedia.com/contact.html",
+ "address_label": "Find LGA",
+ "contact_cta": {
+  "k": "Ready to grow your feed?",
+  "t": "Book a free strategy call"
+ },
+ "actions": [
+  {"t": "Free consult", "i": "cal", "u": "https://lgasocialmedia.com/contact.html", "a": "book", "pri": 1},
+  {"t": "Services", "i": "apply", "u": "https://lgasocialmedia.com/services.html", "a": "services"},
+  {"t": "Website", "i": "web", "u": "https://lgasocialmedia.com/", "a": "website"}
+ ],
+ "ticker": ["Social media management", "Photo and video shoots", "Reels, TikTok and Shorts", "Content calendars", "Community management", "Paid social on Meta and TikTok", "Monthly reporting"],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Content that builds brands. *Strategy that grows them.*",
+  "text": "LGA Marketing is a social media strategy and content studio based on the North Shore of Long Island. They plan, shoot, edit, caption and post for local businesses, from first-week startups to established names, with one strategy across Instagram, TikTok, Facebook and Meta Ads. The name is the roadmap: Launch, Growth, Authority. Every package is custom, built around where your business is today."
+ },
+ "goals": {
+  "k": "Where is your business today?",
+  "t": "Pick *your starting point*",
+  "chips_k": "Includes",
+  "items": [
+   {"t": "Launch", "h": "L is for Launch.", "d": "For new and early-stage businesses building a presence from the ground up.", "b": ["Brand voice and content pillars", "Profile setup and optimization", "Consistent monthly posting"], "c": ["Startups", "New locations", "Rebrands"], "cta": "Ask about Launch"},
+   {"t": "Growth", "h": "G is for Growth.", "d": "For businesses ready to scale reach, engagement and content volume. Everything in Launch, plus more.", "b": ["Photo and video content production", "Reels and short-form strategy", "Community management and monthly reporting"], "c": ["Reels", "Community", "Reporting"], "cta": "Ask about Growth"},
+   {"t": "Authority", "h": "A is for Authority.", "d": "For established brands ready to lead their category. Everything in Growth, plus more.", "b": ["Full-scale content production", "Campaign and launch strategy", "Promotion and paid amplification"], "c": ["Campaigns", "Paid social", "Strategy partner"], "cta": "Ask about Authority"}
+  ]
+ },
+ "services_k": "What they do",
+ "services_t": "Strategy, content and *promotion*",
+ "services": [
+  {"t": "Social media management", "d": "Monthly content calendar, captions and posting, comment and DM replies, and monthly performance reporting."},
+  {"t": "Photo and video content", "d": "On-location shoots, Reels, TikTok and Shorts editing, product and service photography, branded templates."},
+  {"t": "Promotion and growth", "d": "Launch and seasonal campaigns, local promotion and partnerships, paid social on Meta and TikTok."}
+ ],
+ "reviews": {
+  "t": "Worked with LGA?",
+  "text": "If LGA Marketing helped your business on social, a quick review helps your neighbors find them."
+ },
+ "faq_t": "Social media *FAQ*",
+ "faq": [
+  ["Do you work with brand-new startups?", "Yes, by design. The Launch, Growth and Authority packages meet a business wherever it is, whether you posted your first photo yesterday or have been a local name for years."],
+  ["Do you create the content, or do we?", "LGA handles it end to end: strategy, shooting, editing, captioning and posting. If you already have photos or video you love, they can work those in too."],
+  ["How fast can we get started?", "After the free consult, most clients have a strategy and first content calendar within one to two weeks, depending on package scope."]
+ ],
+ "final": {
+  "k": "LGA Marketing",
+  "t": "Let's launch something *worth growing.*",
+  "text": "Book a free, no-pressure 30-minute strategy call. They typically reply within one business day.",
+  "btn": "Book a free strategy call"
+ },
+ "side_sub": "Social media marketing · North Shore",
+ "side_contact": "Book a free strategy call",
+ "side_extra": {"t": "See services", "u": "https://lgasocialmedia.com/services.html", "a": "services"},
+ "sticky_contact": "Free consult",
+ "sticky_extra": {"t": "Services", "u": "https://lgasocialmedia.com/services.html", "a": "services"}
+}
