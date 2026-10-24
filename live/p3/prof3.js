@@ -96,7 +96,7 @@ function render(d){
     var st=function(n){var o='';for(var i=0;i<5;i++)o+=i<Math.round(n)?'&#9733;':'&#9734;';return o};
     var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],dt=function(x){var a=(x||'').split('-');return a.length===3?mo[+a[1]-1]+' '+a[0]:''};
     el.innerHTML='<div class="rvs"><b>'+v.avg.toFixed(1)+'</b><span class="stars">'+st(v.avg)+'</span><i>'+v.count+' review'+(v.count>1?'s':'')+' on Three Village Local</i></div><div class="rvc">'+
-      v.items.slice(0,6).map(function(x){var t=x.x.length>280?x.x.slice(0,277).replace(/ [^ ]*$/,'')+'...':x.x;return '<div class="rvi"><div class="rs">'+st(x.r)+'</div>'+(x.t?'<b>'+esc(x.t)+'</b>':'')+'<p>'+esc(t)+'</p><span>'+esc(x.n)+(dt(x.d)?' &middot; '+dt(x.d):'')+'</span>'+(x.reply?'<em>Reply: '+esc(x.reply)+'</em>':'')+'</div>'}).join('')+'</div>';
+      v.items.slice(0,3).map(function(x){var t=x.x.length>280?x.x.slice(0,277).replace(/ [^ ]*$/,'')+'...':x.x;return '<div class="rvi"><div class="rs">'+st(x.r)+'</div>'+(x.t?'<b>'+esc(x.t)+'</b>':'')+'<p>'+esc(t)+'</p><span>'+esc(x.n)+(dt(x.d)?' &middot; '+dt(x.d):'')+'</span>'+(x.reply?'<em>Reply: '+esc(x.reply)+'</em>':'')+'</div>'}).join('')+'</div>';
     var h2=box.querySelector('.rv .h2');if(h2)h2.textContent='What neighbors say'}).catch(function(){});
   var V={navy:'--navy',navy2:'--navy2',blue:'--blue',sky:'--sky',gold:'--gold',ink:'--ink',soft:'--soft',line:'--line',onblue:'--onblue',hf:'--hf',hw:'--hw',hcase:'--hcase',hls:'--hls',bf:'--bf',h1s:'--h1s',h2s:'--h2s',h1m:'--h1m',h2m:'--h2m'},css='';
   for(var k in V)if(T[k])css+=V[k]+':'+T[k]+';';box.style.cssText=css;
