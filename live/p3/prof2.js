@@ -24,7 +24,7 @@ function openState(h){if(!h)return null;var n=nowET(),k=DAYS[n.d],t=h[k];functio
   for(var i=0;i<8;i++){var dd=(n.d+i)%7,x=h[DAYS[dd]];if(!x)continue;if(x==='24h')x=['00:00','24:00'];if(i===0&&n.m<mm(x[0]))return {on:false,txt:'Opens today '+t12(x[0])};if(i>0)return {on:false,txt:'Opens '+(i===1?'tomorrow':DN[DAYS[dd]].slice(0,3))+' '+t12(x[0])}}
   return {on:false,txt:'Closed'}}
 
-fetch(BASE+'vip/'+uid+'.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(d){if(d)render(d)}).catch(function(){});
+fetch(BASE+'vip/'+uid+'.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(d){if(!d)return;if(d.layout==='v3'){var q='?t='+Date.now(),l=document.createElement('link');l.rel='stylesheet';l.href=BASE+'prof3.css'+q;document.head.appendChild(l);var s=document.createElement('script');s.src=BASE+'prof3.js'+q;document.body.appendChild(s);document.documentElement.classList.add('pv2-on');return}render(d)}).catch(function(){});
 
 function render(d){
   var T=d.theme||{},slug=location.pathname.replace(/^\/|\/$/g,''),tel=(d.phone||'').replace(/\D/g,'').slice(-10),
