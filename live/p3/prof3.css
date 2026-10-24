@@ -32,7 +32,7 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 #pv3 .head img{width:100%!important;height:100%!important;object-fit:cover;object-position:50% 20%}
 #pv3 .head.logo{flex-basis:150px;height:150px;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px}
 #pv3 .head.logo img{object-fit:contain;object-position:center}
-#pv3 .hin .k{font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--gold);text-transform:uppercase}
+#pv3 .hin .k{font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.75)}
 #pv3 .hin h1{font-family:var(--hf);font-weight:var(--hw);font-size:58px;line-height:1;letter-spacing:var(--hls);text-transform:var(--hcase);margin:6px 0 4px;color:#fff;text-shadow:0 3px 18px rgba(0,0,0,.45)}
 #pv3 .hin .sub{font-size:17px;font-weight:600;color:#e6eefa}
 #pv3 .hin .co{display:flex;align-items:center;gap:16px;margin-top:16px;flex-wrap:wrap}
