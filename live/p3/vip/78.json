@@ -25,9 +25,10 @@
   "h1m": "42px"
  },
  "hero": {
-  "img": "img/78-hero-walk.webp",
-  "alt": "A couple walking together down a tree-lined path covered in fall leaves",
-  "pos": "50% 55%"
+  "img": "img/78-banner.webp",
+  "alt": "Girard Wealth Management Group sign and office at 376 Mark Tree Rd, Setauket",
+  "pos": "50% 50%",
+  "banner": true
  },
  "headshot": "img/78-head.webp",
  "headshot_alt": "Frank Girard, CFP®, Girard Wealth Management Group",
