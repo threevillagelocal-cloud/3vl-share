@@ -1,0 +1,270 @@
+{
+ "uid": "528",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "Rolling Hills Property Services Inc.",
+ "short": "Rolling Hills Property Services",
+ "first": "Ron",
+ "category": "Landscaping & Property Services",
+ "kicker": "Landscaping · Paving · Snow · Suffolk County",
+ "sub": "Lawn care, plantings, paving, excavation and snow removal",
+ "theme": {
+  "navy": "#112C11",
+  "navy2": "#1E4A1F",
+  "blue": "#2E8B33",
+  "sky": "#F0F9F0",
+  "gold": "#7BD67F",
+  "fonts": "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap",
+  "bf": "Inter, system-ui, sans-serif"
+ },
+ "hero": {
+  "img": "img/528-hero.webp",
+  "alt": "Front lawn with fresh mulched beds and plantings by Rolling Hills",
+  "pos": "50% 55%"
+ },
+ "logo": "img/528-logo.png",
+ "phone": "6316528035",
+ "phone_label": "Call or text",
+ "maps": "Rolling Hills Property Services, Suffolk County NY",
+ "website": "https://www.rollinghillspm.com/",
+ "instagram": "rollinghillsinc",
+ "contact_cta": {
+  "k": "Spring cleanup, paving, snow?",
+  "t": "Request a quote"
+ },
+ "actions": [
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16316528035",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Get a quote",
+   "i": "msg",
+   "u": "/rolling-hills-property-services-inc/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Text",
+   "i": "msg",
+   "u": "sms:+16316528035",
+   "a": "text"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://www.rollinghillspm.com/",
+   "a": "website"
+  }
+ ],
+ "ticker": [
+  "Lawn maintenance",
+  "Mulch and plantings",
+  "Privacy trees",
+  "Driveway paving",
+  "Excavation and grading",
+  "Snow removal and salting",
+  "Firewood delivery",
+  "Serving Suffolk County"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "One call for the *whole property.*",
+  "text": "Rolling Hills Property Services keeps Suffolk County homes and businesses looking sharp all year. Spring and fall cleanups, weekly lawn care, fresh mulch and plantings, privacy trees, paver walkways and driveway paving, then snow removal and salting when winter hits. Owner Ron and his crew handle it all, so you don't have to juggle five different companies.",
+  "quote": "From the first mow of spring to the last snowstorm, one crew that knows your property.",
+  "by": "Three Village Local"
+ },
+ "gallery_k": "Recent work",
+ "gallery_t": "Real yards, *real results*",
+ "gallery": [
+  {
+   "img": "img/528-g1.webp",
+   "alt": "New garden bed beside a paver patio and pool"
+  },
+  {
+   "img": "img/528-g2.webp",
+   "alt": "Colonial home with fresh mulch beds and green lawn"
+  },
+  {
+   "img": "img/528-g3.webp",
+   "alt": "Poolside boulder garden with plantings"
+  },
+  {
+   "img": "img/528-g4.webp",
+   "alt": "Arborvitae privacy row along a white fence"
+  },
+  {
+   "img": "img/528-g5.webp",
+   "alt": "Freshly paved asphalt driveway"
+  },
+  {
+   "img": "img/528-g6.webp",
+   "alt": "New paver walkway"
+  },
+  {
+   "img": "img/528-g7.webp",
+   "alt": "Rolling Hills dump truck loaded with mulch"
+  },
+  {
+   "img": "img/528-g8.webp",
+   "alt": "Flower planting at a front entry"
+  }
+ ],
+ "goals": {
+  "k": "What do you need?",
+  "t": "Pick a *project*",
+  "chips_k": "Services",
+  "items": [
+   {
+    "t": "Lawn & cleanups",
+    "h": "A yard that looks cared for all season.",
+    "d": "Weekly mowing and edging plus spring and fall cleanups to clear leaves and debris.",
+    "b": [
+     "Lawn maintenance",
+     "Spring and fall cleanups",
+     "Brush removal and weeding"
+    ],
+    "c": [
+     "Mowing",
+     "Edging",
+     "Leaf cleanup",
+     "Weeding"
+    ],
+    "cta": "Get a lawn quote"
+   },
+   {
+    "t": "Plantings",
+    "h": "Curb appeal you can see from the street.",
+    "d": "Mulch, flowers, shrubs and privacy trees installed and shaped to fit your home.",
+    "b": [
+     "Mulch installation",
+     "Flower and shrub planting",
+     "Arborvitae privacy screens"
+    ],
+    "c": [
+     "Mulch",
+     "Flowers",
+     "Shrubs",
+     "Privacy trees",
+     "Sod"
+    ],
+    "cta": "Plan my plantings"
+   },
+   {
+    "t": "Paving & hardscape",
+    "h": "Driveways and walkways done right.",
+    "d": "Asphalt paving, sealing and pothole repair, concrete work and paver walkways.",
+    "b": [
+     "Driveway paving and sealing",
+     "Pothole repair",
+     "Paver walkways and concrete"
+    ],
+    "c": [
+     "Asphalt",
+     "Sealing",
+     "Pavers",
+     "Concrete"
+    ],
+    "cta": "Get a paving quote"
+   },
+   {
+    "t": "Excavation",
+    "h": "Site work and drainage.",
+    "d": "Land clearing, grading, excavation and outdoor drainage fixes for homes and projects.",
+    "b": [
+     "Land clearing and grading",
+     "Excavation",
+     "Drainage solutions"
+    ],
+    "c": [
+     "Clearing",
+     "Grading",
+     "Drainage"
+    ],
+    "cta": "Talk about a project"
+   },
+   {
+    "t": "Winter",
+    "h": "Ready when the snow comes.",
+    "d": "Residential and commercial snow removal and salting, gutter cleaning, ice dam prevention, irrigation winterizing and firewood delivery.",
+    "b": [
+     "Snow removal and salting",
+     "Gutter cleaning and ice dams",
+     "Firewood delivery"
+    ],
+    "c": [
+     "Snow",
+     "Salting",
+     "Gutters",
+     "Firewood"
+    ],
+    "cta": "Book snow service"
+   }
+  ]
+ },
+ "hours": {
+  "mon": [
+   "09:00",
+   "17:00"
+  ],
+  "tue": [
+   "09:00",
+   "17:00"
+  ],
+  "wed": [
+   "09:00",
+   "17:00"
+  ],
+  "thu": [
+   "09:00",
+   "17:00"
+  ],
+  "fri": [
+   "09:00",
+   "17:00"
+  ],
+  "sat": null,
+  "sun": null
+ },
+ "reviews": {
+  "t": "Happy with your yard?",
+  "text": "If Rolling Hills took care of your property, a quick review helps your neighbors find a crew they can trust.",
+  "url": "https://www.google.com/search?q=Rolling+Hills+Property+Services+reviews"
+ },
+ "faq_t": "Property services *FAQ*",
+ "faq": [
+  [
+   "What areas do they serve?",
+   "Homes and businesses across Suffolk County, including Three Village."
+  ],
+  [
+   "Can I text instead of call?",
+   "Yes. Call or text 631-652-8035."
+  ],
+  [
+   "Do they do snow removal for businesses?",
+   "Yes. They offer residential and commercial snow removal and salting."
+  ],
+  [
+   "Can one company handle my whole yard?",
+   "That's the idea: lawn care, plantings, paving, drainage and winter services from one crew."
+  ]
+ ],
+ "final": {
+  "k": "Rolling Hills Property Services",
+  "t": "Let's get your property *looking its best.*",
+  "text": "Tell them what you need and get a quote.",
+  "btn": "Request a quote"
+ },
+ "side_sub": "Landscaping, paving & snow · Suffolk County",
+ "side_contact": "Request a quote",
+ "sticky_contact": "Quote",
+ "sticky_extra": {
+  "t": "Text",
+  "u": "sms:+16316528035",
+  "a": "text"
+ },
+ "hours_t": "Office *hours*"
+}
