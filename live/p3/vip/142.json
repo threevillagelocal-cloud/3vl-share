@@ -26,9 +26,10 @@
   "bf": "'Maven Pro', system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/142-hero-garden.webp",
-  "alt": "Lush landscaped backyard garden with flowering shrubs and mature trees",
-  "pos": "50% 50%"
+  "img": "img/142-banner.webp",
+  "alt": "Aronica Plant Healthcare caring for a landscaped front garden",
+  "pos": "50% 50%",
+  "banner": true
  },
  "logo": "img/142-logo.svg",
  "logo_hero": "img/142-logo-white.svg",
