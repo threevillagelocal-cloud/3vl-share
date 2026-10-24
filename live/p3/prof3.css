@@ -207,3 +207,14 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 #pv3 .hin.hb .k{color:var(--blue);text-shadow:none}
 #pv3 .hin.hb .sub{color:var(--ink);opacity:.75}
 @media(max-width:640px){#pv3 .h.bn>img.bg{border-radius:18px!important;box-shadow:0 14px 34px rgba(11,31,75,.18)}#pv3 .h.bn .top{padding-top:12px}#pv3 .hin.hb{padding:14px 4px 2px}}
+
+/* reviews list inside the reviews band (owner 10/24/2026) */
+#pv3 .rvl:empty{display:none}
+#pv3 .rvs{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:18px 0 6px}
+#pv3 .rvs b{font-size:40px;line-height:1;color:#fff}#pv3 .rvs .stars{font-size:26px}#pv3 .rvs i{font-style:normal;color:rgba(255,255,255,.85);font-weight:600}
+#pv3 .rvc{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:18px 0 6px;text-align:left}
+#pv3 .rvi{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+#pv3 .rvi .rs{color:var(--gold);letter-spacing:2px;font-size:16px}
+#pv3 .rvi b{color:#fff;font-size:16px}#pv3 .rvi p{margin:0;color:rgba(255,255,255,.92);font-size:15px;line-height:1.5}
+#pv3 .rvi span{color:rgba(255,255,255,.7);font-size:13px;font-weight:700}
+#pv3 .rvi em{font-style:normal;color:rgba(255,255,255,.75);font-size:13px;border-left:3px solid var(--gold);padding-left:10px}

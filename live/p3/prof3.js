@@ -80,7 +80,7 @@ function render(d){
   /* instagram */
   if(d.instagram&&d.feed&&d.feed.length)h+='<section class="s up">'+K('Live on Instagram')+H2('@'+d.instagram)+'<div class="ig">'+d.feed.slice(0,9).map(function(f){return '<a data-a="ig_post" target="_blank" rel="noopener" href="'+esc(f.link)+'"><img src="'+src(f.img+'-400.webp')+'" loading="lazy" alt="Instagram post from @'+esc(d.instagram)+'"></a>'}).join('')+'</div><div class="row"><a class="b b1" data-a="instagram" target="_blank" rel="noopener" href="https://www.instagram.com/'+esc(d.instagram)+'/">Follow on Instagram</a></div></section>';
   /* reviews */
-  if(d.reviews)h+='<section class="s rv up"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>'+H2(d.reviews.t)+'<p class="lead">'+esc(d.reviews.text)+'</p><div class="row">'+
+  if(d.reviews)h+='<section class="s rv up"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>'+H2(d.reviews.t)+'<p class="lead">'+esc(d.reviews.text)+'</p><div class="rvl" id="pv3rvl"></div><div class="row">'+
      (d.reviews.url?'<a class="b bg2" data-a="google_reviews" href="'+esc(d.reviews.url)+'" target="_blank" rel="noopener">'+esc(d.reviews.btn||'Read Google reviews')+'</a>':'')+
      '<a class="b b2" data-a="review" href="'+review+'">Review '+esc(d.first||d.short||'them')+' on 3VL</a></div></section>';
   /* faq */
@@ -91,6 +91,13 @@ function render(d){
   if(d.compliance)h+='<p class="comp">'+esc(d.compliance)+(d.compliance_logo?'<img src="'+src(d.compliance_logo)+'" alt="Equal Housing Opportunity" loading="lazy">':'')+'</p>';
 
   var box=document.createElement('div');box.id='pv3';box.innerHTML=h;
+  /* real 3VL reviews (owner 10/24/2026: "show reviews in these new profile designs"); reviews.json is rebuilt from BD */
+  fetch(BASE+'vip/reviews.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(R){var v=R&&R[uid],el=box.querySelector('#pv3rvl');if(!v||!v.items||!v.items.length||!el)return;
+    var st=function(n){var o='';for(var i=0;i<5;i++)o+=i<Math.round(n)?'&#9733;':'&#9734;';return o};
+    var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],dt=function(x){var a=(x||'').split('-');return a.length===3?mo[+a[1]-1]+' '+a[0]:''};
+    el.innerHTML='<div class="rvs"><b>'+v.avg.toFixed(1)+'</b><span class="stars">'+st(v.avg)+'</span><i>'+v.count+' review'+(v.count>1?'s':'')+' on Three Village Local</i></div><div class="rvc">'+
+      v.items.slice(0,6).map(function(x){var t=x.x.length>280?x.x.slice(0,277).replace(/ [^ ]*$/,'')+'...':x.x;return '<div class="rvi"><div class="rs">'+st(x.r)+'</div>'+(x.t?'<b>'+esc(x.t)+'</b>':'')+'<p>'+esc(t)+'</p><span>'+esc(x.n)+(dt(x.d)?' &middot; '+dt(x.d):'')+'</span>'+(x.reply?'<em>Reply: '+esc(x.reply)+'</em>':'')+'</div>'}).join('')+'</div>';
+    var h2=box.querySelector('.rv .h2');if(h2)h2.textContent='What neighbors say'}).catch(function(){});
   var V={navy:'--navy',navy2:'--navy2',blue:'--blue',sky:'--sky',gold:'--gold',ink:'--ink',soft:'--soft',line:'--line',onblue:'--onblue',hf:'--hf',hw:'--hw',hcase:'--hcase',hls:'--hls',bf:'--bf',h1s:'--h1s',h2s:'--h2s',h1m:'--h1m',h2m:'--h2m'},css='';
   for(var k in V)if(T[k])css+=V[k]+':'+T[k]+';';box.style.cssText=css;
   col.insertBefore(box,col.firstChild);document.documentElement.classList.add('pv3-on');
