@@ -26,9 +26,10 @@
   "bf": "'Work Sans', system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/552-hero.webp",
-  "alt": "Strong Strains dispensary showroom with marble floors, glass display cases and the lit Strong Strains Island High sign",
-  "pos": "50% 55%"
+  "img": "img/552-banner.webp",
+  "alt": "Strong Strains store interior",
+  "pos": "50% 50%",
+  "banner": true
  },
  "logo": "img/552-logo.png",
  "phone": "6316357876",

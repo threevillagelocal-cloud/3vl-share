@@ -26,9 +26,10 @@
   "bf": "'Open Sans', system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/143-hero.webp",
-  "alt": "The 1892 Tudor-style Emma S. Clark Memorial Library building across the front lawn on Main Street, Setauket",
-  "pos": "50% 55%"
+  "img": "img/143-banner.webp",
+  "alt": "Emma S. Clark Memorial Library in Setauket",
+  "pos": "50% 50%",
+  "banner": true
  },
  "logo": "img/143-logo.png",
  "phone": "6319414080",
