@@ -28,9 +28,10 @@
   "h2m": "40px"
  },
  "hero": {
-  "img": "img/484-hero.webp",
-  "alt": "Jennifer Bardram holding her harbor sunset painting",
-  "pos": "50% 40%"
+  "img": "img/484-banner.webp",
+  "alt": "J33 Art Studios: original art and pyrography",
+  "pos": "50% 50%",
+  "banner": true
  },
  "logo": "img/484-logo.webp",
  "phone": "6314037913",

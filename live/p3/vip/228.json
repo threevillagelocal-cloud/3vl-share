@@ -27,9 +27,10 @@
   "bf": "'Open Sans', system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/228-hero.webp",
-  "alt": "Amy C. Raupp, Esq. standing on a village street",
-  "pos": "62% 30%"
+  "img": "img/228-banner.webp",
+  "alt": "Amy C. Raupp, Esq. of Raupp Law, P.C. in her office",
+  "pos": "50% 50%",
+  "banner": true
  },
  "headshot": "img/228-head.webp",
  "headshot_alt": "Amy C. Raupp, Esq.",

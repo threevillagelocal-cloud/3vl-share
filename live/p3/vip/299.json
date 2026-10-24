@@ -22,9 +22,10 @@
   "bf": "'Open Sans', system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/299-hero.webp",
-  "alt": "Mark Freeley with his two rescue dogs on a dock by the water",
-  "pos": "50% 18%"
+  "img": "img/299-banner.webp",
+  "alt": "Mark Freeley, The North Shore Injury Lawyer, in his office",
+  "pos": "50% 50%",
+  "banner": true
  },
  "headshot": "img/299-head.webp",
  "headshot_alt": "Mark T. Freeley, personal injury lawyer",
