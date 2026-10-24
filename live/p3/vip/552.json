@@ -1,0 +1,243 @@
+{
+ "uid": "552",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "Strong Strains",
+ "short": "Strong Strains",
+ "first": "Strong Strains",
+ "category": "Cannabis Dispensary",
+ "kicker": "Island High · East Setauket",
+ "sub": "Premium cannabis dispensary. Pick up or delivery.",
+ "pills": [
+  "🪪 Adults 21+ only"
+ ],
+ "theme": {
+  "navy": "#0B0B0F",
+  "navy2": "#2B0A2E",
+  "blue": "#B8179B",
+  "sky": "#F6F1F7",
+  "gold": "#16D2F9",
+  "onblue": "#FFFFFF",
+  "fonts": "https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Work+Sans:wght@400;500;700&display=swap",
+  "hf": "Outfit, sans-serif",
+  "hw": "800",
+  "hcase": "none",
+  "hls": "-.01em",
+  "bf": "'Work Sans', system-ui, sans-serif"
+ },
+ "hero": {
+  "img": "img/552-hero.webp",
+  "alt": "Strong Strains dispensary showroom with marble floors, glass display cases and the lit Strong Strains Island High sign",
+  "pos": "50% 55%"
+ },
+ "logo": "img/552-logo.png",
+ "phone": "6316357876",
+ "phone_label": "Call the dispensary",
+ "address": "19 Technology Dr, East Setauket, NY 11733",
+ "address_label": "Strong Strains",
+ "maps": "Strong Strains, 19 Technology Dr, East Setauket, NY 11733",
+ "website": "https://strongstrains.com/",
+ "instagram": "strongstrains",
+ "facebook": "https://www.facebook.com/profile.php?id=61577219799105",
+ "contact_url": "https://strongstrains.com/stores/strong-strains",
+ "contact_cta": {
+  "k": "Pick up or delivery",
+  "t": "Shop the menu"
+ },
+ "actions": [
+  {
+   "t": "Shop menu",
+   "i": "web",
+   "u": "https://strongstrains.com/stores/strong-strains",
+   "a": "shop",
+   "pri": 1
+  },
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16316357876",
+   "a": "call"
+  },
+  {
+   "t": "Directions",
+   "i": "map",
+   "u": "https://www.google.com/maps/search/?api=1&query=Strong+Strains+19+Technology+Dr+East+Setauket+NY+11733",
+   "a": "directions"
+  },
+  {
+   "t": "Instagram",
+   "i": "ig",
+   "u": "https://www.instagram.com/strongstrains/",
+   "a": "instagram"
+  }
+ ],
+ "ticker": [
+  "Flower",
+  "Pre-rolls",
+  "Vapes",
+  "Edibles",
+  "Concentrates",
+  "Tinctures",
+  "Topicals",
+  "Accessories",
+  "Same-day delivery",
+  "Order ahead"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Great weed, *no gimmicks.*",
+  "text": "Strong Strains is an adult-use cannabis dispensary at 19 Technology Drive in East Setauket. The team curates lab-tested, handpicked products, from flower and pre-rolls to edibles, concentrates, tinctures, topicals and accessories, and the staff knows the menu well. Shop in the store, order ahead for pickup, or get same-day delivery."
+ },
+ "gallery_k": "Inside the dispensary",
+ "gallery_t": "A look *inside*",
+ "gallery": [
+  {
+   "img": "img/552-g1.webp",
+   "alt": "Strong Strains sales counter with the lit Island High sign and menu screens"
+  },
+  {
+   "img": "img/552-g2.webp",
+   "alt": "Glass display case in front of the Strong Strains logo wall"
+  },
+  {
+   "img": "img/552-g3.webp",
+   "alt": "Row of lit glass display cases along the Strong Strains counter"
+  }
+ ],
+ "goals": {
+  "k": "How do you want to shop?",
+  "t": "Shop *your way*",
+  "chips_k": "On the menu",
+  "items": [
+   {
+    "t": "In store",
+    "h": "Visit the dispensary.",
+    "d": "Browse the glass cases and ask the staff for help finding what you are looking for.",
+    "b": [
+     "Handpicked, lab-tested products",
+     "Knowledgeable staff",
+     "19 Technology Dr, East Setauket"
+    ],
+    "c": [
+     "Flower",
+     "Pre-rolls",
+     "Vapes",
+     "Edibles"
+    ],
+    "u": "https://www.google.com/maps/search/?api=1&query=Strong+Strains+19+Technology+Dr+East+Setauket+NY+11733",
+    "cta": "Get directions"
+   },
+   {
+    "t": "Pick up",
+    "h": "Order ahead, skip the line.",
+    "d": "Pre-order online or in the Strong Strains mobile app up to one day ahead, and your order will be ready when you arrive.",
+    "b": [
+     "Order online or in the mobile app",
+     "Pre-order up to one day ahead",
+     "Secure checkout with Pay by Bank"
+    ],
+    "c": [
+     "Concentrates",
+     "Tinctures",
+     "Topicals",
+     "Accessories"
+    ],
+    "u": "https://strongstrains.com/stores/strong-strains",
+    "cta": "Shop the menu"
+   },
+   {
+    "t": "Delivery",
+    "h": "Same-day delivery.",
+    "d": "Delivery in 2-hour windows. Check the delivery minimums for your area on the Strong Strains site.",
+    "b": [
+     "Same-day delivery",
+     "2-hour delivery windows",
+     "Order online or in the mobile app"
+    ],
+    "c": [
+     "Delivery"
+    ],
+    "u": "https://strongstrains.com/delivery-minimums/",
+    "cta": "Check delivery"
+   },
+   {
+    "t": "Mobile app",
+    "h": "The Strong Strains mobile app.",
+    "d": "Order ahead, get alerts about new drops, and earn points with the Island High Club rewards program.",
+    "b": [
+     "Order ahead",
+     "New drop alerts",
+     "Island High Club rewards"
+    ],
+    "c": [
+     "Island High Club"
+    ],
+    "u": "https://strongstrains.com/stores/strong-strains",
+    "cta": "Shop online"
+   }
+  ]
+ },
+ "hours_k": "Strong Strains",
+ "hours_t": "Store *hours*",
+ "hours": {
+  "mon": [
+   "09:00",
+   "21:30"
+  ],
+  "tue": [
+   "09:00",
+   "21:30"
+  ],
+  "wed": [
+   "09:00",
+   "21:30"
+  ],
+  "thu": [
+   "09:00",
+   "23:00"
+  ],
+  "fri": [
+   "09:00",
+   "23:00"
+  ],
+  "sat": [
+   "09:00",
+   "23:00"
+  ],
+  "sun": [
+   "10:00",
+   "20:00"
+  ]
+ },
+ "reviews": {
+  "t": "Shopped at Strong Strains?",
+  "text": "Your review helps neighbors find a local dispensary they can trust.",
+  "url": "https://g.page/r/CVLCU5pP8T-1EBM/review",
+  "btn": "Leave a Google review"
+ },
+ "faq_t": "Quick *FAQ*",
+ "faq": [
+  [
+   "Who can shop at Strong Strains?",
+   "Adults 21 and older only."
+  ],
+  [
+   "Do they deliver?",
+   "Yes. Strong Strains offers same-day delivery in 2-hour windows. Check the delivery minimums page on strongstrains.com for your area."
+  ],
+  [
+   "Where is the store?",
+   "19 Technology Drive, East Setauket, NY 11733. Call 631-635-7876 with questions."
+  ]
+ ],
+ "final": {
+  "k": "Strong Strains · Island High",
+  "t": "Pick up or *delivery.*",
+  "text": "Shop the menu online or stop by 19 Technology Drive in East Setauket.",
+  "btn": "Shop the menu"
+ },
+ "side_sub": "Cannabis dispensary · East Setauket",
+ "side_contact": "Shop the menu",
+ "sticky_contact": "Shop",
+ "compliance": "For adults 21 and older. Please consume responsibly. Cannabis products contain THC and can impair concentration and coordination; do not drive or operate machinery under the influence. Not recommended for use if pregnant or nursing. Keep out of reach of children and pets. Concerned about your cannabis use? Text HOPENY or call 1-877-8-HOPENY."
+}

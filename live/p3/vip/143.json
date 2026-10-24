@@ -1,0 +1,201 @@
+{
+ "uid": "143",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "Emma S. Clark Memorial Library",
+ "short": "Emma S. Clark Library",
+ "first": "Emma Clark Library",
+ "category": "Public Library",
+ "kicker": "Setauket · Since 1892",
+ "sub": "The Heart of the Three Village Community",
+ "pills": [
+  "📚 Open 7 days a week"
+ ],
+ "theme": {
+  "navy": "#3A5472",
+  "navy2": "#26384D",
+  "blue": "#46678F",
+  "sky": "#EEF3F9",
+  "gold": "#B9CDE6",
+  "onblue": "#FFFFFF",
+  "fonts": "https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Open+Sans:wght@400;600;700&display=swap",
+  "hf": "'Open Sans Condensed', 'Open Sans', sans-serif",
+  "hw": "700",
+  "hcase": "none",
+  "hls": "0",
+  "bf": "'Open Sans', system-ui, sans-serif"
+ },
+ "hero": {
+  "img": "img/143-hero.webp",
+  "alt": "The 1892 Tudor-style Emma S. Clark Memorial Library building across the front lawn on Main Street, Setauket",
+  "pos": "50% 55%"
+ },
+ "logo": "img/143-logo.png",
+ "phone": "6319414080",
+ "phone_label": "Call the library",
+ "address": "120 Main St, Setauket, NY 11733",
+ "address_label": "Emma S. Clark Memorial Library",
+ "maps": "Emma S. Clark Memorial Library, 120 Main St, Setauket, NY 11733",
+ "email": "askus@emmaclark.org",
+ "website": "https://www.emmaclark.org/",
+ "instagram": "emmaclarklibrary",
+ "facebook": "https://www.facebook.com/EmmaClarkLibrary/",
+ "contact_url": "https://www.emmaclark.org/programs/",
+ "contact_cta": {
+  "k": "What's happening",
+  "t": "Events calendar"
+ },
+ "actions": [
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://www.emmaclark.org/",
+   "a": "website",
+   "pri": 1
+  },
+  {
+   "t": "Events",
+   "i": "cal",
+   "u": "https://www.emmaclark.org/programs/",
+   "a": "events"
+  },
+  {
+   "t": "Directions",
+   "i": "map",
+   "u": "https://www.google.com/maps/search/?api=1&query=Emma+S.+Clark+Memorial+Library+120+Main+St+Setauket+NY+11733",
+   "a": "directions"
+  },
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16319414080",
+   "a": "call"
+  }
+ ],
+ "ticker": [
+  "Programs for all ages",
+  "Museum passes",
+  "Library of Things",
+  "Level Up Kitchen cafe",
+  "Free Seed Collection",
+  "Meeting rooms",
+  "Tech help",
+  "Open 7 days a week"
+ ],
+ "intro": {
+  "k": "Your library",
+  "t": "The heart of *Three Village.*",
+  "text": "Emma S. Clark Memorial Library opened on October 3, 1892, in the Tudor-style building on Main Street in Setauket, and it serves residents of the Three Village Central School District. Today it is a full-service library for every age: books, eBooks and streaming, programs and classes from newborns to adults, museum passes, a Library of Things, tech help and the Level Up Kitchen Library Cafe. It is open seven days a week."
+ },
+ "gallery_k": "Inside the library",
+ "gallery_t": "A look *inside*",
+ "gallery": [
+  {
+   "img": "img/143-g1.webp",
+   "alt": "The library's 1892 reading room with vaulted wood beams, stained glass and chandeliers"
+  },
+  {
+   "img": "img/143-g2.webp",
+   "alt": "The library's entrance canopy with Emma S. Clark Library lettering"
+  },
+  {
+   "img": "img/143-g3.webp",
+   "alt": "Philip Groia Global Studies Collection books in the Delaney Room"
+  },
+  {
+   "img": "img/143-g4.webp",
+   "alt": "Level Up Kitchen Library Cafe owner Chelsea Gomez at the cafe counter"
+  }
+ ],
+ "services_k": "At the library",
+ "services_t": "More than *books*",
+ "services": [
+  {
+   "t": "Programs for all ages",
+   "d": "Events and classes for newborns through adults, plus drop-in activities for kids."
+  },
+  {
+   "t": "Books, eBooks and streaming",
+   "d": "Borrow books and DVDs, or download eBooks, audiobooks, e-magazines and movies."
+  },
+  {
+   "t": "Museum passes",
+   "d": "Museum Exploration Passes and discounted tickets for attractions from New York City to the East End."
+  },
+  {
+   "t": "Library of Things",
+   "d": "Borrow sewing machines, robots, wifi hotspots and more."
+  },
+  {
+   "t": "Tech help and learning",
+   "d": "One-on-one technology help, homework and resume help, language learning and self-paced online classes."
+  }
+ ],
+ "hours_k": "Open all year, Sundays too",
+ "hours_t": "Library *hours*",
+ "hours": {
+  "mon": [
+   "09:30",
+   "21:00"
+  ],
+  "tue": [
+   "09:30",
+   "21:00"
+  ],
+  "wed": [
+   "09:30",
+   "21:00"
+  ],
+  "thu": [
+   "09:30",
+   "21:00"
+  ],
+  "fri": [
+   "09:30",
+   "21:00"
+  ],
+  "sat": [
+   "09:00",
+   "17:00"
+  ],
+  "sun": [
+   "10:00",
+   "17:00"
+  ]
+ },
+ "reviews": {
+  "t": "Love your library?",
+  "text": "Share what you love about Emma Clark so more neighbors discover it.",
+  "url": "https://www.google.com/search?q=Emma+S.+Clark+Memorial+Library+Setauket+reviews"
+ },
+ "faq_t": "Library *FAQ*",
+ "faq": [
+  [
+   "How do I get a library card?",
+   "Start online with the library's Get a Library Card link at livebrary.com/getacard, or call the library at 631-941-4080. The library serves residents of the Three Village Central School District."
+  ],
+  [
+   "Is the library open on holidays?",
+   "The library closes on some holidays. Remaining 2026 closings: November 11, November 26 and December 25, with early 3 PM closings on November 25, December 24 and December 31."
+  ],
+  [
+   "Is there a cafe?",
+   "Yes. The Level Up Kitchen Library Cafe is open Monday to Friday 10:30 AM to 7 PM, Saturday 9 AM to 4:30 PM and Sunday 10 AM to 4:30 PM."
+  ]
+ ],
+ "final": {
+  "k": "Emma S. Clark Memorial Library",
+  "t": "See you at *the library.*",
+  "text": "Check the events calendar for programs this week, or call with any questions.",
+  "btn": "Events calendar"
+ },
+ "side_sub": "Public library · Setauket",
+ "side_contact": "Events calendar",
+ "side_extra": {
+  "t": "Get a library card",
+  "u": "https://www.livebrary.com/getacard",
+  "a": "library_card"
+ },
+ "sticky_contact": "Events",
+ "compliance": "Hours, closings and services are from emmaclark.org. Check the library's website for the latest updates."
+}
