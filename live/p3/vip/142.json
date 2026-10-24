@@ -1,0 +1,74 @@
+{
+ "uid": "142",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "Aronica Plant Healthcare, LLC",
+ "short": "Aronica Plant Healthcare",
+ "first": "Aronica",
+ "brand": "Aronica Plant Healthcare",
+ "category": "Tree, Shrub & Lawn Care",
+ "kicker": "Setauket · Serving Long Island since 1990",
+ "sub": "Tree & shrub care · Lawn care · Tick & mosquito control",
+ "pills": ["🌳 Organic lawn care option"],
+ "theme": {
+  "navy": "#0B3D22",
+  "navy2": "#006634",
+  "blue": "#006634",
+  "sky": "#EEF6F0",
+  "gold": "#ED6513",
+  "fonts": "https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;700;800&display=swap",
+  "hf": "'Maven Pro', sans-serif",
+  "hw": "800",
+  "hcase": "none",
+  "hls": "-.01em",
+  "bf": "'Maven Pro', system-ui, sans-serif"
+ },
+ "hero": {"img": "img/142-hero.webp", "alt": "Aronica Plant Healthcare brand green background", "pos": "50% 50%"},
+ "logo": "img/142-logo.svg",
+ "logo_hero": "img/142-logo-white.svg",
+ "phone": "6319289000",
+ "email": "info@aronicaplanthealthcare.com",
+ "address": "Setauket, NY 11733",
+ "address_label": "Based in",
+ "maps": "Aronica Plant Healthcare, Setauket, NY",
+ "website": "https://aronicaplanthealthcare.com/",
+ "instagram": "aronicaplanthealthcare",
+ "facebook": "https://www.facebook.com/aronicaplanthealthcare/",
+ "contact_cta": {"k": "Trees or lawn need help?", "t": "Request a visit"},
+ "actions": [
+  {"t": "Call", "i": "call", "u": "tel:+16319289000", "a": "call", "pri": 1},
+  {"t": "Message", "i": "msg", "u": "/aronica-plant-healthcare-llc/connect", "a": "contact"},
+  {"t": "Website", "i": "web", "u": "https://aronicaplanthealthcare.com/", "a": "website"},
+  {"t": "Save contact", "i": "card", "a": "vcard"}
+ ],
+ "vcard": {"n": "Aronica Plant Healthcare;;;;", "fn": "Aronica Plant Healthcare", "org": "Aronica Plant Healthcare, LLC", "title": "Tree, shrub and lawn care"},
+ "ticker": ["Tree and shrub spraying", "Deep root fertilization", "Pruning and storm response", "Conventional and organic lawn care", "Tick and mosquito control", "Deer and geese repellents", "Serving Long Island since 1990"],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Healthy trees, shrubs *and lawns.*",
+  "text": "Aronica Plant Healthcare has cared for Long Island landscapes since 1990. From their Setauket base, the team protects trees and shrubs from insects, disease and winter burn, feeds them at the root zone, prunes for health and safety, and runs lawn programs with both conventional and organic options. They also handle seasonal tick and mosquito control."
+ },
+ "goals": {
+  "k": "What does your yard need?",
+  "t": "Find the *right care*",
+  "chips_k": "Ask about",
+  "items": [
+   {"t": "Trees & shrubs", "h": "Plant healthcare.", "d": "Targeted spraying for insects, disease and nutrition, deep root fertilization and anti-desiccant winter sprays for evergreens.", "b": ["Tree and shrub spraying", "Deep root fertilization", "Anti-desiccant winter sprays"], "c": ["Insects", "Disease", "Winter burn"]},
+   {"t": "Pruning & storms", "h": "Pruning, support and storm help.", "d": "Ornamental and mature tree pruning, tree support systems and emergency storm response.", "b": ["Ornamental and mature tree pruning", "Tree support systems", "Emergency storm pruning"], "c": ["Pruning", "Cabling", "Storm damage"]},
+   {"t": "Lawn", "h": "Conventional or organic lawn care.", "d": "Lawn renovation, fertilization, overseeding, core aeration and lawn diagnostics.", "b": ["Fertilization and overseeding", "Core aeration", "Lawn diagnostics"], "c": ["Conventional", "Organic"]},
+   {"t": "Ticks & pests", "h": "Ticks, mosquitoes and hungry deer.", "d": "Seasonal tick and flying insect control, plus repellent programs for deer and geese.", "b": ["Tick control", "Mosquito control", "Deer and geese repellents"], "c": ["Ticks", "Mosquitoes", "Deer"]},
+   {"t": "Soil & roots", "h": "Fix the problem below ground.", "d": "Soil analysis-based restoration, air spading, radial trenching and vertical mulching, plus diagnostic consulting for plant problems.", "b": ["Soil restoration", "Air spading and radial trenching", "Diagnostic consulting"], "c": ["Soil", "Roots", "Diagnosis"]}
+  ]
+ },
+ "reviews": {"t": "Happy with your yard?", "text": "A quick review helps your neighbors find good care for their trees and lawns.", "url": "https://www.google.com/search?q=Aronica+Plant+Healthcare+reviews"},
+ "faq_t": "Yard care *FAQ*",
+ "faq": [
+  ["Do they offer organic lawn care?", "Yes. Aronica offers both conventional and organic turf management."],
+  ["Can they help with ticks and mosquitoes?", "Yes. They run seasonal tick and flying insect control programs."],
+  ["How do I pay?", "Aronica accepts checks, major credit cards, Zelle and Venmo."]
+ ],
+ "final": {"k": "Aronica Plant Healthcare", "t": "Give your landscape *some care.*", "text": "Call or send a message to set up a visit.", "btn": "Send a message"},
+ "side_sub": "Tree, shrub & lawn care",
+ "side_contact": "Send a message",
+ "sticky_extra": {"t": "Website", "u": "https://aronicaplanthealthcare.com/", "a": "website"}
+}

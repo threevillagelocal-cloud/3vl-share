@@ -1,0 +1,80 @@
+{
+ "uid": "228",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "Raupp Law PC",
+ "short": "Amy C. Raupp, Esq.",
+ "first": "Amy",
+ "brand": "Raupp Law, P.C.",
+ "side_name": "Raupp Law, P.C.",
+ "category": "Estate Planning & Elder Law Attorney",
+ "kicker": "Raupp Law, P.C. · Setauket",
+ "sub": "Estate planning · Elder law · Real estate",
+ "pills": ["🏡 Free in-home consultations"],
+ "theme": {
+  "navy": "#14213A",
+  "navy2": "#00305B",
+  "blue": "#14213A",
+  "sky": "#F6F1E4",
+  "gold": "#E2B53A",
+  "fonts": "https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap",
+  "hf": "Raleway, sans-serif",
+  "hw": "800",
+  "hcase": "none",
+  "hls": "-.01em",
+  "bf": "'Open Sans', system-ui, sans-serif"
+ },
+ "hero": {"img": "img/228-hero.webp", "alt": "Amy C. Raupp, Esq. standing on a village street", "pos": "62% 30%"},
+ "headshot": "img/228-head.webp",
+ "headshot_alt": "Amy C. Raupp, Esq.",
+ "phone": "6317694440",
+ "phone_label": "Call Amy",
+ "email": "amy@raupplaw.com",
+ "address": "9 Carlton Ave, Setauket, NY 11733",
+ "address_label": "Setauket office",
+ "maps": "Raupp Law PC, 9 Carlton Ave, Setauket, NY 11733",
+ "website": "https://www.raupplaw.com/",
+ "facebook": "https://www.facebook.com/Amy.C.Raupp.Attorney",
+ "linkedin": "https://www.linkedin.com/in/amy-c-raupp-esq-bb247821/",
+ "contact_cta": {"k": "Ready to talk?", "t": "Request a free consultation"},
+ "actions": [
+  {"t": "Call Amy", "i": "call", "u": "tel:+16317694440", "a": "call", "pri": 1},
+  {"t": "Consultation", "i": "msg", "u": "/raupp-law-pc/connect", "a": "contact"},
+  {"t": "Website", "i": "web", "u": "https://www.raupplaw.com/", "a": "website"},
+  {"t": "Save contact", "i": "card", "a": "vcard"}
+ ],
+ "vcard": {"n": "Raupp;Amy;C.;;Esq.", "fn": "Amy C. Raupp, Esq.", "org": "Raupp Law, P.C.", "title": "Attorney"},
+ "ticker": ["Wills and trusts", "Medicaid planning and applications", "Estate administration", "Guardianships", "Real estate closings", "Business law", "Free in-home consultations", "Nassau and Suffolk"],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Protecting *your legacy.*",
+  "text": "Amy Raupp grew up in Three Village, graduated from Ward Melville High School and still lives here with her husband and two sons. She earned her law degree in 2009 and runs Raupp Law from Carlton Avenue in Setauket, helping families across Nassau and Suffolk with estate planning, elder law and Medicaid, estate administration, guardianships, real estate and business law. Consultations are free, and she will come to your home.",
+  "quote": "You worked hard for your assets... we work hard to protect them.",
+  "by": "Amy C. Raupp, Esq."
+ },
+ "goals": {
+  "k": "How can Amy help?",
+  "t": "What are you *planning for?*",
+  "chips_k": "Ask about",
+  "items": [
+   {"t": "Estate planning", "h": "Wills, trusts and the right documents.", "d": "Wills, powers of attorney, health care proxies and living wills, plus trusts for asset protection, estate tax planning or special needs.", "b": ["Wills", "Powers of attorney and health care proxies", "Trusts"], "c": ["Wills", "Trusts", "POA"], "cta": "Request a free consultation"},
+   {"t": "Medicaid & elder law", "h": "Plan ahead for long-term care.", "d": "Medicaid planning to protect assets, plus Community Medicaid and Chronic Care (nursing home) applications and crisis plans.", "b": ["Medicaid planning", "Community Medicaid applications", "Chronic Care applications"], "c": ["Medicaid", "Nursing home", "Home care"], "cta": "Request a free consultation"},
+   {"t": "After a loss", "h": "Estate administration and probate.", "d": "Guidance through probate and estate administration in Suffolk and Nassau.", "b": ["Probate", "Estate administration"], "c": ["Probate", "Administration"], "cta": "Talk to Amy"},
+   {"t": "Guardianship", "h": "Guardianship petitions.", "d": "Guardianship proceedings in Nassau and Suffolk.", "b": ["Guardianship petitions"], "c": ["Guardianship"], "cta": "Talk to Amy"},
+   {"t": "Real estate & business", "h": "Buying, selling and building a business.", "d": "Representation for buyers and sellers of residential and commercial property, plus forming, buying and selling companies.", "b": ["Residential and commercial closings", "Business formation", "Buying and selling a business"], "c": ["Buying", "Selling", "LLCs"], "cta": "Talk to Amy"}
+  ]
+ },
+ "reviews": {"t": "Worked with Amy?", "text": "A quick review helps your neighbors find an attorney they can trust with their family's future.", "url": "https://www.google.com/search?q=Raupp+Law+PC+Setauket+reviews"},
+ "faq_t": "Questions *neighbors ask*",
+ "faq": [
+  ["Is the first consultation free?", "Yes. Raupp Law offers free consultations, and Amy offers in-home appointments."],
+  ["What areas does Amy serve?", "Raupp Law serves families in Nassau and Suffolk Counties from its office at 9 Carlton Avenue in Setauket."],
+  ["How can I pay?", "Raupp Law accepts all major credit cards."]
+ ],
+ "final": {"k": "Raupp Law, P.C.", "t": "Start your plan *with a neighbor.*", "text": "Call Amy or send a message to set up a free consultation.", "btn": "Request a consultation"},
+ "side_sub": "Estate planning & elder law · Setauket",
+ "side_contact": "Request a consultation",
+ "sticky_contact": "Consultation",
+ "sticky_extra": {"t": "Website", "u": "https://www.raupplaw.com/", "a": "website"},
+ "compliance": "Attorney Advertising. Prior results do not guarantee a similar outcome. This page is general information, not legal advice, and contacting the firm does not create an attorney-client relationship."
+}

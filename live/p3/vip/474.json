@@ -1,0 +1,68 @@
+{
+ "uid": "474",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "Chris's Complete Landscaping",
+ "short": "Chris's Complete Landscaping",
+ "first": "Chris",
+ "category": "Landscaping & Lawn Care",
+ "kicker": "Owner-operated · Since 2011",
+ "sub": "Lawn care · Cleanups · Mulch & plantings · Power washing",
+ "pills": ["🌿 Small company, personal service"],
+ "theme": {
+  "navy": "#163A1B",
+  "navy2": "#2C6B2F",
+  "blue": "#2C6B2F",
+  "sky": "#F0F6EC",
+  "gold": "#A6D86B",
+  "fonts": "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;700&display=swap",
+  "hf": "'Barlow Condensed', sans-serif",
+  "hw": "800",
+  "hcase": "uppercase",
+  "hls": "0",
+  "bf": "Barlow, system-ui, sans-serif"
+ },
+ "hero": {"img": "img/474-hero.webp", "alt": "Chris's Complete Landscaping green background", "pos": "50% 50%"},
+ "headshot": "img/474-head.webp",
+ "headshot_alt": "Chris's Complete Landscaping work truck and commercial stand-on mowers",
+ "phone": "6315727186",
+ "phone_label": "Call Chris",
+ "email": "chriscompletelandscaping@yahoo.com",
+ "contact_cta": {"k": "Need yard work?", "t": "Request an estimate"},
+ "actions": [
+  {"t": "Call Chris", "i": "call", "u": "tel:+16315727186", "a": "call", "pri": 1},
+  {"t": "Estimate", "i": "msg", "u": "/chriss-complete-landscaping/connect", "a": "contact"},
+  {"t": "Save contact", "i": "card", "a": "vcard"}
+ ],
+ "vcard": {"n": "Cilibrasi;Christopher;;;", "fn": "Christopher Cilibrasi", "org": "Chris's Complete Landscaping", "title": "Owner/operator"},
+ "ticker": ["Weekly lawn service", "Spring and fall cleanups", "Mulch and plantings", "Bush trimming", "Aeration and topsoil", "Power washing", "Snow removal"],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Your yard, *looking its best.*",
+  "text": "Chris Cilibrasi has run Chris's Complete Landscaping since 2011. It's an owner-operated company that keeps Long Island lawns and landscape beds neat through every season: weekly lawn service, spring and fall cleanups, fresh mulch and plantings, bush trimming, aeration, topsoil and power washing, plus snow removal in winter.",
+  "quote": "We may be a small company but we treat every customer like family.",
+  "by": "Chris Cilibrasi, owner"
+ },
+ "services_k": "What Chris does",
+ "services_t": "Complete *yard care*",
+ "services": [
+  {"t": "Weekly lawn service", "d": "Routine mowing and lawn care to keep the property neat all season."},
+  {"t": "Spring & fall cleanups", "d": "Leaves, branches and seasonal debris cleared out."},
+  {"t": "Mulch & plantings", "d": "Fresh mulch and new plantings for instant curb appeal."},
+  {"t": "Trimming, aeration & topsoil", "d": "Bush trimming, lawn aeration and topsoil."},
+  {"t": "Power washing & snow", "d": "Power washing outside, plus snow removal in winter."}
+ ],
+ "reviews": {"t": "Happy with your yard?", "text": "A quick review helps your neighbors find a landscaper they can count on.", "url": "https://www.google.com/search?q=Chris%27s+Complete+Landscaping+reviews"},
+ "faq_t": "Lawn care *FAQ*",
+ "faq": [
+  ["What services does Chris offer?", "Weekly lawn service, spring and fall cleanups, mulch, plantings, bush trimming, aeration, topsoil, power washing and snow removal."],
+  ["How long has Chris been in business?", "Chris's Complete Landscaping has been in business since 2011."],
+  ["How do I get an estimate?", "Call Chris at 631-572-7186 or send a message through Three Village Local."]
+ ],
+ "final": {"k": "Chris's Complete Landscaping", "t": "Let's get your yard *looking great.*", "text": "Tell Chris what your property needs.", "btn": "Request an estimate"},
+ "address_label": "Contact",
+ "side_sub": "Lawn care & landscaping",
+ "side_contact": "Request an estimate",
+ "sticky_contact": "Estimate",
+ "sticky_extra": {"t": "Review", "u": "/chriss-complete-landscaping/writeareview", "a": "review"}
+}
