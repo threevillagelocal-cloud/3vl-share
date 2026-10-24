@@ -25,9 +25,10 @@
   "bf": "Gantari, system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/499-hero.webp",
-  "alt": "Orthopedic Associates of Long Island office reception with the OALI logo on the wall",
-  "pos": "50% 45%"
+  "img": "img/499-banner2.webp",
+  "alt": "Orthopedic Associates of Long Island waiting room and front desk in East Setauket",
+  "pos": "50% 50%",
+  "banner": true
  },
  "logo": "img/499-logo.png",
  "logo_hero": "img/499-logo-white.png",
