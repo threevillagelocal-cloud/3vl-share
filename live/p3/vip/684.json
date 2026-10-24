@@ -26,9 +26,10 @@
   "bf": "Manrope, system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/684-hero.webp",
-  "alt": "Victor Stabile smiling in a bright living room",
-  "pos": "50% 30%"
+  "img": "img/684-banner.webp",
+  "alt": "Victor Stabile of Douglas Elliman in front of a home for sale",
+  "pos": "50% 50%",
+  "banner": true
  },
  "headshot": "img/684-g3.webp",
  "headshot_alt": "Victor Stabile, Douglas Elliman Real Estate",
