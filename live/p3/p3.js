@@ -76,6 +76,11 @@ function search(qraw,max){var q=norm(qraw);if(q.length<2||!data)return [];
   if(out.some(function(x){return !x.weak}))out=out.filter(function(x){return !x.weak});
   out.sort(function(a,b){return b.s-a.s||(TIER[b.r.m.p]||0)-(TIER[a.r.m.p]||0)||(b.r.m.l?1:0)-(a.r.m.l?1:0)||a.r.m.n.localeCompare(b.r.m.n)});
   if(out.length){var top=out[0].s;out=out.filter(function(x){return x.s>=top*.3})}   /* drop the long tail of faint matches */
+  /* owner 10/24/2026: real estate searches show The O'Dwyer-Brainard Team (112) first, above all other VIPs */
+  if(/(^| )(real ?estate|realtors?|realty|real estate agents?|homes? for sale|houses? for sale|sell(ing)? (my|a) (home|house)|buy(ing)? (a )?(home|house))( |$)/.test(' '+q+' ')){
+    var pi=-1;out.forEach(function(x,i){if(String(x.r.m.id)==='112')pi=i});
+    if(pi>0)out.unshift(out.splice(pi,1)[0]);
+    else if(pi<0){var pr=null;data.forEach(function(r){if(String(r.m.id)==='112')pr=r});if(pr)out.unshift({r:pr,s:9999,all:true,weak:false,hit:[],cat:true,grp:true})}}
   return out.slice(0,max||7)}
 return {load:load,search:search,norm:norm,STOP:STOP,ok:function(){return !!data}}})();
 window.tvlSS=SS;
