@@ -10,7 +10,9 @@
  "category": "Estate Planning & Elder Law Attorney",
  "kicker": "Raupp Law, P.C. · Setauket",
  "sub": "Estate planning · Elder law · Real estate",
- "pills": ["🏡 Free in-home consultations"],
+ "pills": [
+  "🏡 Free in-home consultations"
+ ],
  "theme": {
   "navy": "#14213A",
   "navy2": "#00305B",
@@ -24,7 +26,11 @@
   "hls": "-.01em",
   "bf": "'Open Sans', system-ui, sans-serif"
  },
- "hero": {"img": "img/228-hero.webp", "alt": "Amy C. Raupp, Esq. standing on a village street", "pos": "62% 30%"},
+ "hero": {
+  "img": "img/228-hero.webp",
+  "alt": "Amy C. Raupp, Esq. standing on a village street",
+  "pos": "62% 30%"
+ },
  "headshot": "img/228-head.webp",
  "headshot_alt": "Amy C. Raupp, Esq.",
  "phone": "6317694440",
@@ -36,15 +42,52 @@
  "website": "https://www.raupplaw.com/",
  "facebook": "https://www.facebook.com/Amy.C.Raupp.Attorney",
  "linkedin": "https://www.linkedin.com/in/amy-c-raupp-esq-bb247821/",
- "contact_cta": {"k": "Ready to talk?", "t": "Request a free consultation"},
+ "contact_cta": {
+  "k": "Ready to talk?",
+  "t": "Request a free consultation"
+ },
  "actions": [
-  {"t": "Call Amy", "i": "call", "u": "tel:+16317694440", "a": "call", "pri": 1},
-  {"t": "Consultation", "i": "msg", "u": "/raupp-law-pc/connect", "a": "contact"},
-  {"t": "Website", "i": "web", "u": "https://www.raupplaw.com/", "a": "website"},
-  {"t": "Save contact", "i": "card", "a": "vcard"}
+  {
+   "t": "Call Amy",
+   "i": "call",
+   "u": "tel:+16317694440",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Message",
+   "i": "msg",
+   "u": "/raupp-law-pc/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://www.raupplaw.com/",
+   "a": "website"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
  ],
- "vcard": {"n": "Raupp;Amy;C.;;Esq.", "fn": "Amy C. Raupp, Esq.", "org": "Raupp Law, P.C.", "title": "Attorney"},
- "ticker": ["Wills and trusts", "Medicaid planning and applications", "Estate administration", "Guardianships", "Real estate closings", "Business law", "Free in-home consultations", "Nassau and Suffolk"],
+ "vcard": {
+  "n": "Raupp;Amy;C.;;Esq.",
+  "fn": "Amy C. Raupp, Esq.",
+  "org": "Raupp Law, P.C.",
+  "title": "Attorney"
+ },
+ "ticker": [
+  "Wills and trusts",
+  "Medicaid planning and applications",
+  "Estate administration",
+  "Guardianships",
+  "Real estate closings",
+  "Business law",
+  "Free in-home consultations",
+  "Nassau and Suffolk"
+ ],
  "intro": {
   "k": "Meet your neighbor",
   "t": "Protecting *your legacy.*",
@@ -57,24 +100,115 @@
   "t": "What are you *planning for?*",
   "chips_k": "Ask about",
   "items": [
-   {"t": "Estate planning", "h": "Wills, trusts and the right documents.", "d": "Wills, powers of attorney, health care proxies and living wills, plus trusts for asset protection, estate tax planning or special needs.", "b": ["Wills", "Powers of attorney and health care proxies", "Trusts"], "c": ["Wills", "Trusts", "POA"], "cta": "Request a free consultation"},
-   {"t": "Medicaid & elder law", "h": "Plan ahead for long-term care.", "d": "Medicaid planning to protect assets, plus Community Medicaid and Chronic Care (nursing home) applications and crisis plans.", "b": ["Medicaid planning", "Community Medicaid applications", "Chronic Care applications"], "c": ["Medicaid", "Nursing home", "Home care"], "cta": "Request a free consultation"},
-   {"t": "After a loss", "h": "Estate administration and probate.", "d": "Guidance through probate and estate administration in Suffolk and Nassau.", "b": ["Probate", "Estate administration"], "c": ["Probate", "Administration"], "cta": "Talk to Amy"},
-   {"t": "Guardianship", "h": "Guardianship petitions.", "d": "Guardianship proceedings in Nassau and Suffolk.", "b": ["Guardianship petitions"], "c": ["Guardianship"], "cta": "Talk to Amy"},
-   {"t": "Real estate & business", "h": "Buying, selling and building a business.", "d": "Representation for buyers and sellers of residential and commercial property, plus forming, buying and selling companies.", "b": ["Residential and commercial closings", "Business formation", "Buying and selling a business"], "c": ["Buying", "Selling", "LLCs"], "cta": "Talk to Amy"}
+   {
+    "t": "Estate planning",
+    "h": "Wills, trusts and the right documents.",
+    "d": "Wills, powers of attorney, health care proxies and living wills, plus trusts for asset protection, estate tax planning or special needs.",
+    "b": [
+     "Wills",
+     "Powers of attorney and health care proxies",
+     "Trusts"
+    ],
+    "c": [
+     "Wills",
+     "Trusts",
+     "POA"
+    ],
+    "cta": "Request a free consultation"
+   },
+   {
+    "t": "Medicaid & elder law",
+    "h": "Plan ahead for long-term care.",
+    "d": "Medicaid planning to protect assets, plus Community Medicaid and Chronic Care (nursing home) applications and crisis plans.",
+    "b": [
+     "Medicaid planning",
+     "Community Medicaid applications",
+     "Chronic Care applications"
+    ],
+    "c": [
+     "Medicaid",
+     "Nursing home",
+     "Home care"
+    ],
+    "cta": "Request a free consultation"
+   },
+   {
+    "t": "After a loss",
+    "h": "Estate administration and probate.",
+    "d": "Guidance through probate and estate administration in Suffolk and Nassau.",
+    "b": [
+     "Probate",
+     "Estate administration"
+    ],
+    "c": [
+     "Probate",
+     "Administration"
+    ],
+    "cta": "Talk to Amy"
+   },
+   {
+    "t": "Guardianship",
+    "h": "Guardianship petitions.",
+    "d": "Guardianship proceedings in Nassau and Suffolk.",
+    "b": [
+     "Guardianship petitions"
+    ],
+    "c": [
+     "Guardianship"
+    ],
+    "cta": "Talk to Amy"
+   },
+   {
+    "t": "Real estate & business",
+    "h": "Buying, selling and building a business.",
+    "d": "Representation for buyers and sellers of residential and commercial property, plus forming, buying and selling companies.",
+    "b": [
+     "Residential and commercial closings",
+     "Business formation",
+     "Buying and selling a business"
+    ],
+    "c": [
+     "Buying",
+     "Selling",
+     "LLCs"
+    ],
+    "cta": "Talk to Amy"
+   }
   ]
  },
- "reviews": {"t": "Worked with Amy?", "text": "A quick review helps your neighbors find an attorney they can trust with their family's future.", "url": "https://www.google.com/search?q=Raupp+Law+PC+Setauket+reviews"},
- "faq_t": "Questions *neighbors ask*",
+ "reviews": {
+  "t": "Worked with Amy?",
+  "text": "A quick review helps your neighbors find an attorney they can trust with their family's future.",
+  "url": "https://www.google.com/search?q=Raupp+Law+PC+Setauket+reviews"
+ },
+ "faq_t": "Estate planning *FAQ*",
  "faq": [
-  ["Is the first consultation free?", "Yes. Raupp Law offers free consultations, and Amy offers in-home appointments."],
-  ["What areas does Amy serve?", "Raupp Law serves families in Nassau and Suffolk Counties from its office at 9 Carlton Avenue in Setauket."],
-  ["How can I pay?", "Raupp Law accepts all major credit cards."]
+  [
+   "Is the first consultation free?",
+   "Yes. Raupp Law offers free consultations, and Amy offers in-home appointments."
+  ],
+  [
+   "What areas does Amy serve?",
+   "Raupp Law serves families in Nassau and Suffolk Counties from its office at 9 Carlton Avenue in Setauket."
+  ],
+  [
+   "How can I pay?",
+   "Raupp Law accepts all major credit cards."
+  ]
  ],
- "final": {"k": "Raupp Law, P.C.", "t": "Start your plan *with a neighbor.*", "text": "Call Amy or send a message to set up a free consultation.", "btn": "Request a consultation"},
+ "final": {
+  "k": "Raupp Law, P.C.",
+  "t": "Start your plan *with a neighbor.*",
+  "text": "Call Amy or send a message to set up a free consultation.",
+  "btn": "Request a consultation"
+ },
  "side_sub": "Estate planning & elder law · Setauket",
  "side_contact": "Request a consultation",
  "sticky_contact": "Consultation",
- "sticky_extra": {"t": "Website", "u": "https://www.raupplaw.com/", "a": "website"},
+ "sticky_extra": {
+  "t": "Website",
+  "u": "https://www.raupplaw.com/",
+  "a": "website"
+ },
  "compliance": "Attorney Advertising. Prior results do not guarantee a similar outcome. This page is general information, not legal advice, and contacting the firm does not create an attorney-client relationship."
 }

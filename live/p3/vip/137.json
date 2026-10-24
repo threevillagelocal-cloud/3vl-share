@@ -10,7 +10,9 @@
  "category": "Estate Planning Attorney",
  "kicker": "Southard Estate Planning · Setauket",
  "sub": "Estate planning & estate administration attorney",
- "pills": ["⚖️ Admitted in New York & California"],
+ "pills": [
+  "⚖️ Admitted in New York & California"
+ ],
  "theme": {
   "navy": "#183054",
   "navy2": "#131E38",
@@ -22,9 +24,15 @@
   "hw": "700",
   "hcase": "none",
   "hls": "-.01em",
-  "bf": "Overpass, system-ui, sans-serif"
+  "bf": "Overpass, system-ui, sans-serif",
+  "h1s": "48px",
+  "h1m": "36px"
  },
- "hero": {"img": "img/137-hero.webp", "alt": "Southard Estate Planning brand navy background", "pos": "50% 50%"},
+ "hero": {
+  "img": "img/137-hero.webp",
+  "alt": "Southard Estate Planning brand navy background",
+  "pos": "50% 50%"
+ },
  "headshot": "img/137-head.webp",
  "headshot_alt": "Katherine A. Southard, Esq.",
  "logo": "img/137-logo.png",
@@ -39,15 +47,51 @@
  "instagram": "southardestateplanning",
  "facebook": "https://www.facebook.com/profile.php?id=61550713821925",
  "linkedin": "https://www.linkedin.com/in/katherine-southard-5819544",
- "contact_cta": {"k": "Ready to plan?", "t": "Request a consultation"},
+ "contact_cta": {
+  "k": "Ready to plan?",
+  "t": "Request a consultation"
+ },
  "actions": [
-  {"t": "Call", "i": "call", "u": "tel:+16318181725", "a": "call", "pri": 1},
-  {"t": "Message", "i": "msg", "u": "/southard-estate-planning/connect", "a": "contact"},
-  {"t": "Directions", "i": "map", "u": "https://www.google.com/maps/search/?api=1&query=Southard+Estate+Planning+175+Main+St+Setauket+NY", "a": "directions"},
-  {"t": "Save contact", "i": "card", "a": "vcard"}
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16318181725",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Message",
+   "i": "msg",
+   "u": "/southard-estate-planning/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Directions",
+   "i": "map",
+   "u": "https://www.google.com/maps/search/?api=1&query=Southard+Estate+Planning+175+Main+St+Setauket+NY",
+   "a": "directions"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
  ],
- "vcard": {"n": "Southard;Katherine;A.;;Esq.", "fn": "Katherine A. Southard, Esq.", "org": "Southard Estate Planning", "title": "Attorney"},
- "ticker": ["Wills and trusts", "Powers of attorney", "Health care documents", "Guardianship planning for children", "Estate administration and probate", "Over 17 years of experience", "Main Street, Setauket"],
+ "vcard": {
+  "n": "Southard;Katherine;A.;;Esq.",
+  "fn": "Katherine A. Southard, Esq.",
+  "org": "Southard Estate Planning",
+  "title": "Attorney"
+ },
+ "ticker": [
+  "Wills and trusts",
+  "Powers of attorney",
+  "Health care documents",
+  "Guardianship planning for children",
+  "Estate administration and probate",
+  "Over 17 years of experience",
+  "Main Street, Setauket"
+ ],
  "intro": {
   "k": "Meet your neighbor",
   "t": "Estate planning, *made personal.*",
@@ -58,25 +102,85 @@
  "services_k": "How Katherine helps",
  "services_t": "Plans that *protect your family*",
  "services": [
-  {"t": "Wills & trusts", "d": "Decide who makes decisions and who inherits. Trusts can keep your affairs private and help avoid probate."},
-  {"t": "Powers of attorney & health care", "d": "Name who makes financial and medical decisions for you if you can't."},
-  {"t": "Protecting your children", "d": "Plan who would care for minor children and how their assets would be managed."},
-  {"t": "Estate administration", "d": "Guidance for families through probate and estate administration."},
-  {"t": "Plan reviews", "d": "Periodic reviews of your plan, with a team of financial advisors and accountants when needed."}
+  {
+   "t": "Wills & trusts",
+   "d": "Decide who makes decisions and who inherits. Trusts can keep your affairs private and help avoid probate."
+  },
+  {
+   "t": "Powers of attorney & health care",
+   "d": "Name who makes financial and medical decisions for you if you can't."
+  },
+  {
+   "t": "Protecting your children",
+   "d": "Plan who would care for minor children and how their assets would be managed."
+  },
+  {
+   "t": "Estate administration",
+   "d": "Guidance for families through probate and estate administration."
+  },
+  {
+   "t": "Plan reviews",
+   "d": "Periodic reviews of your plan, with a team of financial advisors and accountants when needed."
+  }
  ],
  "hours_k": "Setauket office",
  "hours_t": "Office *hours*",
- "hours": {"mon": ["08:30", "16:30"], "tue": ["08:30", "16:30"], "wed": ["08:30", "16:30"], "thu": ["08:30", "16:30"], "fri": ["08:30", "16:30"], "sat": null, "sun": null},
- "reviews": {"t": "Worked with Katherine?", "text": "A quick review helps your neighbors take the first step on their own plan.", "url": "https://www.google.com/search?q=Southard+Estate+Planning+Setauket+reviews"},
+ "hours": {
+  "mon": [
+   "08:30",
+   "16:30"
+  ],
+  "tue": [
+   "08:30",
+   "16:30"
+  ],
+  "wed": [
+   "08:30",
+   "16:30"
+  ],
+  "thu": [
+   "08:30",
+   "16:30"
+  ],
+  "fri": [
+   "08:30",
+   "16:30"
+  ],
+  "sat": null,
+  "sun": null
+ },
+ "reviews": {
+  "t": "Worked with Katherine?",
+  "text": "A quick review helps your neighbors take the first step on their own plan.",
+  "url": "https://www.google.com/search?q=Southard+Estate+Planning+Setauket+reviews"
+ },
  "faq_t": "Estate planning *FAQ*",
  "faq": [
-  ["Do I need an estate plan if I don't have a lot of assets?", "Katherine believes every person deserves a well thought out estate plan, whether you are single, married or in a committed relationship, regardless of net worth."],
-  ["Where is the office?", "175 Main Street, Suite 5, Setauket, NY 11733. Hours are Monday to Friday, 8:30 AM to 4:30 PM."],
-  ["How can I pay?", "Checks, e-checks and credit cards."]
+  [
+   "Do I need an estate plan if I don't have a lot of assets?",
+   "Katherine believes every person deserves a well thought out estate plan, whether you are single, married or in a committed relationship, regardless of net worth."
+  ],
+  [
+   "Where is the office?",
+   "175 Main Street, Suite 5, Setauket, NY 11733. Hours are Monday to Friday, 8:30 AM to 4:30 PM."
+  ],
+  [
+   "How can I pay?",
+   "Checks, e-checks and credit cards."
+  ]
  ],
- "final": {"k": "Southard Estate Planning", "t": "Protect the people *you love.*", "text": "Call the Setauket office or send a message to get started.", "btn": "Send a message"},
+ "final": {
+  "k": "Southard Estate Planning",
+  "t": "Protect the people *you love.*",
+  "text": "Call the Setauket office or send a message to get started.",
+  "btn": "Send a message"
+ },
  "side_sub": "Estate planning attorney · Setauket",
  "side_contact": "Send a message",
- "sticky_extra": {"t": "Website", "u": "https://southardestateplanning.com/", "a": "website"},
+ "sticky_extra": {
+  "t": "Website",
+  "u": "https://southardestateplanning.com/",
+  "a": "website"
+ },
  "compliance": "Attorney Advertising. Prior results do not guarantee a similar outcome. Katherine A. Southard is admitted in New York and California. This page is general information, not legal advice, and contacting the firm does not create an attorney-client relationship."
 }
