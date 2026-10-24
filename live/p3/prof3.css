@@ -197,11 +197,13 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 #pv3.ready .up.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){#pv3 *{animation:none!important;transition:none!important}#pv3.ready .up{opacity:1;transform:none}}
 
-/* banner hero (hero.banner: true): wide 12:5 photo with no text on it, name block underneath (owner 10/24/2026) */
-#pv3 .h.bn{min-height:0;display:block;aspect-ratio:12/5}#pv3 .h.bn>img.bg{animation:none}
-#pv3 .h.bn:after{background:linear-gradient(180deg,rgba(6,10,20,.38) 0%,rgba(6,10,20,0) 28%)}
-#pv3 .hin.hb{color:var(--ink);padding:20px 6px 4px}
+/* banner hero (hero.banner: true): owner-made 12:5 banner shown whole, badges and name block underneath (owner 10/24/2026) */
+#pv3 .h.bn{min-height:0;display:block;aspect-ratio:auto;background:transparent;box-shadow:none;border-radius:0;overflow:visible}
+#pv3 .h.bn>img.bg{position:relative;inset:auto;height:auto!important;aspect-ratio:12/5;border-radius:24px!important;box-shadow:0 24px 60px rgba(11,31,75,.2);animation:none}
+#pv3 .h.bn:after{display:none}
+#pv3 .h.bn .top{position:static;padding:16px 0 0}
+#pv3 .hin.hb{color:var(--ink);padding:16px 6px 4px}
 #pv3 .hin.hb h1{color:var(--navy);text-shadow:none}
 #pv3 .hin.hb .k{color:var(--blue);text-shadow:none}
 #pv3 .hin.hb .sub{color:var(--ink);opacity:.75}
-@media(max-width:640px){#pv3 .h.bn{min-height:0;aspect-ratio:auto;background:transparent;box-shadow:none;border-radius:0;overflow:visible}#pv3 .h.bn>img.bg{position:relative;inset:auto;height:auto!important;aspect-ratio:12/5;border-radius:18px!important;box-shadow:0 14px 34px rgba(11,31,75,.18);animation:none}#pv3 .h.bn:after{display:none}#pv3 .h.bn .top{position:static;padding:12px 0 0}#pv3 .hin.hb{padding:14px 4px 2px}}
+@media(max-width:640px){#pv3 .h.bn>img.bg{border-radius:18px!important;box-shadow:0 14px 34px rgba(11,31,75,.18)}#pv3 .h.bn .top{padding-top:12px}#pv3 .hin.hb{padding:14px 4px 2px}}

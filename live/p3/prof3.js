@@ -45,7 +45,7 @@ function render(d){
      (d.hero.banner?'</section>':'')+
      '<div class="hin'+(d.hero.banner?' hb':'')+'">'+(d.hero.banner?'':d.headshot?'<div class="head"><img src="'+src(d.headshot)+'" alt="'+esc(d.headshot_alt||d.name)+'"></div>':d.logo&&!d.logo_hero?'<div class="head logo"><img src="'+src(d.logo)+'" alt="'+esc(d.name)+' logo"></div>':'')+
      '<div>'+(d.kicker?'<div class="k">'+esc(d.kicker)+'</div>':'')+'<h1>'+esc(d.short||d.name)+'</h1>'+(d.sub?'<div class="sub">'+esc(d.sub)+'</div>':'')+
-     ((d.logo_hero||d.rating)?'<div class="co">'+(d.logo_hero?'<img src="'+src(d.logo_hero)+'" alt="'+esc(d.brand||d.name)+'">':'')+
+     (((d.logo_hero&&!d.hero.banner)||d.rating)?'<div class="co">'+(d.logo_hero&&!d.hero.banner?'<img src="'+src(d.logo_hero)+'" alt="'+esc(d.brand||d.name)+'">':'')+
        (d.rating?'<a class="gstar" data-a="google_reviews" href="'+esc(d.rating.url)+'" target="_blank" rel="noopener"><i>&#9733;&#9733;&#9733;&#9733;&#9733;</i>'+esc(d.rating.text)+'</a>':'')+'</div>':'')+
      '</div></div>'+(d.hero.banner?'':'</section>');
   /* action tiles */
