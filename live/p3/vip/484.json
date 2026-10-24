@@ -21,7 +21,11 @@
   "hf": "'Amatic SC', cursive",
   "hw": "700",
   "hls": ".03em",
-  "bf": "Raleway, system-ui, sans-serif"
+  "bf": "Raleway, system-ui, sans-serif",
+  "h1s": "76px",
+  "h2s": "50px",
+  "h1m": "56px",
+  "h2m": "40px"
  },
  "hero": {
   "img": "img/484-hero.webp",

@@ -90,7 +90,7 @@ function render(d){
   if(d.compliance)h+='<p class="comp">'+esc(d.compliance)+(d.compliance_logo?'<img src="'+src(d.compliance_logo)+'" alt="Equal Housing Opportunity" loading="lazy">':'')+'</p>';
 
   var box=document.createElement('div');box.id='pv3';box.innerHTML=h;
-  var V={navy:'--navy',navy2:'--navy2',blue:'--blue',sky:'--sky',gold:'--gold',ink:'--ink',soft:'--soft',line:'--line',onblue:'--onblue',hf:'--hf',hw:'--hw',hcase:'--hcase',hls:'--hls',bf:'--bf'},css='';
+  var V={navy:'--navy',navy2:'--navy2',blue:'--blue',sky:'--sky',gold:'--gold',ink:'--ink',soft:'--soft',line:'--line',onblue:'--onblue',hf:'--hf',hw:'--hw',hcase:'--hcase',hls:'--hls',bf:'--bf',h1s:'--h1s',h2s:'--h2s',h1m:'--h1m',h2m:'--h2m'},css='';
   for(var k in V)if(T[k])css+=V[k]+':'+T[k]+';';box.style.cssText=css;
   col.insertBefore(box,col.firstChild);document.documentElement.classList.add('pv3-on');
   /* sidebar */
