@@ -29,9 +29,10 @@
   "h1m": "36px"
  },
  "hero": {
-  "img": "img/137-hero-family.webp",
-  "alt": "A family walking hand in hand along the beach at sunset",
-  "pos": "50% 50%"
+  "img": "img/137-banner.webp",
+  "alt": "Katherine Southard of Southard Estate Planning by the harbor in Setauket",
+  "pos": "50% 50%",
+  "banner": true
  },
  "headshot": "img/137-head.webp",
  "headshot_alt": "Katherine A. Southard, Esq.",
