@@ -172,5 +172,100 @@ def main():
     print("photos in use %d | new %d | failed %d | removed %d" % (len(want), made, failed, len(gone)))
 
 
+# ---------- VIP profile photos for the homepage Local Business Spotlight (10/24/2026) ----------
+# Source of truth = live/p3/vip/<uid>.json in THIS repo (the members' current v3 profiles): hero.img (12:5 owner banner when
+# hero.banner is true), headshot, logo. Copies are keyed by a hash of the source file, so a changed photo gets new file names
+# the next run. Index: t/vip.json  {uid: {src, banner, pos, big: {640,960,1280}, thumb (240x180 crop), logo, head}}.
+VIPDIR = os.path.join(os.path.dirname(HERE), "live", "p3", "vip")
+
+
+def _sha(path):
+    import hashlib
+    return hashlib.sha1(open(path, "rb").read()).hexdigest()[:10]
+
+
+def _pos(p):
+    try:
+        x, y = [float(v.strip().rstrip("%")) / 100 for v in (p or "50% 50%").split()[:2]]
+        return min(max(x, 0), 1), min(max(y, 0), 1)
+    except Exception:
+        return .5, .5
+
+
+def _crop(im, ratio, pos):
+    """Crop to width/height = ratio around the focal point pos (like CSS object-position)."""
+    x, y = _pos(pos)
+    w, h = im.size
+    if w / h > ratio:
+        nw = round(h * ratio); left = round((w - nw) * x); return im.crop((left, 0, left + nw, h))
+    nh = round(w / ratio); top = round((h - nh) * y); return im.crop((0, top, w, top + nh))
+
+
+def _save(im, path, w=None, q=76):
+    if w and im.width > w:
+        im = im.resize((w, max(1, round(im.height * w / im.width))), Image.LANCZOS)
+    im.save(path, "WEBP", quality=q, method=6)
+
+
+def vip_copies():
+    idx, keep = {}, set()
+    for fn in sorted(os.listdir(VIPDIR)):
+        m = re.fullmatch(r"(\d+)\.json", fn)
+        if not m:
+            continue
+        uid = m.group(1)
+        try:
+            j = json.load(open(os.path.join(VIPDIR, fn), encoding="utf-8"))
+        except Exception as ex:
+            print("WARN vip", fn, ex); continue
+        h = j.get("hero") or {}
+        rec = {"src": h.get("img") or "", "banner": bool(h.get("banner")), "pos": h.get("pos") or "50% 50%"}
+        src = os.path.join(VIPDIR, rec["src"]) if rec["src"] else ""
+        if src and os.path.isfile(src) and not src.lower().endswith(".svg"):
+            hs = j.get("headshot") if rec["banner"] else None   # banner (owner graphic with text): the small thumb uses the headshot
+            hp = os.path.join(VIPDIR, hs) if hs else ""
+            hp = hp if hp and os.path.isfile(hp) and not hp.lower().endswith(".svg") else ""
+            key = "vip-%s-%s%s" % (uid, _sha(src), _sha(hp)[:4] if hp else "")
+            names = {"big640": key + "-640.webp", "big960": key + "-960.webp", "big1280": key + "-1280.webp", "thumb": key + "-t240.webp"}
+            if not all(os.path.exists(os.path.join(HERE, n)) for n in names.values()):
+                try:
+                    im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
+                    big = im if rec["banner"] else _crop(im, 12 / 5, rec["pos"])   # big card is always 12:5; banners are shown whole
+                    for w in (640, 960, 1280):
+                        _save(big, os.path.join(HERE, names["big%d" % w]), w)
+                    tim, tpos = (ImageOps.exif_transpose(Image.open(hp)).convert("RGB"), "50% 25%") if hp else (im, rec["pos"])
+                    _save(_crop(tim, 4 / 3, tpos).resize((240, 180), Image.LANCZOS), os.path.join(HERE, names["thumb"]))
+                except Exception as ex:
+                    print("FAIL vip", uid, ex); names = None
+            if names:
+                rec.update({k: "t/" + v for k, v in names.items()}); keep.update(names.values())
+        for f in ("logo", "headshot"):
+            v = j.get(f)
+            p = os.path.join(VIPDIR, v) if v else ""
+            if not p or not os.path.isfile(p):
+                continue
+            if p.lower().endswith(".svg"):
+                rec[f] = "live/p3/vip/" + v; continue
+            n = "vip-%s-%s-%s.webp" % (uid, f, _sha(p))
+            if not os.path.exists(os.path.join(HERE, n)):
+                try:
+                    im = ImageOps.exif_transpose(Image.open(p))
+                    im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
+                    _save(im, os.path.join(HERE, n), 240, 82)
+                except Exception as ex:
+                    print("FAIL vip", uid, f, ex); continue
+            rec[f] = "t/" + n; keep.add(n)
+        idx[uid] = rec
+    for f in os.listdir(HERE):   # copies of photos that were replaced
+        if f.startswith("vip-") and f.endswith(".webp") and f not in keep:
+            os.remove(os.path.join(HERE, f))
+    json.dump(idx, open(os.path.join(HERE, "vip.json"), "w"), indent=0, sort_keys=True)
+    print("vip copies:", len(idx), "members,", len(keep), "files")
+
+
 if __name__ == "__main__":
+    try:
+        vip_copies()
+    except Exception as ex:
+        print("WARN vip_copies", ex)
     main()
