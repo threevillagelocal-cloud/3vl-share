@@ -79,10 +79,6 @@ function render(d){
   if(d.hours){var today=DAYS[nowET().d];h+='<section class="s up">'+K(d.hours_k||'Hours')+H2(d.hours_t||'When to *visit*')+'<div class="hrs">'+['mon','tue','wed','thu','fri','sat','sun'].map(function(k){var x=d.hours[k];return '<div'+(k===today?' class="today"':'')+'><span>'+DN[k]+'</span><span>'+(x==='24h'?'Open 24 hours':x?t12(x[0])+' - '+t12(x[1]):'Closed')+'</span></div>'}).join('')+'</div></section>'}
   /* instagram */
   if(d.instagram&&d.feed&&d.feed.length)h+='<section class="s up">'+K('Live on Instagram')+H2('@'+d.instagram)+'<div class="ig">'+d.feed.slice(0,9).map(function(f){return '<a data-a="ig_post" target="_blank" rel="noopener" href="'+esc(f.link)+'"><img src="'+src(f.img+'-400.webp')+'" loading="lazy" alt="Instagram post from @'+esc(d.instagram)+'"></a>'}).join('')+'</div><div class="row"><a class="b b1" data-a="instagram" target="_blank" rel="noopener" href="https://www.instagram.com/'+esc(d.instagram)+'/">Follow on Instagram</a></div></section>';
-  /* facebook feed (owner 10/24/2026: "we lost the vip's facebook feed"): BD's own box is desktop-only and often blank, so the page carries its own */
-  if(d.facebook&&/facebook\.com\//.test(d.facebook)&&d.fb_feed!==false)h+='<section class="s up fbs">'+K('On Facebook')+H2('Latest from *'+(d.first||d.short||d.name)+'*')+
-     '<div class="fbw"><div class="fb-page" data-href="'+esc(d.facebook)+'" data-tabs="timeline" data-show-posts="true" data-width="500" data-height="620" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div></div>'+
-     '<div class="row"><a class="b b2" data-a="facebook" target="_blank" rel="noopener" href="'+esc(d.facebook)+'">Follow on Facebook</a></div></section>';
   /* reviews */
   if(d.reviews)h+='<section class="s rv up" id="pv3rv"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>'+H2(d.reviews.t)+'<p class="lead">'+esc(d.reviews.text)+'</p><div class="rvl" id="pv3rvl"></div><div class="row">'+
      (d.reviews.url?'<a class="b bg2" data-a="google_reviews" href="'+esc(d.reviews.url)+'" target="_blank" rel="noopener">'+esc(d.reviews.btn||'Read Google reviews')+'</a>':'')+
@@ -95,10 +91,7 @@ function render(d){
   if(d.compliance)h+='<p class="comp">'+esc(d.compliance)+(d.compliance_logo?'<img src="'+src(d.compliance_logo)+'" alt="Equal Housing Opportunity" loading="lazy">':'')+'</p>';
 
   var box=document.createElement('div');box.id='pv3';box.innerHTML=h;
-  if(box.querySelector('.fbs')){var fbn=0,fbt=setInterval(function(){var sec=box.querySelector('.fbs');if(!sec||!document.body.contains(sec)){if(++fbn>80)clearInterval(fbt);return}
-    if(window.FB&&FB.XFBML){FB.XFBML.parse(sec);clearInterval(fbt)}
-    else if(fbn===4&&!document.querySelector('script[src*="connect.facebook.net/en_US/sdk.js"]')){if(!document.getElementById('fb-root')){var fr=document.createElement('div');fr.id='fb-root';document.body.appendChild(fr)}var sc=document.createElement('script');sc.async=true;sc.src='https://connect.facebook.net/en_US/sdk.js#version=v24.0&xfbml=1';document.head.appendChild(sc)}
-    if(++fbn>80)clearInterval(fbt)},250)}
+
   /* real 3VL reviews (owner 10/24/2026: "show reviews in these new profile designs"); reviews.json is rebuilt from BD */
   fetch(BASE+'vip/reviews.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(R){var v=R&&R[uid],el=box.querySelector('#pv3rvl'),top=box.querySelector('.h .top');
     /* star rating badge next to the VIP/Verified pills: links to the reviews, or to "write a review" when there are none yet */
@@ -129,6 +122,15 @@ function render(d){
       (d.instagram?'<div class="li">'+ic('ig')+'<a data-a="instagram" href="https://www.instagram.com/'+esc(d.instagram)+'/" target="_blank" rel="noopener">@'+esc(d.instagram)+'</a></div>':'')+
       (d.facebook?'<div class="li">'+ic('fb')+'<a data-a="facebook" href="'+esc(d.facebook)+'" target="_blank" rel="noopener">Facebook</a></div>':'')+
       (d.linkedin?'<div class="li">'+ic('li')+'<a data-a="linkedin" href="'+esc(d.linkedin)+'" target="_blank" rel="noopener">LinkedIn</a></div>':'')+'</div>';
+    /* Facebook feed in the right column, like BD had it (owner 10/24/2026); BD's own box is desktop-only and loads late, so it is hidden */
+    if(d.facebook&&/facebook\.com\//.test(d.facebook)&&d.fb_feed!==false){
+      var fbc=document.createElement('div');fbc.className='c fbc';fbc.innerHTML='<div class="fbh"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M15.1 12.6h-2.2V20h-3v-7.4H8.4V10h1.5V8.4c0-2 .9-3.2 3.3-3.2h2v2.6h-1.3c-.9 0-1 .3-1 1V10h2.3z"/></svg><b>Facebook</b><a data-a="facebook" href="'+esc(d.facebook)+'" target="_blank" rel="noopener">Follow</a></div><div class="fb-page" data-href="'+esc(d.facebook)+'" data-tabs="timeline" data-show-posts="true" data-width="320" data-height="480" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div>';
+      sd.appendChild(fbc);
+      Array.prototype.forEach.call(side.querySelectorAll('.fb-page'),function(x){if(!fbc.contains(x)){var m=x.closest('.module')||x.parentNode;m.style.display='none'}});
+      var fbn=0,fbt=setInterval(function(){fbn++;
+        if(window.FB&&FB.XFBML&&!fbc.getAttribute('data-p')){fbc.setAttribute('data-p','1');FB.XFBML.parse(fbc)}
+        else if(fbn===4&&!window.FB&&!document.querySelector('script[src*="connect.facebook.net/en_US/sdk.js"]')){if(!document.getElementById('fb-root')){var fr=document.createElement('div');fr.id='fb-root';document.body.appendChild(fr)}var sc=document.createElement('script');sc.async=true;sc.src='https://connect.facebook.net/en_US/sdk.js#version=v24.0&xfbml=1';document.head.appendChild(sc)}
+        if(fbn>60){clearInterval(fbt);var fi=fbc.querySelector('iframe');if(!fi||fi.offsetHeight<60)fbc.style.display='none'}},250)}
     side.insertBefore(sd,side.firstChild)}
   /* sticky phone bar */
   var sb=document.createElement('div');sb.className='pv3-sticky';sb.style.cssText=css;
