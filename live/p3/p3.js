@@ -1,5 +1,21 @@
 /* 3VL premium page styles (Categories + Blog). Loaded sitewide from widget 13; acts only on its own pages.
    Business search results + Deals are NOT enabled here. */
+/* 3VL sitewide header loader (10/24/2026). SITEWIDE=false: only for the preview (?hdr=1 sets a test cookie, ?hdr=0 clears it).
+   Switch on for everyone: SITEWIDE=true + publish_live.py. Rollback: SITEWIDE=false + publish_live.py. */
+(function(){var SITEWIDE=false;if(window.__tvlshl)return;window.__tvlshl=1;
+  try{var q=location.search,p=location.pathname.replace(/\/+$/,'')||'/',H=document.documentElement;
+    if(/[?&]hdr=1(&|$)/.test(q))document.cookie='tvlhdr=1;path=/;max-age=604800';
+    if(/[?&]hdr=0(&|$)/.test(q))document.cookie='tvlhdr=;path=/;max-age=0';
+    var on=SITEWIDE||/[?&]hdr=1(&|$)/.test(q)||(/(^|; )tvlhdr=1/.test(document.cookie)&&!/[?&]hdr=0(&|$)/.test(q));
+    if(!on||p==='/'||p==='/home'||/^\/(checkout|account|admin|preview-home)(\/|$)/.test(p))return;
+    H.classList.add('tvl-sh');
+    var st=document.createElement('style');st.textContent='@keyframes tvlshshow{to{opacity:1}}html.tvl-sh:not(.tvl-sh-on) body>.header{opacity:0;animation:tvlshshow .2s linear 6s forwards}'+
+      'html.tvl-sh:not(.tvl-sh-on) body{padding-top:160px}@media (max-width:900px){html.tvl-sh:not(.tvl-sh-on) body{padding-top:150px}}html.tvl-sh:not(.tvl-sh-on) body>.header{position:absolute!important;left:0;right:0;top:0}';
+    (document.head||H).appendChild(st);
+    var B='https://threevillagelocal-cloud.github.io/3vl-share/live/hdr/';
+    var l=document.createElement('link');l.rel='preload';l.as='style';l.href=B+'sitehdr.css';(document.head||H).appendChild(l);
+    var s=document.createElement('script');s.async=true;s.fetchPriority='high';s.src=B+'sitehdr.js';(document.head||H).appendChild(s);
+  }catch(e){}})();
 (function(){
 if(window.__p3)return;window.__p3=1;
 var me=document.currentScript;var BASE=me?me.src.replace(/p3\.js.*$/,''):'';
