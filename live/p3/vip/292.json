@@ -1,0 +1,284 @@
+{
+ "uid": "292",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "Farm to Table Catering and Cafe by Filomena",
+ "short": "Farm to Table Cafe",
+ "first": "Filomena",
+ "category": "Cafe and Catering",
+ "kicker": "Cafe + catering · Stony Brook · Since 2014",
+ "sub": "Fresh cafe favorites and full-service catering by Chef Filomena",
+ "pills": [
+  "★ 2024 Readers' Choice Best Caterer"
+ ],
+ "theme": {
+  "navy": "#24391A",
+  "navy2": "#3B5E27",
+  "blue": "#3F7A22",
+  "sky": "#F5F0E2",
+  "gold": "#D9B65C",
+  "ink": "#2B2B2B",
+  "fonts": "https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Open+Sans:wght@400;600;700&display=swap",
+  "hf": "Oswald, sans-serif",
+  "hw": "600",
+  "hcase": "none",
+  "hls": "0",
+  "bf": "'Open Sans', system-ui, sans-serif",
+  "h1s": "60px",
+  "h2s": "38px",
+  "h1m": "42px",
+  "h2m": "30px"
+ },
+ "hero": {
+  "img": "img/292-hero.webp",
+  "alt": "Farm to Table Cafe by Filomena storefront with outdoor seating on Nesconset Highway in Stony Brook",
+  "pos": "50% 45%"
+ },
+ "logo": "img/292-logo.png",
+ "phone": "6316759066",
+ "phone_label": "Call the cafe",
+ "email": "filomena@farmtotablecatering.com",
+ "address": "2460 Nesconset Hwy, Suite 1, Stony Brook, NY 11790",
+ "address_label": "Stony Brook cafe",
+ "maps": "Farm to Table Cafe by Filomena, 2460 Nesconset Hwy, Stony Brook, NY 11790",
+ "website": "https://farmtotablecatering.com/",
+ "instagram": "farmtotablebyfilomena",
+ "facebook": "https://www.facebook.com/farmtotablecateringbyfilomena",
+ "contact_url": "https://farmtotablecatering.com/contact/",
+ "contact_cta": {
+  "k": "Planning an event?",
+  "t": "Ask about catering"
+ },
+ "actions": [
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16316759066",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Catering",
+   "i": "msg",
+   "u": "https://farmtotablecatering.com/contact/",
+   "a": "contact"
+  },
+  {
+   "t": "Directions",
+   "i": "map",
+   "u": "https://www.google.com/maps/search/?api=1&query=Farm+to+Table+Cafe+2460+Nesconset+Hwy+Stony+Brook+NY",
+   "a": "directions"
+  },
+  {
+   "t": "Instagram",
+   "i": "ig",
+   "u": "https://www.instagram.com/farmtotablebyfilomena/",
+   "a": "instagram"
+  }
+ ],
+ "ticker": [
+  "Cafe favorites",
+  "Wedding catering",
+  "Private parties",
+  "Corporate events",
+  "Private dining room",
+  "Holiday menus",
+  "Staffing and bar service",
+  "Catering 7 days a week"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Healthy, delicious and *made with care.*",
+  "text": "Chef Filomena Lombardi grew up in Italy in a farming family of eight children, and that farm-to-table way of cooking is still at the heart of everything she makes. Stop into the Stony Brook cafe on Nesconset Highway for fresh breakfast, lunch and grab-and-go favorites, or let her team cater your wedding, party, shower or office event with full service, from staffing and bar to rentals and day-of planning.",
+  "quote": "We make healthy delicious!",
+  "by": "Filomena's motto"
+ },
+ "gallery_k": "From Filomena's kitchen",
+ "gallery_t": "Made *fresh*",
+ "gallery": [
+  {
+   "img": "img/292-g1.webp",
+   "alt": "Catering display with charcuterie, strawberries, crostini and baby's breath"
+  },
+  {
+   "img": "img/292-g3.webp",
+   "alt": "Tray of lobster rolls"
+  },
+  {
+   "img": "img/292-g2.webp",
+   "alt": "Farm to Table dining room set with white tablecloths"
+  },
+  {
+   "img": "img/292-g4.webp",
+   "alt": "Plated steak with broccolini and a heart-shaped cutlet"
+  },
+  {
+   "img": "img/292-g6.webp",
+   "alt": "Oysters on the half shell with lemon"
+  },
+  {
+   "img": "img/292-g7.webp",
+   "alt": "Round table set for a party with florals and pink accents"
+  },
+  {
+   "img": "img/292-g8.webp",
+   "alt": "Grilled salmon over cucumber and chickpea salad"
+  },
+  {
+   "img": "img/292-g9.webp",
+   "alt": "Soft pretzel station at a catered event"
+  },
+  {
+   "img": "img/292-g5.webp",
+   "alt": "Charcuterie platter with salami and cheese"
+  }
+ ],
+ "goals": {
+  "k": "How can Filomena help?",
+  "t": "Pick *your occasion*",
+  "chips_k": "Ask about",
+  "items": [
+   {
+    "t": "Weddings",
+    "h": "Wedding catering, start to finish.",
+    "d": "Full-service wedding catering on Long Island, with menus built around your day.",
+    "b": [
+     "Free consultation",
+     "Professional staffing and bar service",
+     "Party rentals and day-of planning"
+    ],
+    "c": [
+     "Weddings",
+     "Showers",
+     "Rehearsal dinners"
+    ],
+    "u": "https://farmtotablecatering.com/contact/",
+    "cta": "Plan your wedding menu"
+   },
+   {
+    "t": "Parties",
+    "h": "Private parties and holidays.",
+    "d": "Birthdays, showers, holiday gatherings and family celebrations.",
+    "b": [
+     "Catering 7 days a week",
+     "Brunch, stations or plated menus",
+     "Holiday dinner orders"
+    ],
+    "c": [
+     "Parties",
+     "Holidays",
+     "Brunch"
+    ],
+    "u": "https://farmtotablecatering.com/contact/",
+    "cta": "Ask about your party"
+   },
+   {
+    "t": "Private dining",
+    "h": "Book the private dining room.",
+    "d": "Host your event in Farm to Table's own dining room, set and served by the team.",
+    "b": [
+     "Private dining room",
+     "Set for your group",
+     "Full-service menus"
+    ],
+    "c": [
+     "Private events",
+     "Showers",
+     "Dinners"
+    ],
+    "u": "https://farmtotablecatering.com/contact/",
+    "cta": "Ask about the dining room"
+   },
+   {
+    "t": "Corporate",
+    "h": "Office and corporate catering.",
+    "d": "Corporate events, meetings and pharmaceutical dinners, handled with professional staff.",
+    "b": [
+     "Corporate events",
+     "Pharmaceutical dinners",
+     "Staffing available"
+    ],
+    "c": [
+     "Corporate",
+     "Pharma dinners"
+    ],
+    "u": "https://farmtotablecatering.com/contact/",
+    "cta": "Get a catering quote"
+   },
+   {
+    "t": "The cafe",
+    "h": "Stop in at the cafe.",
+    "d": "Fresh sandwiches, wraps, salads, soups and grab-and-go favorites in Stony Brook.",
+    "b": [
+     "Breakfast and lunch",
+     "Grab-and-go",
+     "Seasonal specials"
+    ],
+    "c": [
+     "Cafe",
+     "Takeout"
+    ],
+    "u": "tel:+16316759066",
+    "cta": "Call the cafe"
+   }
+  ]
+ },
+ "hours_k": "Cafe hours",
+ "hours_t": "Stony Brook *cafe hours*",
+ "hours": {
+  "mon": [
+   "09:30",
+   "17:00"
+  ],
+  "tue": [
+   "09:30",
+   "18:00"
+  ],
+  "wed": [
+   "09:30",
+   "18:00"
+  ],
+  "thu": [
+   "09:30",
+   "18:00"
+  ],
+  "fri": [
+   "09:30",
+   "18:00"
+  ],
+  "sat": [
+   "08:30",
+   "17:00"
+  ],
+  "sun": null
+ },
+ "reviews": {
+  "t": "Loved the food?",
+  "text": "If Filomena catered your event or you're a cafe regular, a quick review helps your neighbors find her.",
+  "url": "https://www.google.com/search?q=Farm+to+Table+Cafe+by+Filomena+Stony+Brook+reviews"
+ },
+ "faq_t": "Catering *FAQ*",
+ "faq": [
+  [
+   "Is catering available every day?",
+   "Yes. Farm to Table caters 7 days a week, and consultations are free."
+  ],
+  [
+   "What kinds of events do they cater?",
+   "Weddings, private parties, showers, holidays, corporate events and pharmaceutical dinners, with staffing, bar service, rentals and day-of planning available."
+  ],
+  [
+   "Is there more than one location?",
+   "Yes. The cafe is at 2460 Nesconset Hwy in Stony Brook, and there is a second location at 127 Smithtown Blvd in Nesconset."
+  ]
+ ],
+ "final": {
+  "k": "Farm to Table by Filomena",
+  "t": "Let's plan *something delicious.*",
+  "text": "Call the cafe or ask about catering for your next event.",
+  "btn": "Ask about catering"
+ },
+ "side_sub": "Cafe and catering · Stony Brook",
+ "side_contact": "Ask about catering",
+ "sticky_contact": "Catering"
+}

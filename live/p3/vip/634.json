@@ -1,0 +1,136 @@
+{
+ "uid": "634",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "Stroll Head of the Harbor",
+ "short": "Stroll Head of the Harbor",
+ "first": "Stroll",
+ "category": "Local Magazine",
+ "kicker": "Neighborhood magazine · Saint James · Head of the Harbor",
+ "sub": "Delivering neighborhood connections to your mailbox every month",
+ "pills": [
+  "Publisher Jae Hartzell"
+ ],
+ "theme": {
+  "navy": "#4A2540",
+  "navy2": "#633353",
+  "blue": "#7E4A63",
+  "sky": "#F6EEF0",
+  "gold": "#BEE4D9",
+  "ink": "#2E2A2C",
+  "fonts": "https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700&display=swap",
+  "hf": "'Libre Caslon Text', serif",
+  "hw": "700",
+  "hcase": "none",
+  "hls": "0",
+  "bf": "Roboto, system-ui, sans-serif",
+  "h1s": "54px",
+  "h2s": "36px",
+  "h1m": "36px",
+  "h2m": "28px"
+ },
+ "hero": {
+  "img": "img/634-hero.webp",
+  "alt": "September 2026 cover of Stroll Head of the Harbor magazine",
+  "pos": "80% 50%"
+ },
+ "logo": "img/634-logo.png",
+ "logo_hero": "img/634-logo-white.png",
+ "brand": "Stroll",
+ "phone": "6315608276",
+ "phone_label": "Call Jae",
+ "email": "jae.hartzell@n2co.com",
+ "website": "https://www.strollmag.com/locations/head-of-the-harbor-ny-e733/",
+ "instagram": "strollheadoftheharbor",
+ "facebook": "https://www.facebook.com/profile.php?id=61591425194814",
+ "contact_cta": {
+  "k": "Local business?",
+  "t": "Ask about advertising"
+ },
+ "actions": [
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16315608276",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Message",
+   "i": "msg",
+   "u": "/stroll-head-of-the-harbor/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://www.strollmag.com/locations/head-of-the-harbor-ny-e733/",
+   "a": "website"
+  },
+  {
+   "t": "Instagram",
+   "i": "ig",
+   "u": "https://www.instagram.com/strollheadoftheharbor/",
+   "a": "instagram"
+  }
+ ],
+ "ticker": [
+  "Monthly magazine",
+  "Delivered to your mailbox",
+  "Resident spotlights",
+  "Local business features",
+  "Community events",
+  "Neighbors, kids and pets"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Get to know *your neighbors.*",
+  "text": "Stroll Head of the Harbor is a monthly neighborhood magazine mailed to residents in Saint James and the Head of the Harbor area. Publisher Jae Hartzell fills each issue with resident spotlights, local business features and community happenings, because genuine connections with the neighbors next door and the business owners down the street make for a more meaningful place to live. Stroll is owned by The N2 Company and is not affiliated with any club, developer or homeowners association."
+ },
+ "services_k": "What Stroll does",
+ "services_t": "Inside *every issue*",
+ "services": [
+  {
+   "t": "Resident spotlights",
+   "d": "Neighbors, families, kids and pets featured right on the pages, and sometimes on the cover."
+  },
+  {
+   "t": "Local business features",
+   "d": "Stories on the business owners down the street, from restaurants to service pros."
+  },
+  {
+   "t": "Advertising partners",
+   "d": "Local businesses that support the magazine reach residents in their mailboxes each month."
+  }
+ ],
+ "reviews": {
+  "t": "Read Stroll?",
+  "text": "Neighbors and advertising partners, a quick review helps others find Stroll Head of the Harbor.",
+  "url": "https://www.strollmag.com/locations/head-of-the-harbor-ny-e733/",
+  "btn": "Visit Stroll online"
+ },
+ "faq_t": "*FAQ*",
+ "faq": [
+  [
+   "Who gets Stroll Head of the Harbor?",
+   "It is mailed every month to residents in the Saint James and Head of the Harbor area."
+  ],
+  [
+   "Can I suggest a neighbor or story?",
+   "Yes. Reach out to publisher Jae Hartzell by phone or message here."
+  ],
+  [
+   "How can my business advertise?",
+   "Contact Jae to ask about becoming an advertising partner. A media kit is available on the Stroll website."
+  ]
+ ],
+ "final": {
+  "k": "Stroll Head of the Harbor",
+  "t": "Let's *connect.*",
+  "text": "Call or message Jae about a story idea or advertising.",
+  "btn": "Send a message"
+ },
+ "side_sub": "Neighborhood magazine · Head of the Harbor",
+ "side_contact": "Send a message",
+ "sticky_contact": "Message"
+}

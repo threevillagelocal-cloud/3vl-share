@@ -1,0 +1,259 @@
+{
+ "uid": "296",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "Roseland School of Dance",
+ "short": "Roseland School of Dance",
+ "first": "Roseland",
+ "category": "Dance School",
+ "kicker": "Stony Brook Village Center · Since 2015",
+ "sub": "Ballet, tap, jazz, lyrical, hip hop, pointe and tumbling, from 12 months to adult",
+ "pills": [
+  "Win from Within"
+ ],
+ "theme": {
+  "navy": "#112337",
+  "navy2": "#2B1630",
+  "blue": "#BB2254",
+  "sky": "#FCEFF4",
+  "gold": "#F6A9C9",
+  "ink": "#1B1B24",
+  "fonts": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Lato:wght@400;700&display=swap",
+  "hf": "'Playfair Display', serif",
+  "hw": "700",
+  "hcase": "none",
+  "hls": "0",
+  "bf": "Lato, system-ui, sans-serif",
+  "h1s": "58px",
+  "h2s": "38px",
+  "h1m": "40px",
+  "h2m": "30px"
+ },
+ "hero": {
+  "img": "img/296-hero.webp",
+  "alt": "Roseland School of Dance studio entrance in the Stony Brook Village Center",
+  "pos": "50% 55%"
+ },
+ "logo": "img/296-logo.png",
+ "phone": "6316756343",
+ "phone_label": "Call the studio",
+ "email": "roselandstonybrook@gmail.com",
+ "address": "97 Main St, Suites I & J, Stony Brook, NY 11790",
+ "address_label": "Stony Brook Village",
+ "maps": "Roseland School of Dance, 97 Main St, Stony Brook, NY 11790",
+ "website": "https://roselanddance.com/stony-brook/",
+ "instagram": "roselandstonybrook",
+ "facebook": "https://www.facebook.com/RoselandSchoolofDanceStonyBrook/",
+ "contact_cta": {
+  "k": "New dancer?",
+  "t": "Try a class"
+ },
+ "actions": [
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16316756343",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Try a class",
+   "i": "msg",
+   "u": "/roseland-school-of-dance/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Directions",
+   "i": "map",
+   "u": "https://www.google.com/maps/search/?api=1&query=Roseland+School+of+Dance+97+Main+St+Stony+Brook+NY",
+   "a": "directions"
+  },
+  {
+   "t": "Instagram",
+   "i": "ig",
+   "u": "https://www.instagram.com/roselandstonybrook/",
+   "a": "instagram"
+  }
+ ],
+ "ticker": [
+  "Ballet",
+  "Pointe",
+  "Tap",
+  "Jazz",
+  "Lyrical",
+  "Hip Hop",
+  "Tumbling",
+  "Classes from 12 months",
+  "Teens and adults",
+  "Annual recital"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Win from Within *at Roseland.*",
+  "text": "Roseland School of Dance Stony Brook sits right in the Stony Brook Village Center. Owner Ms. Michele Schmitt has been with Roseland for many years, and her two daughters grew up dancing here and now teach. Classes start at 12 months and grow with your dancer through kindergarten, tweens, teens and adults, from beginner to advanced. Each year students perform in a professionally produced recital."
+ },
+ "gallery_k": "Inside the studio",
+ "gallery_t": "Life at *Roseland*",
+ "gallery": [
+  {
+   "img": "img/296-g1.webp",
+   "alt": "Roseland Stony Brook studio with pink wall and barres"
+  },
+  {
+   "img": "img/296-g2.webp",
+   "alt": "Dancers' feet in ballet slippers in a circle"
+  },
+  {
+   "img": "img/296-g3.webp",
+   "alt": "Studio with hardwood floor, mirrors and barres"
+  },
+  {
+   "img": "img/296-g4.webp",
+   "alt": "Halloween bulletin board and colorful tutus at the studio"
+  },
+  {
+   "img": "img/296-g5.webp",
+   "alt": "Dancers en pointe at the barre"
+  },
+  {
+   "img": "img/296-g6.webp",
+   "alt": "Roseland dance apparel and bags"
+  },
+  {
+   "img": "img/296-g7.webp",
+   "alt": "Roseland Stony Brook teachers together on stage"
+  },
+  {
+   "img": "img/296-g8.webp",
+   "alt": "Chalkboard sign: Friends, Fun and Fantastic Dancing this summer at Roseland 2026"
+  }
+ ],
+ "goals": {
+  "k": "Who's dancing?",
+  "t": "Find *the right class*",
+  "chips_k": "Ask about",
+  "items": [
+   {
+    "t": "Little ones",
+    "h": "Toddler and preschool dance.",
+    "d": "Classes start at 12 months, with toddler and preschool classes before kindergarten.",
+    "b": [
+     "Classes from 12 months",
+     "Toddler and preschool dance",
+     "Tiny Tumblers"
+    ],
+    "c": [
+     "Dance with Me",
+     "Pre-Dance",
+     "Tiny Tumblers"
+    ],
+    "cta": "Ask about little ones"
+   },
+   {
+    "t": "Kids",
+    "h": "Kindergarten and up.",
+    "d": "Ballet, tap, jazz and tumbling classes that grow with your dancer.",
+    "b": [
+     "Kinder and Junior Dance",
+     "Jam and Cheer",
+     "Beginner through advanced"
+    ],
+    "c": [
+     "Ballet",
+     "Tap",
+     "Jazz",
+     "Tumbling"
+    ],
+    "cta": "Ask about kids classes"
+   },
+   {
+    "t": "Tweens and teens",
+    "h": "Lyrical, hip hop and pointe.",
+    "d": "Older dancers keep building technique, with lyrical, hip hop and pointe.",
+    "b": [
+     "Lyrical and hip hop",
+     "Pointe",
+     "Student Teaching Program"
+    ],
+    "c": [
+     "Lyrical",
+     "Hip Hop",
+     "Pointe"
+    ],
+    "cta": "Ask about teen classes"
+   },
+   {
+    "t": "Adults",
+    "h": "Dance is for grown-ups too.",
+    "d": "Roseland classes continue through adults, beginner to advanced.",
+    "b": [
+     "Adult classes",
+     "All levels",
+     "Fun and friendly"
+    ],
+    "c": [
+     "Adults"
+    ],
+    "cta": "Ask about adult classes"
+   }
+  ]
+ },
+ "hours_k": "Studio hours",
+ "hours_t": "When the *studio is open*",
+ "hours": {
+  "mon": [
+   "16:30",
+   "20:30"
+  ],
+  "tue": [
+   "16:30",
+   "20:30"
+  ],
+  "wed": [
+   "16:30",
+   "20:30"
+  ],
+  "thu": [
+   "16:30",
+   "20:30"
+  ],
+  "fri": [
+   "16:30",
+   "20:30"
+  ],
+  "sat": [
+   "09:00",
+   "12:00"
+  ],
+  "sun": null
+ },
+ "reviews": {
+  "t": "Part of the Roseland family?",
+  "text": "A quick review from a Roseland parent or dancer helps other families find the studio.",
+  "url": "https://www.google.com/search?q=Roseland+School+of+Dance+Stony+Brook+reviews"
+ },
+ "faq_t": "Parent *FAQ*",
+ "faq": [
+  [
+   "How young can my child start?",
+   "Classes start at 12 months, with toddler and preschool classes before kindergarten."
+  ],
+  [
+   "Is there a recital?",
+   "Yes. Each year students perform in Roseland's professionally produced recital for family and friends."
+  ],
+  [
+   "Does Roseland do anything in the community?",
+   "Yes. They help Girl Scout troops earn a dance badge, visit preschools and daycares with free Music and Movement classes, and dance at Stony Brook Village events."
+  ]
+ ],
+ "final": {
+  "k": "Roseland School of Dance",
+  "t": "Come dance *with us.*",
+  "text": "Call the studio or send a message to try a class.",
+  "btn": "Try a class"
+ },
+ "side_sub": "Dance school · Stony Brook Village",
+ "side_contact": "Try a class",
+ "sticky_contact": "Try a class"
+}
