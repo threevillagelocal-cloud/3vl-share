@@ -1,0 +1,240 @@
+{
+ "uid": "402",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "CMIT Solutions of North Suffolk",
+ "short": "CMIT Solutions of North Suffolk",
+ "first": "Dave",
+ "category": "IT Support & Cybersecurity",
+ "kicker": "Your Technology Team · Stony Brook",
+ "sub": "Managed IT, cybersecurity and cloud for local businesses",
+ "pills": [
+  "🛡️ 24/7 monitoring"
+ ],
+ "theme": {
+  "navy": "#002F44",
+  "navy2": "#0A4A66",
+  "blue": "#D93A30",
+  "sky": "#F4F8FA",
+  "gold": "#FFD2CE",
+  "fonts": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap",
+  "hf": "'Nunito Sans', system-ui, sans-serif",
+  "hw": "900",
+  "hcase": "none",
+  "hls": "-.015em",
+  "bf": "'Nunito Sans', system-ui, sans-serif",
+  "h1s": "50px",
+  "h2s": "34px",
+  "h1m": "34px",
+  "h2m": "28px"
+ },
+ "hero": {
+  "img": "img/402-hero.webp",
+  "alt": "Dave Walters, Founder and President of CMIT Solutions of North Suffolk",
+  "pos": "50% 28%"
+ },
+ "logo_hero": "img/402-logo-white.svg",
+ "logo": "img/402-logo.svg",
+ "phone": "6312043060",
+ "phone_label": "Call CMIT",
+ "email": "dwalters@cmitsolutions.com",
+ "address": "2100 Nesconset Hwy #1016, Stony Brook, NY 11790",
+ "address_label": "Stony Brook",
+ "maps": "CMIT Solutions of North Suffolk, 2100 Nesconset Hwy, Stony Brook, NY 11790",
+ "website": "https://cmitsolutions.com/suffolk-ny-1250/",
+ "facebook": "https://www.facebook.com/profile.php?id=61583567519823",
+ "linkedin": "https://www.linkedin.com/company/cmit-solutions-of-north-suffolk/",
+ "contact_url": "https://cmitsolutions.com/suffolk-ny-1250/contact-us/",
+ "contact_cta": {
+  "k": "IT giving you headaches?",
+  "t": "Get a free IT consultation"
+ },
+ "actions": [
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16312043060",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Free consult",
+   "i": "msg",
+   "u": "https://cmitsolutions.com/suffolk-ny-1250/contact-us/",
+   "a": "contact"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://cmitsolutions.com/suffolk-ny-1250/",
+   "a": "website"
+  },
+  {
+   "t": "LinkedIn",
+   "i": "li",
+   "u": "https://www.linkedin.com/company/cmit-solutions-of-north-suffolk/",
+   "a": "linkedin"
+  }
+ ],
+ "ticker": [
+  "Managed IT",
+  "Cybersecurity",
+  "Help desk support",
+  "Backup and disaster recovery",
+  "Cloud and Microsoft 365",
+  "HIPAA and NIST compliance",
+  "AI and IT strategy",
+  "Flat-rate monthly plans"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Big-company IT, *local accountability.*",
+  "text": "Founder and President Dave Walters brings more than 25 years of technology leadership to Long Island's business community. Born and raised here and a volunteer firefighter for over two decades, Dave helps small and mid-sized companies run securely with proactive IT management, cloud services, strong cybersecurity and smart AI strategy, backed by a network of more than 250 CMIT Solutions locations."
+ },
+ "goals": {
+  "k": "Protect. Manage. Grow.",
+  "t": "What does your *business need?*",
+  "chips_k": "Services",
+  "items": [
+   {
+    "t": "Protect",
+    "h": "Keep threats out and data safe.",
+    "d": "Multi-layered security, compliance support, and dependable backup and recovery.",
+    "b": [
+     "Cybersecurity and ransomware defense",
+     "HIPAA and NIST compliance",
+     "Backup and disaster recovery"
+    ],
+    "c": [
+     "Security",
+     "Compliance",
+     "Backup"
+    ],
+    "u": "https://cmitsolutions.com/suffolk-ny-1250/contact-us/",
+    "cta": "Get a free IT consultation"
+   },
+   {
+    "t": "Manage",
+    "h": "IT that just works.",
+    "d": "Fully managed IT with 24/7 monitoring, plus remote and on-site help when you need it.",
+    "b": [
+     "Managed IT services",
+     "Help desk support",
+     "Network and wifi management"
+    ],
+    "c": [
+     "Managed IT",
+     "Help desk",
+     "Networks"
+    ],
+    "u": "https://cmitsolutions.com/suffolk-ny-1250/contact-us/",
+    "cta": "Get a free IT consultation"
+   },
+   {
+    "t": "Grow",
+    "h": "Technology that scales with you.",
+    "d": "Cloud, Microsoft 365, collaboration tools and AI strategy to help your team do more.",
+    "b": [
+     "Cloud and Microsoft 365",
+     "Productivity and communications",
+     "AI and IT strategy"
+    ],
+    "c": [
+     "Cloud",
+     "AI",
+     "Strategy"
+    ],
+    "u": "https://cmitsolutions.com/suffolk-ny-1250/contact-us/",
+    "cta": "Get a free IT consultation"
+   },
+   {
+    "t": "New location",
+    "h": "Opening a new office?",
+    "d": "CMIT uses its vendor relationships to source cost-effective, quality systems and equipment.",
+    "b": [
+     "IT procurement",
+     "Systems and equipment",
+     "Network and wifi"
+    ],
+    "c": [
+     "Procurement"
+    ],
+    "u": "https://cmitsolutions.com/suffolk-ny-1250/contact-us/",
+    "cta": "Plan your setup"
+   }
+  ]
+ },
+ "advantage": {
+  "k": "Local owner, national team",
+  "t": "Your *technology team*",
+  "text": "You get the personal attention of a local owner in Stony Brook, backed by more than 250 CMIT Solutions locations nationwide. Managed services come with flat-rate monthly pricing, and clients get 24/7 monitoring and support."
+ },
+ "stats": [
+  {
+   "n": "25+",
+   "l": "Years of tech leadership"
+  },
+  {
+   "n": "250+",
+   "l": "CMIT locations nationwide"
+  },
+  {
+   "n": "24/7",
+   "l": "Monitoring for clients"
+  }
+ ],
+ "hours_t": "Office *hours*",
+ "hours": {
+  "mon": [
+   "08:00",
+   "18:00"
+  ],
+  "tue": [
+   "08:00",
+   "18:00"
+  ],
+  "wed": [
+   "08:00",
+   "18:00"
+  ],
+  "thu": [
+   "08:00",
+   "18:00"
+  ],
+  "fri": [
+   "08:00",
+   "18:00"
+  ],
+  "sat": null,
+  "sun": null
+ },
+ "reviews": {
+  "t": "Work with CMIT?",
+  "text": "A quick review helps other local businesses find IT help they can trust.",
+  "url": "https://www.google.com/search?q=CMIT+Solutions+of+North+Suffolk+reviews"
+ },
+ "faq_t": "IT *FAQ*",
+ "faq": [
+  [
+   "How is managed IT priced?",
+   "CMIT's managed services use flat-rate monthly pricing, so costs are predictable."
+  ],
+  [
+   "Who do they work with?",
+   "Small and mid-sized businesses across Suffolk County and Long Island, including accounting, finance, healthcare, legal, nonprofit and real estate offices."
+  ],
+  [
+   "Is after-hours support extra?",
+   "It depends on the plan. Many managed IT plans include 24/7 support with no extra per-incident fee."
+  ]
+ ],
+ "final": {
+  "k": "CMIT Solutions of North Suffolk",
+  "t": "Build a better business *with better IT.*",
+  "text": "Call or book a free IT consultation.",
+  "btn": "Free IT consultation"
+ },
+ "side_sub": "Your Technology Team · Stony Brook",
+ "side_contact": "Free IT consultation",
+ "sticky_contact": "Free consult"
+}

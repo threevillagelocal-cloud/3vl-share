@@ -1,0 +1,152 @@
+{
+ "uid": "153",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "SBNA - Small Business Networking Alliance",
+ "short": "SBNA",
+ "first": "SBNA",
+ "category": "Business Networking Group",
+ "kicker": "Small Business Networking Alliance",
+ "sub": "Weekly networking lunch · Wednesdays 11:30 AM",
+ "pills": [
+  "🤝 One seat per profession"
+ ],
+ "theme": {
+  "navy": "#0E2B4A",
+  "navy2": "#163E68",
+  "blue": "#F28C28",
+  "onblue": "#0E2B4A",
+  "sky": "#EAF6FD",
+  "gold": "#2FA8E8",
+  "fonts": "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;800&display=swap",
+  "hf": "Anton, Impact, sans-serif",
+  "hw": "400",
+  "hcase": "uppercase",
+  "hls": ".01em",
+  "bf": "Inter, system-ui, sans-serif",
+  "h1s": "64px",
+  "h1m": "48px"
+ },
+ "hero": {
+  "img": "img/153-hero.webp",
+  "alt": "SBNA members at a networking lunch meeting",
+  "pos": "50% 55%"
+ },
+ "logo": "img/153-logo.webp",
+ "website": "https://www.sbna-li.com/",
+ "facebook": "https://www.facebook.com/SBNAofLI",
+ "contact_cta": {
+  "k": "Want to visit?",
+  "t": "Request a guest seat"
+ },
+ "actions": [
+  {
+   "t": "Visit as a guest",
+   "i": "msg",
+   "u": "/sbna-small-business-networking-alliance/connect",
+   "a": "contact",
+   "pri": 1
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://www.sbna-li.com/",
+   "a": "website"
+  },
+  {
+   "t": "Facebook",
+   "i": "fb",
+   "u": "https://www.facebook.com/SBNAofLI",
+   "a": "facebook"
+  }
+ ],
+ "ticker": [
+  "Give. Learn. Educate.",
+  "One seat per profession",
+  "Wednesdays 11:30 AM to 1:00 PM",
+  "Independent and member-driven",
+  "20+ local business owners",
+  "Guests welcome"
+ ],
+ "intro": {
+  "k": "Who we are",
+  "t": "Real relationships, *real referrals.*",
+  "text": "SBNA is an independent, member-driven networking group of more than 20 local business owners on Long Island's North Shore. Established more than ten years ago, with many founders still active, members meet every Wednesday for a structured lunch to share expertise, spotlight each other's businesses and pass referrals. It's local, not a national franchise.",
+  "quote": "Give. Learn. Educate.",
+  "by": "The SBNA motto"
+ },
+ "services_k": "How it works",
+ "services_t": "Inside *SBNA*",
+ "services": [
+  {
+   "t": "Weekly lunch meeting",
+   "d": "Every Wednesday, 11:30 AM to 1:00 PM, with a structured agenda."
+  },
+  {
+   "t": "One seat per profession",
+   "d": "Each profession holds a single seat, so members never compete for the same referrals."
+  },
+  {
+   "t": "Learn from each other",
+   "d": "Members share their expertise and what makes a good referral, with regular member spotlights."
+  },
+  {
+   "t": "Visit as a guest",
+   "d": "Guests are welcome. Reach out first so we can confirm your profession's seat is open."
+  }
+ ],
+ "advantage": {
+  "k": "Member-led",
+  "t": "Run by *local owners*",
+  "text": "SBNA is led by President TJ Sirani, Vice President John McGregor and Treasurer Judi Wallace. See the full member directory at sbna-li.com."
+ },
+ "hours_k": "Meetings",
+ "hours_t": "When *we meet*",
+ "hours": {
+  "mon": null,
+  "tue": null,
+  "wed": [
+   "11:30",
+   "13:00"
+  ],
+  "thu": null,
+  "fri": null,
+  "sat": null,
+  "sun": null
+ },
+ "reviews": {
+  "t": "Been to a meeting?",
+  "text": "Members and guests, a quick review helps other local owners find a group that fits.",
+  "url": "https://www.facebook.com/SBNAofLI",
+  "btn": "SBNA on Facebook"
+ },
+ "faq_t": "Joining *FAQ*",
+ "faq": [
+  [
+   "When does SBNA meet?",
+   "Every Wednesday from 11:30 AM to 1:00 PM in the Port Jefferson area. We share exact details when you reach out."
+  ],
+  [
+   "Can I visit before joining?",
+   "Yes. Guests are welcome. Send a message first so we can confirm your profession's seat is open."
+  ],
+  [
+   "Why one seat per profession?",
+   "It protects referrals. With one member per profession, everyone knows exactly who to send business to."
+  ]
+ ],
+ "final": {
+  "k": "SBNA",
+  "t": "Grow with *local owners.*",
+  "text": "Send a message to request a guest seat at a Wednesday lunch.",
+  "btn": "Request a guest seat"
+ },
+ "side_sub": "Business networking · North Shore",
+ "side_contact": "Request a guest seat",
+ "sticky_contact": "Visit as a guest",
+ "sticky_extra": {
+  "t": "Website",
+  "u": "https://www.sbna-li.com/",
+  "a": "website"
+ }
+}

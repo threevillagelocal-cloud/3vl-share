@@ -1,0 +1,220 @@
+{
+ "uid": "149",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "Walker & Mackenzie, P.C.",
+ "short": "Walker & Mackenzie",
+ "first": "Walker & Mackenzie",
+ "category": "Personal Injury Attorneys",
+ "kicker": "Attorneys at Law · Bohemia, NY",
+ "sub": "100% personal injury focused · Free consultations",
+ "pills": [
+  "⚖️ Free consultations"
+ ],
+ "theme": {
+  "navy": "#123375",
+  "navy2": "#1B4594",
+  "blue": "#3A79B8",
+  "sky": "#EDF2FA",
+  "gold": "#D6DFEE",
+  "fonts": "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@400;600;700&display=swap",
+  "hf": "'Abril Fatface', Georgia, serif",
+  "hw": "400",
+  "hcase": "none",
+  "hls": "0",
+  "bf": "'DM Sans', system-ui, sans-serif",
+  "h1s": "54px",
+  "h2s": "36px",
+  "h1m": "40px",
+  "h2m": "29px"
+ },
+ "hero": {
+  "img": "img/149-hero.webp",
+  "alt": "Partners Megan Mackenzie and Svetlana Walker in front of the firm's WM logo wall",
+  "pos": "72% 30%"
+ },
+ "headshot": "img/149-head.webp",
+ "headshot_alt": "Svetlana Walker, Esq. and Megan Mackenzie, Esq.",
+ "logo_hero": "img/149-logo-white.png",
+ "logo": "img/149-logo.webp",
+ "phone": "6317915090",
+ "phone_label": "Call the firm",
+ "email": "mmackenzie@walkermackenzielaw.com",
+ "address": "1650 Sycamore Ave, Suite 19, Bohemia, NY 11716",
+ "address_label": "Bohemia office",
+ "maps": "Walker & Mackenzie, P.C., 1650 Sycamore Ave, Suite 19, Bohemia, NY 11716",
+ "website": "https://walkermackenzielaw.com/",
+ "instagram": "walkermackenzielaw",
+ "facebook": "https://www.facebook.com/walkermackenzielaw/",
+ "contact_cta": {
+  "k": "Hurt in an accident?",
+  "t": "Request a free consultation"
+ },
+ "actions": [
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16317915090",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Free consult",
+   "i": "msg",
+   "u": "/walker-mackenzie-p-c/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Directions",
+   "i": "map",
+   "u": "https://www.google.com/maps/search/?api=1&query=Walker+%26+Mackenzie+P.C.+1650+Sycamore+Ave+Bohemia+NY",
+   "a": "directions"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://walkermackenzielaw.com/",
+   "a": "website"
+  }
+ ],
+ "ticker": [
+  "100% personal injury",
+  "Free consultations",
+  "Available 24/7",
+  "Women owned and operated",
+  "100% LGBT-friendly",
+  "We will come to you",
+  "Integrity. Efficiency. Results."
+ ],
+ "intro": {
+  "k": "Meet the firm",
+  "t": "Hands-on lawyers *for injury victims.*",
+  "text": "Walker & Mackenzie, P.C. is a personal injury firm in Bohemia led by partners Svetlana Walker, Esq. and Megan Mackenzie, Esq., with Thomas J. Youllar, Esq. and Vesselin Mitev, Esq. as Of Counsel. The firm is 100% focused on representing people hurt by negligence, recklessness and intentional acts. Consultations are free, and they are here day or night when you or a loved one needs help."
+ },
+ "gallery_k": "The team",
+ "gallery_t": "Meet *the lawyers*",
+ "gallery": [
+  {
+   "img": "img/149-g1.webp",
+   "alt": "Partners Megan Mackenzie and Svetlana Walker at the firm's office"
+  },
+  {
+   "img": "img/149-g2.webp",
+   "alt": "Megan Mackenzie, Esq., partner"
+  },
+  {
+   "img": "img/149-g3.webp",
+   "alt": "Svetlana Walker, Esq., partner"
+  },
+  {
+   "img": "img/149-g4.webp",
+   "alt": "Thomas J. Youllar, Esq., Of Counsel"
+  },
+  {
+   "img": "img/149-g5.webp",
+   "alt": "Vesselin Mitev, Esq., Of Counsel"
+  }
+ ],
+ "goals": {
+  "k": "What happened?",
+  "t": "Cases they *handle*",
+  "chips_k": "Ask about",
+  "items": [
+   {
+    "t": "Vehicle accidents",
+    "h": "Hurt in a crash?",
+    "d": "The firm litigates claims from car, truck, motorcycle and hit and run accidents, and helps with New York no-fault benefits.",
+    "b": [
+     "Car and truck accidents",
+     "Motorcycle accidents",
+     "Hit and run accidents",
+     "No-fault benefits"
+    ],
+    "c": [
+     "Free consultation"
+    ],
+    "cta": "Request a free consultation"
+   },
+   {
+    "t": "Pedestrian & bike",
+    "h": "Struck while walking or riding?",
+    "d": "Claims for pedestrians knocked down and cyclists hit by vehicles.",
+    "b": [
+     "Pedestrian knockdowns",
+     "Bicycle accidents"
+    ],
+    "c": [
+     "Free consultation"
+    ],
+    "cta": "Request a free consultation"
+   },
+   {
+    "t": "Construction",
+    "h": "Injured on a job site?",
+    "d": "Claims for construction workers hurt in site accidents.",
+    "b": [
+     "Construction site accidents"
+    ],
+    "c": [
+     "Free consultation"
+    ],
+    "cta": "Request a free consultation"
+   },
+   {
+    "t": "Falls & dog bites",
+    "h": "Hurt on someone else's property?",
+    "d": "Injuries from dangerous property conditions and dog attacks.",
+    "b": [
+     "Slip and falls",
+     "Trip and falls",
+     "Dog bite incidents"
+    ],
+    "c": [
+     "Free consultation"
+    ],
+    "cta": "Request a free consultation"
+   }
+  ]
+ },
+ "hours_k": "Availability",
+ "hours_t": "Here *day or night*",
+ "hours": {
+  "mon": "24h",
+  "tue": "24h",
+  "wed": "24h",
+  "thu": "24h",
+  "fri": "24h",
+  "sat": "24h",
+  "sun": "24h"
+ },
+ "reviews": {
+  "t": "Worked with the firm?",
+  "text": "If Walker & Mackenzie helped you, a quick review helps your neighbors find the right lawyer.",
+  "url": "https://www.google.com/search?q=Walker+%26+Mackenzie+P.C.+Bohemia+reviews"
+ },
+ "faq_t": "Injury *FAQ*",
+ "faq": [
+  [
+   "Is the consultation free?",
+   "Yes. Walker & Mackenzie offers free consultations to talk through your potential personal injury claim."
+  ],
+  [
+   "Can they come to me?",
+   "Yes. The firm says Walker & Mackenzie will come to you."
+  ],
+  [
+   "Where do they practice?",
+   "The office is in Bohemia. The firm serves Suffolk County communities including Bohemia, Central Islip, Coram, Islip, East Islip, West Islip and Smithtown."
+  ]
+ ],
+ "final": {
+  "k": "Walker & Mackenzie, P.C.",
+  "t": "Hurt? *Talk to a partner.*",
+  "text": "Call any time or request a free consultation.",
+  "btn": "Free consultation"
+ },
+ "side_sub": "Attorneys at Law · Bohemia",
+ "side_contact": "Request a free consultation",
+ "sticky_contact": "Free consult",
+ "compliance": "Attorney Advertising. Prior results do not guarantee a similar outcome. This page is general information, not legal advice, and contacting the firm through it does not create an attorney-client relationship."
+}

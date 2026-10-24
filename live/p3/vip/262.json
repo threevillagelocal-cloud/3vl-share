@@ -1,0 +1,187 @@
+{
+ "uid": "262",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "Three Village Home Watch",
+ "short": "Three Village Home Watch",
+ "first": "Tony",
+ "category": "Home Watch",
+ "kicker": "Home watch · Stony Brook",
+ "sub": "Documented home checks while you're away",
+ "pills": [
+  "🏠 NHWA accredited"
+ ],
+ "theme": {
+  "navy": "#0A4E85",
+  "navy2": "#0072BB",
+  "blue": "#0072BB",
+  "sky": "#EAF4FB",
+  "gold": "#9EDDB0",
+  "fonts": "https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Open+Sans:wght@400;600;700&display=swap",
+  "hf": "Cinzel, Georgia, serif",
+  "hw": "700",
+  "hcase": "none",
+  "hls": "0",
+  "bf": "'Open Sans', system-ui, sans-serif",
+  "h1s": "50px",
+  "h2s": "32px",
+  "h1m": "34px",
+  "h2m": "26px"
+ },
+ "hero": {
+  "img": "img/262-hero.webp",
+  "alt": "Three Village Home Watch brand panel",
+  "pos": "50% 50%"
+ },
+ "logo": "img/262-logo.png",
+ "phone": "6316895683",
+ "phone_label": "Call Tony",
+ "email": "tony@noreasterps.com",
+ "website": "https://threevillagehomewatch.com/",
+ "contact_cta": {
+  "k": "Heading away?",
+  "t": "Set up home watch"
+ },
+ "actions": [
+  {
+   "t": "Call Tony",
+   "i": "call",
+   "u": "tel:+16316895683",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Message",
+   "i": "msg",
+   "u": "/three-village-home-watch/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Email",
+   "i": "mail",
+   "u": "mailto:tony@noreasterps.com",
+   "a": "email"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://threevillagehomewatch.com/",
+   "a": "website"
+  }
+ ],
+ "ticker": [
+  "NHWA accredited",
+  "Certified Home Watch Professional (CHWP)",
+  "Bonded and insured for home watch",
+  "Home watch is our only business",
+  "Snowbirds and frequent travelers",
+  "Three Village and Port Jefferson"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Peace of mind *while you're away.*",
+  "text": "Three Village Home Watch gives seasonal residents, snowbirds and frequent travelers on Long Island's North Shore peace of mind while they're away. Owner Tony Saunders performs regular, documented visual inspections of your home, checking for signs of intrusion, pest activity, water damage, weather damage, HVAC failures and other issues before they become expensive problems."
+ },
+ "gallery_k": "Credentials",
+ "gallery_t": "Certified *home watch pro*",
+ "gallery": [
+  {
+   "img": "img/262-g1.webp",
+   "alt": "Tony Saunders receiving his NHWA Certified Home Watch Professional recognition"
+  }
+ ],
+ "services_k": "What's included",
+ "services_t": "How *home watch works*",
+ "services": [
+  {
+   "t": "Regular home checks",
+   "d": "Documented visual inspections of your home or property while you're away."
+  },
+  {
+   "t": "What Tony looks for",
+   "d": "Signs of intrusion, pests, water damage, weather damage, HVAC failures and other issues."
+  },
+  {
+   "t": "After-hours visits",
+   "d": "Available outside business hours for an additional fee."
+  },
+  {
+   "t": "Trusted referrals",
+   "d": "For homes in the Hamptons, North Fork or elsewhere in the US and Canada, referrals to other NHWA-accredited companies."
+  }
+ ],
+ "advantage": {
+  "k": "Why home watch",
+  "t": "Home watch is our *only* business",
+  "text": "It's not a side service tacked onto property management or cleaning. Three Village Home Watch is fully bonded and insured specifically for home watch work, is an Accredited Member of the National Home Watch Association, and Tony is an NHWA Certified Home Watch Professional.",
+  "logos": [
+   {
+    "img": "img/262-nhwa-acc.webp",
+    "alt": "NHWA Accredited Member"
+   },
+   {
+    "img": "img/262-nhwa-chwp.png",
+    "alt": "NHWA Certified Home Watch Professional"
+   }
+  ]
+ },
+ "hours_t": "Business *hours*",
+ "hours": {
+  "mon": [
+   "08:00",
+   "16:00"
+  ],
+  "tue": [
+   "08:00",
+   "16:00"
+  ],
+  "wed": [
+   "08:00",
+   "16:00"
+  ],
+  "thu": [
+   "08:00",
+   "16:00"
+  ],
+  "fri": [
+   "08:00",
+   "16:00"
+  ],
+  "sat": null,
+  "sun": null
+ },
+ "reviews": {
+  "t": "Trust Tony with your home?",
+  "text": "A quick review helps your neighbors find home watch they can count on.",
+  "url": "https://www.google.com/search?q=Three+Village+Home+Watch+reviews"
+ },
+ "faq_t": "Home watch *FAQ*",
+ "faq": [
+  [
+   "What is home watch?",
+   "A visual inspection of a home or property, looking for obvious issues, while the owner is away."
+  ],
+  [
+   "What areas do they cover?",
+   "Stony Brook, Setauket, East Setauket, Old Field, Poquott, Port Jefferson, Port Jefferson Station, Belle Terre, St. James, Head of the Harbor, Nissequogue, Mt. Sinai, Lake Grove, Terryville and nearby North Shore communities."
+  ],
+  [
+   "Can Tony visit after hours?",
+   "Yes, for an additional fee."
+  ]
+ ],
+ "final": {
+  "k": "Three Village Home Watch",
+  "t": "Away for the season? *We'll keep watch.*",
+  "text": "Call Tony or send a message to get started.",
+  "btn": "Send a message"
+ },
+ "side_sub": "Home watch · Stony Brook",
+ "side_contact": "Send a message",
+ "sticky_contact": "Message",
+ "sticky_extra": {
+  "t": "Email",
+  "u": "mailto:tony@noreasterps.com",
+  "a": "email"
+ }
+}

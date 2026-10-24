@@ -1,0 +1,203 @@
+{
+ "uid": "733",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "Elliott Levine, Harvest Commercial Lending",
+ "short": "Elliott Levine",
+ "first": "Elliott",
+ "brand": "Harvest Small Business Finance",
+ "category": "Commercial & SBA Lending",
+ "kicker": "SVP Business Development · Harvest",
+ "sub": "SBA 7(a), SBA 504 and conventional commercial real estate loans",
+ "pills": [
+  "🏢 Business lending"
+ ],
+ "theme": {
+  "navy": "#0B3F80",
+  "navy2": "#0B4C9A",
+  "blue": "#0B6FC0",
+  "sky": "#EAF2FB",
+  "gold": "#A9D8F5",
+  "fonts": "https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap",
+  "hf": "'Bodoni Moda', Georgia, serif",
+  "hw": "800",
+  "hcase": "none",
+  "hls": "-.01em",
+  "bf": "'Nunito Sans', system-ui, sans-serif",
+  "h1s": "56px",
+  "h2s": "36px",
+  "h1m": "40px",
+  "h2m": "29px"
+ },
+ "hero": {
+  "img": "img/733-hero.webp",
+  "alt": "Harvest Small Business Finance brand panel",
+  "pos": "50% 50%"
+ },
+ "headshot": "img/733-head.webp",
+ "headshot_alt": "Elliott Levine, SVP Business Development, Harvest",
+ "logo_hero": "img/733-logo-white.png",
+ "logo": "img/733-logo.png",
+ "phone": "9144338775",
+ "phone_label": "Call Elliott",
+ "email": "elevine@harvestsbf.com",
+ "website": "https://www.harvestsbf.com/team-5-1/elliott-levine",
+ "linkedin": "https://www.linkedin.com/in/elliott-levine-1a9ba2225/",
+ "contact_cta": {
+  "k": "Buying, refinancing or expanding?",
+  "t": "Talk to Elliott"
+ },
+ "actions": [
+  {
+   "t": "Call Elliott",
+   "i": "call",
+   "u": "tel:+19144338775",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Message",
+   "i": "msg",
+   "u": "/elliott-levine/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Email",
+   "i": "mail",
+   "u": "mailto:elevine@harvestsbf.com",
+   "a": "email"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
+ ],
+ "vcard": {
+  "n": "Levine;Elliott;;;",
+  "fn": "Elliott Levine",
+  "org": "Harvest Small Business Finance",
+  "title": "SVP Business Development"
+ },
+ "ticker": [
+  "SBA 7(a) loans",
+  "SBA 504 loans",
+  "Conventional commercial loans",
+  "Buy your building",
+  "Refinance and cash-out",
+  "Creative loan structuring",
+  "NADCO 2026 Non-Bank 504 Lender of the Year"
+ ],
+ "intro": {
+  "k": "Meet Elliott",
+  "t": "Creative structuring for *business owners.*",
+  "text": "Elliott Levine has spent two decades in real estate and business financing and is known for creative loan structuring that fits each client. Before Harvest, he was President and Founder of Stellar Capital Solutions, helping hundreds of clients own and operate their own businesses. Today he helps owners finance commercial real estate with SBA and conventional loans. Away from work he's a husband, dad of two, volunteer youth coach and local charity fundraiser."
+ },
+ "goals": {
+  "k": "What's your next move?",
+  "t": "Financing for *your building*",
+  "chips_k": "Loan options",
+  "items": [
+   {
+    "t": "Buy your building",
+    "h": "Stop renting, start owning.",
+    "d": "Finance the purchase of owner-occupied commercial real estate: office, industrial or retail.",
+    "b": [
+     "Owner-occupied property",
+     "Office, industrial and retail",
+     "SBA and conventional options"
+    ],
+    "c": [
+     "SBA 7(a)",
+     "SBA 504"
+    ],
+    "cta": "Talk about buying"
+   },
+   {
+    "t": "Refinance",
+    "h": "Rework the loan you have.",
+    "d": "Refinance existing commercial property debt into a structure that fits your business.",
+    "b": [
+     "Commercial refinance",
+     "SBA or conventional",
+     "Structured around your business"
+    ],
+    "c": [
+     "SBA 504",
+     "Conventional"
+    ],
+    "cta": "Talk about refinancing"
+   },
+   {
+    "t": "Cash-out & capital",
+    "h": "Put your equity to work.",
+    "d": "Pull cash out of commercial property you own, or include working capital in an SBA 7(a) loan.",
+    "b": [
+     "Cash-out refinance",
+     "Working capital",
+     "Business expansion"
+    ],
+    "c": [
+     "SBA 7(a)",
+     "Conventional"
+    ],
+    "cta": "Talk about capital"
+   }
+  ]
+ },
+ "advantage": {
+  "k": "Why Harvest",
+  "t": "A national lender, *a local contact*",
+  "text": "Harvest is a non-bank lender holding one of only 14 SBLC licenses issued by the SBA that allow non-banks to originate SBA 7(a) loans. It is consistently ranked among the top ten SBA 7(a) lenders nationwide and was named NADCO's 2026 Non-Bank 504 Lender of the Year for the third year in a row."
+ },
+ "stats": [
+  {
+   "n": "$3B+",
+   "l": "CRE loans funded since 2016"
+  },
+  {
+   "n": "1 of 14",
+   "l": "Non-bank SBA 7(a) licenses"
+  },
+  {
+   "n": "3 yrs",
+   "l": "NADCO 504 Lender of the Year"
+  }
+ ],
+ "reviews": {
+  "t": "Worked with Elliott?",
+  "text": "A quick review helps other business owners find the right lender.",
+  "url": "https://www.google.com/search?q=Elliott+Levine+Harvest+Small+Business+Finance"
+ },
+ "faq_t": "Lending *FAQ*",
+ "faq": [
+  [
+   "What kinds of loans does Elliott offer?",
+   "SBA 7(a), SBA 504 and conventional commercial real estate loans for purchase, refinance and cash-out."
+  ],
+  [
+   "Is Harvest a bank?",
+   "No. Harvest is a non-bank lender licensed by the SBA to originate SBA 7(a) loans."
+  ],
+  [
+   "Which loan is right for me?",
+   "It depends on your property and plans. Elliott can walk you through the options for your business."
+  ]
+ ],
+ "final": {
+  "k": "Elliott Levine · Harvest",
+  "t": "Let's talk about *your building.*",
+  "text": "Call, email or send a message.",
+  "btn": "Message Elliott"
+ },
+ "side_name": "Elliott Levine",
+ "side_sub": "SVP Business Development · Harvest",
+ "side_contact": "Message Elliott",
+ "sticky_contact": "Message",
+ "sticky_extra": {
+  "t": "Email",
+  "u": "mailto:elevine@harvestsbf.com",
+  "a": "email"
+ },
+ "compliance": "HARVEST SMALL BUSINESS FINANCE, LLC HEADQUARTERS, 24422 AVENIDA DE LA CARLOTA, SUITE 400, LAGUNA HILLS, CA 92653. SBA 7A LOANS MADE OR ARRANGED PURSUANT TO A CALIFORNIA FINANCE LENDERS LAW LICENSE NUMBER 60DBO-52244. HARVEST COMMERCIAL CAPITAL, LLC HEADQUARTERS, 24422 AVENIDA DE LA CARLOTA, SUITE 400, LAGUNA HILLS, CA 92653. SBA 504 AND CONVENTIONAL COMMERCIAL MORTGAGE LOANS MADE OR ARRANGED PURSUANT TO A CALIFORNIA FINANCE LENDERS LAW LICENSE NUMBER 60DBO-53525."
+}

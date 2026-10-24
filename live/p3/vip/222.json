@@ -1,0 +1,192 @@
+{
+ "uid": "222",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "GH Insurance Co.",
+ "short": "GH Insurance Co.",
+ "first": "Gene",
+ "category": "Insurance Advisor",
+ "kicker": "Gene Heeter · Insurance Advisor",
+ "sub": "Home, auto, life, business insurance and employee benefits",
+ "pills": [
+  "🛡️ NY licensed, all lines"
+ ],
+ "theme": {
+  "navy": "#3D3935",
+  "navy2": "#5A524B",
+  "blue": "#8A6552",
+  "sky": "#F6F2E8",
+  "gold": "#D9CFA8",
+  "ink": "#231F20",
+  "line": "#E7E1D3",
+  "soft": "#FAF7F0",
+  "fonts": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600;700&display=swap",
+  "hf": "'Playfair Display', Georgia, serif",
+  "hw": "700",
+  "hcase": "none",
+  "hls": "-.01em",
+  "bf": "'Open Sans', system-ui, sans-serif",
+  "h1s": "56px",
+  "h2s": "36px",
+  "h1m": "40px",
+  "h2m": "29px"
+ },
+ "hero": {
+  "img": "img/222-hero.webp",
+  "alt": "Gene Heeter of GH Insurance Co.",
+  "pos": "52% 25%"
+ },
+ "logo_hero": "img/222-logo-hero.png",
+ "logo": "img/222-logo.png",
+ "phone": "6316020422",
+ "phone_label": "Call Gene",
+ "email": "gene@ghinsuranceco.com",
+ "linkedin": "https://linkedin.com/in/gene-heeter",
+ "contact_cta": {
+  "k": "Need coverage?",
+  "t": "Ask Gene for a quote"
+ },
+ "actions": [
+  {
+   "t": "Call Gene",
+   "i": "call",
+   "u": "tel:+16316020422",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Get a quote",
+   "i": "msg",
+   "u": "/gh-insurance-co/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Email",
+   "i": "mail",
+   "u": "mailto:gene@ghinsuranceco.com",
+   "a": "email"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
+ ],
+ "vcard": {
+  "n": "Heeter;Gene;;;",
+  "fn": "Gene Heeter",
+  "org": "GH Insurance Co.",
+  "title": "Insurance Advisor"
+ },
+ "ticker": [
+  "Boutique insurance brokerage",
+  "Home and auto",
+  "Life insurance",
+  "Business insurance",
+  "Employee benefits",
+  "NY licensed: Health & Life, Property & Casualty",
+  "Do the right thing"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "A solution, *not just a premium.*",
+  "text": "GH Insurance Co. is a brokerage led by Gene Heeter that helps manage and insure everything from employee benefits to business risk, plus home, auto and life coverage. Gene has learned that not every policy works for every client, so he takes the time to understand your situation first and find a solution in your best interest.",
+  "quote": "Let's work together to come up with a solution, not just a premium.",
+  "by": "Gene Heeter"
+ },
+ "goals": {
+  "k": "What do you need covered?",
+  "t": "Pick *a line*",
+  "chips_k": "Ask about",
+  "items": [
+   {
+    "t": "Home & auto",
+    "h": "Protect your home and car.",
+    "d": "Personal coverage for your house and vehicles, matched to your needs.",
+    "b": [
+     "Home insurance",
+     "Auto insurance",
+     "Coverage that fits your situation"
+    ],
+    "c": [
+     "Home",
+     "Auto"
+    ],
+    "cta": "Ask about home and auto"
+   },
+   {
+    "t": "Life",
+    "h": "Plan for the people you love.",
+    "d": "Gene helps you sort through your life insurance options.",
+    "b": [
+     "Life insurance",
+     "Options explained clearly"
+    ],
+    "c": [
+     "Life"
+    ],
+    "cta": "Ask about life insurance"
+   },
+   {
+    "t": "Business",
+    "h": "Manage your business risk.",
+    "d": "Business insurance for local companies, built around how you operate.",
+    "b": [
+     "Business insurance",
+     "Business risk"
+    ],
+    "c": [
+     "Business"
+    ],
+    "cta": "Ask about business coverage"
+   },
+   {
+    "t": "Employee benefits",
+    "h": "Take care of your team.",
+    "d": "Employee benefits for your business, handled by your broker.",
+    "b": [
+     "Employee benefits",
+     "Group benefits"
+    ],
+    "c": [
+     "Benefits"
+    ],
+    "cta": "Ask about benefits"
+   }
+  ]
+ },
+ "reviews": {
+  "t": "Worked with Gene?",
+  "text": "A quick review helps your neighbors find an insurance advisor they can trust.",
+  "url": "https://www.google.com/search?q=GH+Insurance+Co+Gene+Heeter+reviews"
+ },
+ "faq_t": "Insurance *FAQ*",
+ "faq": [
+  [
+   "What kinds of insurance does Gene handle?",
+   "Home, auto, life, business insurance and employee benefits."
+  ],
+  [
+   "Is Gene licensed?",
+   "Yes. Gene is licensed in New York for Health & Life and Property & Casualty."
+  ],
+  [
+   "How can I pay?",
+   "GH Insurance Co. accepts check, credit card or ACH draft."
+  ]
+ ],
+ "final": {
+  "k": "GH Insurance Co.",
+  "t": "Let's find *the right coverage.*",
+  "text": "Call Gene or ask for a quote.",
+  "btn": "Get a quote"
+ },
+ "side_sub": "Insurance Advisor · Wading River",
+ "side_contact": "Ask for a quote",
+ "sticky_contact": "Quote",
+ "sticky_extra": {
+  "t": "Email",
+  "u": "mailto:gene@ghinsuranceco.com",
+  "a": "email"
+ }
+}
