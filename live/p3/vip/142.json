@@ -26,9 +26,9 @@
   "bf": "'Maven Pro', system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/142-hero-house.webp",
-  "alt": "Colonial home with a landscaped front yard and flower beds",
-  "pos": "60% 60%"
+  "img": "img/142-hero-garden.webp",
+  "alt": "Lush landscaped backyard garden with flowering shrubs and mature trees",
+  "pos": "50% 50%"
  },
  "logo": "img/142-logo.svg",
  "logo_hero": "img/142-logo-white.svg",
