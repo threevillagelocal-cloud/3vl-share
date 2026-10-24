@@ -1,0 +1,62 @@
+{
+ "uid": "173",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "SKINMED SPA + BODY",
+ "short": "SKINMED Spa + Body",
+ "first": "SKINMED",
+ "category": "Skin Care & Spa",
+ "kicker": "Experts in glowing skin · Port Jefferson",
+ "sub": "Facials, custom skin consults, laser and body contouring",
+ "pills": ["✨ Two Port Jeff locations"],
+ "theme": {"navy": "#0B0B0B", "navy2": "#2A2A2A", "blue": "#111111", "sky": "#F6F2E7", "gold": "#CFAD2B", "ink": "#151515", "fonts": "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Roboto:wght@400;500;700&display=swap", "hf": "'EB Garamond', serif", "hw": "600", "hcase": "none", "hls": "0", "bf": "Roboto, system-ui, sans-serif", "h1s": "64px", "h2s": "42px", "h1m": "46px", "h2m": "32px"},
+ "hero": {"img": "img/173-hero.webp", "alt": "SKINMED SPA storefront at 142 East Main Street, Port Jefferson", "pos": "50% 50%"},
+ "logo": "img/173-logo.png",
+ "phone": "6316838330",
+ "phone_label": "Call the spa",
+ "address": "142 E Main St, Port Jefferson, NY 11777",
+ "address_label": "SKINMED SPA",
+ "maps": "SKINMED SPA, 142 E Main St, Port Jefferson, NY 11777",
+ "website": "https://skinmedspapj.com/",
+ "instagram": "skinmedspapj",
+ "facebook": "https://www.facebook.com/106277868134409",
+ "contact_url": "https://www.vagaro.com/skinmedspa2/services",
+ "contact_cta": {"k": "Ready to glow?", "t": "Book online"},
+ "actions": [
+  {"t": "Book online", "i": "cal", "u": "https://www.vagaro.com/skinmedspa2/services", "a": "book", "pri": 1},
+  {"t": "Call", "i": "call", "u": "tel:+16316838330", "a": "call"},
+  {"t": "Directions", "i": "map", "u": "https://www.google.com/maps/search/?api=1&query=SKINMED+SPA+142+E+Main+St+Port+Jefferson+NY", "a": "directions"},
+  {"t": "Instagram", "i": "ig", "u": "https://www.instagram.com/skinmedspapj", "a": "instagram"}
+ ],
+ "ticker": ["Facials", "Custom skin consults", "Laser hair removal", "Body contouring", "Body wraps", "Membership clubs", "Professional skincare", "Free parking behind the spa"],
+ "intro": {"k": "Meet your neighbor", "t": "Experts in *glowing skin.*",
+  "text": "SKINMED SPA + BODY is Port Jefferson's chic black-and-white skin studio on East Main Street, with its sister studio SKINMED BODY around the corner on Mariners Way. Start with a custom skin analysis, then follow a plan built for your skin: facials, laser hair removal, body contouring and wraps, plus memberships that keep your glow on schedule. Free parking is right behind the building."},
+ "gallery_k": "Inside the spa", "gallery_t": "The *SKINMED* look",
+ "gallery": [
+  {"img": "img/173-g1.webp", "alt": "SKINMED reception desk with team members"},
+  {"img": "img/173-g2.webp", "alt": "SKINMED retail skincare display"},
+  {"img": "img/173-g3.webp", "alt": "SKINMED team member holding skincare product"},
+  {"img": "img/173-g4.webp", "alt": "SKINMED team member portrait in the spa"},
+  {"img": "img/173-g5.webp", "alt": "SKINMED front desk with branded apparel"},
+  {"img": "img/173-g6.webp", "alt": "SKINMED featured on POOSH"}
+ ],
+ "goals": {"k": "What are you looking for?", "t": "Your *skin, your plan*", "chips_k": "Ask about", "items": [
+  {"t": "Facials", "h": "Facials that evolve with your skin.", "d": "A curated menu of facial treatments, chosen after a look at what your skin needs right now.", "b": ["Custom skin analysis", "Curated facial menu", "Professional skincare to take home"], "c": ["Facials", "Dermaplane", "Skin analysis"], "u": "https://www.vagaro.com/skinmedspa2/services", "cta": "Book a facial"},
+  {"t": "Skin consult", "h": "Start with a custom consult.", "d": "A virtual or in-person skin analysis and a custom skincare routine built for you.", "b": ["Virtual or in person", "Custom regimen", "Product guidance"], "c": ["Consult", "Regimen"], "u": "https://www.vagaro.com/skinmedspa2/services", "cta": "Book a consult"},
+  {"t": "Laser", "h": "Laser hair removal.", "d": "Sessions from small areas to full legs.", "b": ["Small and large areas", "Session menu", "Book online"], "c": ["Laser hair removal"], "u": "https://www.vagaro.com/skinmedspa2/services", "cta": "Book laser"},
+  {"t": "Body", "h": "SKINMED BODY on Mariners Way.", "d": "Body contouring and body wraps with owners Sara and Lauren. Start with a free 30-minute body consult.", "b": ["Free 30-minute body consult", "Customized body contouring", "Body wraps"], "c": ["Body contouring", "Wraps"], "u": "https://www.vagaro.com/skinmedspa2/services", "cta": "Book a body consult"},
+  {"t": "Memberships", "h": "Keep your glow on schedule.", "d": "Monthly club memberships with regular treatments and member savings on products.", "b": ["Monthly treatments", "Member product savings", "Two club levels"], "c": ["Essentials Club", "Serious Skin Club"], "cta": "Ask about memberships"}
+ ]},
+ "reviews": {"t": "Glowing reviews", "text": "Visited SKINMED? Your review helps neighbors find their new favorite spa.", "url": "https://www.google.com/search?q=SKINMED+SPA+Port+Jefferson+reviews"},
+ "faq_t": "Spa *FAQ*",
+ "faq": [
+  ["How do I book?", "Book online through SKINMED's Vagaro booking page, or call 631-683-8330."],
+  ["Where do I park?", "There is a free private lot behind the building with a rear entrance."],
+  ["Where is SKINMED BODY?", "Around the corner at 144 Mariners Way in Port Jefferson."]
+ ],
+ "final": {"k": "SKINMED SPA + BODY", "t": "Your glow *starts here.*", "text": "Book online or call the spa.", "btn": "Book online"},
+ "side_sub": "Skin care & body · Port Jefferson",
+ "side_contact": "Book online",
+ "sticky_contact": "Book",
+ "compliance": "Services and results vary by person. Ask the spa about which treatments are right for you."
+}
