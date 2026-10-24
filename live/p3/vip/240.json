@@ -31,9 +31,10 @@
   "h2m": "27px"
  },
  "hero": {
-  "img": "img/240-hero-books.webp",
-  "alt": "Bookkeeping at a desk with a calculator, ledger and paperwork",
-  "pos": "60% 50%"
+  "img": "img/240-banner.webp",
+  "alt": "John McGregor of JM Management Solutions in a bright office",
+  "pos": "72% 40%",
+  "banner": true
  },
  "headshot": "img/240-head.webp",
  "headshot_alt": "John McGregor, founder of JM Management Solutions",
