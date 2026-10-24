@@ -98,21 +98,7 @@
  "advantage": {
   "k": "Member-led",
   "t": "Run by *local owners*",
-  "text": "SBNA is led by President TJ Sirani, Vice President John McGregor and Treasurer Judi Wallace. See the full member directory at sbna-li.com."
- },
- "hours_k": "Meetings",
- "hours_t": "When *we meet*",
- "hours": {
-  "mon": null,
-  "tue": null,
-  "wed": [
-   "11:30",
-   "13:00"
-  ],
-  "thu": null,
-  "fri": null,
-  "sat": null,
-  "sun": null
+  "text": "SBNA is led by President TJ Sirani, Vice President John McGregor and Treasurer Judi Wallace. Browse the full member directory on the SBNA website."
  },
  "reviews": {
   "t": "Been to a meeting?",
