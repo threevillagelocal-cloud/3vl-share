@@ -30,9 +30,9 @@
   "h2m": "28px"
  },
  "hero": {
-  "img": "img/634-hero.webp",
-  "alt": "September 2026 cover of Stroll Head of the Harbor magazine",
-  "pos": "80% 50%"
+  "img": "img/634-hero2.webp",
+  "alt": "Stroll Head of the Harbor brand panel with the September 2026 cover",
+  "pos": "22% 50%"
  },
  "logo": "img/634-logo.png",
  "logo_hero": "img/634-logo-white.png",
@@ -87,6 +87,14 @@
   "t": "Get to know *your neighbors.*",
   "text": "Stroll Head of the Harbor is a monthly neighborhood magazine mailed to residents in Saint James and the Head of the Harbor area. Publisher Jae Hartzell fills each issue with resident spotlights, local business features and community happenings, because genuine connections with the neighbors next door and the business owners down the street make for a more meaningful place to live. Stroll is owned by The N2 Company and is not affiliated with any club, developer or homeowners association."
  },
+ "gallery_k": "On the cover",
+ "gallery_t": "The latest *issue*",
+ "gallery": [
+  {
+   "img": "img/634-g1.webp",
+   "alt": "September 2026 cover of Stroll Head of the Harbor featuring resident Vinny Galiano and Chef Roger"
+  }
+ ],
  "services_k": "What Stroll does",
  "services_t": "Inside *every issue*",
  "services": [
