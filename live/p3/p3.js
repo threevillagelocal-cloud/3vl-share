@@ -632,3 +632,25 @@ function focus(inp,b){
 
 if(!run()){var n=0,iv=setInterval(function(){if(run()||++n>60)clearInterval(iv)},150);document.addEventListener('DOMContentLoaded',run)}
 })();
+
+/* Write-a-review: one overall 1-5 star rating plus comments (owner 10/24/2026). BD's form still asks for 5 sub-ratings and a title;
+   they are hidden and filled from the overall rating and the first words of the review when it is sent. */
+(function(){
+if(!/\/writeareview\/?$/.test(location.pathname))return;
+var tries=0;
+function go(){var f=document.querySelector('form[name="member_review"]')||document.querySelector('form[id^="member_review"]');
+  if(!f){if(++tries<60)setTimeout(go,200);return}
+  var others=['service','response','expertise','results','language'];
+  others.forEach(function(k){var l=document.getElementById('rating_'+k+'_label');if(!l)return;l.style.display='none';var g=l.nextElementSibling;if(g)g.style.display='none'});
+  var ov=document.getElementById('rating_overall_label');if(ov)ov.textContent='Your rating';
+  var t=f.querySelector('[name="review_title"]');
+  if(t){var fg=t.closest('.form-group');if(fg)fg.style.display='none';t.removeAttribute('required')}
+  function sync(){var c=f.querySelector('input[name="rating_overall"]:checked');if(!c)return;
+    others.forEach(function(k){var r=f.querySelector('input[name="rating_'+k+'"][value="'+c.value+'"]');if(r)r.checked=true});
+    if(t&&!t.value){var d=((f.querySelector('[name="review_description"]')||{}).value||'').trim(),w=d.split(' ').slice(0,6).join(' ');
+      t.value=w?(w.length<d.length?w+'...':w):(c.value+' star review')}}
+  f.addEventListener('change',sync,true);f.addEventListener('submit',sync,true);
+  Array.prototype.forEach.call(f.querySelectorAll('[type=submit],button'),function(b){b.addEventListener('click',sync,true)});
+}
+go();
+})();
