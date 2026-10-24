@@ -10,7 +10,9 @@
  "category": "Orthopedics",
  "kicker": "Hart Orthopedics · Stony Brook",
  "sub": "Board-certified orthopedic surgeon",
- "pills": ["🩺 Walk-ins & same-day appointments"],
+ "pills": [
+  "🩺 Walk-ins & same-day appointments"
+ ],
  "theme": {
   "navy": "#1F3D7A",
   "navy2": "#142955",
@@ -24,7 +26,11 @@
   "hls": ".01em",
   "bf": "Inter, system-ui, sans-serif"
  },
- "hero": {"img": "img/364-hero.webp", "alt": "Hart Orthopedics brand navy background", "pos": "50% 50%"},
+ "hero": {
+  "img": "img/364-hero.webp",
+  "alt": "Hart Orthopedics brand navy background",
+  "pos": "50% 50%"
+ },
  "headshot": "img/364-head.webp",
  "headshot_alt": "Dr. Jeffrey D. Hart, DO, orthopedic surgeon",
  "logo": "img/364-logo.png",
@@ -39,14 +45,47 @@
  "facebook": "https://www.facebook.com/DrJeffreyDHart",
  "linkedin": "https://www.linkedin.com/in/jeffrey-d-hart-3b1585295",
  "contact_url": "https://www.hartorthopedics.com/en/contact-us/",
- "contact_cta": {"k": "Need to be seen?", "t": "Request an appointment"},
+ "contact_cta": {
+  "k": "Need to be seen?",
+  "t": "Request an appointment"
+ },
  "actions": [
-  {"t": "Call", "i": "call", "u": "tel:+18333742787", "a": "call", "pri": 1},
-  {"t": "Appointment", "i": "cal", "u": "https://www.hartorthopedics.com/en/contact-us/", "a": "book"},
-  {"t": "Directions", "i": "map", "u": "https://www.google.com/maps/search/?api=1&query=Hart+Orthopedics+2500+Nesconset+Hwy+Stony+Brook+NY", "a": "directions"},
-  {"t": "Website", "i": "web", "u": "https://www.hartorthopedics.com/en/hart-orthopedics-stony-brook-location/", "a": "website"}
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+18333742787",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Book",
+   "i": "cal",
+   "u": "https://www.hartorthopedics.com/en/contact-us/",
+   "a": "book"
+  },
+  {
+   "t": "Directions",
+   "i": "map",
+   "u": "https://www.google.com/maps/search/?api=1&query=Hart+Orthopedics+2500+Nesconset+Hwy+Stony+Brook+NY",
+   "a": "directions"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://www.hartorthopedics.com/en/hart-orthopedics-stony-brook-location/",
+   "a": "website"
+  }
  ],
- "ticker": ["Walk-ins welcome", "Same-day appointments", "Telehealth visits", "Knee, hip and shoulder", "Spine and pain management", "Sports medicine", "Castle Connolly Top Doctors 2025", "Workers comp and no-fault"],
+ "ticker": [
+  "Walk-ins welcome",
+  "Same-day appointments",
+  "Telehealth visits",
+  "Knee, hip and shoulder",
+  "Spine and pain management",
+  "Sports medicine",
+  "Castle Connolly Top Doctors 2025",
+  "Workers comp and no-fault"
+ ],
  "intro": {
   "k": "Your neighbor in orthopedics",
   "t": "Orthopedic care, *at the heart of it.*",
@@ -59,24 +98,144 @@
   "t": "Find the *right care*",
   "chips_k": "Conditions",
   "items": [
-   {"t": "Knee & hip", "h": "Knee and hip care.", "d": "Surgical and nonsurgical care for knee and hip problems, including total joint replacement.", "b": ["Meniscus and arthritis care", "Total knee replacement", "Total hip replacement"], "c": ["Knee", "Hip", "Arthritis"], "u": "https://www.hartorthopedics.com/en/contact-us/", "cta": "Request an appointment"},
-   {"t": "Shoulder & elbow", "h": "Shoulder and elbow care.", "d": "Care for impingement, fractures, dislocations, arthritis and elbow injuries.", "b": ["Impingement", "Fractures and dislocations", "Elbow and sports injuries"], "c": ["Shoulder", "Elbow"], "u": "https://www.hartorthopedics.com/en/contact-us/", "cta": "Request an appointment"},
-   {"t": "Hand, foot & ankle", "h": "Hands, wrists, feet and ankles.", "d": "Diagnosis and treatment for hand, wrist, foot and ankle conditions.", "b": ["Hand and wrist", "Foot and ankle"], "c": ["Hand", "Wrist", "Foot", "Ankle"], "u": "https://www.hartorthopedics.com/en/contact-us/", "cta": "Request an appointment"},
-   {"t": "Back & pain", "h": "Spine care and pain management.", "d": "Spine care, pain management, physical medicine and rehabilitation, and injection therapy.", "b": ["Spine and back pain", "Pain management and PM&R", "Injection therapy"], "c": ["Back", "Neck", "Chronic pain"], "u": "https://www.hartorthopedics.com/en/contact-us/", "cta": "Request an appointment"},
-   {"t": "Sports & injury", "h": "Sports, work and auto injuries.", "d": "Sports medicine to help you return to play, plus care for workers compensation and no-fault cases.", "b": ["Sports medicine", "Workers compensation", "No-fault auto injuries"], "c": ["Sports", "Work", "Auto"], "u": "https://www.hartorthopedics.com/en/contact-us/", "cta": "Request an appointment"}
+   {
+    "t": "Knee & hip",
+    "h": "Knee and hip care.",
+    "d": "Surgical and nonsurgical care for knee and hip problems, including total joint replacement.",
+    "b": [
+     "Meniscus and arthritis care",
+     "Total knee replacement",
+     "Total hip replacement"
+    ],
+    "c": [
+     "Knee",
+     "Hip",
+     "Arthritis"
+    ],
+    "u": "https://www.hartorthopedics.com/en/contact-us/",
+    "cta": "Request an appointment"
+   },
+   {
+    "t": "Shoulder & elbow",
+    "h": "Shoulder and elbow care.",
+    "d": "Care for impingement, fractures, dislocations, arthritis and elbow injuries.",
+    "b": [
+     "Impingement",
+     "Fractures and dislocations",
+     "Elbow and sports injuries"
+    ],
+    "c": [
+     "Shoulder",
+     "Elbow"
+    ],
+    "u": "https://www.hartorthopedics.com/en/contact-us/",
+    "cta": "Request an appointment"
+   },
+   {
+    "t": "Hand, foot & ankle",
+    "h": "Hands, wrists, feet and ankles.",
+    "d": "Diagnosis and treatment for hand, wrist, foot and ankle conditions.",
+    "b": [
+     "Hand and wrist",
+     "Foot and ankle"
+    ],
+    "c": [
+     "Hand",
+     "Wrist",
+     "Foot",
+     "Ankle"
+    ],
+    "u": "https://www.hartorthopedics.com/en/contact-us/",
+    "cta": "Request an appointment"
+   },
+   {
+    "t": "Back & pain",
+    "h": "Spine care and pain management.",
+    "d": "Spine care, pain management, physical medicine and rehabilitation, and injection therapy.",
+    "b": [
+     "Spine and back pain",
+     "Pain management and PM&R",
+     "Injection therapy"
+    ],
+    "c": [
+     "Back",
+     "Neck",
+     "Chronic pain"
+    ],
+    "u": "https://www.hartorthopedics.com/en/contact-us/",
+    "cta": "Request an appointment"
+   },
+   {
+    "t": "Sports & injury",
+    "h": "Sports, work and auto injuries.",
+    "d": "Sports medicine to help you return to play, plus care for workers compensation and no-fault cases.",
+    "b": [
+     "Sports medicine",
+     "Workers compensation",
+     "No-fault auto injuries"
+    ],
+    "c": [
+     "Sports",
+     "Work",
+     "Auto"
+    ],
+    "u": "https://www.hartorthopedics.com/en/contact-us/",
+    "cta": "Request an appointment"
+   }
   ]
  },
  "hours_k": "Stony Brook office",
  "hours_t": "Office *hours*",
- "hours": {"mon": ["09:00", "17:00"], "tue": ["09:00", "17:00"], "wed": ["09:00", "17:00"], "thu": ["09:00", "17:00"], "fri": ["09:00", "17:00"], "sat": null, "sun": null},
- "reviews": {"t": "Patients, share your experience", "text": "Your review helps neighbors find the care they need.", "url": "https://www.google.com/search?q=Hart+Orthopedics+Stony+Brook+reviews"},
+ "hours": {
+  "mon": [
+   "09:00",
+   "17:00"
+  ],
+  "tue": [
+   "09:00",
+   "17:00"
+  ],
+  "wed": [
+   "09:00",
+   "17:00"
+  ],
+  "thu": [
+   "09:00",
+   "17:00"
+  ],
+  "fri": [
+   "09:00",
+   "17:00"
+  ],
+  "sat": null,
+  "sun": null
+ },
+ "reviews": {
+  "t": "Patients, share your experience",
+  "text": "Your review helps neighbors find the care they need.",
+  "url": "https://www.google.com/search?q=Hart+Orthopedics+Stony+Brook+reviews"
+ },
  "faq_t": "Patient *FAQ*",
  "faq": [
-  ["Do I need an appointment?", "Hart Orthopedics offers walk-ins and same-day appointments. Call 1-833-374-2787 to check today's availability."],
-  ["Where is the Stony Brook office?", "2500 Nesconset Highway, Unit 11C, Stony Brook, NY 11790. The practice's main office is in Massapequa."],
-  ["Can I have a telehealth visit?", "Yes. Hart Orthopedics offers telehealth appointments."]
+  [
+   "Do I need an appointment?",
+   "Hart Orthopedics offers walk-ins and same-day appointments. Call 1-833-374-2787 to check today's availability."
+  ],
+  [
+   "Where is the Stony Brook office?",
+   "2500 Nesconset Highway, Unit 11C, Stony Brook, NY 11790. The practice's main office is in Massapequa."
+  ],
+  [
+   "Can I have a telehealth visit?",
+   "Yes. Hart Orthopedics offers telehealth appointments."
+  ]
  ],
- "final": {"k": "Hart Orthopedics", "t": "Get back to *feeling like you.*", "text": "Call the office or request an appointment online.", "btn": "Request an appointment"},
+ "final": {
+  "k": "Hart Orthopedics",
+  "t": "Get back to *feeling like you.*",
+  "text": "Call the office or request an appointment online.",
+  "btn": "Request an appointment"
+ },
  "side_sub": "Orthopedics · Stony Brook",
  "side_contact": "Request an appointment",
  "sticky_contact": "Appointment",
