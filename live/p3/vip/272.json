@@ -1,0 +1,63 @@
+{
+ "uid": "272",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "Gina Lollo at Northshore Properties Realty",
+ "short": "Gina Lollo",
+ "first": "Gina",
+ "brand": "Northshore Properties Realty",
+ "category": "Real Estate",
+ "kicker": "Northshore Properties Realty · Setauket",
+ "sub": "Licensed Real Estate Broker and owner · Locally owned since 2007",
+ "pills": ["🗝️ Boutique local brokerage"],
+ "theme": {"navy": "#111111", "navy2": "#2B2516", "blue": "#111111", "sky": "#FAF5E8", "gold": "#E2C98A", "ink": "#151515", "fonts": "https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;600&display=swap", "hf": "Montserrat, 'Helvetica Neue', Arial, sans-serif", "hw": "800", "hcase": "none", "hls": "-.02em", "bf": "Inter, 'Helvetica Neue', Arial, sans-serif", "h1s": "56px", "h2s": "34px", "h1m": "42px", "h2m": "28px"},
+ "hero": {"img": "img/272-hero.webp", "alt": "Boardwalk through the marsh in the Three Village area", "pos": "50% 55%"},
+ "headshot": "img/272-head.webp",
+ "headshot_alt": "Gina Lollo, Licensed Real Estate Broker",
+ "logo": "img/272-logo.png",
+ "phone": "6316254500",
+ "phone_label": "Office",
+ "address": "175 Main St, Suite 1G, Setauket, NY 11733",
+ "address_label": "Office",
+ "maps": "Northshore Properties Realty, 175 Main St, Setauket, NY 11733",
+ "website": "https://northshorepropertiesrealty.com/",
+ "instagram": "northshore.properties.realty",
+ "facebook": "https://www.facebook.com/Northshorepropertiesrealty",
+ "contact_cta": {"k": "Thinking about a move?", "t": "Talk to Gina"},
+ "actions": [
+  {"t": "Call", "i": "call", "u": "tel:+16316254500", "a": "call", "pri": 1},
+  {"t": "Message", "i": "msg", "u": "/gina-lollo-at-northshore-properties-realty/connect", "a": "contact"},
+  {"t": "Search homes", "i": "web", "u": "https://northshorepropertiesrealty.com/", "a": "website"},
+  {"t": "Save contact", "i": "card", "a": "vcard"}
+ ],
+ "vcard": {"n": "Lollo;Gina;;;", "fn": "Gina Lollo", "org": "Northshore Properties Realty", "title": "Licensed Real Estate Broker"},
+ "ticker": ["Locally owned in Setauket", "Licensed in NY and FL", "Certified Buyer Representative", "55 and Better specialist", "Relocation", "Setauket, Stony Brook, Port Jefferson"],
+ "intro": {"k": "Meet your neighbor", "t": "A boutique brokerage *that knows Three Village.*",
+  "text": "Gina Lollo owns Northshore Properties Realty, a locally owned boutique brokerage on Main Street in Setauket. Licensed in New York and Florida, she's a Certified Buyer Representative and a 55 and Better specialist who helps families buy, sell and relocate across Setauket, Stony Brook, Port Jefferson, Smithtown and beyond, with a team that lives here too."},
+ "gallery_k": "Around town", "gallery_t": "Homes and *neighborhoods*",
+ "gallery": [
+  {"img": "img/272-g1.webp", "alt": "Backyard patio at dusk at a Northshore Properties listing"},
+  {"img": "img/272-g2.webp", "alt": "House exterior at a Northshore Properties listing"},
+  {"img": "img/272-g3.webp", "alt": "Townhome exterior at a Northshore Properties listing"},
+  {"img": "img/272-g4.webp", "alt": "Aerial view of a Northshore Properties listing"},
+  {"img": "img/272-g5.webp", "alt": "Leisure Knoll community entrance sign"},
+  {"img": "img/272-g6.webp", "alt": "The Northshore Properties Realty team"}
+ ],
+ "goals": {"k": "How can Gina help?", "t": "What's your *next chapter?*", "chips_k": "Specialties", "items": [
+  {"t": "Selling", "h": "Sell with a local team behind you.", "d": "Pricing, marketing and negotiation from a brokerage that knows every corner of Three Village.", "b": ["Local pricing insight", "Marketing plan", "Negotiation"], "c": ["Valuation", "Marketing"], "cta": "Ask Gina about selling"},
+  {"t": "Buying", "h": "Find the right home with a buyer's advocate.", "d": "Gina is a Certified Buyer Representative who works for you through the whole search.", "b": ["Buyer representation", "Neighborhood guidance", "Offer strategy"], "c": ["First-time buyers", "Move-up buyers"], "u": "https://northshorepropertiesrealty.com/", "cta": "Search homes"},
+  {"t": "55 and better", "h": "Downsizing or moving to a 55+ community.", "d": "Gina is a 55 and Better specialist who helps with the next move, from sale to new home.", "b": ["55+ communities", "Downsizing help", "Sell and buy timing"], "c": ["Downsizing", "55+ communities"], "cta": "Talk to Gina"},
+  {"t": "Relocation", "h": "Moving to or from Long Island.", "d": "Help for families relocating, including Florida, where Gina is also licensed.", "b": ["Relocation team", "NY and FL licensed", "Area tours"], "c": ["Relocation", "Florida"], "cta": "Plan a move"}
+ ]},
+ "reviews": {"t": "Worked with Northshore Properties?", "text": "A quick review helps neighbors find a brokerage they can trust.", "url": "https://www.google.com/search?q=Northshore+Properties+Realty+Setauket+reviews"},
+ "faq_t": "Real estate *FAQ*",
+ "faq": [
+  ["Where is the office?", "175 Main Street, Suite 1G, Setauket, NY 11733."],
+  ["Does Gina help with 55+ moves?", "Yes. She is a 55 and Better specialist."],
+  ["What areas do they cover?", "Setauket, Stony Brook, Port Jefferson, Smithtown and across Long Island."]
+ ],
+ "final": {"k": "Northshore Properties Realty", "t": "Let's find *your place.*", "text": "Call the office or send Gina a message.", "btn": "Message Gina"},
+ "side_sub": "Licensed Real Estate Broker · Northshore Properties Realty",
+ "side_contact": "Message Gina",
+ "compliance": "Gina Lollo, Licensed Real Estate Broker, Northshore Properties Realty, 175 Main St, Suite 1G, Setauket, NY 11733. Equal Housing Opportunity."
+}
