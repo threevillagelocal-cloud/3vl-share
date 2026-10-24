@@ -1,0 +1,216 @@
+{
+ "uid": "240",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "JM Management Solutions Inc",
+ "short": "JM Management Solutions",
+ "first": "John",
+ "brand": "JM Management Solutions",
+ "category": "Bookkeeping and Consulting",
+ "kicker": "Bookkeeping and business consulting · Long Island",
+ "sub": "John McGregor, founder · Better numbers. Better business.",
+ "pills": [
+  "📊 Free consultation"
+ ],
+ "theme": {
+  "navy": "#0A1A2F",
+  "navy2": "#16304F",
+  "blue": "#8A6A0C",
+  "sky": "#F7F5F0",
+  "gold": "#D4AF5A",
+  "ink": "#16202C",
+  "fonts": "https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;600;700&display=swap",
+  "hf": "Poppins, system-ui, sans-serif",
+  "hw": "800",
+  "hcase": "none",
+  "hls": "-.02em",
+  "bf": "Inter, system-ui, sans-serif",
+  "h1s": "52px",
+  "h2s": "34px",
+  "h1m": "36px",
+  "h2m": "27px"
+ },
+ "hero": {
+  "img": "img/240-hero.webp",
+  "alt": "JM Management Solutions gold JM monogram on navy",
+  "pos": "80% 40%"
+ },
+ "headshot": "img/240-head.webp",
+ "headshot_alt": "John McGregor, founder of JM Management Solutions",
+ "logo": "img/240-logo.png",
+ "phone": "6319871532",
+ "phone_label": "Call John",
+ "email": "bookjohnm@outlook.com",
+ "address": "Patchogue, NY · Serving Long Island",
+ "address_label": "Based in",
+ "maps": "Patchogue, NY",
+ "website": "https://www.bookjohnm.com/",
+ "contact_url": "https://www.bookjohnm.com/contact",
+ "contact_cta": {
+  "k": "Free consultation",
+  "t": "Tell John about your business"
+ },
+ "actions": [
+  {
+   "t": "Call John",
+   "i": "call",
+   "u": "tel:+16319871532",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Free consult",
+   "i": "msg",
+   "u": "https://www.bookjohnm.com/contact",
+   "a": "contact"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://www.bookjohnm.com/",
+   "a": "website"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
+ ],
+ "vcard": {
+  "n": "McGregor;John;;;",
+  "fn": "John McGregor",
+  "org": "JM Management Solutions Inc",
+  "title": "Founder"
+ },
+ "ticker": [
+  "30+ years in financial services",
+  "Bookkeeping",
+  "Cash flow and monthly reporting",
+  "Accounts payable and collections",
+  "Loan-readiness planning",
+  "Supplemental insurance",
+  "Suffolk and Nassau",
+  "In person or remote"
+ ],
+ "intro": {
+  "k": "Meet the founder",
+  "t": "A financial partner *who explains things.*",
+  "text": "John McGregor spent more than 30 years in the credit union and financial industry, leading retail banking and lending teams. He started JM Management Solutions so small and mid-sized Long Island businesses get the same financial discipline big companies have: books in order, clear numbers and plain-English advice. You work directly with John, not a call center.",
+  "quote": "Know your numbers. Run your business better.",
+  "by": "John McGregor"
+ },
+ "goals": {
+  "k": "How can John help?",
+  "t": "Where do you *need help?*",
+  "chips_k": "Services",
+  "items": [
+   {
+    "t": "Bookkeeping",
+    "h": "Books done right, every month.",
+    "d": "Day-to-day bookkeeping, transaction organization and account reconciliation.",
+    "b": [
+     "Monthly bookkeeping",
+     "Reconciliations",
+     "Accounts payable and collections"
+    ],
+    "c": [
+     "Bookkeeping",
+     "AP",
+     "Collections"
+    ],
+    "cta": "Ask about bookkeeping"
+   },
+   {
+    "t": "Financial management",
+    "h": "Always know where you stand.",
+    "d": "Cash flow analysis, expense tracking and monthly reporting.",
+    "b": [
+     "Cash flow analysis",
+     "Expense tracking",
+     "Monthly reports"
+    ],
+    "c": [
+     "Cash flow",
+     "Reporting"
+    ],
+    "cta": "Ask about reporting"
+   },
+   {
+    "t": "Consulting",
+    "h": "Run the business more efficiently.",
+    "d": "Tailored strategy and process improvement built around how your industry actually works.",
+    "b": [
+     "Process improvement",
+     "Industry-specific plans",
+     "Owner-level advice"
+    ],
+    "c": [
+     "Strategy",
+     "Efficiency"
+    ],
+    "cta": "Ask about consulting"
+   },
+   {
+    "t": "Loan readiness",
+    "h": "Walk into the bank prepared.",
+    "d": "Credit profile guidance and loan-readiness planning from someone who led bank lending teams for decades.",
+    "b": [
+     "Credit profile review",
+     "Getting financials in shape",
+     "Debt repayment planning"
+    ],
+    "c": [
+     "Credit guidance",
+     "Financing prep"
+    ],
+    "cta": "Ask about loan readiness"
+   },
+   {
+    "t": "Insurance",
+    "h": "Supplemental coverage for owners and teams.",
+    "d": "Accident, critical illness, cancer, disability, life and hospital policies that pay cash benefits.",
+    "b": [
+     "For the self-employed",
+     "For small teams",
+     "Filling coverage gaps"
+    ],
+    "c": [
+     "Accident",
+     "Disability",
+     "Life"
+    ],
+    "u": "https://www.bookjohnm.com/insurance",
+    "cta": "See insurance options"
+   }
+  ]
+ },
+ "reviews": {
+  "t": "Worked with John?",
+  "text": "Your review helps the next Long Island business owner find a partner they can trust."
+ },
+ "faq_t": "Small business *FAQ*",
+ "faq": [
+  [
+   "Is the first consultation free?",
+   "Yes. Tell John about your business and he follows up personally, usually within one business day."
+  ],
+  [
+   "Who does John work with?",
+   "Small and mid-sized businesses across Suffolk and Nassau, in person or remotely."
+  ],
+  [
+   "Do I need all the services?",
+   "No. Pick where you need help, or John can build a plan that covers it all."
+  ]
+ ],
+ "final": {
+  "k": "JM Management Solutions",
+  "t": "Better numbers. *Better business.*",
+  "text": "Book a free consultation, no pressure, just a real conversation about where your business stands.",
+  "btn": "Get a free consultation"
+ },
+ "side_sub": "Bookkeeping and consulting · Patchogue",
+ "side_contact": "Free consultation",
+ "sticky_contact": "Free consult",
+ "compliance": "Insurance products offered through JM Management Solutions Inc as a licensed agent (John McGregor, NY Insurance License #1444216), and underwritten by Combined Insurance Company of America (a Chubb company). In New York, products are underwritten by Combined Life Insurance Company of New York (Latham, NY)."
+}

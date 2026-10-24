@@ -1,0 +1,197 @@
+{
+ "uid": "217",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "JLW Accounting and Tax Services",
+ "short": "JLW Accounting and Tax Services",
+ "first": "Judi",
+ "brand": "JLW Accounting and Tax Services",
+ "category": "Accounting and Tax",
+ "kicker": "Judi Wallace · East Setauket",
+ "sub": "The missing piece to your financial puzzle",
+ "pills": [
+  "🧩 Free consultation"
+ ],
+ "theme": {
+  "navy": "#24403F",
+  "navy2": "#304E4E",
+  "blue": "#0B8037",
+  "sky": "#ECF6EF",
+  "gold": "#5BE08A",
+  "ink": "#1C2A2A",
+  "fonts": "https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap",
+  "hf": "Poppins, system-ui, sans-serif",
+  "hw": "800",
+  "hcase": "none",
+  "hls": "-.02em",
+  "bf": "'Source Sans 3', system-ui, sans-serif",
+  "h1s": "48px",
+  "h2s": "34px",
+  "h1m": "32px",
+  "h2m": "26px"
+ },
+ "hero": {
+  "img": "img/217-hero.webp",
+  "alt": "Judi Wallace of JLW Accounting and Tax Services",
+  "pos": "50% 25%"
+ },
+ "headshot": "img/217-head.webp",
+ "headshot_alt": "Judi Wallace, owner of JLW Accounting and Tax Services",
+ "logo": "img/217-logo.png",
+ "logo_hero": "img/217-logo-white.png",
+ "phone": "6313388858",
+ "phone_label": "Call Judi",
+ "email": "judi@jlwfinancialservices.com",
+ "address": "690 Route 25A, Suite 1, East Setauket, NY 11733",
+ "address_label": "Office",
+ "maps": "690 NY-25A Suite 1, East Setauket, NY 11733",
+ "website": "https://www.jlwfinancialservices.com/",
+ "facebook": "https://www.facebook.com/profile.php?id=100091849448935",
+ "linkedin": "https://www.linkedin.com/in/judi-wallace-b1767031/",
+ "contact_cta": {
+  "k": "Tax question?",
+  "t": "Ask Judi"
+ },
+ "actions": [
+  {
+   "t": "Call Judi",
+   "i": "call",
+   "u": "tel:+16313388858",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Message",
+   "i": "msg",
+   "u": "/jlw-accounting-and-tax-services/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Directions",
+   "i": "map",
+   "u": "https://www.google.com/maps/search/?api=1&query=690+NY-25A+Suite+1+East+Setauket+NY+11733",
+   "a": "directions"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
+ ],
+ "vcard": {
+  "n": "Wallace;Judi;;;",
+  "fn": "Judi Wallace",
+  "org": "JLW Accounting and Tax Services LLC",
+  "title": "Owner"
+ },
+ "ticker": [
+  "Personal income tax",
+  "Corporate returns",
+  "Bookkeeping",
+  "Payroll processing",
+  "Non-profit accounting",
+  "Financial reporting",
+  "Suffolk and eastern Nassau",
+  "Open 7 days a week"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Taxes made clear. *Numbers made manageable.*",
+  "text": "JLW Accounting and Tax Services is Judi Wallace's full-service accounting firm on Route 25A in East Setauket. Judi, a Setauket resident, helps individuals, families, small businesses and non-profits with tax returns, bookkeeping, payroll and financial reporting, and takes the time to explain what the numbers mean. Clients get a local professional they can call all year, not just at tax time."
+ },
+ "goals": {
+  "k": "How can Judi help?",
+  "t": "What do you *need done?*",
+  "chips_k": "Services",
+  "items": [
+   {
+    "t": "Personal taxes",
+    "h": "Taxes made easy, fast and hassle free.",
+    "d": "Individual income tax returns, prepared and filed on time.",
+    "b": [
+     "Individual returns",
+     "Filing on time",
+     "Plain-English answers"
+    ],
+    "c": [
+     "Personal tax",
+     "Families"
+    ],
+    "cta": "Ask Judi about your taxes"
+   },
+   {
+    "t": "Business taxes",
+    "h": "Returns for your business.",
+    "d": "Corporate income tax, sales tax and payroll tax returns, with deadlines tracked for you.",
+    "b": [
+     "Corporate returns",
+     "Sales tax returns",
+     "Payroll tax returns"
+    ],
+    "c": [
+     "Corporate",
+     "Sales tax",
+     "Payroll tax"
+    ],
+    "cta": "Ask about business taxes"
+   },
+   {
+    "t": "Bookkeeping",
+    "h": "Keep the books current.",
+    "d": "Accounts payable, accounts receivable and collections, bank and credit card reconciliations, payroll processing and compliance.",
+    "b": [
+     "AP and AR",
+     "Reconciliations",
+     "Payroll processing"
+    ],
+    "c": [
+     "Bookkeeping",
+     "Payroll"
+    ],
+    "cta": "Ask about bookkeeping"
+   },
+   {
+    "t": "Non-profits",
+    "h": "Support for organizations doing good work.",
+    "d": "Accounting and tax returns for non-profit organizations.",
+    "b": [
+     "Non-profit returns",
+     "Financial statements",
+     "Year-round support"
+    ],
+    "c": [
+     "Non-profit"
+    ],
+    "cta": "Ask about non-profits"
+   }
+  ]
+ },
+ "reviews": {
+  "t": "Worked with Judi?",
+  "text": "Your review helps the next Three Village family or business find good help."
+ },
+ "faq_t": "Tax and accounting *FAQ*",
+ "faq": [
+  [
+   "Is the first consultation free?",
+   "Yes. JLW offers a free consultation. Call 631-338-8858 or send a message."
+  ],
+  [
+   "Who does JLW work with?",
+   "Individuals, families, small businesses and non-profit organizations in Suffolk and eastern Nassau."
+  ],
+  [
+   "Where is the office?",
+   "690 Route 25A, Suite 1 in East Setauket. JLW is open 7 days a week."
+  ]
+ ],
+ "final": {
+  "k": "JLW Accounting and Tax Services",
+  "t": "Let's make the *numbers easier.*",
+  "text": "Taxes, bookkeeping, payroll or a quick question, start with a conversation with Judi.",
+  "btn": "Message Judi"
+ },
+ "side_name": "JLW Accounting and Tax Services",
+ "side_sub": "Judi Wallace · East Setauket",
+ "side_contact": "Message Judi"
+}

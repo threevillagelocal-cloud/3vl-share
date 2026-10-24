@@ -1,0 +1,206 @@
+{
+ "uid": "78",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "Girard Wealth Management Group",
+ "short": "Girard Wealth Management",
+ "first": "Frank",
+ "brand": "Raymond James",
+ "category": "Financial Advisor",
+ "kicker": "A Raymond James practice · East Setauket",
+ "sub": "Francis J. Girard, CFS, CFP®, ChFC, CLU · President and CEO",
+ "pills": [
+  "🤝 Team approach to planning"
+ ],
+ "theme": {
+  "navy": "#0E2443",
+  "navy2": "#1A3A66",
+  "blue": "#97731F",
+  "sky": "#F5EFE2",
+  "gold": "#D9B45E",
+  "ink": "#16202E",
+  "fonts": "https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700&display=swap",
+  "bf": "Montserrat, system-ui, sans-serif",
+  "h1s": "60px",
+  "h1m": "42px"
+ },
+ "hero": {
+  "img": "img/78-hero.webp",
+  "alt": "The historic Setauket Post Office on a fall afternoon",
+  "pos": "50% 45%"
+ },
+ "headshot": "img/78-head.webp",
+ "headshot_alt": "Frank Girard, CFP®, Girard Wealth Management Group",
+ "logo": "img/78-logo.webp",
+ "logo_hero": "img/78-logo-white.png",
+ "phone": "6315270205",
+ "phone_label": "Call the office",
+ "address": "376 Mark Tree Rd, East Setauket, NY 11733",
+ "address_label": "Office",
+ "maps": "Girard Wealth Management Group, 376 Mark Tree Rd, East Setauket, NY 11733",
+ "website": "https://www.girardwmg.com/",
+ "facebook": "https://www.facebook.com/girardwmg",
+ "contact_cta": {
+  "k": "Planning ahead?",
+  "t": "Start a conversation"
+ },
+ "actions": [
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16315270205",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Message",
+   "i": "msg",
+   "u": "/girard-wealth-management-group/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://www.girardwmg.com/",
+   "a": "website"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
+ ],
+ "vcard": {
+  "n": "Girard;Francis;J.;;",
+  "fn": "Frank Girard",
+  "org": "Girard Wealth Management Group",
+  "title": "President and CEO"
+ },
+ "ticker": [
+  "Financial planning",
+  "Retirement planning",
+  "Investment strategies",
+  "Business and corporate retirement plans",
+  "Education planning",
+  "Estate and charitable giving",
+  "376 Mark Tree Rd, East Setauket"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Wealth management *built on trust.*",
+  "text": "Girard Wealth Management Group is Frank Girard's financial planning practice on Mark Tree Road in East Setauket, a private wealth advisory practice of Raymond James. Frank holds the CFP®, ChFC, CLU and CFS designations, grew up in Dix Hills and lives in East Setauket. He works with a team: James L. McLoughlin, AIF, Branch Manager Arthur Gonsalves, Office Manager Lauren Lobo and Client Service Associates Eva Girard and Linxiu Song."
+ },
+ "goals": {
+  "k": "Where are you headed?",
+  "t": "What are you *planning for?*",
+  "chips_k": "Planning areas",
+  "items": [
+   {
+    "t": "Retirement",
+    "h": "Plan the years after work.",
+    "d": "Retirement planning covers the decisions before and during retirement, from income to investments.",
+    "b": [
+     "Retirement income planning",
+     "Investment review",
+     "Decisions before you retire"
+    ],
+    "c": [
+     "Retirement",
+     "Income"
+    ],
+    "cta": "Ask about retirement"
+   },
+   {
+    "t": "Investing",
+    "h": "A strategy built around your goals.",
+    "d": "Investment strategies and portfolio management tailored to your goals, risk tolerance and liquidity needs.",
+    "b": [
+     "Portfolio management",
+     "Fixed income services",
+     "Ongoing account reviews"
+    ],
+    "c": [
+     "Portfolios",
+     "Fixed income"
+    ],
+    "cta": "Ask about investing"
+   },
+   {
+    "t": "Business owners",
+    "h": "Planning for the business and the owner.",
+    "d": "Business planning and corporate retirement plans, from setting a plan up to overseeing it.",
+    "b": [
+     "Corporate retirement plans",
+     "Business planning",
+     "Owner planning"
+    ],
+    "c": [
+     "401(k) plans",
+     "Business planning"
+    ],
+    "cta": "Ask about business planning"
+   },
+   {
+    "t": "Family and legacy",
+    "h": "College, estate and giving.",
+    "d": "Education planning, estate planning considerations, charitable giving and trusts, coordinated with your tax and legal professionals.",
+    "b": [
+     "College savings",
+     "Estate considerations",
+     "Charitable giving"
+    ],
+    "c": [
+     "Education",
+     "Estate",
+     "Giving"
+    ],
+    "cta": "Ask about legacy planning"
+   }
+  ]
+ },
+ "services_k": "Who you'll work with",
+ "services_t": "Meet *the team*",
+ "services": [
+  {
+   "t": "Francis J. Girard, CFS, CFP®, ChFC, CLU",
+   "d": "President and CEO, Girard Wealth Management Group. Senior Financial Advisor, RJFS."
+  },
+  {
+   "t": "James L. McLoughlin, AIF",
+   "d": "Vice President, Senior Financial Advisor, RJFS."
+  },
+  {
+   "t": "Arthur Gonsalves",
+   "d": "Branch Manager, RJFS."
+  },
+  {
+   "t": "Lauren Lobo, Eva Girard and Linxiu Song",
+   "d": "Office Manager and Client Service Associates."
+  }
+ ],
+ "faq_t": "Planning *FAQ*",
+ "faq": [
+  [
+   "Where is the office?",
+   "376 Mark Tree Road in East Setauket. Call 631-527-0205 to set up a meeting."
+  ],
+  [
+   "What services do they offer?",
+   "Financial planning, retirement planning, investment strategies, business and corporate retirement plans, education planning, and estate, charitable giving and trust considerations."
+  ],
+  [
+   "Do they give tax or legal advice?",
+   "No. Raymond James does not provide tax or legal services. They coordinate with your tax and legal professionals."
+  ]
+ ],
+ "final": {
+  "k": "Girard Wealth Management Group",
+  "t": "Let's talk about *what's next.*",
+  "text": "Call the East Setauket office or send a message to start the conversation.",
+  "btn": "Send a message"
+ },
+ "side_name": "Girard Wealth Management Group",
+ "side_sub": "Raymond James · East Setauket",
+ "side_contact": "Send a message",
+ "compliance": "Girard Wealth Management Group is not a registered broker/dealer and is independent of Raymond James Financial Services, Inc. Investment advisory services offered through Raymond James Financial Services Advisors, Inc. Raymond James financial advisors may only conduct business with residents of the states and/or jurisdictions for which they are properly registered. Investing involves risk and you may incur a profit or loss regardless of strategy selected, including diversification and asset allocation. Raymond James does not provide tax or legal services. Please discuss these matters with the appropriate professional. Certified Financial Planner Board of Standards Center for Financial Planning, Inc. owns and licenses the certification marks CFP®, CERTIFIED FINANCIAL PLANNER®, and CFP® (with plaque design) in the United States to Certified Financial Planner Board of Standards, Inc., which authorizes individuals who successfully complete the organization's initial and ongoing certification requirements to use the certification marks."
+}

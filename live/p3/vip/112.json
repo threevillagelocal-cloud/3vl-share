@@ -1,0 +1,220 @@
+{
+ "uid": "112",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "The O'Dwyer-Brainard Team at Daniel Gale Sotheby's International Realty",
+ "short": "The O'Dwyer-Brainard Team",
+ "first": "Holly and Michael",
+ "brand": "Daniel Gale Sotheby's International Realty",
+ "category": "Real Estate",
+ "kicker": "Daniel Gale Sotheby's International Realty · Stony Brook",
+ "sub": "Holly Brainard and Michael O'Dwyer · Old homes. New chapters. Trusted advisors.",
+ "pills": [
+  "🏛️ Historic home specialists"
+ ],
+ "theme": {
+  "navy": "#002F6C",
+  "navy2": "#123F7E",
+  "blue": "#9A7417",
+  "sky": "#F6F1E2",
+  "gold": "#E8C14E",
+  "ink": "#1F2630",
+  "fonts": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700;900&display=swap",
+  "hf": "'Cormorant Garamond', Georgia, serif",
+  "hw": "700",
+  "hcase": "none",
+  "hls": "0",
+  "bf": "Lato, system-ui, sans-serif",
+  "h1s": "56px",
+  "h2s": "40px",
+  "h1m": "38px",
+  "h2m": "31px"
+ },
+ "hero": {
+  "img": "img/112-hero.webp",
+  "alt": "Michael O'Dwyer and Holly Brainard talking under a garden pergola",
+  "pos": "42% 30%"
+ },
+ "logo": "img/112-logo.png",
+ "phone": "6312353300",
+ "phone_label": "Call the team",
+ "email": "hollyandmichael@danielgale.com",
+ "address": "1067 Route 25A, Stony Brook, NY 11790",
+ "address_label": "Daniel Gale Sotheby's office",
+ "maps": "Daniel Gale Sotheby's International Realty, 1067 NY-25A, Stony Brook, NY 11790",
+ "website": "https://yourlihome.com/",
+ "instagram": "theodwyerbrainardteam",
+ "facebook": "https://www.facebook.com/theodwyerbrainardteam",
+ "contact_cta": {
+  "k": "Thinking about selling?",
+  "t": "Ask Holly and Michael"
+ },
+ "actions": [
+  {
+   "t": "Call the team",
+   "i": "call",
+   "u": "tel:+16312353300",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Message",
+   "i": "msg",
+   "u": "/the-odwyer-brainard-team-at-daniel-gale-sothebys-international-realty/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://yourlihome.com/",
+   "a": "website"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
+ ],
+ "vcard": {
+  "n": "Brainard;Holly;;;",
+  "fn": "The O'Dwyer-Brainard Team",
+  "org": "Daniel Gale Sotheby's International Realty",
+  "title": "Associate Real Estate Brokers"
+ },
+ "ticker": [
+  "40+ years of North Shore real estate",
+  "Associate Real Estate Brokers",
+  "Historic home expertise",
+  "Three Village Historical Society members",
+  "Certified Buyer Representatives",
+  "Karing for Kids co-founders",
+  "Sotheby's International Realty network"
+ ],
+ "intro": {
+  "k": "Meet your neighbors",
+  "t": "Local roots. *Global reach.*",
+  "text": "Holly Brainard is a lifelong Three Village resident and Three Village schools graduate who came to real estate from a tech career at IBM. Michael O'Dwyer grew up in St. James and has spent more than 40 years in North Shore real estate, carrying on the family business his mother Virginia O'Dwyer started. Both are active members of the Three Village Historical Society, and both have a soft spot for old houses.",
+  "quote": "The O'Dwyer-Brainard team made selling our parents home one of the easiest things we've ever done!",
+  "by": "Susan C., Stony Brook"
+ },
+ "gallery_k": "Holly and Michael",
+ "gallery_t": "Meet the *team*",
+ "gallery": [
+  {
+   "img": "img/112-g1.webp",
+   "alt": "Holly Brainard and Michael O'Dwyer at a white kitchen counter"
+  },
+  {
+   "img": "img/112-g2.webp",
+   "alt": "Waterfront boardwalk on Long Island's North Shore"
+  },
+  {
+   "img": "img/112-g3.webp",
+   "alt": "Holly Brainard, Associate Real Estate Broker"
+  },
+  {
+   "img": "img/112-g4.webp",
+   "alt": "Michael O'Dwyer, Associate Real Estate Broker, by the water"
+  }
+ ],
+ "goals": {
+  "k": "How can they help?",
+  "t": "What's your *next chapter?*",
+  "chips_k": "They handle",
+  "items": [
+   {
+    "t": "Selling",
+    "h": "Your home deserves more than a listing.",
+    "d": "Pricing, preparation, presentation and marketing, then negotiation and contract-to-close coordination.",
+    "b": [
+     "Pricing strategy",
+     "Professional marketing",
+     "Contract-to-close coordination"
+    ],
+    "c": [
+     "Pricing",
+     "Marketing",
+     "Negotiation"
+    ],
+    "cta": "Ask about selling"
+   },
+   {
+    "t": "Buying",
+    "h": "Understand what you're buying.",
+    "d": "First-time, move-up and luxury buyers get help weighing the neighborhood, condition, improvements and value, not just the house.",
+    "b": [
+     "Neighborhood guidance",
+     "Condition and value",
+     "Offer strategy"
+    ],
+    "c": [
+     "First-time buyers",
+     "Move-up",
+     "Luxury"
+    ],
+    "cta": "Ask about buying"
+   },
+   {
+    "t": "Historic homes",
+    "h": "Old houses need a trained eye.",
+    "d": "Michael has decades of hands-on experience with historic North Shore properties, and Holly is restoring her second historic home, a 200-year-old house.",
+    "b": [
+     "Historic and antique homes",
+     "Restoration perspective",
+     "Distinctive North Shore properties"
+    ],
+    "c": [
+     "Historic",
+     "Antique",
+     "Restoration"
+    ],
+    "cta": "Talk historic homes"
+   },
+   {
+    "t": "Downsizing",
+    "h": "Selling the family home, gently.",
+    "d": "Guidance for longtime owners and families selling a parent's home, plus relocation help for families on the move.",
+    "b": [
+     "Longtime homeowners",
+     "Family home sales",
+     "Relocation"
+    ],
+    "c": [
+     "Downsizing",
+     "Relocation"
+    ],
+    "cta": "Start the conversation"
+   }
+  ]
+ },
+ "reviews": {
+  "t": "Worked with Holly and Michael?",
+  "text": "Your review helps the next Three Village family choose with confidence."
+ },
+ "faq_t": "Real estate *FAQ*",
+ "faq": [
+  [
+   "What areas do they serve?",
+   "Stony Brook, Setauket, East Setauket, Port Jefferson, St. James, Smithtown and the surrounding North Shore communities."
+  ],
+  [
+   "Do they work with historic homes?",
+   "Yes. Michael has more than 40 years of North Shore experience with historic properties, and Holly is restoring her own 200-year-old home."
+  ],
+  [
+   "What is Karing for Kids?",
+   "An annual fundraiser Holly and Michael co-founded to benefit Stony Brook Children's Hospital."
+  ]
+ ],
+ "final": {
+  "k": "The O'Dwyer-Brainard Team",
+  "t": "Let's talk about *your next move.*",
+  "text": "Ask a question, discuss your home's value or tell Holly and Michael what you're looking for.",
+  "btn": "Message the team"
+ },
+ "side_name": "The O'Dwyer-Brainard Team",
+ "side_sub": "Daniel Gale Sotheby's International Realty · Stony Brook",
+ "side_contact": "Message the team",
+ "compliance": "Holly Brainard and Michael O'Dwyer, Associate Real Estate Brokers, Daniel Gale Sotheby's International Realty, 1067 Route 25A, Stony Brook, NY 11790. Sotheby's International Realty® and the Sotheby's International Realty Logo are service marks licensed to Sotheby's International Realty Affiliates LLC and used with permission. Each office is independently owned and operated. Equal Housing Opportunity.",
+ "compliance_logo": "img/122-eho.png"
+}

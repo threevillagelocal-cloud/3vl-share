@@ -1,0 +1,247 @@
+{
+ "uid": "138",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "TJ Sirani at Zuma Payroll",
+ "short": "TJ Sirani",
+ "first": "TJ",
+ "brand": "Zuma Payroll & Processing",
+ "category": "Payroll Services",
+ "kicker": "Zuma Payroll & Processing · Melville",
+ "sub": "Payroll and HR for Long Island businesses · In payroll since 2004",
+ "pills": [
+  "🏡 Three Village resident"
+ ],
+ "theme": {
+  "navy": "#0A2A52",
+  "navy2": "#0D3E78",
+  "blue": "#0355A4",
+  "sky": "#EAF2FB",
+  "gold": "#9CCBFF",
+  "ink": "#14202E",
+  "fonts": "https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Roboto:wght@400;500;700&display=swap",
+  "hf": "Montserrat, system-ui, sans-serif",
+  "hw": "900",
+  "hcase": "none",
+  "hls": "-.02em",
+  "bf": "Roboto, system-ui, sans-serif",
+  "h1s": "62px",
+  "h2s": "36px",
+  "h1m": "46px",
+  "h2m": "28px"
+ },
+ "hero": {
+  "img": "img/138-hero.webp",
+  "alt": "Stony Brook Harbor on a calm day",
+  "pos": "40% 50%"
+ },
+ "headshot": "img/138-head.webp",
+ "headshot_alt": "TJ Sirani, Zuma Payroll & Processing",
+ "logo": "img/138-logo.png",
+ "phone": "6315256201",
+ "phone_label": "Call TJ direct",
+ "email": "tsirani@zumapay.com",
+ "address": "175 Broadhollow Rd, Suite 190, Melville, NY 11747",
+ "address_label": "Zuma headquarters",
+ "maps": "Zuma Payroll & Processing, 175 Broadhollow Rd, Melville, NY 11747",
+ "website": "https://www.zumapay.com/",
+ "facebook": "https://www.facebook.com/zumapayroll/",
+ "contact_cta": {
+  "k": "Thinking of switching?",
+  "t": "Get a payroll comparison"
+ },
+ "actions": [
+  {
+   "t": "Call TJ",
+   "i": "call",
+   "u": "tel:+16315256201",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Email TJ",
+   "i": "mail",
+   "u": "mailto:tsirani@zumapay.com",
+   "a": "email"
+  },
+  {
+   "t": "Message",
+   "i": "msg",
+   "u": "/tj-sirani-at-zuma-payroll/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
+ ],
+ "vcard": {
+  "n": "Sirani;TJ;;;",
+  "fn": "TJ Sirani",
+  "org": "Zuma Payroll & Processing",
+  "title": "Payroll and HR consultant"
+ },
+ "ticker": [
+  "In payroll since 2004",
+  "Full-service payroll and tax filings",
+  "HR and onboarding",
+  "Time and attendance",
+  "Certified and union payroll",
+  "Pay-as-you-go workers' comp",
+  "ACA compliance",
+  "Zuma named to the 2024 Inc. 5000"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Payroll help from someone *who picks up the phone.*",
+  "text": "TJ Sirani has worked in payroll since 2004, starting at Certified Payroll & Tax Services and spending seven years as Senior Territory Manager and Director of Sales for Suffolk at Long Island Advantage Payroll. In January 2024 he joined Zuma Payroll & Processing, the Melville company founded in 2006 and named to the 2024 Inc. 5000. A Three Village resident, TJ helps local owners move payroll, HR and time tracking into one place, with a real person to call."
+ },
+ "goals": {
+  "k": "How can TJ help?",
+  "t": "What's *slowing you down?*",
+  "chips_k": "Zuma handles",
+  "items": [
+   {
+    "t": "Payroll",
+    "h": "Payroll and payroll taxes, handled.",
+    "d": "End-to-end payroll processing with payroll tax filings done on time.",
+    "b": [
+     "Full-service payroll",
+     "Payroll tax filings",
+     "Employee self-service app"
+    ],
+    "c": [
+     "Payroll",
+     "Taxes",
+     "W-2s"
+    ],
+    "cta": "Ask TJ about payroll"
+   },
+   {
+    "t": "HR",
+    "h": "HR support for small teams.",
+    "d": "Policies, onboarding and compliance guidance, all in the same platform as payroll.",
+    "b": [
+     "Onboarding",
+     "HR policies",
+     "I-9 and wage-and-hour guardrails"
+    ],
+    "c": [
+     "Onboarding",
+     "HR",
+     "Compliance"
+    ],
+    "cta": "Ask TJ about HR"
+   },
+   {
+    "t": "Time and PTO",
+    "h": "Time tracking that flows into payroll.",
+    "d": "Time and attendance, scheduling, PTO and overtime controls on one dashboard.",
+    "b": [
+     "Time and attendance",
+     "Scheduling",
+     "PTO requests"
+    ],
+    "c": [
+     "Time clock",
+     "PTO",
+     "Scheduling"
+    ],
+    "cta": "Ask TJ about time tracking"
+   },
+   {
+    "t": "Contractors",
+    "h": "Built for construction and union payroll.",
+    "d": "Certified payroll, union reports and job costing for contractors and trades.",
+    "b": [
+     "Certified payroll",
+     "Union benefit reports",
+     "Job costing"
+    ],
+    "c": [
+     "Construction",
+     "Union",
+     "Trades"
+    ],
+    "cta": "Ask TJ about contractor payroll"
+   },
+   {
+    "t": "Restaurants",
+    "h": "Tips, overtime and workers' comp.",
+    "d": "Food service tools for tips, overtime and scheduling, plus pay-as-you-go workers' comp.",
+    "b": [
+     "Tip reporting",
+     "Overtime controls",
+     "Pay-as-you-go workers' comp"
+    ],
+    "c": [
+     "Restaurants",
+     "Hospitality"
+    ],
+    "cta": "Ask TJ about restaurant payroll"
+   }
+  ]
+ },
+ "hours_k": "Office hours",
+ "hours_t": "When to *reach TJ*",
+ "hours": {
+  "mon": [
+   "09:00",
+   "17:00"
+  ],
+  "tue": [
+   "09:00",
+   "17:00"
+  ],
+  "wed": [
+   "09:00",
+   "18:00"
+  ],
+  "thu": [
+   "09:00",
+   "17:00"
+  ],
+  "fri": [
+   "09:00",
+   "16:00"
+  ]
+ },
+ "reviews": {
+  "t": "Switched your payroll with TJ?",
+  "text": "Your review helps the next Three Village business owner make the move."
+ },
+ "faq_t": "Payroll *FAQ*",
+ "faq": [
+  [
+   "What size businesses does Zuma work with?",
+   "From one employee up to 1,000, including main-street shops, restaurants and contractors."
+  ],
+  [
+   "What do I need to switch?",
+   "Bring your last payroll report and your tax IDs, and TJ's team handles the setup."
+  ],
+  [
+   "Where is Zuma based?",
+   "Melville, Long Island. Zuma Payroll & Processing was founded in 2006."
+  ]
+ ],
+ "final": {
+  "k": "TJ Sirani · Zuma Payroll",
+  "t": "Get a *side-by-side* payroll comparison.",
+  "text": "Call TJ directly or send a message with what you use now.",
+  "btn": "Message TJ"
+ },
+ "side_sub": "Zuma Payroll & Processing · Melville",
+ "side_contact": "Message TJ",
+ "side_extra": {
+  "t": "Email TJ",
+  "u": "mailto:tsirani@zumapay.com",
+  "a": "email"
+ },
+ "sticky_extra": {
+  "t": "Email",
+  "u": "mailto:tsirani@zumapay.com",
+  "a": "email"
+ }
+}

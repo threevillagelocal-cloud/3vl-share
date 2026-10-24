@@ -1,0 +1,213 @@
+{
+ "uid": "71",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "Team Passamenti at Better Homes and Gardens Real Estate Realty Connect",
+ "short": "Team Passamenti",
+ "first": "John and Kerri",
+ "brand": "Better Homes and Gardens Real Estate Realty Connect",
+ "category": "Real Estate",
+ "kicker": "Better Homes and Gardens Real Estate Realty Connect",
+ "sub": "John and Kerri Passamenti · Long Island's Real Estate Couple",
+ "pills": [
+  "🐾 East Setauket office"
+ ],
+ "theme": {
+  "navy": "#1B4558",
+  "navy2": "#27627C",
+  "blue": "#2F6A82",
+  "sky": "#E9F4F8",
+  "gold": "#9FD6EA",
+  "ink": "#1D2A30",
+  "fonts": "https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Lato:wght@400;700;900&display=swap",
+  "hf": "Merriweather, Georgia, serif",
+  "hw": "900",
+  "hcase": "none",
+  "hls": "-.01em",
+  "bf": "Lato, system-ui, sans-serif",
+  "h1s": "50px",
+  "h2s": "32px",
+  "h1m": "36px",
+  "h2m": "26px"
+ },
+ "hero": {
+  "img": "img/71-hero.webp",
+  "alt": "John and Kerri Passamenti with their two dogs",
+  "pos": "78% 30%"
+ },
+ "headshot": "img/71-head.webp",
+ "headshot_alt": "John and Kerri Passamenti, Team Passamenti",
+ "phone": "6313357019",
+ "phone_label": "Call John and Kerri",
+ "address": "764 Route 25A, Suite 1, East Setauket, NY 11733",
+ "address_label": "East Setauket office",
+ "maps": "764 NY-25A Suite 1, East Setauket, NY 11733",
+ "website": "https://www.longislandrealestatecouple.com/",
+ "instagram": "longislandrealestatecouple",
+ "facebook": "https://www.facebook.com/longislandrealestatecouple",
+ "contact_cta": {
+  "k": "Buying or selling?",
+  "t": "Message John and Kerri"
+ },
+ "actions": [
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16313357019",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Message",
+   "i": "msg",
+   "u": "/team-passamenti-at-better-homes-and-gardens-real-estate-realty-connect/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Search homes",
+   "i": "web",
+   "u": "https://www.longislandrealestatecouple.com/",
+   "a": "website"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
+ ],
+ "vcard": {
+  "n": "Passamenti;John and Kerri;;;",
+  "fn": "Team Passamenti",
+  "org": "Better Homes and Gardens Real Estate Realty Connect",
+  "title": "REALTORS"
+ },
+ "ticker": [
+  "Long Island's Real Estate Couple",
+  "Retired NYPD Lieutenant of Detectives",
+  "Adelphi University marketing grad",
+  "Pro photos, drone and video",
+  "First-time buyers to investors",
+  "Relocation help",
+  "Guide Dog Foundation volunteer"
+ ],
+ "intro": {
+  "k": "Meet your neighbors",
+  "t": "Two different skill sets, *one team.*",
+  "text": "John retired as an NYPD Lieutenant of Detectives after a 20+ year career and brings planning, negotiation and calm under pressure. Kerri spent 10 years in the corporate world and holds a marketing degree from Adelphi University, so your home gets modern, digital-first marketing. They got into real estate after their own less-than-stellar experiences buying and selling, and decided to do it differently.",
+  "quote": "They care about your needs and listen to you. They do whatever they have to do from start to finish.",
+  "by": "A Team Passamenti seller"
+ },
+ "gallery_k": "John, Kerri and the pups",
+ "gallery_t": "Meet *the team*",
+ "gallery": [
+  {
+   "img": "img/71-g1.webp",
+   "alt": "John Passamenti with the team's bulldog and poodle"
+  },
+  {
+   "img": "img/71-g2.webp",
+   "alt": "Kerri Passamenti with the team's two dogs"
+  },
+  {
+   "img": "img/71-g3.webp",
+   "alt": "John and Kerri Passamenti portrait"
+  }
+ ],
+ "goals": {
+  "k": "How can they help?",
+  "t": "Where are you *headed?*",
+  "chips_k": "Ask about",
+  "items": [
+   {
+    "t": "Selling",
+    "h": "Marketing that gets your home seen.",
+    "d": "Pricing strategy plus professional photos, drone, floor plans, video and targeted digital marketing, then steady negotiation to the closing table.",
+    "b": [
+     "Pricing strategy",
+     "Photos, drone, floor plans, video",
+     "Offer review and negotiation"
+    ],
+    "c": [
+     "Pricing",
+     "Digital marketing",
+     "Negotiation"
+    ],
+    "cta": "Ask about selling"
+   },
+   {
+    "t": "Buying",
+    "h": "Find the right home, without the stress.",
+    "d": "First-time buyers, upsizing, downsizing, condos and co-ops, with John and Kerri at every step.",
+    "b": [
+     "Home search",
+     "Neighborhood guidance",
+     "Offer strategy"
+    ],
+    "c": [
+     "First-time",
+     "Upsizing",
+     "Downsizing"
+    ],
+    "u": "https://www.longislandrealestatecouple.com/",
+    "cta": "Search homes"
+   },
+   {
+    "t": "Relocating",
+    "h": "Moving to or from Long Island.",
+    "d": "They coordinate the moving parts, including the agent on the other end, so both sides stay on the same page.",
+    "b": [
+     "Coordinated timing",
+     "Out-of-state moves",
+     "One point of contact"
+    ],
+    "c": [
+     "Relocation"
+    ],
+    "cta": "Ask about relocating"
+   },
+   {
+    "t": "Investing",
+    "h": "Property for the long run.",
+    "d": "John and Kerri manage their own investment properties and guide investors buying on Long Island.",
+    "b": [
+     "Investment property search",
+     "Rental-minded advice",
+     "Portfolio guidance"
+    ],
+    "c": [
+     "Investors"
+    ],
+    "cta": "Talk investing"
+   }
+  ]
+ },
+ "reviews": {
+  "t": "Worked with John and Kerri?",
+  "text": "Your review helps the next Three Village family find the right team."
+ },
+ "faq_t": "Real estate *FAQ*",
+ "faq": [
+  [
+   "Who is on the team?",
+   "John Passamenti, a retired NYPD Lieutenant of Detectives, and Kerri Passamenti, a marketing grad from Adelphi University. They work every deal together."
+  ],
+  [
+   "How do they market a home?",
+   "Pricing strategy, professional photos, drone, floor plans, video and targeted digital and social marketing."
+  ],
+  [
+   "Where is their office?",
+   "764 Route 25A, Suite 1 in East Setauket. They serve Three Village and the wider Long Island market."
+  ]
+ ],
+ "final": {
+  "k": "Team Passamenti",
+  "t": "Let's talk about *your move.*",
+  "text": "Call or send John and Kerri a message.",
+  "btn": "Message the team"
+ },
+ "side_sub": "Better Homes and Gardens Real Estate Realty Connect",
+ "side_contact": "Message John and Kerri",
+ "compliance": "John and Kerri Passamenti, REALTORS®, Better Homes and Gardens Real Estate Realty Connect, 764 Route 25A, Suite 1, East Setauket, NY 11733. Each office is independently owned and operated. Equal Housing Opportunity.",
+ "compliance_logo": "img/122-eho.png"
+}
