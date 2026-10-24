@@ -27,7 +27,7 @@
   "h1m": "42px",
   "h2m": "30px"
  },
- "hero": {"img": "img/158-hero.webp", "alt": "Lawns R Us green striped lawn graphic with mower icon", "pos": "70% 50%"},
+ "hero": {"img": "img/158-hero-lawn.webp", "alt": "Freshly mowed striped front lawn in front of a blue colonial home", "pos": "50% 60%"},
  "logo": "img/158-logo.png",
  "logo_hero": "img/158-logo-white.png",
  "brand": "Lawns R Us NY",

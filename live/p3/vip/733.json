@@ -30,9 +30,9 @@
   "h2m": "29px"
  },
  "hero": {
-  "img": "img/733-hero2.webp",
-  "alt": "Harvest Small Business Finance brand panel",
-  "pos": "50% 50%"
+  "img": "img/733-hero-warehouse.webp",
+  "alt": "Small business team working in a warehouse with packages on conveyor lines",
+  "pos": "60% 50%"
  },
  "headshot": "img/733-head.webp",
  "headshot_alt": "Elliott Levine, SVP Business Development, Harvest",

@@ -27,9 +27,9 @@
   "bf": "Inter, system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/364-hero.webp",
-  "alt": "Hart Orthopedics brand navy background",
-  "pos": "50% 50%"
+  "img": "img/364-hero-xray.webp",
+  "alt": "A foot X-ray reviewed on a tablet during an orthopedic visit",
+  "pos": "62% 50%"
  },
  "headshot": "img/364-head.webp",
  "headshot_alt": "Dr. Jeffrey D. Hart, DO, orthopedic surgeon",

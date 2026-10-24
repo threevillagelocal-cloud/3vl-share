@@ -31,9 +31,9 @@
   "h2m": "27px"
  },
  "hero": {
-  "img": "img/240-hero.webp",
-  "alt": "JM Management Solutions gold JM monogram on navy",
-  "pos": "80% 40%"
+  "img": "img/240-hero-books.webp",
+  "alt": "Bookkeeping at a desk with a calculator, ledger and paperwork",
+  "pos": "60% 50%"
  },
  "headshot": "img/240-head.webp",
  "headshot_alt": "John McGregor, founder of JM Management Solutions",
