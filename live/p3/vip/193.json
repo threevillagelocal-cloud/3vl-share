@@ -1,0 +1,63 @@
+{
+ "uid": "193",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "Team Patel at Douglas Elliman Real Estate",
+ "short": "Team Patel",
+ "first": "Devang",
+ "brand": "Douglas Elliman Real Estate",
+ "category": "Real Estate",
+ "kicker": "Douglas Elliman Real Estate · Setauket",
+ "sub": "Residential and commercial real estate across Long Island",
+ "pills": ["💎 2026 Ellies Diamond Award"],
+ "theme": {"navy": "#0F2A44", "navy2": "#163A5C", "blue": "#009CC5", "sky": "#E6F6FA", "gold": "#7FDCF2", "fonts": "https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Inter:wght@400;600;700&display=swap", "hf": "'Libre Baskerville', serif", "hw": "700", "hcase": "none", "hls": "-.01em", "bf": "Inter, system-ui, sans-serif", "h1s": "54px", "h2s": "34px", "h1m": "40px", "h2m": "28px"},
+ "hero": {"img": "img/193-hero.webp", "alt": "Devang Patel standing at the gate of an estate home", "pos": "50% 40%"},
+ "headshot": "img/193-head.webp",
+ "headshot_alt": "Devang Patel, Douglas Elliman Real Estate",
+ "logo": "img/193-logo.png",
+ "phone": "6312202860",
+ "phone_label": "Call or text Devang",
+ "address": "300 Main St, Setauket, NY 11733",
+ "address_label": "Douglas Elliman office",
+ "maps": "Douglas Elliman Real Estate, 300 Main St, Setauket, NY 11733",
+ "website": "https://teampatelny.com/",
+ "instagram": "teampatelny",
+ "facebook": "https://www.facebook.com/DavePatelRealEstate",
+ "linkedin": "https://www.linkedin.com/in/devangpatelatteampatel/",
+ "contact_cta": {"k": "What's your home worth?", "t": "Ask Team Patel"},
+ "actions": [
+  {"t": "Call or text", "i": "call", "u": "tel:+16312202860", "a": "call", "pri": 1},
+  {"t": "Message", "i": "msg", "u": "/team-patel-at-douglas-elliman-real-estate/connect", "a": "contact"},
+  {"t": "Search homes", "i": "web", "u": "https://teampatelny.com/", "a": "website"},
+  {"t": "Save contact", "i": "card", "a": "vcard"}
+ ],
+ "vcard": {"n": "Patel;Devang;;;", "fn": "Devang Patel", "org": "Team Patel at Douglas Elliman Real Estate", "title": "Licensed Real Estate Salesperson"},
+ "ticker": ["2026 Ellies Diamond Award", "Top 6% of Douglas Elliman agents", "Residential and commercial", "Probate and estate sales", "72 Google reviews", "English, Hindi, Gujarati, Urdu, Punjabi"],
+ "intro": {"k": "Meet your neighbor", "t": "Residential and commercial, *one trusted team.*",
+  "text": "Team Patel is Devang Patel and Pinky Parikh at Douglas Elliman's Setauket office. For nearly a decade they've helped Long Island buyers and sellers with homes, commercial property, and probate and estate sales, earning Douglas Elliman's 2026 Ellies Diamond Award for the top 6% of agents. They speak English, Hindi, Gujarati, Urdu and Punjabi."},
+ "gallery_k": "Team Patel", "gallery_t": "Recognized *by Douglas Elliman*",
+ "gallery": [
+  {"img": "img/193-g1.webp", "alt": "Devang Patel and Pinky Parikh at the Douglas Elliman Ellies awards"},
+  {"img": "img/193-g2.webp", "alt": "Pinky Parikh at the Ellies awards wall"},
+  {"img": "img/193-g3.webp", "alt": "2026 Ellies award graphic for Team Patel"},
+  {"img": "img/193-g4.webp", "alt": "2026 Ellies award graphic for Devang Patel"},
+  {"img": "img/193-g5.webp", "alt": "Team Patel ranked in 2026 RealTrends Verified"}
+ ],
+ "goals": {"k": "How can they help?", "t": "What's your *next move?*", "chips_k": "They handle", "items": [
+  {"t": "Selling", "h": "Pricing and marketing that brings serious buyers.", "d": "From your home's value to closing day, Team Patel builds the plan.", "b": ["Free home valuation", "Marketing plan", "Negotiation"], "c": ["Valuation", "Marketing", "Negotiation"], "cta": "Ask about selling"},
+  {"t": "Buying", "h": "Find the right home with a local team.", "d": "Search homes across Nassau and Suffolk with guidance at every step.", "b": ["Home search", "Market guidance", "Offer strategy"], "c": ["First-time buyers", "Move-up buyers"], "u": "https://teampatelny.com/", "cta": "Search homes"},
+  {"t": "Commercial", "h": "Retail space to investment property.", "d": "Devang ranked #2 on Long Island for commercial at the 2026 Ellies.", "b": ["Retail and office", "Investment property", "Leasing and sales"], "c": ["Retail", "Investment"], "cta": "Talk commercial"},
+  {"t": "Probate & estate", "h": "Selling a home in an estate or trust.", "d": "Patient guidance for families handling probate, estate and trust sales.", "b": ["Probate sales", "Estate and trust property", "Coordination with attorneys"], "c": ["Probate", "Estate", "Trust"], "cta": "Ask about estate sales"}
+ ]},
+ "reviews": {"t": "72 Google reviews", "text": "Worked with Team Patel? Your review helps the next family choose with confidence.", "url": "https://www.google.com/search?q=Team+Patel+Douglas+Elliman+reviews"},
+ "faq_t": "Real estate *FAQ*",
+ "faq": [
+  ["Do they handle commercial property?", "Yes. Team Patel works with residential and commercial clients, from retail spaces to investment properties."],
+  ["Can they help sell a house in an estate?", "Yes. They handle probate, estate and trust sales."],
+  ["What languages do they speak?", "English, Hindi, Gujarati, Urdu and Punjabi."]
+ ],
+ "final": {"k": "Team Patel · Douglas Elliman", "t": "Let's talk about *your move.*", "text": "Call, text or send a message.", "btn": "Message Team Patel"},
+ "side_sub": "Douglas Elliman Real Estate · Setauket",
+ "side_contact": "Message Team Patel",
+ "compliance": "Devang Patel, Licensed Real Estate Salesperson. Pinky Parikh, Licensed Associate Real Estate Broker. Douglas Elliman Real Estate. Equal Housing Opportunity."
+}
