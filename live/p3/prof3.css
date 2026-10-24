@@ -198,7 +198,7 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 @media(prefers-reduced-motion:reduce){#pv3 *{animation:none!important;transition:none!important}#pv3.ready .up{opacity:1;transform:none}}
 
 /* banner hero (hero.banner: true): wide 12:5 photo with no text on it, name block underneath (owner 10/24/2026) */
-#pv3 .h.bn{min-height:0;display:block;aspect-ratio:12/5}
+#pv3 .h.bn{min-height:0;display:block;aspect-ratio:12/5}#pv3 .h.bn>img.bg{animation:none}
 #pv3 .h.bn:after{background:linear-gradient(180deg,rgba(6,10,20,.38) 0%,rgba(6,10,20,0) 28%)}
 #pv3 .hin.hb{color:var(--ink);padding:20px 6px 4px}
 #pv3 .hin.hb h1{color:var(--navy);text-shadow:none}
