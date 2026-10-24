@@ -204,4 +204,4 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 #pv3 .hin.hb h1{color:var(--navy);text-shadow:none}
 #pv3 .hin.hb .k{color:var(--blue);text-shadow:none}
 #pv3 .hin.hb .sub{color:var(--ink);opacity:.75}
-@media(max-width:640px){#pv3 .h.bn{min-height:0;aspect-ratio:16/9}#pv3 .hin.hb{padding:16px 4px 2px}}
+@media(max-width:640px){#pv3 .h.bn{min-height:0;aspect-ratio:auto;background:transparent;box-shadow:none;border-radius:0;overflow:visible}#pv3 .h.bn>img.bg{position:relative;inset:auto;height:auto!important;aspect-ratio:12/5;border-radius:18px!important;box-shadow:0 14px 34px rgba(11,31,75,.18);animation:none}#pv3 .h.bn:after{display:none}#pv3 .h.bn .top{position:static;padding:12px 0 0}#pv3 .hin.hb{padding:14px 4px 2px}}
