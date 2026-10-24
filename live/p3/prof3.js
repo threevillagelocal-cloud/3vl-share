@@ -61,7 +61,7 @@ function render(d){
   function H2(t){return '<h2 class="h2">'+esc(t).replace(/\*(.+?)\*/g,'<em>$1</em>')+'</h2>'}
   function K(t){return t?'<div class="kick">'+esc(t)+'</div>':''}
   /* intro */
-  if(d.intro)h+='<section class="s up"><div class="intro"><div>'+K(d.intro.k)+H2(d.intro.t)+'<p class="lead">'+esc(d.intro.text)+'</p></div>'+
+  if(d.intro)h+='<section class="s up"><div class="intro'+(d.intro.quote?'':' one')+'"><div>'+K(d.intro.k)+H2(d.intro.t)+'<p class="lead">'+esc(d.intro.text)+'</p></div>'+
      (d.intro.quote?'<div class="q"><p>'+esc(d.intro.quote)+'</p><b>'+esc(d.intro.by||'')+'</b></div>':'')+'</div></section>';
   /* gallery */
   var G=d.gallery||[];

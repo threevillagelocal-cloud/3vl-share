@@ -77,6 +77,7 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 #pv3 .q p{font-size:19px;font-weight:600;color:var(--navy);line-height:1.4}
 #pv3 .q b{display:block;margin-top:12px;font-size:14px;color:var(--mut);font-weight:700}
 #pv3 .q:before{content:"\201C";position:absolute;top:-18px;left:16px;font-family:Anton,serif;font-size:80px;color:var(--blue);line-height:1}
+#pv3 .intro.one{grid-template-columns:minmax(0,1fr)}
 @media(max-width:760px){#pv3 .intro{grid-template-columns:minmax(0,1fr)}}
 
 /* tabs */
