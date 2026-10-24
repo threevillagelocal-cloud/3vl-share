@@ -223,9 +223,8 @@ a.td-c:hover{background:var(--sky)}
 .lg-vp:hover .lg-tr,.lg-vp:focus-within .lg-tr{animation-play-state:paused}
 @keyframes lgs{to{transform:translateX(-50%)}}
 .lg{display:block;width:72px;height:40px;border-radius:9px;border:1px solid var(--line);background:#fff;padding:4px;flex:none}
-.lg span{display:block;width:100%;height:100%;background:center/contain no-repeat;filter:grayscale(1);opacity:.9;transition:filter .2s,opacity .2s}
-.lg:hover span,.lg:focus span{filter:none;opacity:1}
-@media (hover:none){.lg span{filter:none;opacity:1}}
+.lg span{display:block;width:100%;height:100%;background:center/contain no-repeat;transition:transform .2s}
+.lg:hover span,.lg:focus span{transform:scale(1.06)}
 .lg-end{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex:none}
 .lg-end .mh-a{margin-left:0}
 .lg-join{font-size:12.5px;color:var(--mute)}
