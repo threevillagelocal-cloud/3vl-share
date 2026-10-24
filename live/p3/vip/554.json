@@ -8,9 +8,31 @@
  "category": "Hardwood Floor Refinishing",
  "kicker": "Veteran-owned · East Setauket · Since 2019",
  "sub": "Sanding, UV-cured finishes, stain, repairs and recoats",
- "pills": ["🇺🇸 Veteran-owned"],
- "theme": {"navy": "#3A1210", "navy2": "#651B18", "blue": "#651B18", "sky": "#F7F0E4", "gold": "#DBC37E", "fonts": "https://fonts.googleapis.com/css2?family=Jost:wght@600;700;800&family=Inter:wght@400;600;700&display=swap", "hf": "Jost, sans-serif", "hw": "800", "hcase": "none", "hls": "-.01em", "bf": "Inter, system-ui, sans-serif", "h1s": "56px", "h2s": "36px", "h1m": "40px", "h2m": "29px"},
- "hero": {"img": "img/554-hero.webp", "alt": "Owner Kendall Harrington with a UV curing machine glowing green on a refinished floor", "pos": "50% 50%"},
+ "pills": [
+  "★ Veteran-owned"
+ ],
+ "theme": {
+  "navy": "#3A1210",
+  "navy2": "#651B18",
+  "blue": "#651B18",
+  "sky": "#F7F0E4",
+  "gold": "#DBC37E",
+  "fonts": "https://fonts.googleapis.com/css2?family=Jost:wght@600;700;800&family=Inter:wght@400;600;700&display=swap",
+  "hf": "Jost, sans-serif",
+  "hw": "800",
+  "hcase": "none",
+  "hls": "-.01em",
+  "bf": "Inter, system-ui, sans-serif",
+  "h1s": "56px",
+  "h2s": "36px",
+  "h1m": "40px",
+  "h2m": "29px"
+ },
+ "hero": {
+  "img": "img/554-hero.webp",
+  "alt": "High-gloss refinished hardwood floor in a living room with a fireplace",
+  "pos": "50% 60%"
+ },
  "logo": "img/554-logo.png",
  "phone": "6318661972",
  "phone_label": "Call Savera",
@@ -20,43 +42,208 @@
  "website": "https://saverawoodfloorrefinishing.com/",
  "instagram": "savera_woodfloor_restoration",
  "facebook": "https://www.facebook.com/profile.php?id=61561941767443",
- "contact_cta": {"k": "Floors looking tired?", "t": "Request an estimate"},
+ "contact_cta": {
+  "k": "Floors looking tired?",
+  "t": "Request an estimate"
+ },
  "actions": [
-  {"t": "Call", "i": "call", "u": "tel:+16318661972", "a": "call", "pri": 1},
-  {"t": "Estimate", "i": "msg", "u": "/savera-wood-floor-refinishing/connect", "a": "contact"},
-  {"t": "Website", "i": "web", "u": "https://saverawoodfloorrefinishing.com/", "a": "website"},
-  {"t": "Instagram", "i": "ig", "u": "https://www.instagram.com/savera_woodfloor_restoration/", "a": "instagram"}
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16318661972",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Estimate",
+   "i": "msg",
+   "u": "/savera-wood-floor-refinishing/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://saverawoodfloorrefinishing.com/",
+   "a": "website"
+  },
+  {
+   "t": "Instagram",
+   "i": "ig",
+   "u": "https://www.instagram.com/savera_woodfloor_restoration/",
+   "a": "instagram"
+  }
  ],
- "ticker": ["Veteran-owned", "UV-cured finishes", "Dust-containment sanding", "Screen and recoat", "Custom stain colors", "Board and pet-stain repairs", "Historic floors"],
- "intro": {"k": "Meet your neighbor", "t": "Beautiful floors, *without the hassle.*",
-  "text": "Savera is a veteran-owned hardwood floor company based right here in East Setauket since 2019. Owner Kendall Harrington and his crew sand with dust containment and finish with Bona and instant-curing UV technology, so floors look great and your family gets back on them fast. Need just a refresh? They'll tell you honestly when a screen and recoat will do instead of a full sanding."},
- "gallery_k": "Before and after", "gallery_t": "See the *difference*",
+ "ticker": [
+  "Veteran-owned",
+  "UV-cured finishes",
+  "Dust-containment sanding",
+  "Screen and recoat",
+  "Custom stain colors",
+  "Board and pet-stain repairs",
+  "Historic floors"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Beautiful floors, *without the hassle.*",
+  "text": "Savera is a veteran-owned hardwood floor company based right here in East Setauket since 2019. Owner Kendall Harrington and his crew sand with dust containment and finish with Bona and instant-curing UV technology, so floors look great and your family gets back on them fast. Need just a refresh? They'll tell you honestly when a screen and recoat will do instead of a full sanding."
+ },
+ "gallery_k": "Before and after",
+ "gallery_t": "See the *difference*",
  "gallery": [
-  {"img": "img/554-g1.webp", "alt": "Before: worn, scratched entry floor by the stairs"},
-  {"img": "img/554-g2.webp", "alt": "After: the same entry floor refinished"},
-  {"img": "img/554-g3.webp", "alt": "High-gloss refinished floor in a living room with fireplace"},
-  {"img": "img/554-g4.webp", "alt": "Room finished in a dark custom stain"},
-  {"img": "img/554-g5.webp", "alt": "Natural light oak floor finished in a bright room"},
-  {"img": "img/554-g6.webp", "alt": "Technician running a UV curing machine"},
-  {"img": "img/554-g7.webp", "alt": "Kendall with a floor sander and dust-containment vacuum"},
-  {"img": "img/554-g8.webp", "alt": "Warm red oak refinished floor"}
+  {
+   "img": "img/554-g1.webp",
+   "alt": "Before: worn, scratched entry floor by the stairs"
+  },
+  {
+   "img": "img/554-g2.webp",
+   "alt": "After: the same entry floor refinished"
+  },
+  {
+   "img": "img/554-g7.webp",
+   "alt": "Kendall with a floor sander and dust-containment vacuum"
+  },
+  {
+   "img": "img/554-g4.webp",
+   "alt": "Room finished in a dark custom stain"
+  },
+  {
+   "img": "img/554-g5.webp",
+   "alt": "Natural light oak floor finished in a bright room"
+  },
+  {
+   "img": "img/554-g5.webp",
+   "alt": "Natural light oak floor finished in a bright room"
+  },
+  {
+   "img": "img/554-g6.webp",
+   "alt": "Technician running a UV curing machine"
+  },
+  {
+   "img": "img/554-g8.webp",
+   "alt": "Warm red oak refinished floor"
+  }
  ],
- "goals": {"k": "What do your floors need?", "t": "Pick *a project*", "chips_k": "Services", "items": [
-  {"t": "Full refinish", "h": "Sanding and a brand-new finish.", "d": "Full sanding with dust containment, then a durable Bona or UV-cured finish.", "b": ["Dust-containment sanding", "UV-cured or Bona finish", "Back on your floors fast"], "c": ["Sanding", "UV finish", "Bona"], "cta": "Request an estimate"},
-  {"t": "Quick refresh", "h": "Screen and recoat.", "d": "A lighter, faster refresh when your floors don't need a full sanding.", "b": ["No full sanding", "Restores shine", "Great before a sale"], "c": ["Recoat", "Pre-sale prep"], "cta": "Ask about a recoat"},
-  {"t": "New color", "h": "Stain and color change.", "d": "Go darker, lighter or warmer with a custom stain.", "b": ["Custom stain samples", "Color change", "Even, professional finish"], "c": ["Stain", "Color change"], "cta": "Talk about color"},
-  {"t": "Repairs", "h": "Fix the damage first.", "d": "Board repairs, pet stains, water damage and construction scuffs.", "b": ["Board replacement", "Pet and water stains", "Paint and construction damage"], "c": ["Repairs"], "cta": "Get a repair quote"}
- ]},
+ "goals": {
+  "k": "What do your floors need?",
+  "t": "Pick *a project*",
+  "chips_k": "Services",
+  "items": [
+   {
+    "t": "Full refinish",
+    "h": "Sanding and a brand-new finish.",
+    "d": "Full sanding with dust containment, then a durable Bona or UV-cured finish.",
+    "b": [
+     "Dust-containment sanding",
+     "UV-cured or Bona finish",
+     "Back on your floors fast"
+    ],
+    "c": [
+     "Sanding",
+     "UV finish",
+     "Bona"
+    ],
+    "cta": "Request an estimate"
+   },
+   {
+    "t": "Quick refresh",
+    "h": "Screen and recoat.",
+    "d": "A lighter, faster refresh when your floors don't need a full sanding.",
+    "b": [
+     "No full sanding",
+     "Restores shine",
+     "Great before a sale"
+    ],
+    "c": [
+     "Recoat",
+     "Pre-sale prep"
+    ],
+    "cta": "Ask about a recoat"
+   },
+   {
+    "t": "New color",
+    "h": "Stain and color change.",
+    "d": "Go darker, lighter or warmer with a custom stain.",
+    "b": [
+     "Custom stain samples",
+     "Color change",
+     "Even, professional finish"
+    ],
+    "c": [
+     "Stain",
+     "Color change"
+    ],
+    "cta": "Talk about color"
+   },
+   {
+    "t": "Repairs",
+    "h": "Fix the damage first.",
+    "d": "Board repairs, pet stains, water damage and construction scuffs.",
+    "b": [
+     "Board replacement",
+     "Pet and water stains",
+     "Paint and construction damage"
+    ],
+    "c": [
+     "Repairs"
+    ],
+    "cta": "Get a repair quote"
+   }
+  ]
+ },
  "hours_t": "Business *hours*",
- "hours": {"mon": ["09:00", "20:00"], "tue": ["09:00", "20:00"], "wed": ["09:00", "20:00"], "thu": ["09:00", "20:00"], "fri": ["09:00", "20:00"], "sat": ["10:00", "20:00"], "sun": null},
- "reviews": {"t": "Love your floors?", "text": "If Savera refinished your floors, a quick review helps your neighbors find them.", "url": "https://www.google.com/search?q=Savera+Hardwood+Floor+Restoration+reviews"},
+ "hours": {
+  "mon": [
+   "09:00",
+   "20:00"
+  ],
+  "tue": [
+   "09:00",
+   "20:00"
+  ],
+  "wed": [
+   "09:00",
+   "20:00"
+  ],
+  "thu": [
+   "09:00",
+   "20:00"
+  ],
+  "fri": [
+   "09:00",
+   "20:00"
+  ],
+  "sat": [
+   "10:00",
+   "20:00"
+  ],
+  "sun": null
+ },
+ "reviews": {
+  "t": "Love your floors?",
+  "text": "If Savera refinished your floors, a quick review helps your neighbors find them.",
+  "url": "https://www.google.com/search?q=Savera+Hardwood+Floor+Restoration+reviews"
+ },
  "faq_t": "Floor *FAQ*",
  "faq": [
-  ["How soon can we walk on the floors?", "With UV-cured finishes, floors cure instantly with low odor. Ask Kendall which finish fits your home."],
-  ["Do I need a full sanding?", "Not always. Savera offers a screen and recoat when your floors just need a refresh."],
-  ["Do they work on older homes?", "Yes. They sand and restore historic and older floors."]
+  [
+   "How soon can we walk on the floors?",
+   "With UV-cured finishes, floors cure instantly with low odor. Ask Kendall which finish fits your home."
+  ],
+  [
+   "Do I need a full sanding?",
+   "Not always. Savera offers a screen and recoat when your floors just need a refresh."
+  ],
+  [
+   "Do they work on older homes?",
+   "Yes. They sand and restore historic and older floors."
+  ]
  ],
- "final": {"k": "Savera Hardwood Floors", "t": "Ready for *floors you love?*", "text": "Call or request an estimate.", "btn": "Request an estimate"},
+ "final": {
+  "k": "Savera Hardwood Floors",
+  "t": "Ready for *floors you love?*",
+  "text": "Call or request an estimate.",
+  "btn": "Request an estimate"
+ },
  "side_sub": "Hardwood floor refinishing · East Setauket",
  "side_contact": "Request an estimate",
  "sticky_contact": "Estimate"
