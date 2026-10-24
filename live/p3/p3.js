@@ -10,7 +10,7 @@
     if(!on||p==='/'||p==='/home'||/^\/(checkout|account|admin|preview-home)(\/|$)/.test(p))return;
     H.classList.add('tvl-sh');
     var st=document.createElement('style');st.textContent='@keyframes tvlshshow{to{opacity:1}}html.tvl-sh:not(.tvl-sh-on) body>.header{opacity:0;animation:tvlshshow .2s linear 6s forwards}'+
-      'html.tvl-sh:not(.tvl-sh-on) body{padding-top:160px}@media (max-width:900px){html.tvl-sh:not(.tvl-sh-on) body{padding-top:150px}}html.tvl-sh:not(.tvl-sh-on) body>.header{position:absolute!important;left:0;right:0;top:0}';
+      'html.tvl-sh:not(.tvl-sh-on) body{padding-top:164px}@media (max-width:900px){html.tvl-sh:not(.tvl-sh-on) body{padding-top:168px}}html.tvl-sh:not(.tvl-sh-on) body>.header{position:absolute!important;left:0;right:0;top:0}';
     (document.head||H).appendChild(st);
     var B='https://threevillagelocal-cloud.github.io/3vl-share/live/hdr/';
     var l=document.createElement('link');l.rel='preload';l.as='style';l.href=B+'sitehdr.css';(document.head||H).appendChild(l);

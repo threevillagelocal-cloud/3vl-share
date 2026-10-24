@@ -30,6 +30,10 @@ html.tvl-inapp #tvl-sh .yh-applink{display:none!important}
 #tvl-sh a.yh-ssr em{font-style:normal;font-size:10.5px;font-weight:700;background:var(--yel);color:#2b2100;border-radius:999px;padding:2px 7px}
 #tvl-sh a.yh-ssall{display:block;margin-top:4px;padding:10px 8px;border-top:1px solid var(--line);font-weight:600;color:var(--blue)}
 #tvl-sf .yf{margin-top:0!important}
+#tvl-sh a.yh-plans{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px 6px 9px;font-weight:600;font-size:14px;color:var(--navy)}
+#tvl-sh a.yh-plans svg{color:var(--yel);fill:var(--yel);width:16px;height:16px}
+#tvl-sh a.yh-plans b{background:var(--sky);color:var(--blue);border-radius:999px;min-width:20px;padding:1px 6px;font-size:12px;text-align:center;line-height:1.4}
+@media (max-width:900px){#tvl-sh a.yh-plans span{display:none}}
 
 #tvl-sh .yh{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40}
 #tvl-sh .yh-in{max-width:1240px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:22px}
