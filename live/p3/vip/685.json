@@ -8,13 +8,38 @@
  "category": "Esthetician & Soul Services",
  "kicker": "Mind | Body | Spirit · Stony Brook",
  "sub": "Advanced esthetics and soul services with Christine Byrnes",
- "pills": ["✨ Private atelier"],
- "theme": {"navy": "#3B352E", "navy2": "#6E665A", "blue": "#827B70", "sky": "#F4EFEA", "gold": "#C9A24A", "ink": "#2B2723", "line": "#E4DACB", "fonts": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap", "hf": "'Cormorant Garamond', Georgia, serif", "hw": "700", "hcase": "none", "hls": "0", "bf": "Montserrat, system-ui, sans-serif", "h1s": "64px", "h2s": "42px", "h1m": "44px", "h2m": "32px"},
- "hero": {"img": "img/685-hero.webp", "alt": "The private atelier at Skin and Soul Sanctuary with cream chairs, a white table and roses", "pos": "50% 45%"},
+ "pills": [
+  "✨ Private atelier"
+ ],
+ "theme": {
+  "navy": "#3B352E",
+  "navy2": "#6E665A",
+  "blue": "#827B70",
+  "sky": "#F4EFEA",
+  "gold": "#C9A24A",
+  "ink": "#2B2723",
+  "line": "#E4DACB",
+  "fonts": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap",
+  "hf": "'Cormorant Garamond', Georgia, serif",
+  "hw": "700",
+  "hcase": "none",
+  "hls": "0",
+  "bf": "Montserrat, system-ui, sans-serif",
+  "h1s": "64px",
+  "h2s": "42px",
+  "h1m": "44px",
+  "h2m": "32px",
+  "soft": "#F6F0E8"
+ },
+ "hero": {
+  "img": "img/685-hero.webp",
+  "alt": "The private atelier at Skin and Soul Sanctuary with cream chairs, a white table and roses",
+  "pos": "50% 45%"
+ },
  "headshot": "img/685-head.webp",
  "headshot_alt": "Christine Byrnes, Licensed Esthetician",
  "logo": "img/685-logo.png",
- "logo_hero": "img/685-wordmark-ivory.png",
+ "logo_hero": "img/685-logo.png",
  "brand": "Skin & Soul Sanctuary",
  "phone": "6313716192",
  "phone_label": "Call Christine",
@@ -25,41 +50,193 @@
  "instagram": "skinnandsoulsanctuary",
  "facebook": "https://www.facebook.com/www.skinandsoulsanctuary",
  "contact_url": "https://www.skinandsoulsanctuary.com/contact",
- "contact_cta": {"k": "Book your service", "t": "Request an appointment"},
+ "contact_cta": {
+  "k": "Book your service",
+  "t": "Request an appointment"
+ },
  "actions": [
-  {"t": "Call", "i": "call", "u": "tel:+16313716192", "a": "call", "pri": 1},
-  {"t": "Book", "i": "cal", "u": "https://www.skinandsoulsanctuary.com/contact", "a": "book"},
-  {"t": "Website", "i": "web", "u": "https://www.skinandsoulsanctuary.com/", "a": "website"},
-  {"t": "Instagram", "i": "ig", "u": "https://www.instagram.com/skinnandsoulsanctuary/", "a": "instagram"}
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16313716192",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Book",
+   "i": "cal",
+   "u": "https://www.skinandsoulsanctuary.com/contact",
+   "a": "book"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://www.skinandsoulsanctuary.com/",
+   "a": "website"
+  },
+  {
+   "t": "Instagram",
+   "i": "ig",
+   "u": "https://www.instagram.com/skinnandsoulsanctuary/",
+   "a": "instagram"
+  }
  ],
- "ticker": ["Signature facials", "Advanced facials", "Microcurrent and facial sculpting", "Massage and facial packages", "Astrology readings", "Human Design readings", "Gift certificates"],
- "intro": {"k": "Meet your neighbor", "t": "Elevating the skin. *Renewing the soul.*",
+ "ticker": [
+  "Signature facials",
+  "Advanced facials",
+  "Microcurrent and facial sculpting",
+  "Massage and facial packages",
+  "Astrology readings",
+  "Human Design readings",
+  "Gift certificates"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Elevating the skin. *Renewing the soul.*",
   "text": "Skin & Soul Sanctuary is Christine Byrnes's private atelier in Stony Brook. A Licensed Esthetician and educator with nearly 20 years in beauty and wellness, she builds every facial around your skin after a conversation about your concerns and goals. The Sanctuary also offers a second path, Soul services, with coaching, hypnotherapy, astrology and Human Design readings, in person or over Zoom or FaceTime.",
   "quote": "An Esthetician that is knowledgeable, incredible at what she does, and tailors skin regiment to meet your needs and budget.",
-  "by": "Dawn M., client review on skinandsoulsanctuary.com"},
- "goals": {"k": "Two paths, one intention", "t": "Choose *your path*", "chips_k": "Ask about", "items": [
-  {"t": "Skin", "h": "Facials built around you.", "d": "Personalized esthetics for your skin and your goals, planned after a one-on-one consult.", "b": ["Customized signature facials", "Advanced facials, microcurrent and sculpting", "Healthy aging, acne and sensitive skin care"], "c": ["Signature Facial", "Advanced Facial", "Microcurrent"], "u": "https://www.skinandsoulsanctuary.com/contact", "cta": "Book a facial"},
-  {"t": "Soul", "h": "Soul services.", "d": "Sessions for self-discovery and personal growth, in person or over Zoom or FaceTime.", "b": ["Rapid Transformation Sessions", "Hypnotherapy, inner child work and past life regression", "Astrology and Human Design readings"], "c": ["Astrology", "Human Design", "Hypnotherapy"], "u": "https://www.skinandsoulsanctuary.com/contact", "cta": "Ask about a session"},
-  {"t": "Body", "h": "Massage and facial days.", "d": "Massage and facial combinations for one, or for two with your partner or a spa buddy.", "b": ["Massage and facial for one", "Packages for two", "Red light therapy or infrared sauna add-on"], "c": ["Spa day", "For two"], "u": "https://www.skinandsoulsanctuary.com/contact", "cta": "Plan a spa day"},
-  {"t": "Gifts", "h": "Give the Sanctuary.", "d": "Gift certificates are available for skin, soul and body services.", "b": ["Gift certificates", "Spa days for two", "Order through Christine"], "c": ["Gift certificate"], "u": "https://www.skinandsoulsanctuary.com/contact", "cta": "Order a gift certificate"}
- ]},
- "advantage": {"k": "Meet Christine", "t": "Esthetician, educator, *practitioner.*",
-  "text": "Christine was introduced to skincare by her grandmother, also an esthetician. She later became a Northeast regional trainer for DiamondTome Microdermabrasion and Clareblend microcurrent, and placed Top 10 in Age Management in the international Skin Games case study competition. She is Board Certified by the Association for Integrative Psychology as a Master Practitioner of NLP, Hypnotherapy and Mental and Emotional Release Therapy."},
- "stats": [{"n": "~20 yrs", "l": "In beauty and wellness"}, {"n": "Top 10", "l": "Age Management, The Skin Games"}, {"n": "2 paths", "l": "Skin and Soul services"}],
+  "by": "Dawn M., client review on skinandsoulsanctuary.com"
+ },
+ "goals": {
+  "k": "Two paths, one intention",
+  "t": "Choose *your path*",
+  "chips_k": "Ask about",
+  "items": [
+   {
+    "t": "Skin",
+    "h": "Facials built around you.",
+    "d": "Personalized esthetics for your skin and your goals, planned after a one-on-one consult.",
+    "b": [
+     "Customized signature facials",
+     "Advanced facials, microcurrent and sculpting",
+     "Healthy aging, acne and sensitive skin care"
+    ],
+    "c": [
+     "Signature Facial",
+     "Advanced Facial",
+     "Microcurrent"
+    ],
+    "u": "https://www.skinandsoulsanctuary.com/contact",
+    "cta": "Book a facial"
+   },
+   {
+    "t": "Soul",
+    "h": "Soul services.",
+    "d": "Sessions for self-discovery and personal growth, in person or over Zoom or FaceTime.",
+    "b": [
+     "Rapid Transformation Sessions",
+     "Hypnotherapy, inner child work and past life regression",
+     "Astrology and Human Design readings"
+    ],
+    "c": [
+     "Astrology",
+     "Human Design",
+     "Hypnotherapy"
+    ],
+    "u": "https://www.skinandsoulsanctuary.com/contact",
+    "cta": "Ask about a session"
+   },
+   {
+    "t": "Body",
+    "h": "Massage and facial days.",
+    "d": "Massage and facial combinations for one, or for two with your partner or a spa buddy.",
+    "b": [
+     "Massage and facial for one",
+     "Packages for two",
+     "Red light therapy or infrared sauna add-on"
+    ],
+    "c": [
+     "Spa day",
+     "For two"
+    ],
+    "u": "https://www.skinandsoulsanctuary.com/contact",
+    "cta": "Plan a spa day"
+   },
+   {
+    "t": "Gifts",
+    "h": "Give the Sanctuary.",
+    "d": "Gift certificates are available for skin, soul and body services.",
+    "b": [
+     "Gift certificates",
+     "Spa days for two",
+     "Order through Christine"
+    ],
+    "c": [
+     "Gift certificate"
+    ],
+    "u": "https://www.skinandsoulsanctuary.com/contact",
+    "cta": "Order a gift certificate"
+   }
+  ]
+ },
+ "advantage": {
+  "k": "Meet Christine",
+  "t": "Esthetician, educator, *practitioner.*",
+  "text": "Christine was introduced to skincare by her grandmother, also an esthetician. She later became a Northeast regional trainer for DiamondTome Microdermabrasion and Clareblend microcurrent, and placed Top 10 in Age Management in the international Skin Games case study competition. She is Board Certified by the Association for Integrative Psychology as a Master Practitioner of NLP, Hypnotherapy and Mental and Emotional Release Therapy."
+ },
  "hours_t": "Appointment *hours*",
- "hours": {"mon": ["10:00", "18:00"], "tue": ["10:00", "18:00"], "wed": ["10:00", "18:00"], "thu": ["10:00", "18:00"], "fri": ["10:00", "18:00"], "sat": ["10:00", "18:00"], "sun": null},
- "reviews": {"t": "Kind words welcome", "text": "Visited the Sanctuary? A quick review helps your neighbors find Christine.", "url": "https://www.skinandsoulsanctuary.com/skin-reviews", "btn": "Read client reviews"},
+ "hours": {
+  "mon": [
+   "10:00",
+   "18:00"
+  ],
+  "tue": [
+   "10:00",
+   "18:00"
+  ],
+  "wed": [
+   "10:00",
+   "18:00"
+  ],
+  "thu": [
+   "10:00",
+   "18:00"
+  ],
+  "fri": [
+   "10:00",
+   "18:00"
+  ],
+  "sat": [
+   "10:00",
+   "18:00"
+  ],
+  "sun": null
+ },
+ "reviews": {
+  "t": "Kind words welcome",
+  "text": "Visited the Sanctuary? A quick review helps your neighbors find Christine.",
+  "url": "https://www.skinandsoulsanctuary.com/skin-reviews",
+  "btn": "Read client reviews"
+ },
  "faq_t": "Sanctuary *FAQ*",
  "faq": [
-  ["How do I book?", "Call Christine at 631-371-6192 or fill out the form on her website. She responds to all inquiries within 24 hours."],
-  ["Can I do soul services remotely?", "Yes. All Soul services are offered in person or over Zoom or FaceTime."],
-  ["Can I book just a massage?", "Massage is offered as part of a massage and facial combination. Massage-only appointments are not available at this location."]
+  [
+   "How do I book?",
+   "Call Christine at 631-371-6192 or fill out the form on her website. She responds to all inquiries within 24 hours."
+  ],
+  [
+   "Can I do soul services remotely?",
+   "Yes. All Soul services are offered in person or over Zoom or FaceTime."
+  ],
+  [
+   "Can I book just a massage?",
+   "Massage is offered as part of a massage and facial combination. Massage-only appointments are not available at this location."
+  ]
  ],
- "final": {"k": "Skin & Soul Sanctuary", "t": "Begin with a facial or a *deeper soul session.*", "text": "Call Christine or request an appointment online.", "btn": "Request an appointment"},
+ "final": {
+  "k": "Skin & Soul Sanctuary",
+  "t": "Begin with a facial or a *deeper soul session.*",
+  "text": "Call Christine or request an appointment online.",
+  "btn": "Request an appointment"
+ },
  "side_name": "Skin & Soul Sanctuary",
  "side_sub": "Christine Byrnes · Stony Brook",
  "side_contact": "Request an appointment",
  "sticky_contact": "Book",
- "sticky_extra": {"t": "Instagram", "u": "https://www.instagram.com/skinnandsoulsanctuary/", "a": "instagram"},
+ "sticky_extra": {
+  "t": "Instagram",
+  "u": "https://www.instagram.com/skinnandsoulsanctuary/",
+  "a": "instagram"
+ },
  "compliance": "General info, not medical advice. Services and results vary by person. Soul services are offered for personal growth and are not a substitute for medical or mental health care."
 }
