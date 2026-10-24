@@ -1,0 +1,67 @@
+{
+ "uid": "151",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "Magic Home Restoration",
+ "short": "Magic Home Restoration",
+ "first": "Magic",
+ "category": "Water, Fire & Mold Restoration",
+ "kicker": "Family-owned · Nesconset",
+ "sub": "Water · Fire · Mold · Storm · Biohazard",
+ "pills": ["🚨 24/7 emergency service"],
+ "theme": {"navy": "#2A1848", "navy2": "#41276C", "blue": "#41276C", "sky": "#F3EEFB", "gold": "#F5CB36", "fonts": "https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500;700&display=swap", "bf": "Roboto, 'Radio Canada', system-ui, sans-serif"},
+ "hero": {"img": "img/151-hero.webp", "alt": "Two Magic Home Restoration technicians in front of their purple and yellow van", "pos": "50% 55%"},
+ "logo": "img/151-logo.png",
+ "phone": "6316462010",
+ "phone_label": "24/7 emergency line",
+ "address": "104 Lake Ave S, Unit 4, Nesconset, NY 11767",
+ "address_label": "Find them",
+ "maps": "Magic Home Restoration, 104 Lake Ave S, Nesconset, NY 11767",
+ "website": "https://magichomerestoration.com/",
+ "instagram": "magichomerestoration",
+ "facebook": "https://www.facebook.com/magichomerestoration",
+ "contact_cta": {"k": "Not an emergency?", "t": "Send them a message"},
+ "actions": [
+  {"t": "Call 24/7", "i": "call", "u": "tel:+16316462010", "a": "call", "pri": 1},
+  {"t": "Message", "i": "msg", "u": "/magic-home-restoration/connect", "a": "contact"},
+  {"t": "Website", "i": "web", "u": "https://magichomerestoration.com/", "a": "website"},
+  {"t": "Save contact", "i": "card", "a": "vcard"}
+ ],
+ "vcard": {"n": "Magic Home Restoration;;;;", "fn": "Magic Home Restoration", "org": "Magic Home Restoration", "title": "24/7 water, fire and mold restoration"},
+ "ticker": ["24/7 emergency response", "Family-owned", "IICRC certified firm", "Works with your insurance company", "Suffolk, Nassau and Queens", "Cleanup through rebuild"],
+ "intro": {"k": "Meet your neighbor", "t": "When disaster hits, *they answer the phone.*",
+  "text": "A burst pipe at 2 AM, a flooded basement, a kitchen fire or a storm-damaged roof: Magic Home Restoration is the family-owned Nesconset team Long Islanders call when it can't wait. They handle the emergency cleanup, dry everything out, work with your insurance company and stay through the rebuild, so you deal with one team from start to finish.",
+  "quote": "Save their number before you need it. You'll be glad you did.", "by": "Three Village Local"},
+ "gallery_k": "On the job", "gallery_t": "The *Magic* crew",
+ "gallery": [
+  {"img": "img/151-g1.webp", "alt": "Fleet of purple and yellow Magic Restoration vans"},
+  {"img": "img/151-g2.webp", "alt": "Magic crew in branded shirts in front of a van at a home"},
+  {"img": "img/151-g3.webp", "alt": "Magic technician standing in front of a white Magic van"},
+  {"img": "img/151-g4.webp", "alt": "Water extraction hoses running into a building on a job"},
+  {"img": "img/151-g5.webp", "alt": "Ceiling opened up after water damage"},
+  {"img": "img/151-g6.webp", "alt": "Furniture wrapped and protected during a restoration"},
+  {"img": "img/151-g7.webp", "alt": "The Magic Home Restoration team together"}
+ ],
+ "goals": {"k": "What happened?", "t": "Tell us *what you're dealing with*", "chips_k": "They handle", "items": [
+  {"t": "Water damage", "h": "Water moves fast. So do they.", "d": "Burst pipes, leaks, overflowing appliances and flooded basements: extraction, structural drying and dehumidification to stop the damage from spreading.", "b": ["Water extraction", "Structural drying and dehumidifiers", "Sewage backup cleanup"], "c": ["Burst pipes", "Flooded basements", "Leaks", "Sewage"], "u": "tel:+16316462010", "cta": "Call 631-646-2010 now"},
+  {"t": "Fire & smoke", "h": "Soot, smoke and odor, handled.", "d": "After a fire or an oil burner puffback, they clean soot, remove smoke odor and repair the structure.", "b": ["Soot and smoke cleanup", "Odor removal", "Puffback cleanup"], "c": ["Kitchen fires", "Puffbacks", "Smoke odor"], "u": "tel:+16316462010", "cta": "Call 631-646-2010"},
+  {"t": "Mold", "h": "Find it, contain it, remove it.", "d": "Mold assessment, containment and removal so your home is safe and dry again.", "b": ["Assessment", "Containment", "Removal"], "c": ["Basements", "Attics", "Bathrooms"]},
+  {"t": "Storm damage", "h": "From tarp to rebuild.", "d": "Tarping, board-up, drying and reconstruction after storms and fallen trees.", "b": ["Emergency tarping and board-up", "Drying", "Reconstruction"], "c": ["Roof damage", "Fallen trees", "Flooding"], "u": "tel:+16316462010", "cta": "Call 631-646-2010"},
+  {"t": "Cleanup", "h": "Discreet help when it's hard.", "d": "Biohazard and trauma cleanup, clutter and hoarding cleanups, plus junk removal and demo through their sister divisions.", "b": ["Biohazard and trauma cleanup", "Clutter and hoarding cleanup", "Junk removal and demo"], "c": ["Biohazard", "Hoarding", "Junk and demo"]}
+ ]},
+ "advantage": {"k": "Why neighbors call Magic", "t": "One team, *start to finish.*", "text": "Emergency cleanup, drying, insurance paperwork and the rebuild, all handled by the same family-owned crew. They work with all major insurance carriers so you're not stuck in the middle."
+ },
+ "stats": [{"n": "24/7", "l": "Emergency response"}, {"n": "IICRC", "l": "Certified firm"}, {"n": "3", "l": "Counties served"}, {"n": "1", "l": "Team, cleanup to rebuild"}],
+ "reviews": {"t": "Neighbors trust Magic", "text": "Had Magic Home Restoration help you through a tough day? Your review helps the next neighbor know who to call.", "url": "https://www.google.com/search?q=Magic+Home+Restoration+Nesconset+reviews"},
+ "faq_t": "Restoration *FAQ*",
+ "faq": [
+  ["Do they really answer at night?", "Yes. Magic Home Restoration offers 24/7 emergency service. Call 631-646-2010 any time."],
+  ["Will they work with my insurance?", "Yes. They work with all major insurance carriers and can help you through the claim."],
+  ["What areas do they serve?", "Suffolk County, Nassau County and Queens, including all of Three Village."],
+  ["Do they do the repairs too?", "Yes. They handle the emergency cleanup and drying, then the reconstruction, so one team takes it start to finish."]
+ ],
+ "final": {"k": "Magic Home Restoration", "t": "Water, fire or mold? *Call now.*", "text": "Day or night, a real person picks up.", "btn": "Send a message"},
+ "side_sub": "24/7 water, fire & mold restoration",
+ "side_contact": "Send a message",
+ "sticky_extra": {"t": "Website", "u": "https://magichomerestoration.com/", "a": "website"}
+}
