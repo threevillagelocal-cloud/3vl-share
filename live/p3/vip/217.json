@@ -31,9 +31,10 @@
   "h2m": "26px"
  },
  "hero": {
-  "img": "img/217-hero.webp",
-  "alt": "Judi Wallace of JLW Accounting and Tax Services",
-  "pos": "85% 25%"
+  "img": "img/217-banner.webp",
+  "alt": "Judi of JLW Accounting and Tax Services at her desk",
+  "pos": "50% 50%",
+  "banner": true
  },
  "headshot": "img/217-head.webp",
  "headshot_alt": "Judi Wallace, owner of JLW Accounting and Tax Services",
