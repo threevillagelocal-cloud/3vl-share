@@ -6,7 +6,7 @@
  "short": "Skin & Soul Sanctuary",
  "first": "Christine",
  "category": "Esthetician & Soul Services",
- "kicker": "Mind | Body | Spirit · Stony Brook",
+ "kicker": "Mind | Body | Spirit",
  "sub": "Advanced esthetics and soul services with Christine Byrnes",
  "pills": [
   "✨ Private atelier"
@@ -32,7 +32,7 @@
   "soft": "#F6F0E8"
  },
  "hero": {
-  "img": "img/685-hero.webp",
+  "img": "img/685-hero2.webp",
   "alt": "The private atelier at Skin and Soul Sanctuary with cream chairs, a white table and roses",
   "pos": "50% 45%"
  },
