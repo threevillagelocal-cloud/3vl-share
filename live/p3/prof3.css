@@ -224,3 +224,8 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 #pv3 .pill.rate .st{color:#E8A317;letter-spacing:1px}
 #pv3 .pill.rate b{font-weight:800}
 #pv3 .pill.rate:hover{box-shadow:0 0 0 2px var(--gold)}
+
+/* facebook feed section (owner 10/24/2026) */
+#pv3 .fbs .fbw{display:flex;justify-content:center;margin:16px 0 8px;min-height:120px}
+#pv3 .fbs .fb-page,#pv3 .fbs .fb-page span,#pv3 .fbs .fb-page iframe{max-width:100%!important}
+#pv3 .fbs .row{justify-content:center}
