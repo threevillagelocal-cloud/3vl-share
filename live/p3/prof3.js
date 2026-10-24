@@ -43,7 +43,7 @@ function render(d){
      (st?'<span class="pill open'+(st.on?' on':'')+'"><i></i>'+esc(st.txt)+'</span>':'')+
      (d.pills||[]).map(function(p){return '<span class="pill">'+esc(p)+'</span>'}).join('')+'</div>'+
      (d.hero.banner?'</section>':'')+
-     '<div class="hin'+(d.hero.banner?' hb':'')+'">'+(d.hero.banner?'':d.headshot?'<div class="head"><img src="'+src(d.headshot)+'" alt="'+esc(d.headshot_alt||d.name)+'"></div>':d.logo&&!d.logo_hero?'<div class="head logo"><img src="'+src(d.logo)+'" alt="'+esc(d.name)+' logo"></div>':'')+
+     '<div class="hin'+(d.hero.banner?' hb':'')+'">'+(d.headshot?'<div class="head"><img src="'+src(d.headshot)+'" alt="'+esc(d.headshot_alt||d.name)+'"></div>':d.logo&&!d.logo_hero?'<div class="head logo"><img src="'+src(d.logo)+'" alt="'+esc(d.name)+' logo"></div>':'')+
      '<div>'+(d.kicker?'<div class="k">'+esc(d.kicker)+'</div>':'')+'<h1>'+esc(d.short||d.name)+'</h1>'+(d.sub?'<div class="sub">'+esc(d.sub)+'</div>':'')+
      /* social icons in the top section (owner 10/24/2026) */
      ((d.facebook||d.instagram||d.linkedin||d.youtube||d.tiktok||d.website)?'<div class="soc">'+

@@ -240,3 +240,9 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 #pv3 .soc .s-fb{background:#1877F2}#pv3 .soc .s-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
 #pv3 .soc .s-li{background:#0A66C2}#pv3 .soc .s-yt{background:#FF0000}#pv3 .soc .s-tt{background:#111}
 #pv3 .soc .s-web{background:var(--navy)}#pv3 .soc .s-web svg{fill:none;stroke:#fff;stroke-width:2}
+
+/* banner mode: small headshot/logo beside the name block, under the banner (owner 10/24/2026) */
+#pv3 .hin.hb{align-items:center}
+#pv3 .hin.hb .head{flex:0 0 112px;height:112px;border-radius:50%;border:3px solid #fff;box-shadow:0 10px 26px rgba(11,31,75,.22)}
+#pv3 .hin.hb .head.logo{flex-basis:112px;height:112px;border-radius:22px;border:1px solid var(--line);padding:10px}
+@media(max-width:640px){#pv3 .hin.hb{flex-direction:row;align-items:center;gap:14px}#pv3 .hin.hb .head,#pv3 .hin.hb .head.logo{flex:0 0 76px;width:76px;height:76px}}
