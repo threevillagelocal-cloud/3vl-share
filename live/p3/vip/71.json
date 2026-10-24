@@ -31,9 +31,10 @@
   "h2m": "26px"
  },
  "hero": {
-  "img": "img/71-hero.webp",
-  "alt": "John and Kerri Passamenti with their two dogs",
-  "pos": "78% 30%"
+  "img": "img/71-banner.webp",
+  "alt": "John and Kerri Passamenti in front of a Long Island home",
+  "pos": "50% 50%",
+  "banner": true
  },
  "headshot": "img/71-head.webp",
  "headshot_alt": "John and Kerri Passamenti, Team Passamenti",
