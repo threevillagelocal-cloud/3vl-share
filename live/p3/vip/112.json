@@ -31,9 +31,10 @@
   "h2m": "31px"
  },
  "hero": {
-  "img": "img/112-hero.webp",
-  "alt": "Michael O'Dwyer and Holly Brainard talking under a garden pergola",
-  "pos": "42% 30%"
+  "img": "img/112-banner.webp",
+  "alt": "Michael O'Dwyer and Holly Brainard at Daniel Gale Sotheby's International Realty",
+  "pos": "50% 50%",
+  "banner": true
  },
  "logo": "img/112-logo.png",
  "phone": "6312353300",

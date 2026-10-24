@@ -1,28 +1,202 @@
 {
  "uid": "115",
+ "layout": "v3",
  "tier": "vip",
  "name": "KGR Contracting Corp.",
  "short": "KGR Contracting",
- "tagline": "Building with Vision, Quality & Pride.",
+ "first": "KGR",
+ "brand": "KGR Contracting Corp.",
  "category": "Contractors & Remodeling",
- "town": "Port Jefferson Station",
+ "kicker": "Port Jefferson Station",
+ "sub": "Kitchens · Bathrooms · Decks · Renovations",
+ "pills": [
+  "🏠 BBB Accredited Business"
+ ],
  "theme": {
-  "accent": "#f2c94c",
-  "ink": "#13233a",
-  "deep": "#141c26",
-  "accent2": "#2f8a4c"
+  "navy": "#141414",
+  "navy2": "#00492D",
+  "blue": "#006A42",
+  "sky": "#F3F7F1",
+  "gold": "#F9C349",
+  "fonts": "https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Karla:wght@400;500;700&display=swap",
+  "hf": "Montserrat, sans-serif",
+  "hw": "800",
+  "hcase": "none",
+  "hls": "-.02em",
+  "bf": "Karla, system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/115-hero",
+  "img": "img/115-v3-hero.webp",
   "alt": "Kitchen remodel by KGR Contracting with white shaker cabinets and a large island",
   "pos": "50% 55%"
  },
- "logo": "https://www.threevillagelocal.com/logos/profile/limage-115-32-photo.webp",
+ "logo": "img/115-v3-logo.png",
+ "logo_hero": "img/115-v3-logo-hero.png",
  "phone": "6313329931",
+ "phone_label": "Call Mike",
+ "email": "mike@kgrcontracting.com",
+ "address": "Port Jefferson Station, NY 11776",
+ "address_label": "Based in",
+ "maps": "KGR Contracting Corp, Port Jefferson Station, NY",
  "website": "https://www.kgrcontracting.com/",
  "instagram": "kgrcontractingcorp",
  "facebook": "https://www.facebook.com/109353392083882",
- "maps": "KGR Contracting Corp, Port Jefferson Station, NY",
+ "contact_cta": {
+  "k": "Planning a project?",
+  "t": "Request a quote"
+ },
+ "actions": [
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16313329931",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Get a quote",
+   "i": "msg",
+   "u": "/kgr-contracting-corp/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://www.kgrcontracting.com/",
+   "a": "website"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
+ ],
+ "vcard": {
+  "n": "Tarduno;Michael;;;",
+  "fn": "Michael Tarduno",
+  "org": "KGR Contracting Corp.",
+  "title": "Owner/operator"
+ },
+ "ticker": [
+  "Kitchen and bathroom specialists",
+  "Decks and outdoor living",
+  "Licensed and insured",
+  "BBB Accredited Business",
+  "Suffolk HI License #HI-68166",
+  "Serving all of Suffolk County",
+  "Financing available"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Building with vision, *quality and pride.*",
+  "text": "KGR Contracting Corp. is owner Mike Tarduno's Port Jefferson Station company, serving homeowners across Suffolk County. Kitchens and bathrooms are the specialty, along with decks, residential renovations and bigger whole-home projects. KGR handles the project management too, so one team keeps your job organized from the first plan to the final walkthrough."
+ },
+ "gallery_k": "Recent work",
+ "gallery_t": "Built by *KGR*",
+ "gallery": [
+  {
+   "img": "img/115-v3-g1.webp",
+   "alt": "Open kitchen with a coffered ceiling, wood cabinets and a large island"
+  },
+  {
+   "img": "img/115-v3-g2.webp",
+   "alt": "White kitchen with skylights, pendant light and island seating"
+  },
+  {
+   "img": "img/115-v3-g3.webp",
+   "alt": "White double vanity bathroom with matte black fixtures and mirrors"
+  },
+  {
+   "img": "img/115-v3-g4.webp",
+   "alt": "Marble-look bathroom with a black vanity and freestanding tub"
+  },
+  {
+   "img": "img/115-g2-800.webp",
+   "big": "img/115-g2-1600.webp",
+   "alt": "Glass walk-in shower with a tiled niche"
+  },
+  {
+   "img": "img/115-g1-800.webp",
+   "big": "img/115-g1-1600.webp",
+   "alt": "Open kitchen renovation"
+  },
+  {
+   "img": "img/115-g6-800.webp",
+   "big": "img/115-g6-1440.webp",
+   "alt": "Covered back porch"
+  }
+ ],
+ "goals": {
+  "k": "What are you looking to improve?",
+  "t": "Pick *your project*",
+  "chips_k": "Ask about",
+  "items": [
+   {
+    "t": "Kitchen",
+    "h": "Better flow, better function.",
+    "d": "Kitchens are a KGR specialty: layout, cabinetry, finishes and lighting planned so the room works better for everyday life and entertaining.",
+    "b": [
+     "Layout and cabinetry",
+     "Islands and seating",
+     "Finishes and lighting"
+    ],
+    "c": [
+     "Full remodel",
+     "Islands",
+     "Cabinets"
+    ],
+    "cta": "Get a kitchen quote"
+   },
+   {
+    "t": "Bathroom",
+    "h": "Clean design, careful details.",
+    "d": "From updated layouts and tile work to fixtures and complete renovations, KGR builds bathrooms that feel finished top to bottom.",
+    "b": [
+     "Walk-in showers",
+     "Vanities and fixtures",
+     "Tile work"
+    ],
+    "c": [
+     "Full remodel",
+     "Showers",
+     "Tubs"
+    ],
+    "cta": "Get a bathroom quote"
+   },
+   {
+    "t": "Deck & outdoor",
+    "h": "Make more of the space outside.",
+    "d": "Decks and covered outdoor spaces built for relaxing and entertaining.",
+    "b": [
+     "Deck building",
+     "Covered porches",
+     "Outdoor living space"
+    ],
+    "c": [
+     "Decks",
+     "Porches"
+    ],
+    "cta": "Ask about a deck"
+   },
+   {
+    "t": "Renovation",
+    "h": "From concept to completion.",
+    "d": "Bigger renovations and multi-room projects, with KGR managing the moving parts from the first plan to the final walkthrough.",
+    "b": [
+     "Residential renovations",
+     "Whole-home improvements",
+     "Project management"
+    ],
+    "c": [
+     "Multi-room",
+     "Whole home"
+    ],
+    "cta": "Talk to KGR"
+   }
+  ]
+ },
+ "hours_k": "Office hours",
+ "hours_t": "When to *call*",
  "hours": {
   "mon": [
    "08:00",
@@ -50,161 +224,39 @@
   ],
   "sun": null
  },
- "facts": [
-  "Licensed & insured",
-  "Kitchen & bath specialists",
-  "Financing available",
-  "Visa, Mastercard, check & cash",
-  "Serving Three Village & Suffolk"
+ "reviews": {
+  "t": "Worked with KGR?",
+  "text": "A quick review helps your neighbors find a contractor they can trust.",
+  "url": "https://www.google.com/search?q=KGR+Contracting+Corp+Port+Jefferson+Station+reviews"
+ },
+ "faq_t": "Project *FAQ*",
+ "faq": [
+  [
+   "Is KGR licensed and insured?",
+   "Yes. KGR Contracting is licensed and insured, holds Suffolk County Home Improvement License #HI-68166 and is a BBB Accredited Business."
+  ],
+  [
+   "What areas does KGR serve?",
+   "KGR is based in Port Jefferson Station and serves homeowners throughout Suffolk County, including Three Village."
+  ],
+  [
+   "How can I pay?",
+   "Visa, Mastercard, check and cash. Financing is available, so ask Mike about options for your project."
+  ]
  ],
- "intro": "KGR Contracting helps Long Island homeowners transform the spaces they live in every day. From kitchens and bathrooms to decks, renovations and whole-home projects, KGR brings craftsmanship, project management and clear communication from concept to completion.",
- "services": [
-  {
-   "t": "Kitchen remodeling",
-   "d": "Better flow, better function, better everyday living."
-  },
-  {
-   "t": "Bathroom remodeling",
-   "d": "Clean design and thoughtful details, top to bottom."
-  },
-  {
-   "t": "Decks & outdoor living",
-   "d": "Make more of the space outside."
-  },
-  {
-   "t": "Residential renovations",
-   "d": "Managed from first plan to final walkthrough."
-  },
-  {
-   "t": "Whole-home improvements",
-   "d": "Multiple rooms under one coordinated plan."
-  }
- ],
- "why": [
-  {
-   "t": "Planning",
-   "d": "Thoughtful preparation turns ideas into realistic, well-executed projects."
-  },
-  {
-   "t": "Communication",
-   "d": "You stay informed throughout the whole renovation."
-  },
-  {
-   "t": "Craftsmanship",
-   "d": "Careful workmanship and attention to the finished details."
-  },
-  {
-   "t": "Project management",
-   "d": "All the moving parts kept organized from start to finish."
-  }
- ],
- "gallery": [
-  {
-   "img": "img/115-hero",
-   "w": [
-    900,
-    1600
-   ],
-   "alt": "Kitchen with island seating"
-  },
-  {
-   "img": "img/115-g1",
-   "w": [
-    800,
-    1600
-   ],
-   "alt": "Open kitchen renovation"
-  },
-  {
-   "img": "img/115-g2",
-   "w": [
-    800,
-    1600
-   ],
-   "alt": "Glass walk-in shower with niche"
-  },
-  {
-   "img": "img/115-g3",
-   "w": [
-    800,
-    1600
-   ],
-   "alt": "Bathroom with wood vanity and mosaic floor"
-  },
-  {
-   "img": "img/115-g5",
-   "w": [
-    800,
-    1440
-   ],
-   "alt": "Tiled tub surround"
-  },
-  {
-   "img": "img/115-g6",
-   "w": [
-    800,
-    1440
-   ],
-   "alt": "Covered back porch"
-  },
-  {
-   "img": "img/115-g4",
-   "w": [
-    800,
-    1600
-   ],
-   "alt": "KGR Contracting trailer on a job site"
-  }
- ],
- "feed": [
-  {
-   "img": "img/115-ig0",
-   "link": "https://www.instagram.com/p/DdLO4uxgDcX/",
-   "date": "2026-09-12"
-  },
-  {
-   "img": "img/115-ig1",
-   "link": "https://www.instagram.com/p/DdLOunMAFk1/",
-   "date": "2026-09-12"
-  },
-  {
-   "img": "img/115-ig2",
-   "link": "https://www.instagram.com/p/DdLMzS9DdAL/",
-   "date": "2026-09-12"
-  },
-  {
-   "img": "img/115-ig3",
-   "link": "https://www.instagram.com/p/DdLMbDcjRcm/",
-   "date": "2026-09-12"
-  },
-  {
-   "img": "img/115-ig4",
-   "link": "https://www.instagram.com/p/DdLK9majUdI/",
-   "date": "2026-09-12"
-  },
-  {
-   "img": "img/115-ig5",
-   "link": "https://www.instagram.com/p/DdLKa5XjTYW/",
-   "date": "2026-09-12"
-  },
-  {
-   "img": "img/115-ig6",
-   "link": "https://www.instagram.com/p/DdLKPV6jVJw/",
-   "date": "2026-09-12"
-  },
-  {
-   "img": "img/115-ig7",
-   "link": "https://www.instagram.com/p/DdLJ7JEDQlw/",
-   "date": "2026-09-12"
-  },
-  {
-   "img": "img/115-ig8",
-   "link": "https://www.instagram.com/p/DdLJB-ojZOT/",
-   "date": "2026-09-12"
-  }
- ],
- "cta": {
-  "title": "Ready to improve your home?",
-  "text": "Kitchen, bathroom, deck or a bigger renovation: start with a conversation."
- }
+ "final": {
+  "k": "KGR Contracting Corp.",
+  "t": "Ready to improve *your home?*",
+  "text": "Kitchen, bathroom, deck or a bigger renovation: start with a conversation.",
+  "btn": "Request a quote"
+ },
+ "side_sub": "Kitchens, baths, decks & renovations",
+ "side_contact": "Request a quote",
+ "sticky_contact": "Get a quote",
+ "sticky_extra": {
+  "t": "Website",
+  "u": "https://www.kgrcontracting.com/",
+  "a": "website"
+ },
+ "compliance": "Suffolk County Home Improvement License #HI-68166. Licensed and insured."
 }
