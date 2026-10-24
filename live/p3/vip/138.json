@@ -31,9 +31,10 @@
   "h2m": "28px"
  },
  "hero": {
-  "img": "img/138-hero-shop.webp",
-  "alt": "A local shop owner behind the counter of a bright small business",
-  "pos": "55% 50%"
+  "img": "img/138-banner.webp",
+  "alt": "TJ Sirani of Zuma Payroll & Processing in a bright modern office",
+  "pos": "72% 40%",
+  "banner": true
  },
  "headshot": "img/138-head.webp",
  "headshot_alt": "TJ Sirani, Zuma Payroll & Processing",

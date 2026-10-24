@@ -37,16 +37,17 @@ function render(d){
       dir='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(d.maps||d.address||d.name),st=openState(d.hours),h='';
   if(T.fonts){var fl=document.createElement('link');fl.rel='stylesheet';fl.href=T.fonts;document.head.appendChild(fl)}
   /* hero */
-  h+='<section class="h"><img class="bg" src="'+src(d.hero.img)+'" alt="'+esc(d.hero.alt)+'" style="object-position:'+(d.hero.pos||'50% 50%')+'" fetchpriority="high">'+
+  h+='<section class="h'+(d.hero.banner?' bn':'')+'"><img class="bg" src="'+src(d.hero.img)+'" alt="'+esc(d.hero.alt)+'" style="object-position:'+(d.hero.pos||'50% 50%')+'" fetchpriority="high">'+
      '<div class="top"><span class="tier'+(d.tier==='vip'?'':' feat')+'">'+(d.tier==='vip'?'&#9733; VIP MEMBER':'FEATURED')+'</span>'+
      (d.verified!==false?'<span class="pill"><svg viewBox="0 0 24 24"><path d="M12 1l3 2.4 3.8-.3.9 3.7 3.3 2-1.5 3.5 1.5 3.5-3.3 2-.9 3.7-3.8-.3L12 23l-3-2.4-3.8.3-.9-3.7-3.3-2L2.5 12 1 8.5l3.3-2 .9-3.7 3.8.3z"/><path d="M7.5 12.5l3 3 6-6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Verified</span>':'')+
      (st?'<span class="pill open'+(st.on?' on':'')+'"><i></i>'+esc(st.txt)+'</span>':'')+
      (d.pills||[]).map(function(p){return '<span class="pill">'+esc(p)+'</span>'}).join('')+'</div>'+
-     '<div class="hin">'+(d.headshot?'<div class="head"><img src="'+src(d.headshot)+'" alt="'+esc(d.headshot_alt||d.name)+'"></div>':d.logo&&!d.logo_hero?'<div class="head logo"><img src="'+src(d.logo)+'" alt="'+esc(d.name)+' logo"></div>':'')+
+     (d.hero.banner?'</section>':'')+
+     '<div class="hin'+(d.hero.banner?' hb':'')+'">'+(d.hero.banner?'':d.headshot?'<div class="head"><img src="'+src(d.headshot)+'" alt="'+esc(d.headshot_alt||d.name)+'"></div>':d.logo&&!d.logo_hero?'<div class="head logo"><img src="'+src(d.logo)+'" alt="'+esc(d.name)+' logo"></div>':'')+
      '<div>'+(d.kicker?'<div class="k">'+esc(d.kicker)+'</div>':'')+'<h1>'+esc(d.short||d.name)+'</h1>'+(d.sub?'<div class="sub">'+esc(d.sub)+'</div>':'')+
      ((d.logo_hero||d.rating)?'<div class="co">'+(d.logo_hero?'<img src="'+src(d.logo_hero)+'" alt="'+esc(d.brand||d.name)+'">':'')+
        (d.rating?'<a class="gstar" data-a="google_reviews" href="'+esc(d.rating.url)+'" target="_blank" rel="noopener"><i>&#9733;&#9733;&#9733;&#9733;&#9733;</i>'+esc(d.rating.text)+'</a>':'')+'</div>':'')+
-     '</div></div></section>';
+     '</div></div>'+(d.hero.banner?'':'</section>');
   /* action tiles */
   var A=d.actions||[{t:'Call',i:'call',u:telH,a:'call',pri:1},{t:'Contact',i:'msg',u:contact,a:'contact'},{t:'Directions',i:'map',u:dir,a:'directions'},{t:'Website',i:'web',u:d.website,a:'website'}];
   A=A.filter(function(x){return x.u||x.i==='card'});
