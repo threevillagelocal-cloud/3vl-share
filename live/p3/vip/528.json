@@ -18,9 +18,10 @@
   "bf": "Inter, system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/528-hero.webp",
-  "alt": "Front lawn with fresh mulched beds and plantings by Rolling Hills",
-  "pos": "50% 55%"
+  "img": "img/528-banner.webp",
+  "alt": "Rolling Hills crew landscaping a front yard with their truck",
+  "pos": "50% 50%",
+  "banner": true
  },
  "logo": "img/528-logo.png",
  "phone": "6316528035",
