@@ -26,9 +26,10 @@
   "bf": "Karla, system-ui, sans-serif"
  },
  "hero": {
-  "img": "img/115-v3-hero.webp",
-  "alt": "Kitchen remodel by KGR Contracting with white shaker cabinets and a large island",
-  "pos": "50% 55%"
+  "img": "img/115-banner.webp",
+  "alt": "KGR Contracting sign on a remodeled kitchen island",
+  "pos": "50% 50%",
+  "banner": true
  },
  "logo": "img/115-v3-logo.png",
  "logo_hero": "img/115-v3-logo-hero.png",
