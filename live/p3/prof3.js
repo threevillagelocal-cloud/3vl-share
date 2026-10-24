@@ -45,6 +45,14 @@ function render(d){
      (d.hero.banner?'</section>':'')+
      '<div class="hin'+(d.hero.banner?' hb':'')+'">'+(d.hero.banner?'':d.headshot?'<div class="head"><img src="'+src(d.headshot)+'" alt="'+esc(d.headshot_alt||d.name)+'"></div>':d.logo&&!d.logo_hero?'<div class="head logo"><img src="'+src(d.logo)+'" alt="'+esc(d.name)+' logo"></div>':'')+
      '<div>'+(d.kicker?'<div class="k">'+esc(d.kicker)+'</div>':'')+'<h1>'+esc(d.short||d.name)+'</h1>'+(d.sub?'<div class="sub">'+esc(d.sub)+'</div>':'')+
+     /* social icons in the top section (owner 10/24/2026) */
+     ((d.facebook||d.instagram||d.linkedin||d.youtube||d.tiktok||d.website)?'<div class="soc">'+
+       (d.facebook?'<a class="s-fb" data-a="facebook" href="'+esc(d.facebook)+'" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M15.1 12.6h-2.2V20h-3v-7.4H8.4V10h1.5V8.4c0-2 .9-3.2 3.3-3.2h2v2.6h-1.3c-.9 0-1 .3-1 1V10h2.3z"/></svg></a>':'')+
+       (d.instagram?'<a class="s-ig" data-a="instagram" href="https://www.instagram.com/'+esc(d.instagram)+'/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="#fff" stroke-width="2"/><circle cx="16.7" cy="7.3" r="1.2"/></svg></a>':'')+
+       (d.linkedin?'<a class="s-li" data-a="linkedin" href="'+esc(d.linkedin)+'" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.5 9.5h2.8V18H6.5zM7.9 5.3a1.6 1.6 0 1 1 0 3.2 1.6 1.6 0 0 1 0-3.2zM11 9.5h2.7v1.2c.4-.7 1.3-1.4 2.7-1.4 2.9 0 3.4 1.9 3.4 4.3V18h-2.8v-3.9c0-.9 0-2.1-1.3-2.1s-1.5 1-1.5 2V18H11z"/></svg></a>':'')+
+       (d.youtube?'<a class="s-yt" data-a="youtube" href="'+esc(d.youtube)+'" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M10 8.8v6.4l5.6-3.2z"/></svg></a>':'')+
+       (d.tiktok?'<a class="s-tt" data-a="tiktok" href="'+esc(d.tiktok)+'" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 4h2.4c.2 1.7 1.3 3 3 3.2v2.4c-1.1 0-2.1-.3-3-.9v5.6a4.6 4.6 0 1 1-4.6-4.6h.5v2.5h-.5a2.1 2.1 0 1 0 2.2 2.1z"/></svg></a>':'')+
+       (d.website?'<a class="s-web" data-a="website" href="'+esc(d.website)+'" target="_blank" rel="noopener" aria-label="Website">'+ic('web')+'</a>':'')+'</div>':'')+
      (((d.logo_hero&&!d.hero.banner)||d.rating)?'<div class="co">'+(d.logo_hero&&!d.hero.banner?'<img src="'+src(d.logo_hero)+'" alt="'+esc(d.brand||d.name)+'">':'')+
        (d.rating?'<a class="gstar" data-a="google_reviews" href="'+esc(d.rating.url)+'" target="_blank" rel="noopener"><i>&#9733;&#9733;&#9733;&#9733;&#9733;</i>'+esc(d.rating.text)+'</a>':'')+'</div>':'')+
      '</div></div>'+(d.hero.banner?'':'</section>');
