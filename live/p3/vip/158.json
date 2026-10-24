@@ -1,0 +1,74 @@
+{
+ "uid": "158",
+ "layout": "v3",
+ "tier": "featured",
+ "name": "Lawns R Us",
+ "short": "Lawns R Us",
+ "first": "Lawns R Us",
+ "category": "Lawn Care & Landscaping",
+ "kicker": "Father and son · Licensed & insured · Suffolk County",
+ "sub": "Lawn care, spring and fall cleanups, pruning and mulching",
+ "pills": ["35+ years"],
+ "theme": {
+  "navy": "#0A120D",
+  "navy2": "#0B3D22",
+  "blue": "#0D9649",
+  "sky": "#EDF7F0",
+  "gold": "#7FDB97",
+  "ink": "#16201A",
+  "fonts": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap",
+  "hf": "Inter, system-ui, sans-serif",
+  "hw": "800",
+  "hcase": "none",
+  "hls": "-.02em",
+  "bf": "Inter, system-ui, sans-serif",
+  "h1s": "60px",
+  "h2s": "38px",
+  "h1m": "42px",
+  "h2m": "30px"
+ },
+ "hero": {"img": "img/158-hero.webp", "alt": "Lawns R Us green striped lawn graphic with mower icon", "pos": "70% 50%"},
+ "logo": "img/158-logo.png",
+ "logo_hero": "img/158-logo-white.png",
+ "brand": "Lawns R Us NY",
+ "phone": "6317515296",
+ "phone_label": "631-751-LAWN",
+ "email": "lawnsrusny@gmail.com",
+ "contact_cta": {"k": "Free on-site estimate", "t": "Request an estimate"},
+ "actions": [
+  {"t": "Call", "i": "call", "u": "tel:+16317515296", "a": "call", "pri": 1},
+  {"t": "Free estimate", "i": "msg", "u": "/lawns-r-us/connect", "a": "contact"},
+  {"t": "Email", "i": "mail", "u": "mailto:lawnsrusny@gmail.com", "a": "email"}
+ ],
+ "ticker": ["Licensed & insured", "Father and son team", "Lawn care & maintenance", "Spring cleanups", "Fall cleanups", "Pruning", "Mulching", "Free estimates", "All of Suffolk County"],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "Relax. *They'll do it all.*",
+  "text": "Lawns R Us is a licensed and insured landscape and lawn service led by a father and son team and their crew, with more than 35 years in business. Based in Stony Brook and serving all of Suffolk County, they handle lawn care and maintenance, spring and fall cleanups, pruning, mulching and more, for homes and businesses. Estimates are free.",
+  "quote": "Making Suffolk beautiful, one lawn at a time.",
+  "by": "Lawns R Us"
+ },
+ "goals": {
+  "k": "What does your yard need?",
+  "t": "Pick *a project*",
+  "chips_k": "Services",
+  "items": [
+   {"t": "Lawn care", "h": "Lawn care and maintenance.", "d": "Ongoing care that keeps your lawn and property looking sharp through the season.", "b": ["Mowing and trimming", "Homes and businesses", "Crew that knows your property"], "c": ["Lawn care", "Maintenance"], "cta": "Get a free estimate"},
+   {"t": "Cleanups", "h": "Spring and fall cleanups.", "d": "Get the yard ready in spring and put it to bed in fall.", "b": ["Spring cleanups", "Fall cleanups", "Leaves and debris"], "c": ["Spring", "Fall"], "cta": "Book a cleanup"},
+   {"t": "Pruning", "h": "Pruning and shaping.", "d": "Neat, healthy cuts for shrubs and plantings.", "b": ["Shrubs and hedges", "Clean lines", "Done by the same crew"], "c": ["Pruning"], "cta": "Ask about pruning"},
+   {"t": "Mulching", "h": "Fresh mulch, instant curb appeal.", "d": "Fresh mulch in your beds to finish the look.", "b": ["Bed mulching", "Tidy finish", "Pairs well with a cleanup"], "c": ["Mulching"], "cta": "Ask about mulching"}
+  ]
+ },
+ "reviews": {"t": "Happy with your lawn?", "text": "If Lawns R Us takes care of your yard, a quick review helps your neighbors find a crew they can trust."},
+ "faq_t": "Lawn *FAQ*",
+ "faq": [
+  ["Are estimates free?", "Yes. Call 631-751-LAWN (5296) or send a request and they will set up a free estimate."],
+  ["What area do they serve?", "Lawns R Us is based in Stony Brook and serves all of Suffolk County."],
+  ["Are they licensed and insured?", "Yes. Lawns R Us is a licensed and insured landscape and lawn service."]
+ ],
+ "final": {"k": "Lawns R Us", "t": "Ready for *a yard you love?*", "text": "Call 631-751-LAWN or request a free estimate.", "btn": "Free estimate"},
+ "side_sub": "Lawn care · Stony Brook & Suffolk County",
+ "side_contact": "Request a free estimate",
+ "sticky_contact": "Estimate",
+ "sticky_extra": {"t": "Email", "u": "mailto:lawnsrusny@gmail.com", "a": "email"}
+}
