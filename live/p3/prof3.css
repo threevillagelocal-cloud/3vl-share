@@ -221,7 +221,7 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 
 /* star rating badge in the pill row (owner 10/24/2026) */
 #pv3 .pill.rate{text-decoration:none!important;color:var(--ink,#1F2630)!important;gap:6px;cursor:pointer}
-#pv3 .pill.rate .st{color:#E8A317;letter-spacing:1px}
+#pv3 .pill.rate .rst{color:#E8A317;letter-spacing:1px}
 #pv3 .pill.rate b{font-weight:800}
 #pv3 .pill.rate:hover{box-shadow:0 0 0 2px var(--gold)}
 

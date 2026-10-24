@@ -103,8 +103,8 @@ function render(d){
   fetch(BASE+'vip/reviews.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(R){var v=R&&R[uid],el=box.querySelector('#pv3rvl'),top=box.querySelector('.h .top');
     /* star rating badge next to the VIP/Verified pills: links to the reviews, or to "write a review" when there are none yet */
     if(top){var a=document.createElement('a');a.className='pill rate';a.setAttribute('data-a','reviews_badge');
-      if(v&&v.items&&v.items.length){a.href=box.querySelector('#pv3rv')?'#pv3rv':review;a.innerHTML='<span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>'+v.avg.toFixed(1)+'</b>&nbsp;('+v.count+' review'+(v.count>1?'s':'')+')'}
-      else{a.href=review;a.innerHTML='<span class="st">&#9734;&#9734;&#9734;&#9734;&#9734;</span>Be the first to review'}
+      if(v&&v.items&&v.items.length){a.href=box.querySelector('#pv3rv')?'#pv3rv':review;a.innerHTML='<span class="rst">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>'+v.avg.toFixed(1)+'</b>&nbsp;('+v.count+' review'+(v.count>1?'s':'')+')'}
+      else{a.href=review;a.innerHTML='<span class="rst">&#9734;&#9734;&#9734;&#9734;&#9734;</span>Be the first to review'}
       top.appendChild(a)}
     if(!v||!v.items||!v.items.length||!el)return;
     var st=function(n){var o='';for(var i=0;i<5;i++)o+=i<Math.round(n)?'&#9733;':'&#9734;';return o};
