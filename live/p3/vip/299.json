@@ -1,0 +1,255 @@
+{
+ "uid": "299",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "The North Shore Injury Lawyer",
+ "short": "Mark Freeley",
+ "first": "Mark",
+ "brand": "The North Shore Injury Lawyer",
+ "category": "Personal Injury Lawyer",
+ "kicker": "The North Shore Injury Lawyer · Stony Brook",
+ "sub": "Personal injury lawyer · 30+ years · Se habla español",
+ "pills": [
+  "⚖️ Free case review"
+ ],
+ "theme": {
+  "navy": "#004564",
+  "navy2": "#0C537D",
+  "blue": "#0A77A4",
+  "sky": "#E8F4F8",
+  "gold": "#26A572",
+  "fonts": "https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@400;600;700&display=swap",
+  "bf": "'Open Sans', system-ui, sans-serif"
+ },
+ "hero": {
+  "img": "img/299-hero.webp",
+  "alt": "Mark Freeley with his two rescue dogs on a dock by the water",
+  "pos": "50% 45%"
+ },
+ "headshot": "img/299-head.webp",
+ "headshot_alt": "Mark T. Freeley, personal injury lawyer",
+ "logo": "img/299-logo.png",
+ "rating": {
+  "text": "100+ five-star Google reviews",
+  "url": "https://www.google.com/search?q=The+North+Shore+Injury+Lawyer+reviews"
+ },
+ "phone": "6314959435",
+ "phone_label": "Call Mark",
+ "address": "111 Main Street, Unit J, Stony Brook, NY 11790",
+ "address_label": "Stony Brook office",
+ "maps": "The North Shore Injury Lawyer, 111 Main Street, Stony Brook, NY 11790",
+ "website": "https://northshoreinjurylawyer.com/",
+ "facebook": "https://www.facebook.com/TheNorthShoreInjuryLawyer",
+ "linkedin": "https://www.linkedin.com/in/mark-freeley-7a3527a/",
+ "contact_cta": {
+  "k": "Hurt in an accident?",
+  "t": "Request a free case review"
+ },
+ "actions": [
+  {
+   "t": "Call Mark",
+   "i": "call",
+   "u": "tel:+16314959435",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Free review",
+   "i": "msg",
+   "u": "/the-north-shore-injury-lawyer/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://northshoreinjurylawyer.com/",
+   "a": "website"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
+ ],
+ "vcard": {
+  "n": "Freeley;Mark;T.;;",
+  "fn": "Mark T. Freeley",
+  "org": "The North Shore Injury Lawyer",
+  "title": "Personal Injury Lawyer"
+ },
+ "ticker": [
+  "30+ years helping injury victims",
+  "Hofstra Law",
+  "Admitted in NY, NJ and FL",
+  "Nassau and Suffolk",
+  "English and Spanish",
+  "Free case review",
+  "Rescue dog advocate"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "A lawyer who *fights for the injured.*",
+  "text": "Mark Freeley has spent more than 30 years helping people hurt by someone else's carelessness: car crashes, construction falls, unsafe property and the loss of a loved one. He's a Hofstra Law graduate admitted in New York, New Jersey and Florida, with an office right on Main Street in Stony Brook. When he isn't in court, you'll find him volunteering and fostering for Last Chance Animal Rescue with his dogs Sarah and Saint.",
+  "quote": "A neighbor who shows up for people when they're hurt, and for the animals who need a second chance.",
+  "by": "Three Village Local"
+ },
+ "gallery_k": "Beyond the courtroom",
+ "gallery_t": "Mark *and the pups*",
+ "gallery": [
+  {
+   "img": "img/299-g1.webp",
+   "alt": "Mark Freeley on a white porch with his two dogs"
+  },
+  {
+   "img": "img/299-g2.webp",
+   "alt": "Mark on a harbor beach with his dogs"
+  },
+  {
+   "img": "img/299-g3.webp",
+   "alt": "Mark Freeley at his office desk"
+  },
+  {
+   "img": "img/299-g4.webp",
+   "alt": "Mark on a TV segment with a rescue dog"
+  },
+  {
+   "img": "img/299-g5.webp",
+   "alt": "Mark holding a rescue puppy"
+  },
+  {
+   "img": "img/299-g6.webp",
+   "alt": "Mark with his dog by the marsh"
+  }
+ ],
+ "goals": {
+  "k": "How can Mark help?",
+  "t": "What *happened to you?*",
+  "chips_k": "Cases he handles",
+  "items": [
+   {
+    "t": "Car accident",
+    "h": "Hurt in a crash on Long Island?",
+    "d": "Car, truck and bus accidents can leave you with medical bills, lost work and an insurance company that isn't on your side. Mark handles the claim so you can focus on getting better.",
+    "b": [
+     "Free review of your case",
+     "Deals with the insurance companies",
+     "Nassau and Suffolk courts"
+    ],
+    "c": [
+     "Car",
+     "Truck",
+     "Bus",
+     "Pedestrian"
+    ],
+    "cta": "Get a free case review"
+   },
+   {
+    "t": "Construction injury",
+    "h": "Injured on the job site?",
+    "d": "Falls from heights, scaffolding and equipment accidents. Mark has a dedicated practice for injured construction and union electrical workers.",
+    "b": [
+     "NY Labor Law claims",
+     "Falls from height",
+     "Union electrical workers"
+    ],
+    "c": [
+     "Falls",
+     "Scaffolds",
+     "Equipment",
+     "Union workers"
+    ],
+    "cta": "Get a free case review"
+   },
+   {
+    "t": "Slip & fall",
+    "h": "Hurt because a property wasn't safe?",
+    "d": "Slips, trips and falls caused by unsafe conditions at stores, homes or public places.",
+    "b": [
+     "Unsafe property conditions",
+     "Stores and businesses",
+     "Homes and public places"
+    ],
+    "c": [
+     "Slip and fall",
+     "Trip and fall",
+     "Unsafe property"
+    ],
+    "cta": "Get a free case review"
+   },
+   {
+    "t": "Wrongful death",
+    "h": "When a family loses someone they love.",
+    "d": "Mark helps families who lost a loved one because of someone else's negligence, with care and patience.",
+    "b": [
+     "Compassionate guidance",
+     "Family-focused",
+     "Free consultation"
+    ],
+    "c": [
+     "Negligence",
+     "Accidents"
+    ],
+    "cta": "Talk to Mark"
+   }
+  ]
+ },
+ "advantage": {
+  "k": "Why neighbors call Mark",
+  "t": "Local, experienced, *on your side.*",
+  "text": "Thirty-plus years of injury cases, a Stony Brook office on Main Street, help in English and Spanish, and a free first conversation. You talk to the lawyer, not a call center."
+ },
+ "stats": [
+  {
+   "n": "30+",
+   "count": 30,
+   "l": "Years of experience"
+  },
+  {
+   "n": "100+",
+   "count": 100,
+   "l": "Five-star Google reviews"
+  },
+  {
+   "n": "3",
+   "l": "States admitted"
+  },
+  {
+   "n": "Free",
+   "l": "Case review"
+  }
+ ],
+ "reviews": {
+  "t": "100+ five-star reviews",
+  "text": "Clients trust Mark to guide them through one of the hardest times of their lives.",
+  "url": "https://www.google.com/search?q=The+North+Shore+Injury+Lawyer+reviews"
+ },
+ "faq_t": "Injury case *FAQ*",
+ "faq": [
+  [
+   "How much does a first consultation cost?",
+   "Nothing. Mark offers a free case review. Call 631-495-9435 or send a message."
+  ],
+  [
+   "Does Mark speak Spanish?",
+   "Services are offered in English and Spanish."
+  ],
+  [
+   "Where does he practice?",
+   "Throughout Nassau and Suffolk counties, with an office at 111 Main Street in Stony Brook."
+  ],
+  [
+   "What kinds of cases does he take?",
+   "Car and truck accidents, construction and workplace falls, slip and falls, unsafe property and wrongful death."
+  ]
+ ],
+ "final": {
+  "k": "The North Shore Injury Lawyer",
+  "t": "Hurt? *Talk to Mark today.*",
+  "text": "Free case review. No pressure, just answers.",
+  "btn": "Request a free review"
+ },
+ "side_sub": "Personal injury lawyer · Stony Brook",
+ "side_contact": "Request a free case review",
+ "sticky_contact": "Free review",
+ "compliance": "Attorney Advertising. The North Shore Injury Lawyer represents injury victims throughout Nassau County and Suffolk County, New York. This page is not legal advice. Contacting us does not create an attorney-client relationship. Prior results do not guarantee a similar outcome."
+}
