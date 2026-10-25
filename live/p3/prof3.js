@@ -38,9 +38,10 @@ function render(d){
       dir='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(d.maps||d.address||d.name),st=openState(d.hours),h='';
   if(T.fonts){var fl=document.createElement('link');fl.rel='stylesheet';fl.href=T.fonts;document.head.appendChild(fl)}
   /* hero (the name is a div styled as before: BD's own server-rendered h1 stays the page's only H1, 10/24/2026) */
-  /* banner heroes: phone-size copies (img/<name>-900/-1300.webp, listed in hero.sw); prof.js preloads the same set */
+  /* banner heroes: phone-size copies (img/<name>-900/-1300.webp, listed in hero.sw); prof.js preloads the same set.
+     sizes/srcset come BEFORE src: otherwise Chrome also downloads the full file while parsing the markup */
   var hs=d.hero.banner&&d.hero.sw&&/[.]webp$/.test(d.hero.img)?d.hero.sw.map(function(w,i){return (i===d.hero.sw.length-1?src(d.hero.img):src(d.hero.img).replace(/[.]webp$/,'-'+w+'.webp'))+' '+w+'w'}).join(', '):'';
-  h+='<section class="h'+(d.hero.banner?' bn':'')+'"><img class="bg" src="'+src(d.hero.img)+'"'+(hs?' srcset="'+hs+'" sizes="(max-width:991px) 100vw, 1000px"':'')+' alt="'+esc(d.hero.alt)+'" style="object-position:'+(d.hero.pos||'50% 50%')+'" fetchpriority="high">'+
+  h+='<section class="h'+(d.hero.banner?' bn':'')+'"><img class="bg"'+(hs?' sizes="(max-width:991px) 100vw, 1000px" srcset="'+hs+'"':'')+' src="'+src(d.hero.img)+'" alt="'+esc(d.hero.alt)+'" style="object-position:'+(d.hero.pos||'50% 50%')+'" fetchpriority="high">'+
      '<div class="top"><span class="tier'+(d.tier==='vip'?'':' feat')+'">'+(d.tier==='vip'?'&#9733; VIP MEMBER':'FEATURED')+'</span>'+
      (d.verified!==false?'<span class="pill"><svg viewBox="0 0 24 24"><path d="M12 1l3 2.4 3.8-.3.9 3.7 3.3 2-1.5 3.5 1.5 3.5-3.3 2-.9 3.7-3.8-.3L12 23l-3-2.4-3.8.3-.9-3.7-3.3-2L2.5 12 1 8.5l3.3-2 .9-3.7 3.8.3z"/><path d="M7.5 12.5l3 3 6-6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Verified</span>':'')+
      (st?'<span class="pill open'+(st.on?' on':'')+'"><i></i>'+esc(st.txt)+'</span>':'')+
@@ -118,6 +119,10 @@ function render(d){
     var h2=box.querySelector('.rv .h2');if(h2)h2.textContent='What neighbors say'}).catch(function(){});
   var V={navy:'--navy',navy2:'--navy2',blue:'--blue',sky:'--sky',gold:'--gold',ink:'--ink',soft:'--soft',line:'--line',onblue:'--onblue',hf:'--hf',hw:'--hw',hcase:'--hcase',hls:'--hls',bf:'--bf',h1s:'--h1s',h2s:'--h2s',h1m:'--h1m',h2m:'--h2m'},css='';
   for(var k in V)if(T[k])css+=V[k]+':'+T[k]+';';box.style.cssText=css;
+  /* BD's page script (addAttributesToImages) re-downloads every <img> without width/height through new Image(src): the full-size
+     hero on top of the phone copy, and every lazy gallery/feed/logo photo at once. Marked as done, it leaves ours alone (10/24/2026). */
+  function bdSkip(el){[].forEach.call(el.querySelectorAll('img'),function(i){i.setAttribute('data-processed','true')})}
+  bdSkip(box);
   col.insertBefore(box,col.firstChild);document.documentElement.classList.add('pv3-on','pv2-on');/* pv2-on here, not earlier: the old layout keeps its space until now, so the right column never jumps (10/24/2026) */
   /* sidebar */
   var side=document.querySelector('.member_profile .sidebar-section');
@@ -145,7 +150,7 @@ function render(d){
         if(window.FB&&FB.XFBML&&!fbc.getAttribute('data-p')){fbc.setAttribute('data-p','1');FB.XFBML.parse(fbc)}
         else if(fbn===4&&!window.FB&&!document.querySelector('script[src*="connect.facebook.net/en_US/sdk.js"]')){if(!document.getElementById('fb-root')){var fr=document.createElement('div');fr.id='fb-root';document.body.appendChild(fr)}var sc=document.createElement('script');sc.async=true;sc.src='https://connect.facebook.net/en_US/sdk.js#version=v24.0&xfbml=1';document.head.appendChild(sc)}
         if(fbn>60){clearInterval(fbt);var fi=fbc.querySelector('iframe');if(!fi||fi.offsetHeight<60)fbc.style.display='none'}},250)}}
-    side.insertBefore(sd,side.firstChild);
+    bdSkip(sd);side.insertBefore(sd,side.firstChild);
     if(fbc){if('IntersectionObserver' in window){var fio=new IntersectionObserver(function(es){if(es.some(function(x){return x.isIntersecting})){fio.disconnect();fbgo()}},{rootMargin:'700px 0px'});fio.observe(fbc)}else fbgo()}}
   /* sticky phone bar */
   var sb=document.createElement('div');sb.className='pv3-sticky';sb.style.cssText=css;
