@@ -1,0 +1,7 @@
+{
+ "lines": [
+  {"key": "halloween", "until": "2026-10-31", "line": "Halloween events + ferry alerts"},
+  {"key": "tonight", "from": "2026-11-01", "until": "2026-11-15", "line": "See what&#39;s open tonight in Three Village"},
+  {"key": "default", "line": "Events, news &amp; alerts in Three Village"}
+ ]
+}
