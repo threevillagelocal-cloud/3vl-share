@@ -270,13 +270,13 @@
 },
 "499": {
 "banner": true,
-"big1280": "t/vip-499-2756d5effe-1280.webp",
-"big640": "t/vip-499-2756d5effe-640.webp",
-"big960": "t/vip-499-2756d5effe-960.webp",
+"big1280": "t/vip-499-e108932818-1280.webp",
+"big640": "t/vip-499-e108932818-640.webp",
+"big960": "t/vip-499-e108932818-960.webp",
 "logo": "t/vip-499-logo-00c487cde1.webp",
 "pos": "50% 50%",
-"src": "img/499-banner2.webp",
-"thumb": "t/vip-499-2756d5effe-t240.webp"
+"src": "img/499-banner3.webp",
+"thumb": "t/vip-499-e108932818-t240.webp"
 },
 "528": {
 "banner": true,
