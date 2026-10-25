@@ -29,7 +29,12 @@
   "img": "img/684-banner.webp",
   "alt": "Victor Stabile of Douglas Elliman in front of a home for sale",
   "pos": "50% 50%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "headshot": "img/684-g3.webp",
  "headshot_alt": "Victor Stabile, Douglas Elliman Real Estate",

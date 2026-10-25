@@ -29,7 +29,12 @@
   "img": "img/143-banner.webp",
   "alt": "Emma S. Clark Memorial Library in Setauket",
   "pos": "50% 50%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "logo": "img/143-logo.png",
  "phone": "6319414080",

@@ -34,7 +34,12 @@
   "img": "img/217-banner.webp",
   "alt": "Judi of JLW Accounting and Tax Services at her desk",
   "pos": "50% 50%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "headshot": "img/217-head.webp",
  "headshot_alt": "Judi Wallace, owner of JLW Accounting and Tax Services",

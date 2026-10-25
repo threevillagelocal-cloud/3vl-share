@@ -32,7 +32,12 @@
   "img": "img/137-banner.webp",
   "alt": "Katherine Southard of Southard Estate Planning by the harbor in Setauket",
   "pos": "50% 50%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "headshot": "img/137-head.webp",
  "headshot_alt": "Katherine A. Southard, Esq.",

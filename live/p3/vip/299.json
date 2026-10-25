@@ -25,7 +25,12 @@
   "img": "img/299-banner.webp",
   "alt": "Mark Freeley, The North Shore Injury Lawyer, in his office",
   "pos": "50% 50%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "headshot": "img/299-head.webp",
  "headshot_alt": "Mark T. Freeley, personal injury lawyer",

@@ -30,7 +30,12 @@
   "img": "img/364-banner2.webp",
   "alt": "Dr. Jeffrey D. Hart and the Hart Orthopedics reception desk in Stony Brook",
   "pos": "50% 50%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "headshot": "img/364-head2.webp",
  "headshot_alt": "Dr. Jeffrey D. Hart, DO, orthopedic surgeon",

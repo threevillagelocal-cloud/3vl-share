@@ -31,7 +31,12 @@
   "img": "img/484-banner.webp",
   "alt": "J33 Art Studios: original art and pyrography",
   "pos": "50% 50%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "logo": "img/484-logo.webp",
  "phone": "6314037913",

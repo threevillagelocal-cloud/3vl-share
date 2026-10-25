@@ -34,7 +34,12 @@
   "img": "img/112-banner.webp",
   "alt": "Michael O'Dwyer and Holly Brainard at Daniel Gale Sotheby's International Realty",
   "pos": "50% 50%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "logo": "img/112-logo.png",
  "phone": "6312353300",

@@ -38,7 +38,9 @@ function render(d){
       dir='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(d.maps||d.address||d.name),st=openState(d.hours),h='';
   if(T.fonts){var fl=document.createElement('link');fl.rel='stylesheet';fl.href=T.fonts;document.head.appendChild(fl)}
   /* hero (the name is a div styled as before: BD's own server-rendered h1 stays the page's only H1, 10/24/2026) */
-  h+='<section class="h'+(d.hero.banner?' bn':'')+'"><img class="bg" src="'+src(d.hero.img)+'" alt="'+esc(d.hero.alt)+'" style="object-position:'+(d.hero.pos||'50% 50%')+'" fetchpriority="high">'+
+  /* banner heroes: phone-size copies (img/<name>-900/-1300.webp, listed in hero.sw); prof.js preloads the same set */
+  var hs=d.hero.banner&&d.hero.sw&&/[.]webp$/.test(d.hero.img)?d.hero.sw.map(function(w,i){return (i===d.hero.sw.length-1?src(d.hero.img):src(d.hero.img).replace(/[.]webp$/,'-'+w+'.webp'))+' '+w+'w'}).join(', '):'';
+  h+='<section class="h'+(d.hero.banner?' bn':'')+'"><img class="bg" src="'+src(d.hero.img)+'"'+(hs?' srcset="'+hs+'" sizes="(max-width:991px) 100vw, 1000px"':'')+' alt="'+esc(d.hero.alt)+'" style="object-position:'+(d.hero.pos||'50% 50%')+'" fetchpriority="high">'+
      '<div class="top"><span class="tier'+(d.tier==='vip'?'':' feat')+'">'+(d.tier==='vip'?'&#9733; VIP MEMBER':'FEATURED')+'</span>'+
      (d.verified!==false?'<span class="pill"><svg viewBox="0 0 24 24"><path d="M12 1l3 2.4 3.8-.3.9 3.7 3.3 2-1.5 3.5 1.5 3.5-3.3 2-.9 3.7-3.8-.3L12 23l-3-2.4-3.8.3-.9-3.7-3.3-2L2.5 12 1 8.5l3.3-2 .9-3.7 3.8.3z"/><path d="M7.5 12.5l3 3 6-6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Verified</span>':'')+
      (st?'<span class="pill open'+(st.on?' on':'')+'"><i></i>'+esc(st.txt)+'</span>':'')+

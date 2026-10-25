@@ -34,7 +34,12 @@
   "img": "img/240-banner.webp",
   "alt": "John McGregor of JM Management Solutions in a bright office",
   "pos": "72% 40%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "headshot": "img/240-head.webp",
  "headshot_alt": "John McGregor, founder of JM Management Solutions",

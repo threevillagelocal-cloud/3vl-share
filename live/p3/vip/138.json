@@ -34,7 +34,12 @@
   "img": "img/138-banner.webp",
   "alt": "TJ Sirani of Zuma Payroll & Processing in a bright modern office",
   "pos": "72% 40%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "headshot": "img/138-head.webp",
  "headshot_alt": "TJ Sirani, Zuma Payroll & Processing",

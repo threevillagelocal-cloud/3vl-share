@@ -21,7 +21,12 @@
   "img": "img/528-banner.webp",
   "alt": "Rolling Hills crew landscaping a front yard with their truck",
   "pos": "50% 50%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "logo": "img/528-logo.png",
  "phone": "6316528035",

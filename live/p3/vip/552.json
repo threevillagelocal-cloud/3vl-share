@@ -29,7 +29,12 @@
   "img": "img/552-banner.webp",
   "alt": "Strong Strains store interior",
   "pos": "50% 50%",
-  "banner": true
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
  },
  "logo": "img/552-logo.png",
  "phone": "6316357876",
