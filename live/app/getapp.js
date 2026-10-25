@@ -19,11 +19,11 @@ function pick(j){var t=new Date().toISOString().slice(0,10);(j.lines||[]).some(f
 function ga(n,o){try{gtag('event',n,o)}catch(e){}}
 function show(why){
 if(shown||document.getElementById('tvl-getapp'))return;shown=true;
-if(!document.getElementById('tga2css')){var st=document.createElement('style');st.id='tga2css';st.textContent='#tvl-getapp.v2 .tga-t b{white-space:normal!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:14px!important;line-height:1.2!important}#tvl-getapp.v2 a.tga-btn{padding:0 12px!important;height:36px!important;font-size:12.5px!important;letter-spacing:.04em!important;white-space:nowrap}@media(max-width:340px){#tvl-getapp.v2 a.tga-btn{padding:0 10px!important;font-size:11.5px!important}}';document.head.appendChild(st)}
+if(!document.getElementById('tga2css')){var st=document.createElement('style');st.id='tga2css';st.textContent='#tvl-getapp.v2 .tga-t b{white-space:normal!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:14px!important;line-height:1.2!important}#tvl-getapp.v2 a.tga-btn{padding:0 12px!important;height:36px!important;font-size:12.5px!important;letter-spacing:.04em!important;white-space:nowrap}@media(max-width:374px){#tvl-getapp.v2 .tg2f{display:none}#tvl-getapp.v2 a.tga-btn{padding:0 14px!important;font-size:14px!important}}';document.head.appendChild(st)}
 var b=document.createElement('div');b.id='tvl-getapp';b.className='v2';b.setAttribute('role','region');b.setAttribute('aria-label','Get the Three Village Local mobile app');
 b.innerHTML='<div class="tga-ic"><img src="https://cdn.jsdelivr.net/gh/threevillagelocal-cloud/3vl-assets@ff2b1c9100c8/badges/3vl-logo-160.png" alt="" width="42" height="42"></div>'+
 '<div class="tga-t"><b>'+LINE+'</b><span><i>Free</i> mobile app</span></div>'+
-'<a class="tga-btn" href="'+url+'" target="_blank" rel="noopener">Get it free</a>'+
+'<a class="tga-btn" href="'+url+'" target="_blank" rel="noopener">Get<span class="tg2f"> it free</span></a>'+
 '<button class="tga-x" type="button" aria-label="Close">&times;</button>';
 document.body.appendChild(b);document.body.style.paddingBottom='96px';
 b.querySelector('.tga-x').onclick=function(){b.classList.remove('tvl-in');ga('app_banner_close',{store:store,line:KEY});try{localStorage.setItem('tvlGetAppX',Date.now())}catch(e){}setTimeout(function(){b.remove();document.body.style.paddingBottom=''},600)};
