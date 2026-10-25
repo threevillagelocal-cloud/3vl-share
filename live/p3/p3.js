@@ -2,7 +2,7 @@
    Business search results + Deals are NOT enabled here. */
 /* 3VL sitewide header loader (10/24/2026). SITEWIDE=false: only for the preview (?hdr=1 sets a test cookie, ?hdr=0 clears it).
    Switch on for everyone: SITEWIDE=true + publish_live.py. Rollback: SITEWIDE=false + publish_live.py. */
-(function(){var SITEWIDE=false;if(window.__tvlshl)return;window.__tvlshl=1;
+(function(){var SITEWIDE=true;if(window.__tvlshl)return;window.__tvlshl=1;
   try{var q=location.search,p=location.pathname.replace(/\/+$/,'')||'/',H=document.documentElement;
     if(/[?&]hdr=1(&|$)/.test(q))document.cookie='tvlhdr=1;path=/;max-age=604800';
     if(/[?&]hdr=0(&|$)/.test(q))document.cookie='tvlhdr=;path=/;max-age=0';
