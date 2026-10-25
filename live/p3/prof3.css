@@ -245,4 +245,4 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 #pv3 .hin.hb{align-items:center}
 #pv3 .hin.hb .head{flex:0 0 112px;height:112px;border-radius:50%;border:3px solid #fff;box-shadow:0 10px 26px rgba(11,31,75,.22)}
 #pv3 .hin.hb .head.logo{flex-basis:112px;height:112px;border-radius:22px;border:1px solid var(--line);padding:10px}
-@media(max-width:640px){#pv3 .hin.hb{flex-direction:row;align-items:center;gap:14px}#pv3 .hin.hb .head,#pv3 .hin.hb .head.logo{flex:0 0 76px;width:76px;height:76px}}
+@media(max-width:640px){#pv3 .hin.hb{flex-direction:row;align-items:flex-start;gap:14px}#pv3 .hin.hb .head,#pv3 .hin.hb .head.logo{flex:0 0 76px;width:76px;height:76px}}
