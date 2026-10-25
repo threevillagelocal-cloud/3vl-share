@@ -29,14 +29,15 @@ function openState(h){if(!h)return null;var n=nowET(),t=h[DAYS[n.d]];function mm
   if(t==='24h')return {on:true,txt:'Open 24 hours'};if(t&&n.m>=mm(t[0])&&n.m<mm(t[1]))return {on:true,txt:'Open now · til '+t12(t[1])};
   for(var i=0;i<8;i++){var dd=(n.d+i)%7,x=h[DAYS[dd]];if(!x)continue;if(x==='24h')x=['00:00','24:00'];if(i===0&&n.m<mm(x[0]))return {on:false,txt:'Opens today '+t12(x[0])};if(i>0)return {on:false,txt:'Opens '+(i===1?'tomorrow':DN[DAYS[dd]].slice(0,3))+' '+t12(x[0])}}return {on:false,txt:'Closed'}}
 
-fetch(BASE+'vip/'+uid+'.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(d){if(d)render(d)}).catch(function(){});
+/* prof.js already started this download (window.__pvData, 10/24/2026); fetch only if it did not */
+(window.__pvData||fetch(BASE+'vip/'+uid+'.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null})).then(function(d){if(d)render(d)}).catch(function(){});
 
 function render(d){
   var T=d.theme||{},slug=location.pathname.replace(/^\/|\/$/g,''),tel=(d.phone||'').replace(/\D/g,'').slice(-10),telF='('+tel.slice(0,3)+') '+tel.slice(3,6)+'-'+tel.slice(6)+(d.phone_ext?' ext. '+d.phone_ext:''),
       telH='tel:+1'+tel+(d.phone_ext?','+d.phone_ext:''),contact=d.contact_url||('/'+slug+'/connect'),review='/'+slug+'/writeareview',
       dir='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(d.maps||d.address||d.name),st=openState(d.hours),h='';
   if(T.fonts){var fl=document.createElement('link');fl.rel='stylesheet';fl.href=T.fonts;document.head.appendChild(fl)}
-  /* hero */
+  /* hero (the name is a div styled as before: BD's own server-rendered h1 stays the page's only H1, 10/24/2026) */
   h+='<section class="h'+(d.hero.banner?' bn':'')+'"><img class="bg" src="'+src(d.hero.img)+'" alt="'+esc(d.hero.alt)+'" style="object-position:'+(d.hero.pos||'50% 50%')+'" fetchpriority="high">'+
      '<div class="top"><span class="tier'+(d.tier==='vip'?'':' feat')+'">'+(d.tier==='vip'?'&#9733; VIP MEMBER':'FEATURED')+'</span>'+
      (d.verified!==false?'<span class="pill"><svg viewBox="0 0 24 24"><path d="M12 1l3 2.4 3.8-.3.9 3.7 3.3 2-1.5 3.5 1.5 3.5-3.3 2-.9 3.7-3.8-.3L12 23l-3-2.4-3.8.3-.9-3.7-3.3-2L2.5 12 1 8.5l3.3-2 .9-3.7 3.8.3z"/><path d="M7.5 12.5l3 3 6-6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Verified</span>':'')+
@@ -44,7 +45,7 @@ function render(d){
      (d.pills||[]).map(function(p){return '<span class="pill">'+esc(p)+'</span>'}).join('')+'</div>'+
      (d.hero.banner?'</section>':'')+
      '<div class="hin'+(d.hero.banner?' hb':'')+'">'+(d.headshot?'<div class="head"><img src="'+src(d.headshot)+'" alt="'+esc(d.headshot_alt||d.name)+'"></div>':d.logo&&!d.logo_hero?'<div class="head logo"><img src="'+src(d.logo)+'" alt="'+esc(d.name)+' logo"></div>':'')+
-     '<div>'+(d.kicker?'<div class="k">'+esc(d.kicker)+'</div>':'')+'<h1>'+esc(d.short||d.name)+'</h1>'+(d.sub?'<div class="sub">'+esc(d.sub)+'</div>':'')+
+     '<div>'+(d.kicker?'<div class="k">'+esc(d.kicker)+'</div>':'')+'<div class="h1" role="heading" aria-level="1">'+esc(d.short||d.name)+'</div>'+(d.sub?'<div class="sub">'+esc(d.sub)+'</div>':'')+
      /* social icons in the top section (owner 10/24/2026) */
      ((d.facebook||d.instagram||d.linkedin||d.youtube||d.tiktok||d.website)?'<div class="soc">'+
        (d.facebook?'<a class="s-fb" data-a="facebook" href="'+esc(d.facebook)+'" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M15.1 12.6h-2.2V20h-3v-7.4H8.4V10h1.5V8.4c0-2 .9-3.2 3.3-3.2h2v2.6h-1.3c-.9 0-1 .3-1 1V10h2.3z"/></svg></a>':'')+
@@ -132,14 +133,18 @@ function render(d){
       (d.linkedin?'<div class="li">'+ic('li')+'<a data-a="linkedin" href="'+esc(d.linkedin)+'" target="_blank" rel="noopener">LinkedIn</a></div>':'')+'</div>';
     /* Facebook feed in the right column, like BD had it (owner 10/24/2026); BD's own box is desktop-only and loads late, so it is hidden */
     if(d.facebook&&/facebook\.com\//.test(d.facebook)&&d.fb_feed!==false){
-      var fbc=document.createElement('div');fbc.className='c fbc';fbc.innerHTML='<div class="fbh"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M15.1 12.6h-2.2V20h-3v-7.4H8.4V10h1.5V8.4c0-2 .9-3.2 3.3-3.2h2v2.6h-1.3c-.9 0-1 .3-1 1V10h2.3z"/></svg><b>Facebook</b><a data-a="facebook" href="'+esc(d.facebook)+'" target="_blank" rel="noopener">Follow</a></div><div class="fb-page" data-href="'+esc(d.facebook)+'" data-tabs="timeline" data-show-posts="true" data-width="320" data-height="480" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div>';
+      var fbc=document.createElement('div');fbc.className='c fbc';fbc.innerHTML='<div class="fbh"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M15.1 12.6h-2.2V20h-3v-7.4H8.4V10h1.5V8.4c0-2 .9-3.2 3.3-3.2h2v2.6h-1.3c-.9 0-1 .3-1 1V10h2.3z"/></svg><b>Facebook</b><a data-a="facebook" href="'+esc(d.facebook)+'" target="_blank" rel="noopener">Follow</a></div><div class="fb-lazy" data-href="'+esc(d.facebook)+'" data-tabs="timeline" data-show-posts="true" data-width="320" data-height="480" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div>';
       sd.appendChild(fbc);
-      Array.prototype.forEach.call(side.querySelectorAll('.fb-page'),function(x){if(!fbc.contains(x)){var m=x.closest('.module')||x.parentNode;m.style.display='none'}});
+      /* BD's own box is renamed so the Facebook script skips it, and ours only becomes a .fb-page when it is near the screen
+         (on phones the right column is far down: ~600 KB of Facebook files no longer load up front, 10/24/2026) */
+      Array.prototype.forEach.call(side.querySelectorAll('.fb-page'),function(x){if(!fbc.contains(x)){var m=x.closest('.module')||x.parentNode;m.style.display='none';x.className='fb-page-off'}});
+      var fbgo=function(){var z=fbc.querySelector('.fb-lazy');if(z)z.className='fb-page';
       var fbn=0,fbt=setInterval(function(){fbn++;
         if(window.FB&&FB.XFBML&&!fbc.getAttribute('data-p')){fbc.setAttribute('data-p','1');FB.XFBML.parse(fbc)}
         else if(fbn===4&&!window.FB&&!document.querySelector('script[src*="connect.facebook.net/en_US/sdk.js"]')){if(!document.getElementById('fb-root')){var fr=document.createElement('div');fr.id='fb-root';document.body.appendChild(fr)}var sc=document.createElement('script');sc.async=true;sc.src='https://connect.facebook.net/en_US/sdk.js#version=v24.0&xfbml=1';document.head.appendChild(sc)}
-        if(fbn>60){clearInterval(fbt);var fi=fbc.querySelector('iframe');if(!fi||fi.offsetHeight<60)fbc.style.display='none'}},250)}
-    side.insertBefore(sd,side.firstChild)}
+        if(fbn>60){clearInterval(fbt);var fi=fbc.querySelector('iframe');if(!fi||fi.offsetHeight<60)fbc.style.display='none'}},250)}}
+    side.insertBefore(sd,side.firstChild);
+    if(fbc){if('IntersectionObserver' in window){var fio=new IntersectionObserver(function(es){if(es.some(function(x){return x.isIntersecting})){fio.disconnect();fbgo()}},{rootMargin:'700px 0px'});fio.observe(fbc)}else fbgo()}}
   /* sticky phone bar */
   var sb=document.createElement('div');sb.className='pv3-sticky';sb.style.cssText=css;
   sb.innerHTML=(tel?'<a class="p" data-a="call" href="'+telH+'">Call</a>':'')+'<a data-a="contact" href="'+esc(contact)+'"'+ext(contact)+'>'+esc(d.sticky_contact||'Contact')+'</a>'+(d.sticky_extra?'<a data-a="'+esc(d.sticky_extra.a||'extra')+'" href="'+esc(d.sticky_extra.u)+'"'+ext(d.sticky_extra.u)+'>'+esc(d.sticky_extra.t)+'</a>':'<a data-a="directions" href="'+dir+'" target="_blank" rel="noopener">Directions</a>');
