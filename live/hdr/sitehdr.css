@@ -97,7 +97,7 @@ html.tvl-inapp #tvl-sh .yh-in{padding-top:8px}
 #tvl-sh .yh-tj a{color:var(--blue);font-weight:600;padding:3px 8px;border-radius:999px}
 #tvl-sh .yh-tj a:hover{background:var(--sky)}
 #tvl-sf .yf{background:var(--navy);color:#dbe5f2;margin-top:28px;padding:28px 20px 40px}
-#tvl-sf .yf-in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:24px}
+#tvl-sf .yf-in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.3fr;gap:24px}
 #tvl-sf .yf-a img{height:46px!important;width:auto!important;margin:0 0 10px!important}
 #tvl-sf .yf-a p{margin:0;font-size:13.5px;max-width:520px}
 #tvl-sf .yf-c{display:flex;flex-direction:column;gap:6px;font-size:14px}

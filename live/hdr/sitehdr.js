@@ -52,7 +52,7 @@ function header(){
   var mob=ac.login?'<a class="yh-mob" href="'+SITE+'/about/contact">Contact</a><a class="yh-mob" href="'+SITE+'/login">Login</a>':ac.links.map(function(l){return '<a class="yh-mob" href="'+esc(abs(l[1]))+'">'+esc(l[0])+'</a>'}).join('');
   var cats=CATS.map(function(c){return '<a class="yh-q" href="'+SITE+c[1]+'"><span class="yh-qi"><svg viewBox="0 0 24 24" aria-hidden="true">'+c[2]+'</svg></span><span>'+esc(c[0])+'</span></a>'}).join('');
   var d=document.createElement('div');d.id='tvl-sh';
-  d.innerHTML='<header class="yh"><div class="yh-in"><a class="yh-logo" href="'+SITE+'/" aria-label="Three Village Local home"><img src="'+LIVE+'hdr/logo-540.webp" width="167" height="52" alt="Three Village Local"></a>'+
+  d.innerHTML='<header class="yh" data-nosnippet><div class="yh-in"><a class="yh-logo" href="'+SITE+'/" aria-label="Three Village Local home"><img src="'+LIVE+'hdr/logo-540.webp" width="167" height="52" alt="Three Village Local"></a>'+
     '<form class="yh-srch" action="/search_results" method="get" role="search"><span class="yh-si">'+IC.search+'</span><input type="search" name="q" placeholder="Search local businesses" aria-label="Search local businesses" autocomplete="off"><button type="submit">Search</button></form>'+
     '<div class="yh-r"><a class="yh-gr" href="https://maps.google.com/?cid=15405294417866042762" target="_blank" rel="noopener" aria-label="Rated 5.0 on Google"><b>5.0</b><span class="yh-grs">&#9733;&#9733;&#9733;&#9733;&#9733;</span><em>Google</em></a>'+right+
     '<a class="yh-plans" href="'+SITE+'/?plans=1" aria-label="My Plans">'+IC.star+'<span>My Plans</span><b>'+n+'</b></a>'+
@@ -89,6 +89,7 @@ function footer(){var fb='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M
   d.innerHTML='<footer class="yf"><div class="yf-in"><div class="yf-a"><img src="'+LIVE+'hdr/logo-white.webp" width="149" height="50" alt="Three Village Local" loading="lazy"><p>Three Village Local is the free local guide to Setauket, Stony Brook, Port Jefferson and the Three Village area. Find trusted local businesses, this week&rsquo;s events, restaurant specials and community news, all in one place, and support the neighbors who make our community special.</p></div>'+
     '<div class="yf-c"><b>Website</b><a href="'+S+'/about">How It Works</a><a href="'+S+'/about/contact">Contact Us</a><a href="'+S+'/newsletter">Three Village Weekly</a></div>'+
     '<div class="yf-c"><b>Search</b><a href="'+S+'/search_results">Browse Directory</a><a href="'+S+'/categories">Search by Category</a></div>'+
+    '<div class="yf-c"><b>Explore</b><a href="'+S+'/whats-new">What&rsquo;s New</a><a href="'+S+'/restaurants-stony-brook">Restaurants in Stony Brook</a><a href="'+S+'/restaurants-setauket">Restaurants in Setauket</a><a href="'+S+'/restaurants-port-jefferson">Restaurants in Port Jefferson</a><a href="'+S+'/halloween">Halloween in Three Village</a></div>'+
     '<div class="yf-c"><b>Support</b><a href="'+S+'/login">Member Login</a><a href="'+S+'/login/retrieval">Reset Password</a></div></div>'+
     '<div class="yf-in yf-2"><span class="yf-soc"><a href="'+S+'/about/contact" aria-label="Email">'+IC.mail+'</a><a href="https://www.facebook.com/ThreeVillageLocal" aria-label="Facebook" target="_blank" rel="noopener">'+fb+'</a><a href="https://www.instagram.com/threevillagelocal/" aria-label="Instagram" target="_blank" rel="noopener">'+ig+'</a></span><a class="yf-join" href="'+S+'/join">Businesses - Join Today</a></div>'+
     '<p class="yf-copy">&copy; 2026 Three Village Local. All Rights Reserved. <a href="'+S+'/about/terms">Terms of Use</a> <a href="'+S+'/about/privacy">Privacy Policy</a></p></footer>';return d}
@@ -97,9 +98,11 @@ function footer(){var fb='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M
 var drawn=false,fdone=false;
 function ready(){var m=document.getElementById('main-content');return document.readyState!=='loading'||!!m}
 function tryDraw(){if(drawn||!document.body||!ready())return;drawn=true;
-  try{var d=header();document.body.insertBefore(d,document.body.firstChild);wire(d);H.classList.add('tvl-sh-on')}catch(e){H.classList.remove('tvl-sh')}}
+  try{var d=header();document.body.insertBefore(d,document.body.firstChild);wire(d);H.classList.add('tvl-sh-on')}catch(e){H.classList.remove('tvl-sh')}nosnip()}
+/* menus, header and footer chrome stay out of Google snippets (BD's hidden copies too) */
+function nosnip(){try{[].forEach.call(document.querySelectorAll('body>.header,.mobile-main-menu,body>.footer,#tvl-sf,.yf'),function(e){e.setAttribute('data-nosnippet','')})}catch(e){}}
 function tryFoot(){if(fdone)return;var bf=document.querySelector('body>.footer');if(!bf&&document.readyState==='loading')return;fdone=true;
-  try{var f=footer();if(bf)bf.parentNode.insertBefore(f,bf);else document.body.appendChild(f);H.classList.add('tvl-sf-on')}catch(e){}}
+  try{var f=footer();if(bf)bf.parentNode.insertBefore(f,bf);else document.body.appendChild(f);H.classList.add('tvl-sf-on')}catch(e){}nosnip()}
 tryDraw();
 if(!drawn&&window.MutationObserver){var mo=new MutationObserver(function(){tryDraw();if(drawn)mo.disconnect()});mo.observe(H,{childList:true,subtree:true})}
 document.addEventListener('DOMContentLoaded',function(){tryDraw();tryFoot()});
