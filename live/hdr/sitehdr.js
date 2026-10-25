@@ -8,6 +8,7 @@ if(window.__tvlsh)return;window.__tvlsh=1;
 var H=document.documentElement,SITE='https://www.threevillagelocal.com',LIVE='https://threevillagelocal-cloud.github.io/3vl-share/live/';
 if(document.getElementById('wk-top')&&document.querySelector('#wk-top.wk-y'))return;
 H.classList.add('tvl-sh');
+try{var u=navigator.userAgent||'';if(!/FBAN|FBAV|FB_IAB|Instagram/.test(u)&&((/iPhone|iPad|iPod/.test(u)&&!/Safari/.test(u))||(/Android/.test(u)&&u.indexOf('; wv)')>-1)))document.documentElement.classList.add('tvl-inapp');}catch(e){}
 function esc(x){return String(x||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function track(n,p){try{if(window.gtag)window.gtag('event',n,p||{})}catch(e){}}
 var IC={search:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>',
