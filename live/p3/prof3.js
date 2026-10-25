@@ -116,7 +116,7 @@ function render(d){
     var h2=box.querySelector('.rv .h2');if(h2)h2.textContent='What neighbors say'}).catch(function(){});
   var V={navy:'--navy',navy2:'--navy2',blue:'--blue',sky:'--sky',gold:'--gold',ink:'--ink',soft:'--soft',line:'--line',onblue:'--onblue',hf:'--hf',hw:'--hw',hcase:'--hcase',hls:'--hls',bf:'--bf',h1s:'--h1s',h2s:'--h2s',h1m:'--h1m',h2m:'--h2m'},css='';
   for(var k in V)if(T[k])css+=V[k]+':'+T[k]+';';box.style.cssText=css;
-  col.insertBefore(box,col.firstChild);document.documentElement.classList.add('pv3-on');
+  col.insertBefore(box,col.firstChild);document.documentElement.classList.add('pv3-on','pv2-on');/* pv2-on here, not earlier: the old layout keeps its space until now, so the right column never jumps (10/24/2026) */
   /* sidebar */
   var side=document.querySelector('.member_profile .sidebar-section');
   if(side){var sd=document.createElement('div');sd.id='pv3s';sd.style.cssText=css;
