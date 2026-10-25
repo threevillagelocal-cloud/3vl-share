@@ -14,12 +14,12 @@ if(!prev){try{var d=+localStorage.getItem('tvlGetAppX')||0;if(d&&Date.now()-d<12
 var url=ios?'https://apps.apple.com/us/app/three-village-local/id6746367200':'https://play.google.com/store/apps/details?id=com.threevillagelocal.app';
 var store=ios?'ios':'android';
 var pv=1;try{pv=(+sessionStorage.getItem('tvlPV')||0)+1;sessionStorage.setItem('tvlPV',pv)}catch(e){}
-var LINE='Events, news &amp; alerts in Three Village',KEY='default',shown=false;
+var LINE='Local events, businesses &amp; things to do',KEY='default',shown=false;
 function pick(j){var t=new Date().toISOString().slice(0,10);(j.lines||[]).some(function(x){if((!x.from||t>=x.from)&&(!x.until||t<=x.until)){LINE=x.line;KEY=x.key||x.line;return true}})}
 function ga(n,o){try{gtag('event',n,o)}catch(e){}}
 function show(why){
 if(shown||document.getElementById('tvl-getapp'))return;shown=true;
-if(!document.getElementById('tga2css')){var st=document.createElement('style');st.id='tga2css';st.textContent='#tvl-getapp.v2 .tga-t b{white-space:normal!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:14px!important;line-height:1.2!important}#tvl-getapp.v2 a.tga-btn{padding:0 12px!important;height:36px!important;font-size:12.5px!important;letter-spacing:.04em!important;white-space:nowrap}@media(max-width:374px){#tvl-getapp.v2 .tg2f{display:none}#tvl-getapp.v2 a.tga-btn{padding:0 14px!important;font-size:14px!important}}';document.head.appendChild(st)}
+if(!document.getElementById('tga2css')){var st=document.createElement('style');st.id='tga2css';st.textContent='#tvl-getapp.v2 .tga-t b{white-space:normal!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:14px!important;line-height:1.2!important}#tvl-getapp.v2 a.tga-btn{padding:0 12px!important;height:36px!important;font-size:12.5px!important;letter-spacing:.04em!important;white-space:nowrap}@media(max-width:374px){#tvl-getapp.v2 .tg2f{display:none}#tvl-getapp.v2 .tga-t b{font-size:13px!important}#tvl-getapp.v2 a.tga-btn{padding:0 14px!important;font-size:14px!important}}';document.head.appendChild(st)}
 var b=document.createElement('div');b.id='tvl-getapp';b.className='v2';b.setAttribute('role','region');b.setAttribute('aria-label','Get the Three Village Local mobile app');
 b.innerHTML='<div class="tga-ic"><img src="https://cdn.jsdelivr.net/gh/threevillagelocal-cloud/3vl-assets@ff2b1c9100c8/badges/3vl-logo-160.png" alt="" width="42" height="42"></div>'+
 '<div class="tga-t"><b>'+LINE+'</b><span><i>Free</i> mobile app</span></div>'+
