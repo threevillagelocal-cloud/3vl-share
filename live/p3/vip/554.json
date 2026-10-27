@@ -9,7 +9,8 @@
  "kicker": "Veteran-owned · East Setauket · Since 2019",
  "sub": "Sanding, UV-cured finishes, stain, repairs and recoats",
  "pills": [
-  "★ Veteran-owned"
+  "★ Veteran-owned",
+  "Three Village resident owned"
  ],
  "theme": {
   "navy": "#3A1210",
@@ -29,9 +30,16 @@
   "h2m": "29px"
  },
  "hero": {
-  "img": "img/554-hero2.webp",
-  "alt": "High-gloss refinished hardwood floor in a living room with a fireplace",
-  "pos": "50% 60%"
+  "img": "img/554-banner.webp",
+  "alt": "Kendall Harrington of Savera's Hardwood Floor Restoration with his Bona sander and dust-containment vacuum",
+  "pos": "50% 50%",
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   1733
+  ],
+  "ar": "1733/907"
  },
  "logo": "img/554-logo.png",
  "phone": "6318661972",
@@ -232,6 +240,14 @@
   [
    "Do they work on older homes?",
    "Yes. They sand and restore historic and older floors."
+  ],
+  [
+   "Can engineered floors be refinished?",
+   "Often, yes, depending on the wear layer. Kendall can look at your floors and tell you what's possible."
+  ],
+  [
+   "Can you fix pet stains and water damage?",
+   "Yes. Savera repairs and replaces damaged boards, then blends them in with the rest of the floor."
   ]
  ],
  "final": {
@@ -242,5 +258,75 @@
  },
  "side_sub": "Hardwood floor refinishing · East Setauket",
  "side_contact": "Request an estimate",
- "sticky_contact": "Estimate"
+ "sticky_contact": "Estimate",
+ "services_k": "What Savera does",
+ "services_t": "Floor care, *start to finish*",
+ "services": [
+  {
+   "t": "Sanding and refinishing",
+   "d": "Full sanding with dust containment, then a fresh, durable finish."
+  },
+  {
+   "t": "UV-cured finishes",
+   "d": "Instant-curing, low-odor finish so you get back on your floors fast."
+  },
+  {
+   "t": "Screen and recoat",
+   "d": "A lighter refresh when your floors don't need a full sanding."
+  },
+  {
+   "t": "Stain and color change",
+   "d": "Go darker, lighter or warmer with a custom stain."
+  },
+  {
+   "t": "Repairs",
+   "d": "Board replacement, pet stains, water damage and construction scuffs."
+  },
+  {
+   "t": "Engineered floors",
+   "d": "Careful sanding and refinishing for engineered hardwood."
+  },
+  {
+   "t": "Older and historic homes",
+   "d": "Restoring original floors in older Three Village homes."
+  },
+  {
+   "t": "Deep cleaning and prep",
+   "d": "Polish and wax removal, move-in refreshes and pre-sale prep."
+  },
+  {
+   "t": "Installation",
+   "d": "New hardwood floor installation."
+  }
+ ],
+ "advantage": {
+  "k": "Why neighbors pick Savera",
+  "t": "Honest advice. *Beautiful floors.*",
+  "text": "Kendall is a veteran and a Three Village neighbor. He uses Bona products and UV curing technology, and he'll tell you honestly when a screen and recoat will do instead of a full sanding. No high-pressure upselling."
+ },
+ "stats": [
+  {
+   "n": "2019",
+   "l": "Serving Three Village since"
+  },
+  {
+   "n": "UV",
+   "l": "Instant-cure finishes"
+  },
+  {
+   "n": "Bona",
+   "l": "Pro-grade products"
+  }
+ ],
+ "vcard": {
+  "n": "Harrington;Kendall;;;",
+  "fn": "Kendall Harrington",
+  "org": "Savera Wood Floor Refinishing",
+  "title": "Owner"
+ },
+ "sticky_extra": {
+  "t": "Website",
+  "u": "https://saverawoodfloorrefinishing.com/",
+  "a": "website"
+ }
 }
