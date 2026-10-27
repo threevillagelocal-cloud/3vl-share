@@ -299,14 +299,14 @@
 "thumb": "t/vip-552-f0982ff18d-t240.webp"
 },
 "554": {
-"banner": false,
-"big1280": "t/vip-554-136d876ae8-1280.webp",
-"big640": "t/vip-554-136d876ae8-640.webp",
-"big960": "t/vip-554-136d876ae8-960.webp",
+"banner": true,
+"big1280": "t/vip-554-0155ba496a-1280.webp",
+"big640": "t/vip-554-0155ba496a-640.webp",
+"big960": "t/vip-554-0155ba496a-960.webp",
 "logo": "t/vip-554-logo-d935047ccb.webp",
-"pos": "50% 60%",
-"src": "img/554-hero2.webp",
-"thumb": "t/vip-554-136d876ae8-t240.webp"
+"pos": "50% 50%",
+"src": "img/554-banner.webp",
+"thumb": "t/vip-554-0155ba496a-t240.webp"
 },
 "634": {
 "banner": false,
