@@ -133,3 +133,4 @@ html.tvl-inapp #tvl-sh .yh-in{padding-top:8px}
 #tvl-sh .yh-tdin .yh-ts{flex:0 1 auto;min-width:0}
 #tvl-sh .yh-tdin>.yh-tsp{flex:1 1 0;min-width:0}
 @media (max-width:1100px){#tvl-sh .yh-tdin>a.yh-tc{flex-shrink:0;min-width:auto}}
+@media(max-width:760px){#tvl-sf .yf-app b{flex-basis:100%;text-align:center;margin:0 0 2px}}
