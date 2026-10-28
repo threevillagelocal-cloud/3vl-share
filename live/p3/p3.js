@@ -177,7 +177,7 @@ if(isResults||SMARTQ){
       '<button type="button" class="p3-vcf" data-act="save_contact" title="Save to your phone contacts">&#128100; Save</button></div></div>'+
       '<aside class="p3-vside" data-uid="'+esc(b.uid)+'" data-u="'+esc(b.u)+'"></aside></div></div>'}
   function card(b,i){var tel=fmtTel(b.tel);
-    return '<div class="p3-rcard'+(b.feat?' p3-rfeat':'')+'" style="--i:'+(i%12)+'"><a class="p3-rtop" href="'+esc(b.u)+'"><img src="'+esc(b.img)+'" alt="" loading="lazy"><div>'+(b.feat?'<span class="p3-rtag">&#10003; Featured Business</span>':'')+'<b>'+esc(b.n)+'</b><small>&#128205; '+esc(b.town||'Three Village')+'</small></div></a>'+
+    return '<div class="p3-rcard'+(b.feat?' p3-rfeat':'')+'" style="--i:'+(i%12)+'"><a class="p3-rtop" href="'+esc(b.u)+'"><img src="'+esc(b.img)+'" alt="'+esc(b.n)+'" loading="lazy"><div>'+(b.feat?'<span class="p3-rtag">&#10003; Featured Business</span>':'')+'<b>'+esc(b.n)+'</b><small>&#128205; '+esc(b.town||'Three Village')+'</small></div></a>'+
       '<p class="p3-rd">'+esc(b.d.slice(0,140))+(b.d.length>140?'&hellip;':'')+'</p><div class="p3-racts">'+(tel?'<a class="p3-call" href="tel:'+tel.replace(/-/g,'')+'">&#128222; Call</a>':'')+
       '<a href="'+maps(b)+'" target="_blank" rel="noopener">&#128205; Map</a><a class="p3-view" href="'+esc(b.u)+'">View profile &rarr;</a></div></div>'}
   var title=q?'Results for <em>&ldquo;'+esc(q)+'&rdquo;</em>':'<em>'+esc(catName||'Local Businesses')+'</em>';

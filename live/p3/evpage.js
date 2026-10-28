@@ -47,7 +47,7 @@ function nextBlock(host,opts){
     list=list.filter(function(e){var k=e.title.toLowerCase().slice(0,28);if(seen[k])return false;seen[k]=1;return true}).slice(0,3);
     if(!list.length){$('#ev-cards').style.display='none';return}
     $('#ev-cards').innerHTML=list.map(function(e){var s=pd(e.start),en=pd(e.end),run=s.getTime()<now,u=e.page||e.url,own=u.indexOf(location.origin)===0;
-      return '<a class="ev-card" href="'+esc(u)+'"'+(own?'':' target="_blank" rel="noopener"')+'><span class="ev-cimg"><img src="'+esc(sm(e.img,360))+'" data-o="'+esc(e.img)+'" onerror="__tvlEvImg(this)" alt="" loading="lazy"></span>'+
+      return '<a class="ev-card" href="'+esc(u)+'"'+(own?'':' target="_blank" rel="noopener"')+'><span class="ev-cimg"><img src="'+esc(sm(e.img,360))+'" data-o="'+esc(e.img)+'" onerror="__tvlEvImg(this)" alt="'+esc(e.title)+'" loading="lazy"></span>'+
         '<span class="ev-cb"><span class="ev-cdate">'+esc(run?'Now through '+MON[en.getMonth()]+' '+en.getDate():when(s,en,e.allday))+'</span><b>'+esc(e.title)+'</b><small>'+esc(e.venue||'')+'</small></span></a>'}).join('')
   }).catch(function(){var c=$('#ev-cards');if(c)c.style.display='none'});
 }

@@ -86,7 +86,7 @@ function bar(){
     '<button type="button" class="tvc-chip tvc-free'+(S.free?' is-on':'')+'" data-free="1"><i>&#127903;&#65039;</i>Free</button></div></div>'}
 
 function thumb(ev,cls){var t=ev.tags[0]||'';
-  return ev.img?'<img class="'+cls+'" src="'+esc(sm(ev.img,640))+'" data-o="'+esc(ev.img)+'" alt="" loading="lazy" onerror="if(this.dataset.o&&this.src!==this.dataset.o){this.src=this.dataset.o}else{this.style.display=\'none\'}">':
+  return ev.img?'<img class="'+cls+'" src="'+esc(sm(ev.img,640))+'" data-o="'+esc(ev.img)+'" alt="'+esc(ev.title)+'" loading="lazy" onerror="if(this.dataset.o&&this.src!==this.dataset.o){this.src=this.dataset.o}else{this.style.display=\'none\'}">':
     '<span class="'+cls+' tvc-noimg" style="--tc:'+(TC[t]||'#205081')+'">'+(TI[t]||'&#11088;')+'</span>'}
 function card(ev,i){var d=ev.s,on=day(ev.s)<T0&&ev.e>=NOW;  /* multi-day event that started earlier and is still running */
   return '<a class="tvc-card" href="'+esc(ev.url)+'" style="--i:'+(i%12)+'"><div class="tvc-pic">'+thumb(ev,'tvc-img')+
