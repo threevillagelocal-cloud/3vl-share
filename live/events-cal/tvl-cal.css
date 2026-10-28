@@ -145,3 +145,7 @@ html.tvc-on .content_w_sidebar>.col-md-3{order:2;width:100%;right:0}
 .tvc-date.tvc-now b{font-size:15px;letter-spacing:.06em}
 .tvc-date.tvc-now{white-space:nowrap}
 .tvc-date .tvc-thru{display:block;font-style:normal;font-size:9px;letter-spacing:.06em;color:#5b6b7d;margin-top:2px;white-space:nowrap}
+
+/* 10/28/2026 owner: obvious Submit an event button in the hero */
+#tvl-cal#tvl-cal .tvc a.tvc-hbtn.tvc-subev{background:#fff;color:#13233a!important;margin-left:8px}
+@media(max-width:600px){#tvl-cal#tvl-cal .tvc a.tvc-hbtn.tvc-subev{margin:10px 0 0;display:inline-flex}}

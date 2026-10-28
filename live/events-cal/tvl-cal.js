@@ -77,7 +77,7 @@ function hero(){
     '<div class="tvc-hin"><span class="tvc-live"><i></i>LIVE &middot; Updated daily</span>'+
     '<h1 class="tvc-h1">Three Village <em>Events</em></h1>'+
     '<p class="tvc-sub">Everything happening in Stony Brook, Setauket, Port Jefferson and nearby, gathered every morning from local organizers.</p>'+
-    '<div class="tvc-stats"><div><b>'+up.length+'</b><span>coming up</span></div><div><b>'+wk+'</b><span>this weekend</span></div><div><b>'+fr+'</b><span>free</span></div></div>'+(MODE==='list'?'<a class="tvc-hbtn" href="/events-calendar">&#128197; View on Calendar &rarr;</a>':'')+'</div></header>'}
+    '<div class="tvc-stats"><div><b>'+up.length+'</b><span>coming up</span></div><div><b>'+wk+'</b><span>this weekend</span></div><div><b>'+fr+'</b><span>free</span></div></div>'+(MODE==='list'?'<a class="tvc-hbtn" href="/events-calendar">&#128197; View on Calendar &rarr;</a>':'')+'<a class="tvc-hbtn tvc-subev" href="/submit-event">&#10133; Submit your event</a></div></header>'}
 
 function bar(){
   var chip=function(v,l,ic){return '<button type="button" class="tvc-chip'+(S.tag===v?' is-on':'')+'" data-tag="'+esc(v)+'"'+(v?' style="--tc:'+TC[v]+'"':'')+'>'+(ic?'<i>'+ic+'</i>':'')+esc(l)+'</button>'};
