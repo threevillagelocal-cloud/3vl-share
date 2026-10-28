@@ -690,3 +690,13 @@ go();
   }
   go();
 })();
+
+/* 3VL: keep BD's built-in utility pages out of Google (10/27/2026). They have no Page Options in BD admin, so the
+   noindex is added here; Google applies the most restrictive robots tag it sees. */
+(function(){
+  var p=location.pathname.replace(/\/+$/,'')||'/';
+  if(['/search_results','/sitesearch','/pro-members','/copy-6','/pro-members-copy-8','/pro-members-copy-9'].indexOf(p)<0)return;
+  var m=document.querySelector('meta[name="robots"]');
+  if(m)m.setAttribute('content','noindex, follow');
+  else{m=document.createElement('meta');m.name='robots';m.content='noindex, follow';document.head.appendChild(m)}
+})();
