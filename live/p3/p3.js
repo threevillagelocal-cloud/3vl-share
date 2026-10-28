@@ -670,3 +670,23 @@ function go(){var f=document.querySelector('form[name="member_review"]')||docume
 }
 go();
 })();
+
+/* 3VL: label mobile app (Twinr) visits in GA4 (10/27/2026). Events: app_open (once per session) + app_view (every in-app page), user property app_user=yes.
+   App = Android WebView ("; wv)") or iOS WKWebView (no "Safari" token), minus social in-app browsers; push taps carry utm_source=twinr. */
+(function(){
+  if(window.__tvlAppTag)return;window.__tvlAppTag=1;
+  var ua=navigator.userAgent||'',q=location.search;
+  var social=/FBAN|FBAV|FB_IAB|Instagram|Messenger|Snapchat|musical_ly|TikTok|Bytedance|Pinterest|LinkedInApp|Twitter|Line\//.test(ua);
+  var inApp=(!social&&((/iPhone|iPad|iPod/.test(ua)&&!/Safari/.test(ua))||(/Android/.test(ua)&&ua.indexOf('; wv)')>-1)))||/twinr/i.test(ua)||/utm_source=twinr/i.test(q);
+  try{if(inApp)sessionStorage.setItem('tvlApp','1');else if(!social&&sessionStorage.getItem('tvlApp'))inApp=true}catch(e){}
+  if(!inApp)return;
+  var plat=/Android/.test(ua)?'android':'ios',tries=0;
+  function go(){
+    if(!window.gtag){if(++tries<20)setTimeout(go,250);return}
+    gtag('set','user_properties',{app_user:'yes'});
+    var first=true;try{first=!sessionStorage.getItem('tvlAppOpen');sessionStorage.setItem('tvlAppOpen','1')}catch(e){}
+    if(first)gtag('event','app_open',{app_platform:plat});
+    gtag('event','app_view',{app_platform:plat,page_path:location.pathname});
+  }
+  go();
+})();
