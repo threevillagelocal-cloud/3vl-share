@@ -204,3 +204,11 @@
 /* inside the shop row (owner photos 10/29) */
 .ss-inside figure:last-child img{object-position:50% 28%}
 @media (max-width:760px){.ss-inside figure:last-child{aspect-ratio:4/3}}
+/* storefront hero (10/29): on phones keep the photo visible, description moves below it */
+.ss-dek2{display:none}
+@media (max-width:760px){
+ .ss .ss-hbg{object-position:18% 50%}
+ .ss-hero{min-height:430px}
+ .ss-hin .ss-dek,.ss-hin .ss-chips{display:none}
+ .ss-dek2{display:block;font-size:17px;line-height:1.6;color:#26384c;margin:0 0 18px}
+}
