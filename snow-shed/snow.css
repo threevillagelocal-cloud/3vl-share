@@ -201,3 +201,6 @@
 }
 @media(max-width:360px){.ss-h1{font-size:34px!important}.ss-opt{font-size:13.5px}}
 @media(prefers-reduced-motion:reduce){.ss-snow,.ss-snow2,.ss-pulse{animation:none!important}.ss.js .ss-rv{opacity:1;transform:none}}
+/* inside the shop row (owner photos 10/29) */
+.ss-inside figure:last-child img{object-position:50% 28%}
+@media (max-width:760px){.ss-inside figure:last-child{aspect-ratio:4/3}}
