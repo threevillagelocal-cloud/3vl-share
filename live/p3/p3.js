@@ -377,7 +377,7 @@ if(path==='/blog'){
   var root=mount(h,items[0].closest('[itemprop="mainEntity"]')||items[0]);
   items.forEach(hide);
   /* lead photo: BD's thumbnail is already on its way, so it shows first; the sharper 800px copy replaces it once loaded */
-  (function(li){if(!li||!li.dataset.hi)return;var hi=new Image();hi.onload=function(){li.src=hi.src};hi.src=li.dataset.hi})($('.p3-limg img',root));
+  (function(li){if(!li||!li.dataset.hi)return;var f=li.dataset.f,big=(window.innerWidth*(window.devicePixelRatio||1))>1000,hi=new Image();hi.onload=function(){li.src=hi.src};hi.onerror=function(){if(f&&hi.src!==f)hi.src=f};hi.src=(big&&f)?f:li.dataset.hi})($('.p3-limg img',root));/* 10/29: brand-new posts have no 3vl-share copy yet (made every 30 min) -> fall back to the full image; wide screens use the full image */
   function hideTop(){$$('.feature_results_header,.post-search-result-count-container,.views').forEach(function(e){if(!root.contains(e))e.style.display='none'})}
   hideTop();document.addEventListener('DOMContentLoaded',hideTop);window.addEventListener('load',hideTop);
   /* BD loads more posts as you scroll: turn each new one into a card */
