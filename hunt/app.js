@@ -42,7 +42,7 @@
       '<li><b>Scan and check in</b> for 1 point. Each spot counts once a day, so find as many as you can.</li>' +
       '<li><b>Register once.</b> It takes about a minute, and after that every scan around town is one tap.</li></ul>' +
       '<p class="tvh-small" style="margin:0 0 4px">Free to play. No purchase necessary.</p>' +
-      '<button class="tvh-btn tvh-big" id="tvh-join">Register and get my point</button>');
+      '<button class="tvh-btn tvh-big" id="tvh-join">Register to Play</button>');
     document.getElementById('tvh-join').onclick = function () { signup(then, placeName); };
   }
   function signup(then, placeName) {
