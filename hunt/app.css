@@ -41,6 +41,9 @@
 .tvh-legal{margin:22px 0 6px;padding:16px 18px;border-top:1px solid #e1eaf5;color:#66717e;font-size:12.5px;line-height:1.55}
 .tvh-legal p{margin:0 0 8px}.tvh-legal b{color:#3c4a5e}
 .tvh-bonus{display:inline-block;margin:0 0 12px;padding:8px 16px;border-radius:999px;background:#ffc53d;color:#13233a;font-weight:800;font-size:16px;animation:tvhpop .7s cubic-bezier(.2,.8,.2,1.3) both}
+.tvh-lookg{display:grid;grid-template-columns:1.9fr 1fr;gap:12px;align-items:stretch}
+.tvh-lookg img{display:block;width:100%;height:100%;object-fit:cover;border-radius:16px;border:1px solid #e1eaf5;box-shadow:0 8px 24px rgba(15,42,79,.08)}
+@media(max-width:700px){.tvh-lookg{grid-template-columns:1fr}.tvh-lookv{display:none}}
 /* check-in card */
 .tvh-app:empty{display:none}
 .tvh-app .tvh-card{text-align:center;padding:26px 20px;margin:8px 0 18px;border:2px solid #1d5fbf}
