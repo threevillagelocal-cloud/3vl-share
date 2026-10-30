@@ -22,7 +22,7 @@
       .then(function (r) { return r.json(); })
       .catch(function () { return { ok: false, error: 'network' }; });
   }
-  function view(html) { root.innerHTML = '<div class="tvh-card">' + html + '</div>'; window.scrollTo(0, Math.max(0, root.getBoundingClientRect().top + window.scrollY - 80)); }
+  function view(html) { root.innerHTML = '<div class="tvh-card">' + html + '</div>'; window.scrollTo(0, Math.max(0, root.getBoundingClientRect().top + window.scrollY - 150)); }
   function spin(msg) { view('<div class="tvh-spin"></div><p class="tvh-msg">' + esc(msg) + '</p>'); }
   function locate() {
     return new Promise(function (ok) {
