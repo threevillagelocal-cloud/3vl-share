@@ -34,6 +34,17 @@
   var STAR = '<span class="tvh-star">&#9733;</span>';
 
   // ---------- sign up (once) ----------
+  function welcome(then, placeName) {
+    ga('hunt_welcome');
+    view('<div class="tvh-burst">' + STAR + '</div><p class="tvh-kick">You found ' + esc(placeName) + '!</p>' +
+      '<h2>Welcome to the Three Village Local Scavenger Hunt</h2>' +
+      '<ul class="tvh-wl"><li><b>Find our QR signs</b> at local shops and restaurants, plus a few secret stickers around town.</li>' +
+      '<li><b>Scan and check in</b> for 1 point. Each spot counts once a day, so find as many as you can.</li>' +
+      '<li><b>Register once.</b> It takes about a minute, and after that every scan around town is one tap.</li></ul>' +
+      '<p class="tvh-small" style="margin:0 0 4px">Free to play. No purchase necessary.</p>' +
+      '<button class="tvh-btn tvh-big" id="tvh-join">Register and get my point</button>');
+    document.getElementById('tvh-join').onclick = function () { signup(then, placeName); };
+  }
   function signup(then, placeName) {
     view((placeName ? '<p class="tvh-kick">You found ' + esc(placeName) + '!</p>' : '<p class="tvh-kick">Join the hunt</p>') +
       '<h2>One quick sign up</h2><p class="tvh-p">You only do this once on this phone. After that, every check-in is one tap.</p>' +
@@ -115,7 +126,7 @@
           '<button class="tvh-btn tvh-big" id="tvh-go">' + STAR + ' Check in here</button><p class="tvh-small">Your phone will ask to share your location. Say Allow.</p>');
         document.getElementById('tvh-go').onclick = function () { checkin(c); };
       };
-      token() ? go() : signup(function () { checkin(c); }, c.name);
+      token() ? go() : welcome(function () { checkin(c); }, c.name);
     });
   }
   function placeMode(c) {
