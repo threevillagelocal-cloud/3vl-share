@@ -39,7 +39,7 @@
     view('<div class="tvh-burst">' + STAR + '</div><p class="tvh-kick">You found ' + esc(placeName) + '!</p>' +
       '<h2>Welcome to the Three Village Local Scavenger Hunt</h2>' +
       '<ul class="tvh-wl"><li><b>Find our QR signs</b> at local shops and restaurants, plus a few secret stickers around town.</li>' +
-      '<li><b>Scan and check in</b> for 1 point. Each spot counts once a day, so find as many as you can.</li>' +
+      '<li><b>Scan and check in</b> for 10 points. Each spot counts once a day, so find as many as you can.</li>' +
       '<li><b>Register once.</b> It takes about a minute, and after that every scan around town is one tap.</li></ul>' +
       '<p class="tvh-small" style="margin:0 0 4px">Free to play. No purchase necessary.</p>' +
       '<button class="tvh-btn tvh-big" id="tvh-join">Register to Play</button>');
@@ -98,7 +98,7 @@
   function result(r, info) {
     var mine = r.total != null ? '<div class="tvh-tot"><b>' + r.total + '</b><span>total point' + (r.total === 1 ? '' : 's') + '</span></div><p class="tvh-p">' + r.today + ' check-in' + (r.today === 1 ? '' : 's') + ' today &middot; ' + r.spots + ' different spot' + (r.spots === 1 ? '' : 's') + ' so far</p>' : '';
     var more = '<a class="tvh-btn tvh-alt" href="/hunt">See the leaderboard</a>';
-    if (r.ok) { ga('hunt_checkin', { code: code }); return view('<div class="tvh-burst">' + STAR + '</div><p class="tvh-kick">Checked in!' + (r.points > 1 ? ' Bonus day!' : '') + '</p><h2>+' + (r.points || 1) + ' point' + (r.points > 1 ? 's' : '') + ' at ' + esc(r.place) + '</h2>' + mine + '<p class="tvh-p">Keep going: every different spot you find today counts.</p>' + more); }
+    if (r.ok) { ga('hunt_checkin', { code: code }); return view('<div class="tvh-burst">' + STAR + '</div><p class="tvh-kick">Checked in!' + (r.points > 10 ? ' Bonus day!' : '') + '</p><h2>+' + (r.points || 10) + ' points at ' + esc(r.place) + '</h2>' + mine + '<p class="tvh-p">Keep going: every different spot you find today counts.</p>' + more); }
     if (r.error === 'already') { ga('hunt_already'); return view('<p class="tvh-kick">Already counted today</p><h2>You checked in at ' + esc(r.place) + ' today</h2><p class="tvh-p">Each spot counts once a day. Come back tomorrow, or go find another one!</p>' + mine + more); }
     if (r.error === 'far') return view('<p class="tvh-kick">Not quite there</p><h2>You need to be at ' + esc(info.name) + '</h2><p class="tvh-p">Your phone says you are about ' + (r.dist > 1000 ? (r.dist / 1609).toFixed(1) + ' miles' : Math.round(r.dist * 3.28) + ' feet') + ' away. Check-ins only count at the sign or sticker.</p><button class="tvh-btn" id="tvh-again">Try again</button>' + more, bindAgain(info));
     if (r.error === 'weakgps') return view('<p class="tvh-kick">Weak location signal</p><h2>Step near a window or outside</h2><p class="tvh-p">Your phone could not get a good fix on where you are. Turn on Wi-Fi (it helps), then try again.</p><button class="tvh-btn" id="tvh-again">Try again</button>', bindAgain(info));
@@ -122,7 +122,7 @@
       var go = function () {
         var first = LS.get('tvh_first');
         var bx = c.bonus > 1 ? '<p class="tvh-bonus">' + STAR + ' ' + esc(c.bonusNote || (c.bonus === 2 ? 'Double' : c.bonus === 3 ? 'Triple' : c.bonus + 'x') + ' points here today!') + '</p>' : '';
-        view('<p class="tvh-kick">You found it!</p><h2>' + esc(c.name) + '</h2>' + bx + (first ? '<p class="tvh-p">Hi ' + esc(first) + '! Tap below to grab your ' + (c.bonus > 1 ? c.bonus + ' points' : 'point') + '.</p>' : '') +
+        view('<p class="tvh-kick">You found it!</p><h2>' + esc(c.name) + '</h2>' + bx + (first ? '<p class="tvh-p">Hi ' + esc(first) + '! Tap below to grab your ' + (c.bonus > 1 ? c.bonus * 10 : 10) + ' points.</p>' : '') +
           '<button class="tvh-btn tvh-big" id="tvh-go">' + STAR + ' Check in here</button><p class="tvh-small">Your phone will ask to share your location. Say Allow.</p>');
         document.getElementById('tvh-go').onclick = function () { checkin(c); };
       };
