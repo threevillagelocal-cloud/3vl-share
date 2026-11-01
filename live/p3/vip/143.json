@@ -82,7 +82,7 @@
   "Programs for all ages",
   "Museum passes",
   "Library of Things",
-  "Level Up Kitchen cafe",
+  "Library Café",
   "Free Seed Collection",
   "Meeting rooms",
   "Tech help",
@@ -91,7 +91,7 @@
  "intro": {
   "k": "Your library",
   "t": "The heart of *Three Village.*",
-  "text": "Emma S. Clark Memorial Library opened on October 3, 1892, in the Tudor-style building on Main Street in Setauket, and it serves residents of the Three Village Central School District. Today it is a full-service library for every age: books, eBooks and streaming, programs and classes from newborns to adults, museum passes, a Library of Things, tech help and the Level Up Kitchen Library Cafe. It is open seven days a week."
+  "text": "Emma S. Clark Memorial Library opened on October 3, 1892, in the Tudor-style building on Main Street in Setauket, and it serves residents of the Three Village Central School District. Today it is a full-service library for every age: books, eBooks and streaming, programs and classes from newborns to adults, museum passes, a Library of Things, tech help and the Library Café. It is open seven days a week."
  },
  "gallery_k": "Inside the library",
  "gallery_t": "A look *inside*",
@@ -107,10 +107,6 @@
   {
    "img": "img/143-g3.webp",
    "alt": "Philip Groia Global Studies Collection books in the Delaney Room"
-  },
-  {
-   "img": "img/143-g4.webp",
-   "alt": "Level Up Kitchen Library Cafe owner Chelsea Gomez at the cafe counter"
   }
  ],
  "services_k": "At the library",
@@ -186,7 +182,7 @@
   ],
   [
    "Is there a cafe?",
-   "Yes. The Level Up Kitchen Library Cafe is open Monday to Friday 10:30 AM to 7 PM, Saturday 9 AM to 4:30 PM and Sunday 10 AM to 4:30 PM."
+   "Yes. The Library Café is inside the library. Check emmaclark.org for current café hours."
   ]
  ],
  "final": {
