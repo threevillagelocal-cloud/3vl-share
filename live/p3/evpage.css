@@ -72,3 +72,18 @@ html.tvl-we:not(.ev-on) #ev{opacity:0}
   .ev-card b{font-size:15px}
   .ev-links a{flex:1 1 100%;justify-content:center}
 }
+
+/* Three Village Weekly sign-up card */
+.ev-nl{background:#fff;border:1px solid #dde5ee;border-radius:20px;padding:24px 26px;margin:22px 0 0;box-shadow:0 10px 28px rgba(27,47,69,.08);font-family:'tvl-rc','Radio Canada',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;clear:both;box-sizing:border-box;border-top:5px solid #1f6fd6}
+.ev-nl *{box-sizing:border-box}
+.ev-nl-k{color:#1f6fd6;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 6px}
+.ev-nl h2{color:#1b2f45;font-size:26px;line-height:1.15;margin:0 0 8px;font-weight:800}
+.ev-nl-s{color:#3d4f63;font-size:16px;line-height:1.45;margin:0 0 16px}
+.ev-nl-f{display:flex;gap:10px;flex-wrap:wrap;margin:0}
+.ev-nl-f input{flex:1 1 220px;min-width:0;height:50px;border:1.5px solid #c9d5e3;border-radius:12px;padding:0 16px;font-size:16px;color:#1b2f45;background:#f8fafc}
+.ev-nl-f input:focus{outline:none;border-color:#1f6fd6;background:#fff}
+.ev-nl-f input.bad{border-color:#d33}
+.ev-nl-f button{flex:0 0 auto;height:50px;border:0;border-radius:12px;padding:0 24px;background:#1f6fd6;color:#fff;font-weight:800;font-size:16px;cursor:pointer}
+.ev-nl-f button:hover{background:#1758ad}
+.ev-nl-n{color:#7a8899;font-size:13px;margin:10px 0 0}
+@media(max-width:520px){.ev-nl{padding:20px 18px}.ev-nl h2{font-size:22px}.ev-nl-f button{flex:1 1 100%}}

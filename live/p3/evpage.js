@@ -32,6 +32,25 @@ function when(s,e,allday){if(!s)return '';var same=!e||(s.toDateString()===e.toD
   if(!same)return day(s)+' to '+day(e);
   return day(s)+(noTime?'':' · '+tm(s)+(e&&e>s?' to '+tm(e):''))}
 
+/* ---------- Three Village Weekly sign-up card (above the next step block) ----------
+   Email typed here rides to /newsletter in sessionStorage (never the URL), where BD's own form (with its reCAPTCHA) finishes the sign-up.
+   PREVIEW ONLY until the owner OKs it: shows with ?nlprev=1 (remembered in this browser). Hidden for anyone who already signed up. */
+function nlCard(host,before){
+  var on=false;try{if(/[?&]nlprev=1/.test(location.search))localStorage.setItem('tvl_nlprev','1');on=localStorage.getItem('tvl_nlprev')==='1'&&!localStorage.getItem('tvl_nl_done')}catch(e){}
+  if(!on||$('#ev-nl'))return;
+  var c=document.createElement('section');c.id='ev-nl';c.className='ev-nl';
+  c.innerHTML='<div class="ev-nl-t"><p class="ev-nl-k">Three Village Weekly</p><h2>The best of Three Village, every Friday</h2>'+
+    '<p class="ev-nl-s">This weekend&rsquo;s events, local specials and new businesses in one quick email. Free, once a week.</p></div>'+
+    '<form class="ev-nl-f" novalidate><input type="email" name="nlemail" placeholder="Your email address" autocomplete="email" required aria-label="Email address">'+
+    '<button type="submit">Sign me up</button></form><p class="ev-nl-n">No spam. Unsubscribe anytime.</p>';
+  host.insertBefore(c,before);
+  $('.ev-nl-f',c).addEventListener('submit',function(ev){ev.preventDefault();var i=$('input',c),v=(i.value||'').trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){i.focus();i.classList.add('bad');return}
+    try{sessionStorage.setItem('tvl_nl_email',v)}catch(e){}
+    try{if(window.gtag)window.gtag('event','newsletter_start',{source:isEvent?'event':'post'})}catch(e){}
+    location.href='/newsletter?from='+(isEvent?'event':'post')});
+}
+
 /* ---------- next step block (events + blog posts) ---------- */
 function nextBlock(host,opts){
   if(!host||$('#ev-next'))return;
@@ -39,6 +58,7 @@ function nextBlock(host,opts){
   sec.innerHTML='<p class="ev-kick">'+esc(opts.kick)+'</p><h2>'+esc(opts.title)+'</h2><div class="ev-cards" id="ev-cards"></div>'+
     '<div class="ev-links"><a href="/events-calendar" data-ev="calendar">Full calendar <span>&rarr;</span></a><a href="/categories" data-ev="business">Find a local business <span>&rarr;</span></a><a href="/app" data-ev="app">Get the free app <span>&rarr;</span></a><a href="/newsletter" data-ev="newsletter">Get Three Village Weekly <span>&rarr;</span></a></div>';
   host.appendChild(sec);
+  nlCard(host,sec);
   sec.addEventListener('click',function(ev){var a=ev.target.closest('a');if(a)try{if(window.gtag)window.gtag('event','next_step_click',{target:a.getAttribute('data-ev')||'event',from:isEvent?'event':'post'})}catch(e){}});
   fetch(FEED+'?v='+Math.floor(Date.now()/9e5)).then(function(r){return r.json()}).then(function(d){
     var now=Date.now(),here=location.origin+path,seen={};
