@@ -39,7 +39,7 @@ function nlCard(host,before){
   var on=false;try{if(/[?&]nlprev=1/.test(location.search))localStorage.setItem('tvl_nlprev','1');on=localStorage.getItem('tvl_nlprev')==='1'&&!localStorage.getItem('tvl_nl_done')}catch(e){}
   if(!on||$('#ev-nl'))return;
   var c=document.createElement('section');c.id='ev-nl';c.className='ev-nl';
-  c.innerHTML='<div class="ev-nl-t"><p class="ev-nl-k">Three Village Weekly</p><h2>The best of Three Village, every Friday</h2>'+
+  c.innerHTML='<div class="ev-nl-t"><p class="ev-nl-k">Three Village Weekly</p><h2>The best of Three Village, every week</h2>'+
     '<p class="ev-nl-s">This weekend&rsquo;s events, local specials and new businesses in one quick email. Free, once a week.</p></div>'+
     '<form class="ev-nl-f" novalidate><input type="email" name="nlemail" placeholder="Your email address" autocomplete="email" required aria-label="Email address">'+
     '<button type="submit">Sign me up</button></form><p class="ev-nl-n">No spam. Unsubscribe anytime.</p>';
