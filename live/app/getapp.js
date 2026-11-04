@@ -1,6 +1,8 @@
 /* 3VL mobile app bar v2: shows after real interest (1/3 scroll, 2nd page, or 25s), timely line from line.json, store by device, view + click events */
 (function(){
 var ua=navigator.userAgent||'',Q=location.search;
+// ON HOLD (owner 11/4/2026: it covered the Captain Culper chat button on phones). Set HOLD=false to bring it back; ?appbar=on still shows it for testing.
+var HOLD=true;if(HOLD&&Q.indexOf('appbar=on')<0)return;
 var prev=Q.indexOf('appbar=v2')>-1;
 var inFB=/FBAN|FBAV|FB_IAB|Instagram/.test(ua);
 var ios=/iPhone|iPad|iPod/.test(ua),android=/Android/.test(ua);
