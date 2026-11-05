@@ -296,14 +296,14 @@
    "07:00",
    "17:00"
   ],
-  "sat": null,
+  "sat": "By appointment",
   "sun": null
  },
  "reviews": {
   "t": "Happy with your yard?",
   "text": "If Green Machine takes care of your property, a quick review helps your neighbors find a crew they can trust.",
-  "url": "https://www.threevillagelocal.com/green-machine-landscaping/writeareview",
-  "btn": "Write a review"
+  "url": "https://www.facebook.com/profile.php?id=100057451209483&sk=reviews",
+  "btn": "Review on Facebook"
  },
  "faq_t": "Landscaping *FAQ*",
  "faq": [
