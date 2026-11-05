@@ -30,7 +30,7 @@ function openState(h){if(!h)return null;var n=nowET(),t=h[DAYS[n.d]];function mm
   for(var i=0;i<8;i++){var dd=(n.d+i)%7,x=h[DAYS[dd]];if(!x)continue;if(x==='24h')x=['00:00','24:00'];if(i===0&&n.m<mm(x[0]))return {on:false,txt:'Opens today '+t12(x[0])};if(i>0)return {on:false,txt:'Opens '+(i===1?'tomorrow':DN[DAYS[dd]].slice(0,3))+' '+t12(x[0])}}return {on:false,txt:'Closed'}}
 
 /* prof.js already started this download (window.__pvData, 10/24/2026); fetch only if it did not */
-(window.__pvData||fetch(BASE+'vip/'+uid+'.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null})).then(function(d){if(d)render(d)}).catch(function(){});
+(window.__pvData||fetch(BASE+'vip/'+uid+'.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null})).then(function(d){if(d){var q=/[?&]m2=([01])/.exec(location.search);if(q)d.m2=q[1]==='1';render(d)}}).catch(function(){});
 
 function render(d){
   var T=d.theme||{},slug=location.pathname.replace(/^\/|\/$/g,''),tel=(d.phone||'').replace(/\D/g,'').slice(-10),telF='('+tel.slice(0,3)+') '+tel.slice(3,6)+'-'+tel.slice(6)+(d.phone_ext?' ext. '+d.phone_ext:''),
