@@ -38,6 +38,7 @@
  },
  "logo": "img/931-logo3.webp",
  "pills": [
+  "★ TBR Readers' Choice 2023-2025",
   "★ Family owned & operated",
   "Three Village resident owned"
  ],
@@ -342,5 +343,24 @@
  "sticky_contact": "Quote",
  "logo_wide": true,
  "final_first": true,
- "m2": true
+ "m2": true,
+ "awards": {
+  "k": "Award winning",
+  "t": "Readers' Choice *three years running*",
+  "text": "Voted Best on Suffolk's North Shore in the TBR News Media Readers' Choice awards in 2023, 2024 and 2025.",
+  "items": [
+   {
+    "img": "img/931-award-2023.webp",
+    "alt": "TBR Readers' Choice Best on Suffolk's North Shore 2023 Winner"
+   },
+   {
+    "img": "img/931-award-2024.webp",
+    "alt": "TBR Readers' Choice Best on Suffolk's North Shore 2024 Winner"
+   },
+   {
+    "img": "img/931-award-2025.webp",
+    "alt": "TBR Readers' Choice Best on Suffolk's North Shore 2025 Winner"
+   }
+  ]
+ }
 }

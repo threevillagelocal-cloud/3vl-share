@@ -78,6 +78,8 @@ function render(d){
   /* intro */
   if(d.intro)h+='<section class="s up"><div class="intro'+(d.intro.quote?'':' one')+'"><div>'+K(d.intro.k)+H2(d.intro.t)+'<p class="lead">'+esc(d.intro.text)+'</p></div>'+
      (d.intro.quote?'<div class="q"><p>'+esc(d.intro.quote)+'</p><b>'+esc(d.intro.by||'')+'</b></div>':'')+'</div></section>';
+  /* 11/5/2026 awards: big badge row (Green Machine TBR Readers' Choice 2023-2025) */
+  if(d.awards)h+='<section class="s up awd">'+K(d.awards.k||'Award winning')+H2(d.awards.t||'Awards')+(d.awards.text?'<p class="lead">'+esc(d.awards.text)+'</p>':'')+'<div class="awr">'+d.awards.items.map(function(a){return '<img src="'+src(a.img)+'" alt="'+esc(a.alt)+'" loading="lazy" width="260" height="227">'}).join('')+'</div></section>';
   /* gallery */
   var G=d.gallery||[];
   if(G.length)h+='<section class="s up">'+K(d.gallery_k||'Take a look')+H2(d.gallery_t||'Inside *'+(d.short||d.name)+'*')+'<div class="rail">'+G.map(function(g,i){return '<div class="gi" role="button" tabindex="0" data-i="'+i+'"><img src="'+src(g.img)+'" loading="lazy" decoding="async" alt="'+esc(g.alt)+'"></div>'}).join('')+'</div></section>';
