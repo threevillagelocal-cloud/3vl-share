@@ -273,5 +273,6 @@
   "a": "text"
  },
  "hours_t": "Office *hours*",
- "logo_hero": "img/528-logo-white.png"
+ "logo_hero": "img/528-logo-white.png",
+ "m2": true
 }

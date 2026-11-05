@@ -199,5 +199,6 @@
   "a": "library_card"
  },
  "sticky_contact": "Events",
- "compliance": "Hours, closings and services are from emmaclark.org. Check the library's website for the latest updates."
+ "compliance": "Hours, closings and services are from emmaclark.org. Check the library's website for the latest updates.",
+ "m2": true
 }

@@ -300,5 +300,6 @@
  "compliance": "Matthew Bardram, Licensed Mortgage Loan Originator, NMLS #864086. Coltrain Funding Group LLC, DBA Coltrain Mortgage (NMLS #10640), 140 Fell Court Suite 101, Hauppauge, NY 11788, is a Registered Mortgage Broker with the NYS Department of Financial Services. Licensed Mortgage Broker, NJ Department of Banking & Insurance. Licensed Mortgage Broker, Florida Office of Financial Regulation. Licensed Mortgage Broker by the Pennsylvania Department of Banking and Securities. All loans arranged through a third party. We do not make any mortgage loan commitments or fund any mortgage loans. Mortgage broker only, not a mortgage lender or mortgage correspondent lender. All programs subject to borrower qualification, underwriting and lender guidelines. Rates subject to change without notice.",
  "compliance_logo": "img/122-eho.png",
  "text_phone": "6313329436",
- "text_label": "For texting"
+ "text_label": "For texting",
+ "m2": true
 }
