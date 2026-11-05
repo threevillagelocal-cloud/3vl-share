@@ -70,7 +70,7 @@ function render(d){
   if(d.address)C+='<a data-a="directions" href="'+dir+'" target="_blank" rel="noopener">'+ic('map')+'<span><small>'+esc(d.address_label||'Address')+'</small>'+esc(d.address)+'</span></a>';
   if(d.contact_cta)C+='<a class="inq" data-a="contact" href="'+esc(contact)+'"'+ext(contact)+'><span><small>'+esc(d.contact_cta.k)+'</small>'+esc(d.contact_cta.t)+' &rarr;</span></a>';
   if(C)h+='<div class="cs up">'+C+'</div>';
-  if(d.ticker)h+='<div class="tk up"><div class="tr">'+(function(x){return x+x})(d.ticker.map(function(t){return '<span>'+esc(t)+'</span>'}).join(''))+'</div></div>';
+  if(d.ticker)h+='<div class="tk up"><div class="tr">'+(function(x){return d.m2?x:x+x})(d.ticker.map(function(t){return '<span>'+esc(t)+'</span>'}).join(''))+'</div></div>';
   function H2(t){return '<h2 class="h2">'+esc(t).replace(/\*(.+?)\*/g,'<em>$1</em>')+'</h2>'}
   function K(t){return t?'<div class="kick">'+esc(t)+'</div>':''}
   /* intro */
