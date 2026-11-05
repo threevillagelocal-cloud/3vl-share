@@ -303,3 +303,12 @@ html.pv3-m2 body{padding-bottom:84px}
 #pv3.m2 .fin .row .b{width:100%;max-width:300px;justify-content:center;text-align:center;box-sizing:border-box;margin:0}
 }
 @media(max-width:640px){#pv3.m2 .rv .row{flex-direction:column;align-items:center;gap:12px}#pv3.m2 .rv .row .b{width:100%;max-width:300px;box-sizing:border-box;margin:0}}
+/* 11/5 m2 rollout review: tighter tag chips, readable Google rating on banner pages, advantage logos in one row */
+@media(max-width:640px){
+#pv3.m2 .tk .tr{gap:6px}
+#pv3.m2 .tk span{font-size:12px;padding:5px 10px;gap:6px;line-height:1.3}
+#pv3.m2 .tk span:before{width:6px;height:6px}
+#pv3.m2 .hin.hb .gstar{background:#fff;border:1px solid var(--line);color:var(--navy)!important;backdrop-filter:none;box-shadow:0 2px 8px rgba(19,35,58,.07);white-space:normal}
+#pv3.m2 .logos{flex-wrap:nowrap;justify-content:space-between;gap:10px}
+#pv3.m2 .logos img{height:auto!important;max-height:40px;width:auto!important;max-width:31%;object-fit:contain}
+}
