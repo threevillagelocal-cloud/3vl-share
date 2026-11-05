@@ -279,6 +279,9 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 #pv3.m2 .svcs{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin:14px -16px 0;padding:0 16px 4px;scroll-padding:0 16px}
 #pv3.m2 .svcs::-webkit-scrollbar{display:none}
 #pv3.m2 .svc{flex:0 0 78%;scroll-snap-align:start;padding:16px;display:flex;flex-direction:column}
+#pv3.m2 .tabs{flex-wrap:nowrap!important;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;scrollbar-width:none;margin-left:-16px;margin-right:-16px;padding:2px 16px 4px}
+#pv3.m2 .tabs::-webkit-scrollbar{display:none}
+#pv3.m2 .tab{flex:0 0 auto;scroll-snap-align:start;white-space:nowrap}
 #pv3.m2 .swp{display:block;margin-top:10px;font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--blue);text-align:right}
 #pv3.m2 .hrs{display:none}
 #pv3.m2 .hrsg{display:block;margin-top:10px}
