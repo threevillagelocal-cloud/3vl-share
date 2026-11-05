@@ -246,3 +246,7 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 #pv3 .hin.hb .head{flex:0 0 112px;height:112px;border-radius:50%;border:3px solid #fff;box-shadow:0 10px 26px rgba(11,31,75,.22)}
 #pv3 .hin.hb .head.logo{flex-basis:112px;height:112px;border-radius:22px;border:1px solid var(--line);padding:10px}
 @media(max-width:640px){#pv3 .hin.hb{flex-direction:row;align-items:flex-start;gap:14px}#pv3 .hin.hb .head,#pv3 .hin.hb .head.logo{flex:0 0 76px;width:76px;height:76px}}
+
+/* 11/5/2026 logo_wide:true (wide logos, Green Machine 931): wider logo tile so the logo reads; phones stack it above the name */
+#pv3 .hin.hb.wl .head.logo{flex:0 0 250px;width:250px;height:112px;padding:10px 14px}
+@media(max-width:640px){#pv3 .hin.hb.wl{flex-direction:column;gap:12px}#pv3 .hin.hb.wl .head.logo{flex:0 0 auto;width:220px;height:96px}}
