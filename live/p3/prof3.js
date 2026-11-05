@@ -66,6 +66,8 @@ function render(d){
   h+='<div class="acts up'+(A.length===3?' n3':'')+'">'+A.map(function(x){return '<a class="act'+(x.pri?' pri':'')+'" data-a="'+esc(x.a||x.i)+'" href="'+esc(x.i==='card'?'#':x.u)+'"'+(x.i==='card'?' data-vcard="1" download="'+esc(slug)+'.vcf"':ext(x.u))+'>'+ic(x.i)+esc(x.t)+'</a>'}).join('')+'</div>';
   /* contact strip */
   var C='';if(tel)C+='<a data-a="call" href="'+telH+'">'+ic('call')+'<span><small>'+esc(d.phone_label||'Phone')+'</small>'+telF+'</span></a>';
+  /* 11/5/2026 text_phone: a texting-only number (owner's own page 122) */
+  if(d.text_phone){var tp=String(d.text_phone).replace(/\D/g,'');C+='<a data-a="text" href="sms:+1'+tp+'">'+ic('msg')+'<span><small>'+esc(d.text_label||'For texting')+'</small>'+tp.replace(/(\d{3})(\d{3})(\d{4})/,'$1-$2-$3')+'</span></a>'}
   if(d.email)C+='<a data-a="email" href="mailto:'+esc(d.email)+'">'+ic('mail')+'<span><small>Email</small>'+esc(d.email)+'</span></a>';
   if(d.address)C+='<a data-a="directions" href="'+dir+'" target="_blank" rel="noopener">'+ic('map')+'<span><small>'+esc(d.address_label||'Address')+'</small>'+esc(d.address)+'</span></a>';
   if(d.contact_cta)C+='<a class="inq" data-a="contact" href="'+esc(contact)+'"'+ext(contact)+'><span><small>'+esc(d.contact_cta.k)+'</small>'+esc(d.contact_cta.t)+' &rarr;</span></a>';
