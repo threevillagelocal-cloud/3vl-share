@@ -26,7 +26,7 @@
   "h2m": "27px"
  },
  "hero": {
-  "img": "img/931-banner3.webp",
+  "img": "img/931-banner4.webp",
   "alt": "Gray shingle home with a green lawn, hydrangeas and planted beds",
   "pos": "50% 50%",
   "banner": true,
@@ -36,12 +36,12 @@
    2000
   ]
  },
- "logo": "img/931-logo2.webp",
+ "logo": "img/931-logo3.webp",
  "pills": [
   "★ Family owned & operated",
   "Three Village resident owned"
  ],
- "phone": "6319958893",
+ "phone": "6318915937",
  "phone_label": "Call for a free quote",
  "address_label": "Serving",
  "address": "Stony Brook & the Three Village area",
@@ -56,7 +56,7 @@
   {
    "t": "Call",
    "i": "call",
-   "u": "tel:+16319958893",
+   "u": "tel:+16318915937",
    "a": "call",
    "pri": 1
   },
@@ -320,7 +320,7 @@
   ],
   [
    "How do I get a quote?",
-   "Call 631-995-8893 or tap Free quote. Every project starts with a consultation to understand your goals."
+   "Call 631-891-5937 or tap Free quote. Every project starts with a consultation to understand your goals."
   ],
   [
    "What are their hours?",
