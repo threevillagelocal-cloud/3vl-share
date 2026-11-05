@@ -312,3 +312,6 @@ html.pv3-m2 body{padding-bottom:84px}
 #pv3.m2 .logos{flex-wrap:nowrap;justify-content:space-between;gap:10px}
 #pv3.m2 .logos img{height:auto!important;max-height:40px;width:auto!important;max-width:31%;object-fit:contain}
 }
+/* m2: action tile labels never split mid-word (J33 "Commission" split on phones) */
+@media(max-width:640px){#pv3.m2 .act{padding:13px 2px;font-size:12px;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:normal;hyphens:none}}
+@media(max-width:360px){#pv3.m2 .act{font-size:11px;letter-spacing:-.02em}}
