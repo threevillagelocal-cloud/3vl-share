@@ -302,3 +302,4 @@ html.pv3-m2 body{padding-bottom:84px}
 #pv3.m2 .fin .row{flex-direction:column;align-items:center;gap:12px}
 #pv3.m2 .fin .row .b{width:100%;max-width:300px;justify-content:center;text-align:center;box-sizing:border-box;margin:0}
 }
+@media(max-width:640px){#pv3.m2 .rv .row{flex-direction:column;align-items:center;gap:12px}#pv3.m2 .rv .row .b{width:100%;max-width:300px;box-sizing:border-box;margin:0}}
