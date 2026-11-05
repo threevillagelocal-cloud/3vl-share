@@ -100,7 +100,7 @@
   "t": "We help keep the grass *greener.*",
   "text": "Green Machine Landscaping is a family owned and operated landscaping company in Stony Brook. Owner Jason brings a deep understanding of lawn maintenance, botany and soil science together with a love of design, backed by over 20 years of experience and 38 years as a Three Village resident. From weekly mowing and seasonal cleanups to new plantings, patios and walkways, his crew treats every property like their own.",
   "quote": "A Three Village neighbor who treats your yard like his own.",
-  "by": "Three Village Local"
+  "by": "John Stillson"
  },
  "stats": [
   {
@@ -340,5 +340,6 @@
  "side_sub": "Family owned landscaping · Stony Brook",
  "side_contact": "Get a free quote",
  "sticky_contact": "Quote",
- "logo_wide": true
+ "logo_wide": true,
+ "final_first": true
 }

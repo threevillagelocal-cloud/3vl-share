@@ -92,14 +92,17 @@ function render(d){
   /* instagram */
   if(d.instagram&&d.feed&&d.feed.length)h+='<section class="s up">'+K('Live on Instagram')+H2('@'+d.instagram)+'<div class="ig">'+d.feed.slice(0,9).map(function(f){return '<a data-a="ig_post" target="_blank" rel="noopener" href="'+esc(f.link)+'"><img src="'+src(f.img+'-400.webp')+'" loading="lazy" alt="Instagram post from @'+esc(d.instagram)+'"></a>'}).join('')+'</div><div class="row"><a class="b b1" data-a="instagram" target="_blank" rel="noopener" href="https://www.instagram.com/'+esc(d.instagram)+'/">Follow on Instagram</a></div></section>';
   /* reviews */
-  if(d.reviews)h+='<section class="s rv up" id="pv3rv"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>'+H2(d.reviews.t)+'<p class="lead">'+esc(d.reviews.text)+'</p><div class="rvl" id="pv3rvl"></div><div class="row">'+
+  var RV='';if(d.reviews)RV+='<section class="s rv up" id="pv3rv"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>'+H2(d.reviews.t)+'<p class="lead">'+esc(d.reviews.text)+'</p><div class="rvl" id="pv3rvl"></div><div class="row">'+
      (d.reviews.url?'<a class="b bg2" data-a="google_reviews" href="'+esc(d.reviews.url)+'" target="_blank" rel="noopener">'+esc(d.reviews.btn||'Read Google reviews')+'</a>':'')+
      '<a class="b b2" data-a="review" href="'+review+'">Review '+esc(d.first||d.short||'them')+' on 3VL</a></div></section>';
+  /* final cta */
+  var FN='';if(d.final)FN+='<section class="s fin up">'+K(d.final.k)+H2(d.final.t)+'<p class="lead">'+esc(d.final.text)+'</p><div class="row">'+
+     (tel?'<a class="b bg2" data-a="call" href="'+telH+'">Call '+telF+'</a>':'')+'<a class="b b2" data-a="contact" href="'+esc(contact)+'"'+ext(contact)+'>'+esc(d.final.btn||'Contact')+'</a></div></section>';
+  /* 11/5/2026 final_first:true swaps the final call-to-action and the reviews band (owner, Green Machine 931) */
+  if(d.final_first)h+=FN;else h+=RV;
   /* faq */
   if(d.faq)h+='<section class="s up">'+K(d.faq_k||'Questions neighbors ask')+H2(d.faq_t||'*FAQ*')+d.faq.map(function(f){return '<details><summary>'+esc(f[0])+'</summary><p>'+esc(f[1])+'</p></details>'}).join('')+'</section>';
-  /* final cta */
-  if(d.final)h+='<section class="s fin up">'+K(d.final.k)+H2(d.final.t)+'<p class="lead">'+esc(d.final.text)+'</p><div class="row">'+
-     (tel?'<a class="b bg2" data-a="call" href="'+telH+'">Call '+telF+'</a>':'')+'<a class="b b2" data-a="contact" href="'+esc(contact)+'"'+ext(contact)+'>'+esc(d.final.btn||'Contact')+'</a></div></section>';
+  if(d.final_first)h+=RV;else h+=FN;
   if(d.compliance)h+='<p class="comp">'+esc(d.compliance)+(d.compliance_logo?'<img src="'+src(d.compliance_logo)+'" alt="Equal Housing Opportunity" loading="lazy">':'')+'</p>';
 
   var box=document.createElement('div');box.id='pv3';box.innerHTML=h;
