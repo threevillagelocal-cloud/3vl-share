@@ -250,3 +250,43 @@ html.pv2-on body .member_profile>.col-md-9>#pv3{display:block!important}
 /* 11/5/2026 logo_wide:true (wide logos, Green Machine 931): wider logo tile so the logo reads; phones stack it above the name */
 #pv3 .hin.hb.wl .head.logo{flex:0 0 250px;width:250px;height:112px;padding:10px 14px}
 @media(max-width:640px){#pv3 .hin.hb.wl{flex-direction:column;gap:12px}#pv3 .hin.hb.wl .head.logo{flex:0 0 auto;width:220px;height:96px}}
+
+/* 11/5/2026 m2:true = mobile-native phone layout (owner, Green Machine 931 first). Desktop unchanged. */
+#pv3 .swp,#pv3 .hrsg{display:none}
+@media(max-width:640px){
+#pv3.m2 .h.bn .top{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;scrollbar-width:none;gap:7px;padding:12px 28px 2px 0;-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+#pv3.m2 .h.bn .top::-webkit-scrollbar{display:none}
+#pv3.m2 .h .top>*{flex:0 0 auto;scroll-snap-align:start}
+#pv3.m2 .pill{font-size:12.5px;padding:7px 11px;box-shadow:0 2px 8px rgba(19,35,58,.07);border:1px solid var(--line)}
+#pv3.m2 .tier{font-size:12px;padding:7px 12px}
+#pv3.m2 .hin.hb{padding:12px 2px 0;gap:10px}
+#pv3.m2 .hin.hb.wl .head.logo{width:170px;height:74px;padding:6px 10px;border-radius:16px;box-shadow:0 8px 22px rgba(19,35,58,.10)}
+#pv3.m2 .hin.hb .k{font-size:11px;letter-spacing:.12em;line-height:1.45}
+#pv3.m2 .hin.hb .h1{margin:4px 0 2px}
+#pv3.m2 .hin.hb .sub{font-size:15px;line-height:1.4}
+#pv3.m2 .soc{margin-top:10px;gap:8px}
+#pv3.m2 .soc a{width:36px;height:36px}
+#pv3.m2 .soc svg{width:19px;height:19px}
+#pv3.m2 .acts{gap:8px;margin-top:16px}
+#pv3.m2 .act{padding:13px 4px;border-radius:16px;font-size:13px}
+#pv3.m2 .cs{margin-top:8px}
+#pv3.m2 .cs a[data-a=call],#pv3.m2 .cs a.inq{display:none}
+#pv3.m2 .cs a{padding:11px 14px}
+#pv3.m2 .tk{margin-top:10px;border-radius:14px}
+#pv3.m2 .tk .tr{padding:11px 0}
+#pv3.m2 .s{margin-top:16px;padding:20px 16px;border-radius:20px}
+#pv3.m2 .lead{font-size:15.5px;line-height:1.6}
+#pv3.m2 .svcs{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin:14px -16px 0;padding:0 16px 4px;scroll-padding:0 16px}
+#pv3.m2 .svcs::-webkit-scrollbar{display:none}
+#pv3.m2 .svc{flex:0 0 78%;scroll-snap-align:start;padding:16px;display:flex;flex-direction:column}
+#pv3.m2 .swp{display:block;margin-top:10px;font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--blue);text-align:right}
+#pv3.m2 .hrs{display:none}
+#pv3.m2 .hrsg{display:block;margin-top:10px}
+#pv3.m2 .hrsg div{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+#pv3.m2 .hrsg div:last-child{border-bottom:0}
+#pv3.m2 .hrsg div.today{font-weight:800;color:var(--navy)}
+}
+@media(max-width:991px){
+#pv3s.m2>.c:first-child,#pv3s.m2>.c:nth-child(2):not(.fbc){display:none}
+html.pv3-m2 body{padding-bottom:84px}
+}

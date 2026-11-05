@@ -341,5 +341,6 @@
  "side_contact": "Get a free quote",
  "sticky_contact": "Quote",
  "logo_wide": true,
- "final_first": true
+ "final_first": true,
+ "m2": true
 }

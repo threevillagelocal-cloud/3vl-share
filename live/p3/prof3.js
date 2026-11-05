@@ -82,13 +82,13 @@ function render(d){
   /* goal tabs */
   if(d.goals)h+='<section class="s up">'+K(d.goals.k)+H2(d.goals.t)+'<div class="tabs" role="tablist">'+d.goals.items.map(function(g,i){return '<div class="tab" role="tab" tabindex="0" data-g="'+i+'" aria-selected="'+(i===0)+'">'+esc(g.t)+'</div>'}).join('')+'</div><div class="gp"></div></section>';
   /* services */
-  if(d.services)h+='<section class="s up">'+K(d.services_k||'What they do')+H2(d.services_t||'Services')+'<div class="svcs">'+d.services.map(function(s){return '<div class="svc"><b>'+esc(s.t)+'</b><p>'+esc(s.d)+'</p></div>'}).join('')+'</div></section>';
+  if(d.services)h+='<section class="s up">'+K(d.services_k||'What they do')+H2(d.services_t||'Services')+'<div class="svcs">'+d.services.map(function(s){return '<div class="svc"><b>'+esc(s.t)+'</b><p>'+esc(s.d)+'</p></div>'}).join('')+'</div>'+(d.m2?'<div class="swp">Swipe for more &rarr;</div>':'')+'</section>';
   /* advantage + stats */
   if(d.advantage)h+='<section class="s up"><div class="adv"><div>'+K(d.advantage.k)+H2(d.advantage.t)+'<p class="lead">'+esc(d.advantage.text)+'</p>'+
      (d.advantage.logos?'<div class="logos">'+d.advantage.logos.map(function(l){return '<img src="'+src(l.img)+'" alt="'+esc(l.alt)+'" loading="lazy">'}).join('')+'</div>':'')+'</div>'+
      (d.stats?'<div class="st">'+d.stats.map(function(s){return '<div><b'+(s.count?' data-n="'+s.count+'"':'')+'>'+esc(s.n)+'</b><span>'+esc(s.l)+'</span></div>'}).join('')+'</div>':'')+'</div></section>';
   /* hours */
-  if(d.hours){var today=DAYS[nowET().d];h+='<section class="s up">'+K(d.hours_k||'Hours')+H2(d.hours_t||'When to *visit*')+'<div class="hrs">'+['mon','tue','wed','thu','fri','sat','sun'].map(function(k){var x=d.hours[k];return '<div'+(k===today?' class="today"':'')+'><span>'+DN[k]+'</span><span>'+(x==='24h'?'Open 24 hours':typeof x==='string'?esc(x):x?t12(x[0])+' - '+t12(x[1]):'Closed')+'</span></div>'}).join('')+'</div></section>'}
+  if(d.hours){var today=DAYS[nowET().d];h+='<section class="s up">'+K(d.hours_k||'Hours')+H2(d.hours_t||'When to *visit*')+'<div class="hrs">'+['mon','tue','wed','thu','fri','sat','sun'].map(function(k){var x=d.hours[k];return '<div'+(k===today?' class="today"':'')+'><span>'+DN[k]+'</span><span>'+(x==='24h'?'Open 24 hours':typeof x==='string'?esc(x):x?t12(x[0])+' - '+t12(x[1]):'Closed')+'</span></div>'}).join('')+'</div>'+(d.m2?(function(){var ks=['mon','tue','wed','thu','fri','sat','sun'],v=function(k){var x=d.hours[k];return x==='24h'?'Open 24 hours':typeof x==='string'?esc(x):x?t12(x[0])+' - '+t12(x[1]):'Closed'},g=[];ks.forEach(function(k){var t=v(k),l=g[g.length-1];if(l&&l.t===t){l.e=k;l.ks.push(k)}else g.push({s:k,e:k,t:t,ks:[k]})});return '<div class="hrsg">'+g.map(function(x){return '<div'+(x.ks.indexOf(today)>-1?' class="today"':'')+'><span>'+DN[x.s].slice(0,3)+(x.e!==x.s?' - '+DN[x.e].slice(0,3):'')+'</span><span>'+x.t+'</span></div>'}).join('')+'</div>'})():'')+'</section>'}
   /* instagram */
   if(d.instagram&&d.feed&&d.feed.length)h+='<section class="s up">'+K('Live on Instagram')+H2('@'+d.instagram)+'<div class="ig">'+d.feed.slice(0,9).map(function(f){return '<a data-a="ig_post" target="_blank" rel="noopener" href="'+esc(f.link)+'"><img src="'+src(f.img+'-400.webp')+'" loading="lazy" alt="Instagram post from @'+esc(d.instagram)+'"></a>'}).join('')+'</div><div class="row"><a class="b b1" data-a="instagram" target="_blank" rel="noopener" href="https://www.instagram.com/'+esc(d.instagram)+'/">Follow on Instagram</a></div></section>';
   /* reviews */
@@ -105,7 +105,7 @@ function render(d){
   if(d.final_first)h+=RV;else h+=FN;
   if(d.compliance)h+='<p class="comp">'+esc(d.compliance)+(d.compliance_logo?'<img src="'+src(d.compliance_logo)+'" alt="Equal Housing Opportunity" loading="lazy">':'')+'</p>';
 
-  var box=document.createElement('div');box.id='pv3';box.innerHTML=h;
+  var box=document.createElement('div');box.id='pv3';if(d.m2){box.className='m2';document.documentElement.classList.add('pv3-m2')}box.innerHTML=h;
 
   /* real 3VL reviews (owner 10/24/2026: "show reviews in these new profile designs"); reviews.json is rebuilt from BD */
   fetch(BASE+'vip/reviews.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(R){var v=R&&R[uid],el=box.querySelector('#pv3rvl'),top=box.querySelector('.h .top');
@@ -129,7 +129,7 @@ function render(d){
   col.insertBefore(box,col.firstChild);document.documentElement.classList.add('pv3-on','pv2-on');/* pv2-on here, not earlier: the old layout keeps its space until now, so the right column never jumps (10/24/2026) */
   /* sidebar */
   var side=document.querySelector('.member_profile .sidebar-section');
-  if(side){var sd=document.createElement('div');sd.id='pv3s';sd.style.cssText=css;
+  if(side){var sd=document.createElement('div');sd.id='pv3s';if(d.m2)sd.className='m2';sd.style.cssText=css;
     sd.innerHTML='<div class="c"><div class="who"><img'+(d.headshot?'':' class="lg"')+' src="'+src(d.headshot||d.logo)+'" alt=""><div><b>'+esc(d.side_name||d.short||d.name)+'</b><span>'+esc(d.side_sub||d.category||'')+'</span></div></div>'+
       (tel?'<a class="b b1" data-a="call" href="'+telH+'">Call '+telF+'</a>':'')+
       '<a class="b b2" data-a="contact" href="'+esc(contact)+'"'+ext(contact)+'>'+esc(d.side_contact||'Contact')+'</a>'+
@@ -183,7 +183,7 @@ function render(d){
   if(/[?&]shot/.test(location.search)){ups.forEach(function(u){u.classList.add('in')});ups=[];[].forEach.call(document.querySelectorAll('#pv3 img[loading=lazy]'),function(i){i.loading='eager'});sb.style.display='none'}
   function cnt(el){var n=+el.getAttribute('data-n'),s0=performance.now();(function f(t){var q=Math.min(1,(t-s0)/1200);el.textContent=Math.round(n*(1-Math.pow(1-q,3)))+(q===1?'+':'');if(q<1)requestAnimationFrame(f)})(s0)}
   function chk(){busy=false;var lim=innerHeight*.9;ups=ups.filter(function(u){if(u.getBoundingClientRect().top<lim){u.classList.add('in');[].forEach.call(u.querySelectorAll('[data-n]'),cnt);return false}return true});
-    sb.classList.toggle('on',hero.getBoundingClientRect().bottom<0&&(!fin||fin.getBoundingClientRect().top>innerHeight))}
+    sb.classList.toggle('on',hero.getBoundingClientRect().bottom<0&&(!fin||(d.final_first?(fin.getBoundingClientRect().top>innerHeight||fin.getBoundingClientRect().bottom<0):fin.getBoundingClientRect().top>innerHeight)))}
   addEventListener('scroll',function(){if(!busy){busy=true;requestAnimationFrame(chk)}},{passive:true});setInterval(chk,800);chk();
 }
 })();
