@@ -317,3 +317,4 @@ html.pv3-m2 body{padding-bottom:84px}
 @media(max-width:360px){#pv3.m2 .act{font-size:11px;letter-spacing:-.02em}}
 /* m2 phones: ticker copy for the desktop marquee loop is hidden (desktop keeps both copies) */
 @media(max-width:640px){#pv3.m2 .tk .dup{display:none}}
+@media(max-width:640px){#pv3.m2 .hin.hb .gstar i{white-space:nowrap;flex:0 0 auto}}
