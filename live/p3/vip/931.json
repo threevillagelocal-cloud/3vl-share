@@ -26,8 +26,8 @@
   "h2m": "27px"
  },
  "hero": {
-  "img": "img/931-banner2.webp",
-  "alt": "Landscaped Long Island front yard with a striped lawn, shrubs and flower beds",
+  "img": "img/931-banner3.webp",
+  "alt": "Gray shingle home with a green lawn, hydrangeas and planted beds",
   "pos": "50% 50%",
   "banner": true,
   "sw": [
@@ -36,7 +36,7 @@
    2000
   ]
  },
- "logo": "img/931-logo.png",
+ "logo": "img/931-logo2.webp",
  "pills": [
   "★ Family owned & operated",
   "Three Village resident owned"
