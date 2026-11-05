@@ -1,0 +1,344 @@
+{
+ "uid": "931",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "Green Machine Landscaping",
+ "short": "Green Machine",
+ "first": "Jason",
+ "category": "Landscaping",
+ "kicker": "Family owned · Stony Brook · Licensed & insured",
+ "sub": "Lawn care, cleanups, plantings, patios and walkways",
+ "theme": {
+  "navy": "#0E3512",
+  "navy2": "#1F6B20",
+  "blue": "#2C8A2E",
+  "sky": "#F1F8EC",
+  "gold": "#F4E61C",
+  "fonts": "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;600;700&display=swap",
+  "hf": "'Archivo Black', sans-serif",
+  "hw": "400",
+  "hcase": "none",
+  "hls": "-.005em",
+  "bf": "Montserrat, system-ui, sans-serif",
+  "h1s": "52px",
+  "h2s": "34px",
+  "h1m": "36px",
+  "h2m": "27px"
+ },
+ "hero": {
+  "img": "img/931-banner.webp",
+  "alt": "Landscaped front yard with a green lawn and colorful garden beds",
+  "pos": "50% 50%",
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
+ },
+ "logo": "img/931-logo.png",
+ "pills": [
+  "★ Family owned & operated",
+  "Three Village resident owned",
+  "Licensed & insured"
+ ],
+ "phone": "6319958893",
+ "phone_label": "Call for a free quote",
+ "address_label": "Serving",
+ "address": "Stony Brook & the Three Village area",
+ "maps": "Stony Brook, NY 11790",
+ "website": "https://landscapingstonybrook.net/",
+ "facebook": "https://www.facebook.com/profile.php?id=100057451209483",
+ "contact_cta": {
+  "k": "Lawn care, cleanups, a new patio?",
+  "t": "Get a free quote"
+ },
+ "actions": [
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+16319958893",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Free quote",
+   "i": "msg",
+   "u": "/green-machine-landscaping/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://landscapingstonybrook.net/",
+   "a": "website"
+  },
+  {
+   "t": "Save contact",
+   "i": "card",
+   "a": "vcard"
+  }
+ ],
+ "vcard": {
+  "n": "Witover;Jason;;;",
+  "fn": "Jason Witover",
+  "org": "Green Machine Landscaping",
+  "title": "Owner"
+ },
+ "ticker": [
+  "Weekly lawn maintenance",
+  "Spring and fall cleanups",
+  "Mulch and plantings",
+  "Paver patios and walkways",
+  "Retaining walls",
+  "Sod installation",
+  "Aeration and overseeding",
+  "Drainage",
+  "Family owned in Three Village"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "We help keep the grass *greener.*",
+  "text": "Green Machine Landscaping is a family owned and operated landscaping company in Stony Brook. Owner Jason brings a deep understanding of lawn maintenance, botany and soil science together with a love of design, backed by over 20 years of experience and 38 years as a Three Village resident. From weekly mowing and seasonal cleanups to new plantings, patios and walkways, his crew treats every property like their own.",
+  "quote": "A Three Village neighbor who treats your yard like his own.",
+  "by": "Three Village Local"
+ },
+ "stats": [
+  {
+   "n": "20+",
+   "l": "Years of experience"
+  },
+  {
+   "n": "38",
+   "l": "Years in Three Village"
+  },
+  {
+   "n": "★",
+   "l": "Family owned"
+  },
+  {
+   "n": "Free",
+   "l": "Quotes"
+  }
+ ],
+ "services_k": "What they do",
+ "services_t": "Landscaping *services*",
+ "services": [
+  {
+   "t": "Lawn maintenance",
+   "d": "Weekly cutting through the growing season, edging, trimming and clippings removed for a neat, manicured look."
+  },
+  {
+   "t": "Spring and fall cleanups",
+   "d": "Leaves cleared from shrubs, beds and lawns, sticks and small branches removed and debris cleaned up."
+  },
+  {
+   "t": "Plantings and beds",
+   "d": "Shrubs, perennials and trees, plus custom soil, mulch, edging and decorative rock."
+  },
+  {
+   "t": "Patios and walkways",
+   "d": "Paver patios and walkways, steppers and retaining walls in stone, block or boulders."
+  },
+  {
+   "t": "Sod and lawn renovation",
+   "d": "Full-service Kentucky bluegrass sod, plus thatch removal, core aeration and overseeding."
+  },
+  {
+   "t": "Drainage and site prep",
+   "d": "Drain tile systems and basins, grading, soil conditioning and removal of old landscaping."
+  }
+ ],
+ "gallery_k": "Outdoor living",
+ "gallery_t": "Yards that *look cared for*",
+ "gallery": [
+  {
+   "img": "img/931-g1.webp",
+   "alt": "Lawn being mowed on a sunny afternoon"
+  },
+  {
+   "img": "img/931-g2.webp",
+   "alt": "Hedge being trimmed"
+  },
+  {
+   "img": "img/931-g3.webp",
+   "alt": "Fall leaf cleanup with a blower"
+  },
+  {
+   "img": "img/931-g4.webp",
+   "alt": "Backyard paver patio with landscaped beds"
+  },
+  {
+   "img": "img/931-g5.webp",
+   "alt": "Hydrangeas in a garden bed"
+  },
+  {
+   "img": "img/931-g6.webp",
+   "alt": "New plantings going into fresh soil"
+  },
+  {
+   "img": "img/931-g7.webp",
+   "alt": "Stone patio surrounded by plantings"
+  },
+  {
+   "img": "img/931-g8.webp",
+   "alt": "Front lawn and plantings at a suburban home"
+  }
+ ],
+ "goals": {
+  "k": "What do you need?",
+  "t": "Pick a *project*",
+  "chips_k": "Includes",
+  "items": [
+   {
+    "t": "Weekly lawn care",
+    "h": "A neat, manicured lawn all season.",
+    "d": "Weekly cutting (weather permitting), edging and trimming, with clippings removed from the property.",
+    "b": [
+     "Weekly mowing",
+     "Edging and trimming",
+     "Clippings removed"
+    ],
+    "c": [
+     "Mowing",
+     "Edging",
+     "Trimming"
+    ],
+    "cta": "Get a lawn care quote"
+   },
+   {
+    "t": "Cleanups",
+    "h": "Spring and fall, done right.",
+    "d": "Leaves out of the shrubs and beds, lawns vacuumed of leaves, sticks and small branches picked up and debris cleared.",
+    "b": [
+     "Leaf removal",
+     "Bed cleanouts",
+     "Debris cleanup"
+    ],
+    "c": [
+     "Spring",
+     "Fall",
+     "Leaves",
+     "Debris"
+    ],
+    "cta": "Book a cleanup"
+   },
+   {
+    "t": "New landscaping",
+    "h": "Curb appeal from the ground up.",
+    "d": "Old landscaping removed, soil prepared, then new shrubs, perennials and trees with mulch, edging and decorative rock.",
+    "b": [
+     "Site preparation",
+     "Plantings",
+     "Mulch, edging and rock"
+    ],
+    "c": [
+     "Shrubs",
+     "Perennials",
+     "Trees",
+     "Mulch"
+    ],
+    "cta": "Plan my landscaping"
+   },
+   {
+    "t": "Patios & walls",
+    "h": "Outdoor living spaces.",
+    "d": "Paver patios and walkways in cobblestone, Holland stone or flagstone, plus steppers and retaining walls.",
+    "b": [
+     "Paver patios",
+     "Walkways and steppers",
+     "Retaining walls"
+    ],
+    "c": [
+     "Pavers",
+     "Flagstone",
+     "Walls"
+    ],
+    "cta": "Talk about a patio"
+   },
+   {
+    "t": "Lawn renovation",
+    "h": "A thicker, healthier lawn.",
+    "d": "Kentucky bluegrass sod from start to finish, or thatch removal, core aeration and overseeding.",
+    "b": [
+     "Sod installation",
+     "Core aeration",
+     "Overseeding"
+    ],
+    "c": [
+     "Sod",
+     "Aeration",
+     "Seed"
+    ],
+    "cta": "Fix my lawn"
+   }
+  ]
+ },
+ "hours_t": "Business *hours*",
+ "hours": {
+  "mon": [
+   "07:00",
+   "17:00"
+  ],
+  "tue": [
+   "07:00",
+   "17:00"
+  ],
+  "wed": [
+   "07:00",
+   "17:00"
+  ],
+  "thu": [
+   "07:00",
+   "17:00"
+  ],
+  "fri": [
+   "07:00",
+   "17:00"
+  ],
+  "sat": null,
+  "sun": null
+ },
+ "reviews": {
+  "t": "Happy with your yard?",
+  "text": "If Green Machine takes care of your property, a quick review helps your neighbors find a crew they can trust.",
+  "url": "https://www.threevillagelocal.com/green-machine-landscaping/writeareview",
+  "btn": "Write a review"
+ },
+ "faq_t": "Landscaping *FAQ*",
+ "faq": [
+  [
+   "What areas do they serve?",
+   "Stony Brook and the surrounding Three Village area. Call to check your address."
+  ],
+  [
+   "Are they licensed and insured?",
+   "Yes. They hold the licenses needed for the area and carry insurance on all of their projects."
+  ],
+  [
+   "Who will work on my yard?",
+   "Green Machine's own team. Owner Jason, plus longtime crew members Gio and Kevin, who handle installation, design and maintenance."
+  ],
+  [
+   "How do I get a quote?",
+   "Call 631-995-8893 or tap Free quote. Every project starts with a consultation to understand your goals."
+  ],
+  [
+   "What are their hours?",
+   "Monday to Friday 7 AM to 5 PM, Saturday by appointment, closed Sunday."
+  ],
+  [
+   "Don't see the service you need?",
+   "Just ask. They can usually get the materials you want and do the project."
+  ]
+ ],
+ "final": {
+  "k": "Green Machine Landscaping",
+  "t": "Let's get your yard *looking its best.*",
+  "text": "Tell Jason what you need and get a free quote.",
+  "btn": "Get a free quote"
+ },
+ "side_sub": "Family owned landscaping · Stony Brook",
+ "side_contact": "Get a free quote",
+ "sticky_contact": "Quote"
+}
