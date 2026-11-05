@@ -315,3 +315,5 @@ html.pv3-m2 body{padding-bottom:84px}
 /* m2: action tile labels never split mid-word (J33 "Commission" split on phones) */
 @media(max-width:640px){#pv3.m2 .act{padding:13px 2px;font-size:12px;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:normal;hyphens:none}}
 @media(max-width:360px){#pv3.m2 .act{font-size:11px;letter-spacing:-.02em}}
+/* m2 phones: ticker copy for the desktop marquee loop is hidden (desktop keeps both copies) */
+@media(max-width:640px){#pv3.m2 .tk .dup{display:none}}
