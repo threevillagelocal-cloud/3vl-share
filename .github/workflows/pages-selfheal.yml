@@ -3,7 +3,7 @@ name: Picture hosting self-heal
 # watchdog emailed [3VL ALERT]. A plain re-run fixes it, so this re-runs a failed deploy once, by itself.
 on:
   workflow_run:
-    workflows: ["pages build and deployment"]
+    workflows: ["pages-build-deployment", "pages build and deployment"]
     types: [completed]
   schedule:
     - cron: "17 * * * *"
@@ -22,7 +22,7 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           set -e
-          last=$(gh run list -R "$REPO" -L 30 --json databaseId,status,conclusion,attempt,workflowName -q '[.[] | select(.workflowName=="pages build and deployment")][0]')
+          last=$(gh run list -R "$REPO" -L 30 --json databaseId,status,conclusion,attempt,workflowName -q '[.[] | select(.workflowName=="pages-build-deployment" or .workflowName=="pages build and deployment")][0]')
           echo "latest: $last"
           id=$(echo "$last" | jq -r .databaseId); st=$(echo "$last" | jq -r .status)
           concl=$(echo "$last" | jq -r .conclusion); att=$(echo "$last" | jq -r .attempt)
