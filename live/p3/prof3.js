@@ -76,7 +76,7 @@ function render(d){
   /* 11/7/2026 owner: member's Smart Publisher article as an article-preview callout near the top. "news":[{title,url,dek,img,date,k}]
      ("news_preview" shows only with ?newsprev=1 so it can be checked before the article is live) */
   var NW=d.news||(/[?&]newsprev=1/.test(location.search)?d.news_preview:null);
-  if(NW&&NW.length){var n=NW[0];h+='<a class="nwc up" data-a="article" href="'+esc(n.url)+'">'+(n.img?'<span class="ni"><img src="'+src(n.img)+'" alt="'+esc(n.alt||'')+'" loading="lazy"></span>':'')+
+  if(NW&&NW.length){var n=NW[0];h+='<a class="nwc up" data-a="article" href="'+esc(n.url)+'">'+(n.img?'<span class="ni"><img src="'+src(n.img)+'" alt="'+esc(n.alt||'')+'" loading="lazy">'+(n.logo?'<img class="nl" src="'+src(n.logo)+'" alt="'+esc(d.name)+' logo" loading="lazy">':'')+'</span>':'')+
     '<span class="nb"><span class="nk"><i></i>'+esc(n.k||'New article')+(n.date?' &middot; '+esc(n.date):'')+'</span><b>'+esc(n.title)+'</b>'+(n.dek?'<span class="nd">'+esc(n.dek)+'</span>':'')+
     '<span class="nr">Read the article <em>&rarr;</em></span></span></a>'}
   function H2(t){return '<h2 class="h2">'+esc(t).replace(/\*(.+?)\*/g,'<em>$1</em>')+'</h2>'}
