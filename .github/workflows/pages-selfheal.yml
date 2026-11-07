@@ -22,7 +22,7 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           set -e
-          last=$(gh run list -R "$REPO" -w "pages build and deployment" -L 1 --json databaseId,status,conclusion,attempt -q '.[0]')
+          last=$(gh run list -R "$REPO" -L 30 --json databaseId,status,conclusion,attempt,workflowName -q '[.[] | select(.workflowName=="pages build and deployment")][0]')
           echo "latest: $last"
           id=$(echo "$last" | jq -r .databaseId); st=$(echo "$last" | jq -r .status)
           concl=$(echo "$last" | jq -r .conclusion); att=$(echo "$last" | jq -r .attempt)
