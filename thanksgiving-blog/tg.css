@@ -1,0 +1,113 @@
+/* Thanksgiving in Three Village (2026 blog). Scoped to .tgb. No backslashes (BD strips them). */
+.tgb{--navy:#13233a;--ink:#1c2b3e;--mut:#5a6677;--pump:#e2692a;--pump2:#c2531a;--gold:#ffb347;--cream:#fbf7f1;--peach:#fdebd6;--line:rgba(19,35,58,.12);
+  font-family:'tvl-rc','Radio Canada',system-ui,sans-serif;color:var(--ink);font-size:17.5px;line-height:1.68;max-width:860px;margin:0 auto;
+  word-break:normal!important;overflow-wrap:normal!important;hyphens:none!important}
+.tgb *{box-sizing:border-box;word-break:normal!important;overflow-wrap:normal!important;hyphens:none!important}
+.tgb p{margin:0 0 16px!important}
+.tgb img{max-width:100%;height:auto;display:block}
+.tgb .nw,.tgb span.nw{white-space:nowrap!important;display:inline-block}
+.tgb a{color:var(--pump2);font-weight:700}
+#post-content .post-image-container,#post-content .post-image-container + hr{display:none!important}
+.tgb-prog{position:fixed;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,var(--gold),var(--pump));z-index:9999}
+
+/* HERO */
+.tgb-hero{position:relative;border-radius:22px;overflow:hidden;background:#2a1c10;color:#fff;margin:4px 0 18px;min-height:440px;display:flex;align-items:flex-end;box-shadow:0 18px 44px rgba(19,35,58,.22)}
+.tgb .tgb-hbg{position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important;max-width:none!important;margin:0!important;object-fit:cover}
+.tgb-hshade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.45) 45%,rgba(0,0,0,.05) 75%)}
+.tgb-leaf{position:absolute;top:-30px;width:18px;height:18px;border-radius:0 70% 0 70%;background:var(--pump);opacity:.85;animation:tgbfall 12s linear infinite}
+.tgb-leaf.l2{left:22%;background:var(--gold);animation-delay:3s;width:13px;height:13px}.tgb-leaf.l3{left:48%;background:#b8401f;animation-delay:6s}
+.tgb-leaf.l4{left:70%;background:#e8c25a;animation-delay:1.5s;width:12px;height:12px}.tgb-leaf.l5{left:88%;animation-delay:8s}.tgb-leaf.l1{left:8%}
+@keyframes tgbfall{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(520px) rotate(300deg);opacity:0}}
+.tgb-hin{position:relative;padding:28px 28px 26px}
+.tgb-kick{font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--gold);margin:0 0 6px!important}
+.tgb-h1{font:800 44px/1.04 'tvl-rc','Radio Canada',system-ui,sans-serif!important;margin:0 0 10px!important;color:#fff!important;text-wrap:balance;letter-spacing:-.01em}
+.tgb-h1 span{color:var(--gold)}
+.tgb-dek{color:#f4ece2;font-size:18px;max-width:640px;margin:0!important}
+
+/* BIG GUIDE BUTTON */
+.tgb-cta{display:flex;align-items:center;gap:16px;margin:18px 0 26px;padding:18px 20px;border-radius:20px;background:var(--navy);color:#fff!important;text-decoration:none!important;box-shadow:0 14px 34px rgba(19,35,58,.28);position:relative;overflow:hidden;transition:transform .2s}
+.tgb-cta:hover{transform:translateY(-2px)}
+.tgb-cta:before{content:"";position:absolute;inset:0 auto 0 -40%;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent);animation:tgbshine 3.6s ease-in-out infinite}
+@keyframes tgbshine{0%,55%{left:-40%}100%{left:120%}}
+.tgb-cta i{flex:none;width:58px;height:58px;border-radius:16px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:30px;font-style:normal}
+.tgb-cta b{display:block;font-size:22px;line-height:1.15;color:#fff}
+.tgb-cta small{display:block;font-size:14.5px;color:#cfd8e6;font-weight:600;margin-top:3px}
+.tgb-cta em{margin-left:auto;flex:none;font-style:normal;background:var(--pump);color:#fff;font-weight:800;border-radius:999px;padding:11px 18px;font-size:16px;white-space:nowrap}
+.tgb-cta.lite{background:linear-gradient(135deg,var(--pump),#d4521c)}.tgb-cta.lite em{background:#fff;color:var(--pump2)}.tgb-cta.lite small{color:#ffe7d4}
+
+/* JUMP */
+.tgb-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px}
+.tgb-nav a{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:14px;color:var(--navy);text-decoration:none!important}
+.tgb-nav a:hover{border-color:var(--pump);color:var(--pump2)}
+
+/* SECTIONS */
+.tgb-sec{margin:0 0 40px;scroll-margin-top:90px}
+.tgb-label{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--pump2);margin:0 0 4px!important}
+.tgb-h2{font:800 31px/1.12 'tvl-rc','Radio Canada',system-ui,sans-serif!important;color:var(--navy)!important;margin:0 0 14px!important;text-wrap:balance}
+.tgb-lead{font-size:19px;color:var(--ink)}
+.tgb-clear{overflow:hidden}
+.tgb-float{float:right;width:300px;margin:4px 0 12px 22px}
+.tgb-float img{border-radius:14px}
+.tgb figcaption{font-size:12.5px;color:var(--mut);font-style:italic;margin-top:6px;line-height:1.4}
+.tgb-quote{margin:22px 0;padding:0}
+.tgb-quote p{font:800 26px/1.3 'tvl-rc','Radio Canada',sans-serif;color:var(--navy);margin:0 0 10px!important}
+.tgb-quote i{display:block;width:60px;height:4px;background:var(--pump);border-radius:2px}
+
+/* EVENT ROWS */
+.tgb-evs{display:grid;gap:12px;margin:8px 0 6px}
+.tgb-ev{display:grid;grid-template-columns:120px 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none!important;color:var(--ink)!important;box-shadow:0 2px 10px rgba(19,35,58,.05);transition:transform .2s,box-shadow .2s}
+.tgb-ev:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(19,35,58,.12)}
+.tgb-ev .ph{position:relative;background:var(--peach);min-height:110px}
+.tgb .tgb-ev .ph img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover;max-width:none!important;margin:0!important}
+.tgb-ev .ph span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:40px}
+.tgb-ev .bd{padding:12px 14px}
+.tgb-ev small{display:block;color:var(--pump2);font-weight:800;font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
+.tgb-ev b{display:block;font-size:17.5px;line-height:1.25;color:var(--navy);margin:2px 0 3px}
+.tgb-ev span.w{display:block;font-size:14px;color:var(--mut);line-height:1.4}
+
+/* BUSINESS TILES */
+.tgb-biz{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0 8px}
+.tgb-b{position:relative;display:block;border-radius:16px;overflow:hidden;aspect-ratio:1;background:var(--peach);text-decoration:none!important}
+.tgb .tgb-b img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover;max-width:none!important;margin:0!important;transition:transform .4s}
+.tgb-b:hover img{transform:scale(1.06)}
+.tgb-b span{position:absolute;left:0;right:0;bottom:0;padding:26px 10px 9px;background:linear-gradient(0deg,rgba(0,0,0,.86),transparent);color:#fff;font-size:14.5px;line-height:1.2;font-weight:800}
+.tgb-b span em{display:block;font-style:normal;font-weight:700;color:#ffc58f;font-size:12.5px;margin-top:2px}
+.tgb-b.noimg span{background:none;color:var(--navy);top:0;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.tgb-b.noimg span em{color:var(--pump2)}
+
+/* HIGHLIGHT PANELS */
+.tgb-panel{border-radius:18px;padding:20px 22px;margin:18px 0;background:var(--peach)}
+.tgb-panel h3{font:800 20px/1.2 'tvl-rc','Radio Canada',sans-serif!important;color:var(--navy)!important;margin:0 0 8px!important}
+.tgb-panel ul{margin:0;padding-left:20px}.tgb-panel li{margin:4px 0}
+.tgb-panel.navy{background:var(--navy);color:#e6ecf5}.tgb-panel.navy h3{color:#fff!important}.tgb-panel.navy a{color:var(--gold)}
+
+/* WEEKEND TIMELINE */
+.tgb-tl{list-style:none;margin:10px 0 0;padding:0;border-left:3px solid var(--gold);margin-left:8px}
+.tgb-tl li{position:relative;padding:0 0 18px 22px}
+.tgb-tl li:before{content:"";position:absolute;left:-10px;top:5px;width:17px;height:17px;border-radius:50%;background:#fff;border:4px solid var(--pump)}
+.tgb-tl b{display:block;color:var(--navy);font-size:17px}
+.tgb-tl span{display:block;color:var(--mut);font-size:15px;line-height:1.5}
+
+.tgb-two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.tgb-two figure{margin:0}.tgb-two img{border-radius:14px}
+
+.tgb-end{text-align:center;background:var(--cream);border-radius:22px;padding:26px 20px;margin:30px 0 10px}
+.tgb-end h2{margin-bottom:8px!important}
+.tgb-share{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;font:700 15px 'tvl-rc','Radio Canada',sans-serif;color:var(--navy);cursor:pointer;margin-top:4px}
+.tgb-src{font-size:12.5px;color:var(--mut);line-height:1.5;margin-top:20px!important}
+
+/* REVEAL */
+.tgb.js .tgb-rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.tgb.js .tgb-rv.in{opacity:1;transform:none}
+
+@media (max-width:640px){
+  .tgb{font-size:16.5px}
+  .tgb-hero{min-height:420px}.tgb-h1{font-size:31px!important}.tgb-dek{font-size:16px}.tgb-hin{padding:20px 18px}
+  .tgb-h2{font-size:25px!important}.tgb-lead{font-size:17px}
+  .tgb-float{float:none;width:100%;margin:0 0 14px}
+  .tgb-ev{grid-template-columns:96px 1fr}
+  .tgb-biz{grid-template-columns:repeat(2,1fr)}
+  .tgb-cta{flex-wrap:wrap;padding:16px}.tgb-cta i{width:48px;height:48px;font-size:25px}.tgb-cta b{font-size:19px}.tgb-cta em{margin-left:0;width:100%;text-align:center}
+  .tgb-two{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.tgb *,.tgb *:before{animation:none!important;transition:none!important}.tgb.js .tgb-rv{opacity:1;transform:none}}
