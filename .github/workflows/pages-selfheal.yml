@@ -1,0 +1,33 @@
+name: Picture hosting self-heal
+# 11/6/2026: GitHub's own Pages deploy sometimes times out ("syncing_files ... Timeout reached") and the
+# watchdog emailed [3VL ALERT]. A plain re-run fixes it, so this re-runs a failed deploy once, by itself.
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+permissions:
+  actions: write
+  contents: read
+jobs:
+  heal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Re-run a failed Pages deploy once
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -e
+          last=$(gh run list -R "$REPO" -w "pages build and deployment" -L 1 --json databaseId,status,conclusion,attempt -q '.[0]')
+          echo "latest: $last"
+          id=$(echo "$last" | jq -r .databaseId); st=$(echo "$last" | jq -r .status)
+          concl=$(echo "$last" | jq -r .conclusion); att=$(echo "$last" | jq -r .attempt)
+          if [ "$st" = "completed" ] && [ "$concl" = "failure" ] && [ "$att" -lt 3 ]; then
+            echo "re-running $id (attempt $att)"; gh run rerun "$id" -R "$REPO"
+          else
+            echo "nothing to do"
+          fi
