@@ -41,7 +41,10 @@ function render(d){
   /* banner heroes: phone-size copies (img/<name>-900/-1300.webp, listed in hero.sw); prof.js preloads the same set.
      sizes/srcset come BEFORE src: otherwise Chrome also downloads the full file while parsing the markup */
   var hs=d.hero.banner&&d.hero.sw&&/[.]webp$/.test(d.hero.img)?d.hero.sw.map(function(w,i){return (i===d.hero.sw.length-1?src(d.hero.img):src(d.hero.img).replace(/[.]webp$/,'-'+w+'.webp'))+' '+w+'w'}).join(', '):'';
-  h+='<section class="h'+(d.hero.banner?' bn':'')+'"><img class="bg"'+(hs?' sizes="(max-width:991px) 100vw, 1000px" srcset="'+hs+'"':'')+' src="'+src(d.hero.img)+'" alt="'+esc(d.hero.alt)+'" style="object-position:'+(d.hero.pos||'50% 50%')+(d.hero.ar?';aspect-ratio:'+d.hero.ar:'')+'" fetchpriority="high">'+
+  /* optional muted looping hero video (hero.video, phone copy hero.video_sm); the photo is the poster and the fallback (11/12/2026) */
+  var hv=d.hero.video&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var hst='object-position:'+(d.hero.pos||'50% 50%')+(d.hero.ar?';aspect-ratio:'+d.hero.ar:'');
+  h+='<section class="h'+(d.hero.banner?' bn':'')+'">'+(hv?'<video class="bg" autoplay muted loop playsinline preload="auto" poster="'+src(d.hero.img)+'" src="'+src(innerWidth<700&&d.hero.video_sm?d.hero.video_sm:d.hero.video)+'" aria-label="'+esc(d.hero.alt)+'" style="'+hst+'"></video>':'<img class="bg"'+(hs?' sizes="(max-width:991px) 100vw, 1000px" srcset="'+hs+'"':'')+' src="'+src(d.hero.img)+'" alt="'+esc(d.hero.alt)+'" style="'+hst+'" fetchpriority="high">')+
      '<div class="top"><span class="tier'+(d.tier==='vip'?'':' feat')+'">'+(d.tier==='vip'?'&#9733; VIP MEMBER':'FEATURED')+'</span>'+
      (d.verified!==false?'<span class="pill"><svg viewBox="0 0 24 24"><path d="M12 1l3 2.4 3.8-.3.9 3.7 3.3 2-1.5 3.5 1.5 3.5-3.3 2-.9 3.7-3.8-.3L12 23l-3-2.4-3.8.3-.9-3.7-3.3-2L2.5 12 1 8.5l3.3-2 .9-3.7 3.8.3z"/><path d="M7.5 12.5l3 3 6-6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Verified</span>':'')+
      (st?'<span class="pill open'+(st.on?' on':'')+'"><i></i>'+esc(st.txt)+'</span>':'')+
@@ -85,6 +88,8 @@ function render(d){
   if(d.intro)h+='<section class="s up"><div class="intro'+(d.intro.quote?'':' one')+'"><div>'+K(d.intro.k)+H2(d.intro.t)+'<p class="lead">'+esc(d.intro.text)+'</p></div>'+
      (d.intro.quote?'<div class="q"><p>'+esc(d.intro.quote)+'</p><b>'+esc(d.intro.by||'')+'</b></div>':'')+'</div></section>';
   /* 11/5/2026 awards: big badge row (Green Machine TBR Readers' Choice 2023-2025) */
+  /* optional full video with sound, loads only when played (d.video: {k,t,text,src,poster}) */
+  if(d.video)h+='<section class="s up vid">'+K(d.video.k||'Watch')+H2(d.video.t||'See *'+(d.short||d.name)+'*')+(d.video.text?'<p class="lead">'+esc(d.video.text)+'</p>':'')+'<div class="vw"><video controls playsinline preload="none" poster="'+src(d.video.poster)+'" src="'+src(d.video.src)+'"></video></div></section>';
   if(d.awards)h+='<section class="s up awd">'+K(d.awards.k||'Award winning')+H2(d.awards.t||'Awards')+(d.awards.text?'<p class="lead">'+esc(d.awards.text)+'</p>':'')+'<div class="awr">'+d.awards.items.map(function(a){return '<img src="'+src(a.img)+'" alt="'+esc(a.alt)+'" loading="lazy" width="260" height="227">'}).join('')+'</div></section>';
   /* gallery */
   var G=d.gallery||[];

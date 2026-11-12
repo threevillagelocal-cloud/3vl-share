@@ -345,3 +345,10 @@ html.pv3-m2 body{padding-bottom:84px}
 #pv3 .nwc .ni img.nl{position:absolute;left:14px;bottom:12px;width:58%!important;height:auto!important;max-width:240px;z-index:2;filter:drop-shadow(0 0 6px #fff) drop-shadow(0 0 14px rgba(255,255,255,.95)) drop-shadow(0 0 22px rgba(255,255,255,.7))}
 #pv3 .nwc .ni{min-height:220px}
 @media(max-width:640px){#pv3 .nwc .ni{aspect-ratio:16/10}#pv3 .nwc .ni img.nl{width:52%!important;max-width:220px}}
+
+/* video heroes + video section (11/12/2026) */
+#pv3 .h>video.bg{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none;object-fit:cover;z-index:-2;border-radius:0!important;background:#000}
+#pv3 .h.bn>video.bg{position:relative;inset:auto;display:block;height:auto!important;aspect-ratio:12/5;border-radius:24px!important;box-shadow:0 24px 60px rgba(11,31,75,.2)}
+@media(max-width:640px){#pv3 .h.bn>video.bg{border-radius:18px!important;box-shadow:0 14px 34px rgba(11,31,75,.18)}}
+#pv3 .vid .vw{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 24px 60px rgba(11,31,75,.18);background:#000;margin-top:14px}
+#pv3 .vid video{display:block;width:100%!important;height:auto!important;aspect-ratio:16/9;background:#000}
