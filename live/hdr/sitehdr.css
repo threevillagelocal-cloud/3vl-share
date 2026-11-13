@@ -109,7 +109,7 @@ html.tvl-inapp #tvl-sh .yh-in{padding-top:8px}
 #tvl-sf .yf-app{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
 #tvl-sf .yf-app b{color:#fff;font-weight:700;font-size:15px;margin-right:4px}
 #tvl-sf .yf-app a{display:block;line-height:0}
-#tvl-sf .yf-app img{height:44px;width:auto;display:block}
+#tvl-sf .yf-app img{height:44px!important;width:auto!important;max-width:none!important;display:block;margin:0!important}
 #tvl-sf .yf-soc a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff}
 #tvl-sf .yf-join{background:var(--blue);color:#fff!important;font-weight:600;font-size:14px;padding:9px 16px;border-radius:999px}
 #tvl-sf .yf-copy{max-width:1240px;margin:16px auto 0!important;font-size:13.5px;text-align:center}
