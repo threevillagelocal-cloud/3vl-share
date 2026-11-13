@@ -10,13 +10,13 @@
 
   // ---------- departments ----------
   const DEPTS = {
-    restaurant: [['mgmt', 'Management', '#2f5d8a', /owner|general manager/i], ['kitchen', 'Kitchen', '#b4532a', /chef|cook|kitchen|dish/i], ['bar', 'Bar', '#6a4c93', /bar/i], ['foh', 'Front of house', '#1f8a70', /.*/]],
-    contractor: [['mgmt', 'Management', '#2f5d8a', /owner|project manager/i], ['office', 'Office & sales', '#6a4c93', /office|estimat/i], ['field', 'Field crew', '#c47f12', /.*/]],
-    salon: [['mgmt', 'Management', '#2f5d8a', /owner/i], ['desk', 'Front desk', '#6a4c93', /front desk/i], ['medspa', 'Med spa', '#1f8a70', /nurse|injector|esthetic/i], ['hair', 'Hair', '#b0577a', /.*/]],
-    gym: [['mgmt', 'Management', '#2f5d8a', /owner|manager/i], ['desk', 'Front desk', '#6a4c93', /front desk/i], ['coach', 'Coaching', '#4f7a00', /.*/]],
-    landscaper: [['mgmt', 'Management', '#2f5d8a', /owner/i], ['office', 'Office', '#6a4c93', /office/i], ['install', 'Install crew', '#b4532a', /install/i], ['maint', 'Maintenance crews', '#1f7a3a', /.*/]]
+    restaurant: [['mgmt', 'Management', '#2f5d8a', /owner|general manager/i], ['kitchen', 'Kitchen', '#b4532a', /chef|cook|kitchen|dish/i], ['bar', 'Bar', '#6a4c93', /bar/i], ['foh', 'Front of house', '#2a7f9e', /.*/]],
+    contractor: [['mgmt', 'Management', '#2f5d8a', /owner|project manager/i], ['office', 'Office & sales', '#6a4c93', /office|estimat/i], ['field', 'Field crew', '#e0621f', /.*/]],
+    salon: [['mgmt', 'Management', '#2f5d8a', /owner/i], ['desk', 'Front desk', '#6a4c93', /front desk/i], ['medspa', 'Med spa', '#3f8fb0', /nurse|injector|esthetic/i], ['hair', 'Hair', '#b0577a', /.*/]],
+    gym: [['mgmt', 'Management', '#2f5d8a', /owner|manager/i], ['desk', 'Front desk', '#6a4c93', /front desk/i], ['coach', 'Coaching', '#0891b2', /.*/]],
+    landscaper: [['mgmt', 'Management', '#2f5d8a', /owner/i], ['office', 'Office', '#6a4c93', /office/i], ['install', 'Install crew', '#b4532a', /install/i], ['maint', 'Maintenance crews', '#1d5aa6', /.*/]]
   };
-  const depts = () => DEPTS[cfg.id] || [['mgmt', 'Management', '#2f5d8a', /owner|manager/i], ['team', 'Team', '#1f8a70', /.*/]];
+  const depts = () => DEPTS[cfg.id] || [['mgmt', 'Management', '#2f5d8a', /owner|manager/i], ['team', 'Team', '#2a7f9e', /.*/]];
   const deptOf = (m) => { const d = depts().find((x) => x[3].test(m.title)); return { k: d[0], l: d[1], c: d[2] }; };
   const STATUS = { on: ['On shift', 'var(--green)'], brk: ['On break', '#e0a106'], off: ['Off now', 'var(--text-3)'], pto: ['Time off', '#7a5af8'] };
 

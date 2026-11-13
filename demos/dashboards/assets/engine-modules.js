@@ -66,15 +66,17 @@
     const qa = (cfg.quickActions || []).filter((q) => T.can(q.roles)).slice(0, 6);
     const newLeads = s.leads.filter((l) => l.status === 'new');
     const d30 = T.days(30); const p30 = T.days(30, 30);
-    return `
+    const hero = `
       <section class="hero fade-in">${cfg.heroArt ? `<div class="art">${cfg.heroArt}</div>` : ''}
         <div class="chip-ai">${icon('sparkles', 'sm')} Here's your day · ${new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}</div>
         <h2>${T.greeting()}, ${esc(role.person.split(' ')[0])}.</h2>
         <div class="brief-text">${b.text}</div>
         <div class="brief-grid">${b.stats.map((x, i) => `<a class="brief-item" href="${x.href || '#/'}" style="animation-delay:${i * 60}ms"><div class="n" data-count="${x.n}" data-fmt="${x.fmt || 'num'}">${x.n}</div><div class="t">${esc(x.t)}</div></a>`).join('')}</div>
         <div class="brief-actions">${b.actions.map((a, i) => a.href ? `<a class="btn btn-sm ${i === 0 ? 'btn-accent' : ''}" href="${a.href}">${icon(a.icon || 'arrowR', 'sm')}${esc(a.l)}</a>` : `<button class="btn btn-sm ${i === 0 ? 'btn-accent' : ''}" data-act="${a.act}" data-v="${esc(a.v || '')}">${icon(a.icon || 'sparkles', 'sm')}${esc(a.l)}</button>`).join('')}</div>
-      </section>
-      <div class="kpis">${kpis.map(ui.kpi).join('')}</div>
+      </section>`;
+    const sc = T.showcases && T.showcases[cfg.id];
+    return `${sc ? sc().replace('{{HERO}}', () => hero) : hero}
+      <div class="kpis home-kpis">${kpis.map(ui.kpi).join('')}</div>
       ${T.teamStrip ? T.teamStrip() : ''}
       ${T.can(['owner', 'manager']) && T.marketingPulse ? T.marketingPulse() : ''}
       <div class="grid dash">
@@ -93,10 +95,12 @@
   }
   const schedRow = (x) => `<a class="li click" href="${x.href || '#/calendar'}"><div class="time-pill"><b>${esc(x.time)}</b><span>${esc(x.dur || '')}</span></div><span class="vbar" style="background:${x.color || 'var(--chart-1)'}"></span><span class="grow"><div class="t1">${esc(x.title)}</div><div class="t2">${esc(x.sub || '')}</div></span>${x.tag ? `<span class="badge" style="background:color-mix(in srgb, ${x.color || 'var(--chart-1)'} 14%, transparent);color:var(--text)">${esc(x.tag)}</span>` : ''}</a>`;
   T.schedRow = schedRow;
-  const feedRow = (f) => `<a class="feed-item li click ${f.fresh ? 'flash' : ''}" href="${f.href || '#/'}" style="border-top:1px solid var(--border)"><span class="feed-ic ${f.auto ? 'note' : f.tone || ''}">${icon(f.icon || 'activity')}</span><span class="feed-body"><div class="small" style="white-space:normal">${esc(f.text)}</div><div class="meta">${T.timeAgo(f.date)}${f.auto ? ` · <span class="auto-tag">${icon('zap', 'sm')}Automated</span>` : ''}</div></span></a>`;
+  const nbh = (t) => String(t == null ? '' : t).replace(/(\w)-(?=\w)/g, '$1\u2011');
+  T.nbh = nbh;
+  const feedRow = (f) => `<a class="feed-item li click ${f.fresh ? 'flash' : ''}" href="${f.href || '#/'}" style="border-top:1px solid var(--border)"><span class="feed-ic ${f.auto ? 'note' : f.tone || ''}">${icon(f.icon || 'activity')}</span><span class="feed-body"><div class="small" style="white-space:normal">${esc(nbh(f.text))}</div><div class="meta">${T.timeAgo(f.date)}${f.auto ? ` · <span class="auto-tag">${icon('zap', 'sm')}Automated</span>` : ''}</div></span></a>`;
   T.feedRow = feedRow;
   T.feedRow = feedRow;
-  const alertRow = (a) => `<div class="alert-item"><span class="card-icon ${a.tone || 'amber'}">${icon(a.icon || 'alert', 'sm')}</span><div class="grow"><div class="kind">${esc(a.kind || '')}</div><div class="b">${a.href ? `<a href="${a.href}">${esc(a.title)}</a>` : esc(a.title)}</div><div class="why">${esc(a.text)}</div>${a.acts && a.acts.length ? `<div class="acts">${a.acts.map((x) => x.href ? `<a class="btn btn-xs" href="${x.href}">${esc(x.l)}</a>` : `<button class="btn btn-xs" data-act="${x.act}" data-v="${esc(x.v || '')}" data-id="${esc(x.id || '')}">${esc(x.l)}</button>`).join('')}</div>` : ''}</div></div>`;
+  const alertRow = (a) => `<div class="alert-item"><span class="card-icon ${a.tone || 'amber'}">${icon(a.icon || 'alert', 'sm')}</span><div class="grow"><div class="kind">${esc(a.kind || '')}</div><div class="b">${a.href ? `<a href="${a.href}">${esc(nbh(a.title))}</a>` : esc(nbh(a.title))}</div><div class="why">${esc(nbh(a.text))}</div>${a.acts && a.acts.length ? `<div class="acts">${a.acts.map((x) => x.href ? `<a class="btn btn-xs" href="${x.href}">${esc(x.l)}</a>` : `<button class="btn btn-xs" data-act="${x.act}" data-v="${esc(x.v || '')}" data-id="${esc(x.id || '')}">${esc(x.l)}</button>`).join('')}</div>` : ''}</div></div>`;
   T.alertRow = alertRow;
 
   function homeEmployee() {

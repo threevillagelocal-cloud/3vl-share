@@ -32,7 +32,7 @@
     .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); background: var(--surface); border: 1px solid var(--border); padding: 7px 14px; border-radius: 30px; box-shadow: var(--shadow); }
     .eyebrow b { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,.18); }
     h1 { font-size: clamp(38px, 6vw, 72px); line-height: 1.02; letter-spacing: -.045em; margin: 22px auto 0; font-weight: 800; max-width: 900px; }
-    h1 span { background: linear-gradient(100deg, #1f6fe0, #0f4c4a 60%, #b8893b); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    h1 span { background: linear-gradient(100deg, #1f6fe0, #0d2a4f 75%); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .lede { font-size: clamp(16px, 2vw, 19px); color: var(--text-2); max-width: 680px; margin: 18px auto 0; line-height: 1.55; }
     .by { margin-top: 14px; font-weight: 650; color: var(--text); display: inline-flex; align-items: center; gap: 8px; }
     .by i { width: 22px; height: 22px; border-radius: 6px; background: var(--navy); color: var(--yellow); display: grid; place-items: center; font-style: normal; font-size: 9px; font-weight: 900; }
@@ -109,13 +109,13 @@
 
     <div class="section-h" id="demos"><div><h2>Pick a demo</h2><p>Fictional businesses with realistic sample data. Switch between Owner, Manager and Employee views inside each one.</p></div></div>
     <div class="cards">
-      <a class="card" href="restaurant.html" style="--c1:#0f4c4a;--c2:#8a6522;--c3:#e2bd78">
+      <a class="card" href="restaurant.html" style="--c1:#14284a;--c2:#b04a33;--c3:#ffb4a1">
         <div class="shot"><span class="badge-live"><b></b>Restaurant</span><img src="posters/restaurant-desk.webp" width="1366" height="854" alt="Harbor and Vine dashboard home screen" loading="lazy" onerror="this.remove()"></div>
         <div class="body"><span class="kind"><span class="dot"><svg class="i" viewBox="0 0 24 24"><path d="M8 3h8l-.8 5.5a3.2 3.2 0 0 1-6.4 0zM12 12v6M9 19h6"/></svg></span>Restaurant</span><h3>Harbor &amp; Vine</h3><div class="town">Port Jefferson · fictional</div>
           <ul><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Tonight's book, covers and table timeline</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Menu engineering, food and labor cost</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Private events, staff schedule, gift cards</li></ul>
           <span class="open">Open demo<span class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></span></div>
       </a>
-      <a class="card" href="contractor.html" style="--c1:#22262b;--c2:#9a6400;--c3:#f2a516">
+      <a class="card" href="contractor.html" style="--c1:#23272e;--c2:#b0470c;--c3:#ff9a5e">
         <div class="shot"><span class="badge-live"><b></b>Home contractor</span><img src="posters/contractor-desk.webp" width="1366" height="854" alt="North Shore Builders dashboard home screen" loading="lazy" onerror="this.remove()"></div>
         <div class="body"><span class="kind"><span class="dot"><svg class="i" viewBox="0 0 24 24"><path d="M2 18h20v-2H2zM4 15v-3a8 8 0 0 1 16 0v3M10 10V5h4v5"/></svg></span>Home contractor</span><h3>North Shore Builders</h3><div class="town">Setauket · fictional</div>
           <ul><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Lead pipeline and estimate builder</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Jobs, phases, progress photos, change orders</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Invoices, permits and warranty callbacks</li></ul>
@@ -127,13 +127,13 @@
           <ul><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Appointment book by stylist and provider</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Client formulas, notes, before and after</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Rebooking, memberships, retail, waitlist</li></ul>
           <span class="open">Open demo<span class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></span></div>
       </a>
-      <a class="card" href="gym.html" style="--c1:#0b0c0e;--c2:#4a6600;--c3:#c6f432">
+      <a class="card" href="gym.html" style="--c1:#0b0c0e;--c2:#0e7490;--c3:#5ee3f5">
         <div class="shot"><span class="badge-live"><b></b>Gym and fitness</span><img src="posters/gym-desk.webp" width="1366" height="854" alt="Iron Harbor Fitness dashboard home screen" loading="lazy" onerror="this.remove()"></div>
         <div class="body"><span class="kind"><span class="dot"><svg class="i" viewBox="0 0 24 24"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg></span>Gym and fitness studio</span><h3>Iron Harbor Fitness</h3><div class="town">Smithtown · fictional</div>
           <ul><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Live check-ins and class capacity</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Churn risk with one-click win-back</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Trials funnel, PT packages, MRR, challenges</li></ul>
           <span class="open">Open demo<span class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></span></div>
       </a>
-      <a class="card" href="landscaper.html" style="--c1:#1f4d2e;--c2:#7a5a2a;--c3:#d8b98a">
+      <a class="card" href="landscaper.html" style="--c1:#1d4f91;--c2:#a84e1f;--c3:#ffd2b8">
         <div class="shot"><span class="badge-live"><b></b>Landscaping</span><img src="posters/landscaper-desk.webp" width="1366" height="854" alt="Greenline Landscape Co. dashboard home screen" loading="lazy" onerror="this.remove()"></div>
         <div class="body"><span class="kind"><span class="dot"><svg class="i" viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 7 8 4 4 4c0 5 3 8 8 8zM12 12c0-4 3-7 8-7 0 4-3 7-8 7z"/></svg></span>Landscaping</span><h3>Greenline Landscape Co.</h3><div class="town">Stony Brook and Setauket · fictional</div>
           <ul><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Crew routes with a one-tap rain delay</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Maintenance contracts and seasonal upsells</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Install estimates, equipment and spray logs</li></ul>
