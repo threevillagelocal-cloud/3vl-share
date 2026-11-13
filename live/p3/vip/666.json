@@ -7,11 +7,42 @@
  "category": "Steak & Seafood Restaurant",
  "kicker": "Steak & Seafood · Main Street, Port Jefferson",
  "sub": "Prime steaks, a raw bar, craft cocktails, brunch and live music",
- "theme": {"navy": "#123F42", "navy2": "#1E5E62", "blue": "#2A7F84", "sky": "#EEF6F5", "gold": "#E8C77A", "fonts": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;600;700&display=swap", "hf": "'Cormorant Garamond', Georgia, serif", "hw": "700", "hcase": "none", "hls": "0", "bf": "Montserrat, system-ui, sans-serif", "h1s": "56px", "h2s": "38px", "h1m": "40px", "h2m": "30px"},
- "hero": {"img": "img/666-hero.webp", "alt": "Castaways Steak and Seafood: steaks on the grill, oysters, cocktails and the bar", "pos": "50% 50%", "banner": true, "video": "img/666-loop-720.mp4", "video_sm": "img/666-loop-480.mp4"},
+ "theme": {
+  "navy": "#123F42",
+  "navy2": "#1E5E62",
+  "blue": "#2A7F84",
+  "sky": "#EEF6F5",
+  "gold": "#E8C77A",
+  "fonts": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;600;700&display=swap",
+  "hf": "'Cormorant Garamond', Georgia, serif",
+  "hw": "700",
+  "hcase": "none",
+  "hls": "0",
+  "bf": "Montserrat, system-ui, sans-serif",
+  "h1s": "56px",
+  "h2s": "38px",
+  "h1m": "40px",
+  "h2m": "30px"
+ },
+ "hero": {
+  "img": "img/666-front.webp",
+  "alt": "Castaways Steak and Seafood on Main Street in Port Jefferson, with its patio, palm tree and blue umbrellas",
+  "pos": "50% 45%",
+  "banner": true,
+  "ar": "3/1",
+  "sw": [
+   900,
+   1300,
+   2000
+  ]
+ },
  "logo": "img/666-logo.webp",
  "logo_wide": true,
- "pills": ["Nominated: Best Lobster Roll, Best of LI", "Reservations on Resy", "Live music"],
+ "pills": [
+  "Nominated: Best Lobster Roll, Best of LI",
+  "Reservations on Resy",
+  "Live music"
+ ],
  "phone": "888-624-6106",
  "phone_label": "Call for reservations and parties",
  "address_label": "Find us",
@@ -20,63 +51,328 @@
  "website": "https://castawayspj.com/",
  "facebook": "https://www.facebook.com/152807857920156",
  "instagram": "castawayspj",
- "contact_cta": {"k": "Dinner, a party or a night out?", "t": "Book your table"},
+ "contact_cta": {
+  "k": "Dinner, a party or a night out?",
+  "t": "Book your table"
+ },
  "actions": [
-  {"t": "Reserve", "i": "cal", "u": "https://resy.com/cities/port-jefferson-ny-ny/venues/castaways-steak-and-seafood", "a": "reserve", "pri": 1},
-  {"t": "Call", "i": "call", "u": "tel:+18886246106", "a": "call"},
-  {"t": "Menu", "i": "web", "u": "https://castawayspj.com/new-york-port-jefferson-castaway-s-food-menu", "a": "menu"},
-  {"t": "Directions", "i": "map", "u": "https://www.google.com/maps/search/?api=1&query=Castaways+Steak+and+Seafood+106+Main+St+Port+Jefferson+NY", "a": "directions"}
+  {
+   "t": "Reserve",
+   "i": "cal",
+   "u": "https://resy.com/cities/port-jefferson-ny-ny/venues/castaways-steak-and-seafood",
+   "a": "reserve",
+   "pri": 1
+  },
+  {
+   "t": "Call",
+   "i": "call",
+   "u": "tel:+18886246106",
+   "a": "call"
+  },
+  {
+   "t": "Menu",
+   "i": "web",
+   "u": "https://castawayspj.com/new-york-port-jefferson-castaway-s-food-menu",
+   "a": "menu"
+  },
+  {
+   "t": "Directions",
+   "i": "map",
+   "u": "https://www.google.com/maps/search/?api=1&query=Castaways+Steak+and+Seafood+106+Main+St+Port+Jefferson+NY",
+   "a": "directions"
+  }
  ],
- "ticker": ["USDA prime steaks", "Raw bar: oysters and clams", "Fresh seafood", "Craft cocktails", "Brunch", "Happy hour", "Live music", "Private parties", "Catering", "Gift cards", "On Main Street in Port Jeff"],
- "intro": {"k": "Welcome aboard", "t": "Steak, seafood and good times on *Main Street.*", "text": "Castaways is a steak and seafood restaurant at 106 Main Street in the heart of Port Jefferson Village. The kitchen turns out USDA prime steaks like the filet, New York strip and cowboy ribeye, a raw bar with oysters and clams, fresh seafood, tacos and burgers, served with craft cocktails in a bright, nautical dining room and on the patio. Come for lunch, dinner, weekend brunch or happy hour, catch live music, or book the place for your next party."},
- "video": {"k": "Take a look", "t": "A taste of *Castaways*", "text": "From the grill to the raw bar to the cocktail shaker. Tap play for the full video with sound.", "src": "img/666-video.mp4", "poster": "img/666-video-poster.webp"},
- "stats": [{"n": "Prime", "l": "USDA steaks"}, {"n": "Raw bar", "l": "Oysters and clams"}, {"n": "7 days", "l": "Lunch and dinner"}, {"n": "Live", "l": "Music nights"}],
+ "ticker": [
+  "USDA prime steaks",
+  "Raw bar: oysters and clams",
+  "Fresh seafood",
+  "Craft cocktails",
+  "Brunch",
+  "Happy hour",
+  "Live music",
+  "Private parties",
+  "Catering",
+  "Gift cards",
+  "On Main Street in Port Jeff"
+ ],
+ "intro": {
+  "k": "Welcome aboard",
+  "t": "Steak, seafood and good times on *Main Street.*",
+  "text": "Castaways is a steak and seafood restaurant at 106 Main Street in the heart of Port Jefferson Village. The kitchen turns out USDA prime steaks like the filet, New York strip and cowboy ribeye, a raw bar with oysters and clams, fresh seafood, tacos and burgers, served with craft cocktails in a bright, nautical dining room and on the patio. Come for lunch, dinner, weekend brunch or happy hour, catch live music, or book the place for your next party."
+ },
+ "video": {
+  "k": "Take a look",
+  "t": "A taste of *Castaways*",
+  "text": "From the grill to the raw bar to the cocktail shaker. Tap play to watch with sound.",
+  "src": "img/666-video.mp4",
+  "poster": "img/666-video-poster.webp"
+ },
+ "stats": [
+  {
+   "n": "Prime",
+   "l": "USDA steaks"
+  },
+  {
+   "n": "Raw bar",
+   "l": "Oysters and clams"
+  },
+  {
+   "n": "7 days",
+   "l": "Lunch and dinner"
+  },
+  {
+   "n": "Live",
+   "l": "Music nights"
+  }
+ ],
  "services_k": "On the menu",
  "services_t": "What *Castaways* does best",
  "services": [
-  {"t": "Prime steaks", "d": "USDA prime cuts including the filet, New York strip and a cowboy ribeye, grilled the way you like them."},
-  {"t": "Raw bar and seafood", "d": "Oysters and clams on the half shell, mussels, seared tuna, fresh fish and their Best of LI nominated lobster roll."},
-  {"t": "Craft cocktails", "d": "A full bar with creative craft cocktails, seasonal drinks and frozen favorites, plus happy hour specials."},
-  {"t": "Brunch", "d": "Weekend brunch on Main Street, a favorite after a stroll through the village or the harbor."},
-  {"t": "Private parties", "d": "Birthdays, showers, holiday parties and corporate events, with space and menus built for groups."},
-  {"t": "Catering", "d": "Castaways catering brings the menu to your event, from family gatherings to office parties."}
+  {
+   "t": "Prime steaks",
+   "d": "USDA prime cuts including the filet, New York strip and a cowboy ribeye, grilled the way you like them."
+  },
+  {
+   "t": "Raw bar and seafood",
+   "d": "Oysters and clams on the half shell, mussels, seared tuna, fresh fish and their Best of LI nominated lobster roll."
+  },
+  {
+   "t": "Craft cocktails",
+   "d": "A full bar with creative craft cocktails, seasonal drinks and frozen favorites, plus happy hour specials."
+  },
+  {
+   "t": "Brunch",
+   "d": "Weekend brunch on Main Street, a favorite after a stroll through the village or the harbor."
+  },
+  {
+   "t": "Private parties",
+   "d": "Birthdays, showers, holiday parties and corporate events, with space and menus built for groups."
+  },
+  {
+   "t": "Catering",
+   "d": "Castaways catering brings the menu to your event, from family gatherings to office parties."
+  }
  ],
  "gallery_k": "Take a look",
  "gallery_t": "Inside *Castaways*",
  "gallery": [
-  {"img": "img/666-spread.webp", "alt": "Castaways table spread with mussels, steak, tuna and cocktails"},
-  {"img": "img/666-grill.webp", "alt": "Steak and lamb chops on the grill"},
-  {"img": "img/666-oysters.webp", "alt": "Baked oysters on a blue patterned plate"},
-  {"img": "img/666-cocktail.webp", "alt": "Bartender pouring a craft cocktail"},
-  {"img": "img/666-bar.webp", "alt": "The Castaways bar with teal seats and big screens"},
-  {"img": "img/666-tuna.webp", "alt": "Seared tuna over a vegetable salad"},
-  {"img": "img/666-mussels.webp", "alt": "Mussels in a pan"},
-  {"img": "img/666-chandelier.webp", "alt": "Octopus chandelier in the dining room"},
-  {"img": "img/666-flambe.webp", "alt": "Flambe in the kitchen"},
-  {"img": "img/666-patio.webp", "alt": "Outdoor patio with blue umbrellas on Main Street"},
-  {"img": "img/666-margarita.webp", "alt": "Frozen cocktail with a sugar rim"},
-  {"img": "img/666-storefront.webp", "alt": "Castaways on Main Street, Port Jefferson"}
+  {
+   "img": "img/666-spread.webp",
+   "alt": "Castaways table spread with mussels, steak, tuna and cocktails"
+  },
+  {
+   "img": "img/666-grill.webp",
+   "alt": "Steak and lamb chops on the grill"
+  },
+  {
+   "img": "img/666-oysters.webp",
+   "alt": "Baked oysters on a blue patterned plate"
+  },
+  {
+   "img": "img/666-cocktail.webp",
+   "alt": "Bartender pouring a craft cocktail"
+  },
+  {
+   "img": "img/666-bar.webp",
+   "alt": "The Castaways bar with teal seats and big screens"
+  },
+  {
+   "img": "img/666-tuna.webp",
+   "alt": "Seared tuna over a vegetable salad"
+  },
+  {
+   "img": "img/666-mussels.webp",
+   "alt": "Mussels in a pan"
+  },
+  {
+   "img": "img/666-chandelier.webp",
+   "alt": "Octopus chandelier in the dining room"
+  },
+  {
+   "img": "img/666-flambe.webp",
+   "alt": "Flambe in the kitchen"
+  },
+  {
+   "img": "img/666-patio.webp",
+   "alt": "Outdoor patio with blue umbrellas on Main Street"
+  },
+  {
+   "img": "img/666-margarita.webp",
+   "alt": "Frozen cocktail with a sugar rim"
+  },
+  {
+   "img": "img/666-storefront.webp",
+   "alt": "Castaways on Main Street, Port Jefferson"
+  }
  ],
- "goals": {"k": "What are you planning?", "t": "Pick your *occasion*", "chips_k": "Good to know", "items": [
-  {"t": "Dinner", "h": "Steak, seafood and a raw bar.", "d": "Grab a table in the dining room or on the patio for prime steaks, fresh seafood and craft cocktails.", "b": ["USDA prime steaks", "Oysters and clams", "Craft cocktails"], "c": ["Reservations on Resy", "Patio seating"], "cta": "Reserve a table", "u": "https://resy.com/cities/port-jefferson-ny-ny/venues/castaways-steak-and-seafood"},
-  {"t": "Happy hour", "h": "Drinks and bites on Main Street.", "d": "Happy hour specials at the bar, plus live music on several nights of the week.", "b": ["Happy hour specials", "Live music nights", "Big screens for the game"], "c": ["Bar seating", "Live music"], "cta": "See specials", "u": "https://castawayspj.com/new-york-port-jefferson-castaway-s-happy-hours-specials"},
-  {"t": "Brunch", "h": "Weekend brunch in the village.", "d": "Brunch favorites and cocktails, the perfect stop before or after a day in Port Jeff.", "b": ["Weekend brunch", "Brunch cocktails", "Kids menu"], "c": ["Saturday", "Sunday"], "cta": "See the menu", "u": "https://castawayspj.com/new-york-port-jefferson-castaway-s-food-menu"},
-  {"t": "Private party", "h": "We host. You party.", "d": "Holiday parties, birthdays, showers and corporate events with group menus and a team that takes care of everything.", "b": ["Holiday parties", "Birthdays and showers", "Corporate events"], "c": ["Group menus", "Ladies' Lounge Night"], "cta": "Plan a party", "u": "https://castawayspj.com/new-york-port-jefferson-castaway-s-party"},
-  {"t": "Catering", "h": "Castaways at your event.", "d": "Good food is an essential part of any event. Let Castaways handle the catering and make it one to remember.", "b": ["Family gatherings", "Office events", "Holiday catering"], "c": ["Call to plan"], "cta": "Ask about catering", "u": "https://castawayspj.com/new-york-port-jefferson-castaway-s-catering"},
-  {"t": "Gift cards", "h": "The easiest gift in Port Jeff.", "d": "Castaways gift cards are perfect for birthdays, holidays and thank-yous.", "b": ["Buy online", "Any amount", "Use any visit"], "c": ["Holiday gifts"], "cta": "Buy a gift card", "u": "https://www.toasttab.com/castaways-port-jeff-106-main-street/giftcards"}
- ]},
+ "goals": {
+  "k": "What are you planning?",
+  "t": "Pick your *occasion*",
+  "chips_k": "Good to know",
+  "items": [
+   {
+    "t": "Dinner",
+    "h": "Steak, seafood and a raw bar.",
+    "d": "Grab a table in the dining room or on the patio for prime steaks, fresh seafood and craft cocktails.",
+    "b": [
+     "USDA prime steaks",
+     "Oysters and clams",
+     "Craft cocktails"
+    ],
+    "c": [
+     "Reservations on Resy",
+     "Patio seating"
+    ],
+    "cta": "Reserve a table",
+    "u": "https://resy.com/cities/port-jefferson-ny-ny/venues/castaways-steak-and-seafood"
+   },
+   {
+    "t": "Happy hour",
+    "h": "Drinks and bites on Main Street.",
+    "d": "Happy hour specials at the bar, plus live music on several nights of the week.",
+    "b": [
+     "Happy hour specials",
+     "Live music nights",
+     "Big screens for the game"
+    ],
+    "c": [
+     "Bar seating",
+     "Live music"
+    ],
+    "cta": "See specials",
+    "u": "https://castawayspj.com/new-york-port-jefferson-castaway-s-happy-hours-specials"
+   },
+   {
+    "t": "Brunch",
+    "h": "Weekend brunch in the village.",
+    "d": "Brunch favorites and cocktails, the perfect stop before or after a day in Port Jeff.",
+    "b": [
+     "Weekend brunch",
+     "Brunch cocktails",
+     "Kids menu"
+    ],
+    "c": [
+     "Saturday",
+     "Sunday"
+    ],
+    "cta": "See the menu",
+    "u": "https://castawayspj.com/new-york-port-jefferson-castaway-s-food-menu"
+   },
+   {
+    "t": "Private party",
+    "h": "We host. You party.",
+    "d": "Holiday parties, birthdays, showers and corporate events with group menus and a team that takes care of everything.",
+    "b": [
+     "Holiday parties",
+     "Birthdays and showers",
+     "Corporate events"
+    ],
+    "c": [
+     "Group menus",
+     "Ladies' Lounge Night"
+    ],
+    "cta": "Plan a party",
+    "u": "https://castawayspj.com/new-york-port-jefferson-castaway-s-party"
+   },
+   {
+    "t": "Catering",
+    "h": "Castaways at your event.",
+    "d": "Good food is an essential part of any event. Let Castaways handle the catering and make it one to remember.",
+    "b": [
+     "Family gatherings",
+     "Office events",
+     "Holiday catering"
+    ],
+    "c": [
+     "Call to plan"
+    ],
+    "cta": "Ask about catering",
+    "u": "https://castawayspj.com/new-york-port-jefferson-castaway-s-catering"
+   },
+   {
+    "t": "Gift cards",
+    "h": "The easiest gift in Port Jeff.",
+    "d": "Castaways gift cards are perfect for birthdays, holidays and thank-yous.",
+    "b": [
+     "Buy online",
+     "Any amount",
+     "Use any visit"
+    ],
+    "c": [
+     "Holiday gifts"
+    ],
+    "cta": "Buy a gift card",
+    "u": "https://www.toasttab.com/castaways-port-jeff-106-main-street/giftcards"
+   }
+  ]
+ },
  "hours_t": "Hours",
- "hours": {"sun": ["11:00", "22:00"], "mon": ["12:00", "21:00"], "tue": ["12:00", "21:00"], "wed": ["12:00", "21:00"], "thu": ["12:00", "22:00"], "fri": ["11:00", "23:00"], "sat": ["11:00", "23:00"]},
+ "hours": {
+  "sun": [
+   "11:00",
+   "22:00"
+  ],
+  "mon": [
+   "12:00",
+   "21:00"
+  ],
+  "tue": [
+   "12:00",
+   "21:00"
+  ],
+  "wed": [
+   "12:00",
+   "21:00"
+  ],
+  "thu": [
+   "12:00",
+   "22:00"
+  ],
+  "fri": [
+   "11:00",
+   "23:00"
+  ],
+  "sat": [
+   "11:00",
+   "23:00"
+  ]
+ },
  "hours_note": "The bar stays open one hour past the kitchen.",
- "reviews": {"t": "Loved your visit?", "text": "A quick Google review helps your neighbors find a great night out on Main Street.", "url": "https://www.google.com/search?q=Castaways+Steak+and+Seafood+Port+Jefferson+reviews", "btn": "Review on Google"},
+ "reviews": {
+  "t": "Loved your visit?",
+  "text": "A quick Google review helps your neighbors find a great night out on Main Street.",
+  "url": "https://www.google.com/search?q=Castaways+Steak+and+Seafood+Port+Jefferson+reviews",
+  "btn": "Review on Google"
+ },
  "faq": [
-  ["Do they take reservations?", "Yes. Reserve a table on Resy or call 888-624-6106."],
-  ["Is there outdoor seating?", "Yes, Castaways has a patio on Main Street with umbrellas, in season."],
-  ["Do they host private parties?", "Yes. Castaways hosts holiday parties, birthdays, showers and corporate events. Call to plan your party."],
-  ["Is there live music?", "Yes, live music runs several nights a week. Check their specials and events pages for this week's lineup."],
-  ["Where do I park?", "Castaways is at 106 Main St in Port Jefferson Village, with municipal lots and street parking nearby."]
+  [
+   "Do they take reservations?",
+   "Yes. Reserve a table on Resy or call 888-624-6106."
+  ],
+  [
+   "Is there outdoor seating?",
+   "Yes, Castaways has a patio on Main Street with umbrellas, in season."
+  ],
+  [
+   "Do they host private parties?",
+   "Yes. Castaways hosts holiday parties, birthdays, showers and corporate events. Call to plan your party."
+  ],
+  [
+   "Is there live music?",
+   "Yes, live music runs several nights a week. Check their specials and events pages for this week's lineup."
+  ],
+  [
+   "Where do I park?",
+   "Castaways is at 106 Main St in Port Jefferson Village, with municipal lots and street parking nearby."
+  ]
  ],
- "final": {"k": "Castaways Steak & Seafood", "t": "Your table is *waiting.*", "text": "Steaks, seafood, cocktails and live music on Main Street in Port Jefferson.", "btn": "Reserve a table", "u": "https://resy.com/cities/port-jefferson-ny-ny/venues/castaways-steak-and-seafood"},
+ "final": {
+  "k": "Castaways Steak & Seafood",
+  "t": "Your table is *waiting.*",
+  "text": "Steaks, seafood, cocktails and live music on Main Street in Port Jefferson.",
+  "btn": "Reserve a table",
+  "u": "https://resy.com/cities/port-jefferson-ny-ny/venues/castaways-steak-and-seafood"
+ },
  "side_sub": "Steak & seafood · Port Jefferson",
  "side_contact": "Reserve a table",
  "sticky_contact": "Reserve",
