@@ -318,6 +318,16 @@
 "src": "img/634-hero-street.webp",
 "thumb": "t/vip-634-77a22ae3b2-t240.webp"
 },
+"666": {
+"banner": true,
+"big1280": "t/vip-666-d79faee0ac-1280.webp",
+"big640": "t/vip-666-d79faee0ac-640.webp",
+"big960": "t/vip-666-d79faee0ac-960.webp",
+"logo": "t/vip-666-logo-096b184dcf.webp",
+"pos": "50% 45%",
+"src": "img/666-front.webp",
+"thumb": "t/vip-666-d79faee0ac-t240.webp"
+},
 "684": {
 "banner": true,
 "big1280": "t/vip-684-5a97d309be7cf1-1280.webp",
