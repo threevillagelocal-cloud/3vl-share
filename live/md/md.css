@@ -214,3 +214,7 @@ html.md-on #dc3 .dc3-vip{display:none!important}
 @media (max-width:900px){#md .md-net-l{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:420px){#md .md-net-l{grid-template-columns:1fr}}
 #md>.md-card,#md>.md-net{margin-top:12px}
+/* real FB + IG views with brand logos */
+#md .md-soc-r{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--ink)}
+#md .md-soc-r em{font-style:normal;font-weight:800}
+#md .md-brandlogo{width:20px;height:20px;flex:0 0 auto;display:block}
