@@ -178,3 +178,14 @@ html.md-on .member_sidebar a:not(.btn):not([class*=btn]):hover{color:#1d5fbf}
 @media (max-width:560px){#md .md-grow .md-ups{grid-template-columns:1fr}}
 /* new dashboard: BD's default panels live in the left menu instead (Publish/Manage/Account links are already there) */
 html.md-on .dashboard-publish-content,html.md-on .dashboard-module,html.md-on .member_accounts>.row:has(.dashboard-publish-content){display:none!important}
+/* rolling 30-day reach tile with breakdown */
+#md .md-mtabs button{cursor:default}
+#md .md-reach{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:12px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 20px;margin-top:10px}
+#md .md-reach-tot{display:flex;flex-direction:column;gap:6px;justify-content:center;padding-right:18px;border-right:1px solid var(--line)}
+#md .md-reach-tot>b{font-size:clamp(30px,3.4vw,42px);line-height:1.05;color:var(--navy);font-weight:800;letter-spacing:-.02em}
+#md .md-reach-tot>i{font-style:normal;color:var(--mut);font-size:14.5px;line-height:1.4}
+#md .md-reach-l{display:grid;gap:8px;align-content:center}
+#md .md-reach-l li{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:var(--soft)}
+#md .md-reach-l b{font-size:15px;color:var(--ink)}
+#md .md-reach-l em{font-style:normal;font-weight:800;color:var(--blue);font-size:14.5px;text-align:right}
+@media (max-width:760px){#md .md-reach{grid-template-columns:1fr}#md .md-reach-tot{border-right:0;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:12px}#md .md-reach-l li{grid-template-columns:auto 1fr}#md .md-reach-l em{grid-column:2;text-align:left}}
