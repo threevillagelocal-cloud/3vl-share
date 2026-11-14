@@ -425,7 +425,8 @@ var css='#dc3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1f
 +'#dc3 a.dc3-b{display:inline-block;font-size:16px;font-weight:700;padding:11px 18px;border-radius:12px;text-decoration:none!important;background:#006fbb;color:#fff!important}'
 +'#dc3 .mm a.dc3-b{background:#ffc53d;color:#1b2f45!important}'
 +'#dc3 a.dc3-l{display:inline-block;margin-left:12px;font-size:15px;font-weight:700;color:#006fbb}'
-+'@media(max-width:600px){#dc3 a.dc3-b{display:block;text-align:center}#dc3 a.dc3-l{display:block;margin:10px 0 0;text-align:center}}';
++'@media(max-width:600px){#dc3 a.dc3-b{display:block;text-align:center}#dc3 a.dc3-l{display:block;margin:10px 0 0;text-align:center}}'
++'#dc3 .dc3-vip{background:linear-gradient(135deg,#fffaf0,#fff3d6)!important;border:1.5px solid #f2c75c!important}#dc3 .dc3-vip a.dc3-b{background:linear-gradient(135deg,#ffd257,#ffbf2e);color:#13294b!important}';
 var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
 var mm='';
 if(basic){mm=done
@@ -436,7 +437,7 @@ var spm=document.body.className.match(/session-plan-level-(\d+)/),spp=spm?spm[1]
 var promo='',_spOld=spPaid
  ?'<div class="dc3-c"><div class="dc3-ic">&#10024;</div><p class="dc3-k">New &middot; 3VL Smart Publisher</p><b>Promote something in minutes</b><p>Tell us the basics about your event, special or news. We write it, design it and publish it on Three Village Local when you choose. '+(spp==='2'?'1 page a month on your plan.':'One every two weeks on your plan.')+'</p><a class="dc3-b" href="/smart-publisher">Open Smart Publisher</a></div>'
  :'<div class="dc3-c"><div class="dc3-ic">&#128227;</div><p class="dc3-k">Free for members</p><b>Got something you want to promote?</b><p>Send us a special, an event or big news and we will help put it in front of Three Village. Want us to write and publish a full page for you? That is 3VL Smart Publisher, included with Featured and VIP.</p><a class="dc3-b" href="/checkout/2">Upgrade now</a> <a href="/join" style="margin-left:12px;font-weight:700">See the plans</a><p style="margin:10px 0 0;font-size:14px">Or <a href="/promotion#pr3-form">send us a free tip</a> and our team decides what to feature.</p></div>';
-if(!mm)return;var box=document.createElement('div');box.id='dc3';box.innerHTML=mm+promo;
+var isVip=spp==='1'||spp==='8'||spp==='9',vipc='';if(!isVip){vipc='<div class="dc3-c dc3-vip"><div class="dc3-ic">&#11088;</div><p class="dc3-k">Three Village VIP</p><b>Be seen everywhere in Three Village</b><p>Your banner ad across the whole website, the top spot in search, a custom article every quarter, VIP of the Week and your own Member Dashboard.</p><a class="dc3-b" href="/join#plan-vip" data-vip-pop>See what the VIP plan gets you</a></div>';}if(!(mm+vipc))return;var box=document.createElement('div');box.id='dc3';box.innerHTML=vipc+mm+promo;box.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('[data-vip-pop]');if(!t)return;e.preventDefault();if(window.jvOpen){window.jvOpen('vip',null,t);return;}var sc=document.createElement('script');sc.src='https://threevillagelocal-cloud.github.io/3vl-share/site/vip-pop/pop.js?v=1';sc.onload=function(){if(window.jvOpen)window.jvOpen('vip',null,t);else location.href='/join#plan-vip';};sc.onerror=function(){location.href='/join#plan-vip';};document.head.appendChild(sc);try{if(window.gtag)gtag('event','dash_vip_popup',{plan:spp});}catch(x){}});
 h.insertAdjacentElement('afterend',box);
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
