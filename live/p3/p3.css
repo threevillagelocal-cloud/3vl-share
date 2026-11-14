@@ -654,3 +654,6 @@ max-width:1120px;margin:0 auto;padding:4px 0 44px;color:var(--ink);font-family:'
 .edp-btns-row .edp-btn{flex:1 1 100%}
 }
 @media (prefers-reduced-motion:reduce){.edp-up,.edp-hero-img,.edp-eq i{animation:none}.edp-back,.edp-btn,.edp-mc,.edp-poster-f,.edp-all{transition:none}}
+
+/* member dashboard: hide BD "Attract More Clients" VIP badge-code box */
+.dashboard-promote-banner{display:none!important}
