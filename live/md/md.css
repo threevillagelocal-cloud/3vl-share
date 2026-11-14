@@ -173,6 +173,6 @@ html.md-on .member_sidebar a:not(.btn):not([class*=btn]){color:#1d2b3a}
 html.md-on .member_sidebar a:not(.btn):not([class*=btn]):hover{color:#1d5fbf}
 /* Grow with us: its own full-width row under the timeline + side column, 4 across */
 #md .md-grow{grid-column:1/-1}
-#md .md-grow .md-ups{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+#md .md-grow .md-ups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 @media (max-width:1100px){#md .md-grow .md-ups{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){#md .md-grow .md-ups{grid-template-columns:1fr}}
