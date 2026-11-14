@@ -657,3 +657,9 @@ max-width:1120px;margin:0 auto;padding:4px 0 44px;color:var(--ink);font-family:'
 
 /* member dashboard: hide BD "Attract More Clients" VIP badge-code box */
 .dashboard-promote-banner{display:none!important}
+
+/* member area: unused BD sections removed from the left menu + dashboard */
+.member_admin_sidemenu .panel:has(a[href^="/account/audio/"]),.member_admin_sidemenu .panel:has(a[href^="/account/classifieds/"]),
+.member_admin_sidemenu .panel:has(a[href^="/account/coupons/"]),.member_admin_sidemenu .panel:has(a[href^="/account/digital-products/"]),
+.member_admin_sidemenu .panel:has(a[href^="/account/products/"]),.member_admin_sidemenu .panel:has(a[href^="/account/discussions/"]),
+.member_admin_sidemenu .panel:has(a[href^="/account/additional_locations/"]),.recent-transactions-dashboard{display:none!important}
