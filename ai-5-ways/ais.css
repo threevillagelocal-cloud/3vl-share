@@ -445,3 +445,4 @@
 .ais-logos{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}.ais .ais-lg b{word-break:normal;overflow-wrap:normal;hyphens:none}
 @media (max-width:520px){.ais-logos{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .ais h2,.ais h3,.ais p,.ais li,.ais b,.ais a,.ais span{word-break:normal}
+.ais .ais-lg img{margin:0!important}
