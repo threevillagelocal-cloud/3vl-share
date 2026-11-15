@@ -71,11 +71,11 @@
   var roles = $$('.ais-roles button'), ri = 0, timer = null, stopped = false, vis = false;
   function setRole(b) {
     roles.forEach(function (x) { x.classList.toggle('on', x === b); });
-    $$('.ais-dview').forEach(function (v) { v.classList.toggle('on', v.dataset.r === b.dataset.r); });
+    $$('.ais-dimg').forEach(function (v) { v.classList.toggle('on', v.dataset.r === b.dataset.r); });
   }
   roles.forEach(function (b, k) { b.addEventListener('click', function () { stopped = true; clearInterval(timer); ri = k; setRole(b); ga('ais_dash_role', { role: b.dataset.r }); }); });
-  function run() { clearInterval(timer); if (stopped || reduce || !vis || document.hidden) return; timer = setInterval(function () { ri = (ri + 1) % roles.length; setRole(roles[ri]); }, 2500); }
-  var dash = root.querySelector('.ais-dash');
+  function run() { clearInterval(timer); if (stopped || reduce || !vis || document.hidden) return; timer = setInterval(function () { ri = (ri + 1) % roles.length; setRole(roles[ri]); }, 3500); }
+  var dash = root.querySelector('.ais-bw');
   if (dash && 'IntersectionObserver' in window) new IntersectionObserver(function (es) { vis = es[0].isIntersecting; run(); }, { threshold: .4 }).observe(dash);
   document.addEventListener('visibilitychange', run);
 
@@ -112,5 +112,7 @@
   }
   $$('.ais-share').forEach(function (b) { b.addEventListener('click', function () { share(b.classList.contains('ais-save') ? 'plan' : 'final'); }); });
   function toast(t) { var d = document.createElement('div'); d.className = 'ais-toast'; d.textContent = t; document.body.appendChild(d); setTimeout(function () { d.remove(); }, 2200); }
-  $$('a[href*="3vldigital.com"]').forEach(function (a) { a.addEventListener('click', function () { ga('ais_cta', { to: a.pathname }); }); });
+  // GA4: every 3VL Digital CTA (data-cta = position/name) + in-page jump buttons
+  $$('a[data-cta]').forEach(function (a) { a.addEventListener('click', function () { ga('ais_cta', { cta: a.dataset.cta, to: a.pathname, link_url: a.href.split('?')[0] }); }); });
+  $$('a[href^="#ais-"]').forEach(function (a) { a.addEventListener('click', function () { ga('ais_jump', { to: a.getAttribute('href') }); }); });
 })();
