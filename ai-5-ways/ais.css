@@ -376,3 +376,7 @@
 .ais-faq summary{position:relative;padding-right:30px}
 .ais .ais-faq summary:after{position:absolute;right:0;top:0;float:none}
 @media (max-width:380px){.ais-hpic .ais-phone{width:180px}.ais-hpic .ais-chat{height:300px;font-size:11px}}
+.ais-pbar b,.ais-pbar span{white-space:nowrap}
+@media (max-width:860px){.ais-chips{right:auto!important;left:10px!important;align-items:flex-start!important}}
+@media (max-width:520px){.ais-pbar{font-size:12px;padding:9px 12px}.ais-hpic .ais-chat{height:380px!important;font-size:11.5px!important;padding:10px;gap:7px}}
+@media (max-width:380px){.ais-hpic .ais-chat{height:400px!important;font-size:11px!important}}
