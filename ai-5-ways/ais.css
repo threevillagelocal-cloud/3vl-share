@@ -442,3 +442,6 @@
   .ais-band h3{font-size:23px!important}
 }
 @media (max-width:640px){.ais-bwshot{aspect-ratio:1/1.02}.ais .ais-dimg{width:240%!important;height:auto!important;bottom:auto;object-fit:contain}}
+.ais-logos{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}.ais .ais-lg b{word-break:normal;overflow-wrap:normal;hyphens:none}
+@media (max-width:520px){.ais-logos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ais h2,.ais h3,.ais p,.ais li,.ais b,.ais a,.ais span{word-break:normal}
