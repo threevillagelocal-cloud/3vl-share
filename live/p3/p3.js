@@ -417,7 +417,7 @@ var h=document.querySelector('.dashboard_home_title');if(!h||document.getElement
 /* Member Dashboard v2 loader (OFF until the owner approves: set MDV2=true and publish). Private token pages, no member-number URLs.
    The signed-in member's browser computes sha256('3vlmd|'+memberId+'|'+account email) from their own /account/contact page,
    fetches live/md/k/<hash>.txt (holds only their token) and shows live/md/v/<token>.html. Anyone else would need both the id and the email. */
-var MDV2=true;var MDV3=true;/* v3 design (md3.css/js); only matters once MDV2 is on */
+var MDV2=false;var MDV3=true;/* v3 design (md3.css/js); only matters once MDV2 is on */
 if(MDV2)(function(){var sb=document.querySelector('.member_sidebar');var mt=sb&&(sb.textContent||'').match(/Member ID #(\d+)/);var mid=mt&&mt[1];if(!mid||document.getElementById('mdx'))return;
 var B='https://threevillagelocal-cloud.github.io/3vl-share/live/md/',d=new Date(),v=''+d.getFullYear()+(d.getMonth()+1)+d.getDate();document.documentElement.classList.add('md-on');
 var MDN=MDV3?'md3':'md2';var l=document.createElement('link');l.rel='stylesheet';l.href=B+MDN+'.css?v='+v;document.head.appendChild(l);
