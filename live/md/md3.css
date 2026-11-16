@@ -669,3 +669,15 @@ html.md-on .md-wrap:has(#mdx){margin:8px 0 28px}
 .mdx .kpi .value{white-space:nowrap}
 .mdx .kpi .value[data-pre]:not([data-pre=""]){font-size:20px;letter-spacing:-.02em}
 @media (max-width:860px){.mdx .kpi .value[data-pre]:not([data-pre=""]){font-size:17px}}
+/* 11/16 owner: "these sections are too tall" (chart, What we did for you, 3VL Digital box). Compact, no stretching. */
+.mdx#mdx .act-b b,.mdx#mdx .act-b i{white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;display:block}
+.mdx#mdx .act{padding:7px 16px}
+.mdx .g-ov.r3{align-items:start}
+.mdx .stack.fill>.card:first-child,.mdx .stack.fill>.card:last-child{flex:0 0 auto}
+.mdx .stack.fill .chartwrap{flex:0 0 auto}
+.mdx .g-ov.r3 .bigsvg{height:120px}
+.mdx .actc .acts{flex:0 0 auto}
+.mdx .g-ov.r3 .sfeat{align-self:start;justify-content:flex-start;gap:10px;padding:18px 18px 16px}
+.mdx .g-ov.r3 .sfeat h2{font-size:24px;margin:0 0 6px}
+.mdx .g-ov.r3 .sfeat p{margin:0 0 10px}
+.mdx .g-ov.r3 .sf-frame img{max-height:130px}
