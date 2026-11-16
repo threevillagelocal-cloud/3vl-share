@@ -34,7 +34,7 @@ function openState(h){if(!h)return null;var n=nowET(),t=h[DAYS[n.d]];function mm
 
 function render(d){
   var T=d.theme||{},slug=location.pathname.replace(/^\/|\/$/g,''),tel=(d.phone||'').replace(/\D/g,'').slice(-10),telF='('+tel.slice(0,3)+') '+tel.slice(3,6)+'-'+tel.slice(6)+(d.phone_ext?' ext. '+d.phone_ext:''),
-      telH='tel:+1'+tel+(d.phone_ext?','+d.phone_ext:''),contact=d.contact_url||('/'+slug+'/connect'),review='/'+slug+'/writeareview',
+      telH='tel:+1'+tel+(d.phone_ext?','+d.phone_ext:''),tel2=(d.phone2||'').replace(/\D/g,'').slice(-10),telF2=tel2?'('+tel2.slice(0,3)+') '+tel2.slice(3,6)+'-'+tel2.slice(6):'',telH2='tel:+1'+tel2,contact=d.contact_url||('/'+slug+'/connect'),review='/'+slug+'/writeareview',
       dir='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(d.maps||d.address||d.name),st=openState(d.hours),h='';
   if(T.fonts){var fl=document.createElement('link');fl.rel='stylesheet';fl.href=T.fonts;document.head.appendChild(fl)}
   /* hero (the name is a div styled as before: BD's own server-rendered h1 stays the page's only H1, 10/24/2026) */
@@ -68,7 +68,7 @@ function render(d){
   A=A.filter(function(x){return x.u||x.i==='card'});
   h+='<div class="acts up'+(A.length===3?' n3':'')+'">'+A.map(function(x){return '<a class="act'+(x.pri?' pri':'')+'" data-a="'+esc(x.a||x.i)+'" href="'+esc(x.i==='card'?'#':x.u)+'"'+(x.i==='card'?' data-vcard="1" download="'+esc(slug)+'.vcf"':ext(x.u))+'>'+ic(x.i)+esc(x.t)+'</a>'}).join('')+'</div>';
   /* contact strip */
-  var C='';if(tel)C+='<a data-a="call" href="'+telH+'">'+ic('call')+'<span><small>'+esc(d.phone_label||'Phone')+'</small>'+telF+'</span></a>';
+  var C='';if(tel)C+='<a data-a="call" href="'+telH+'">'+ic('call')+'<span><small>'+esc(d.phone_label||'Phone')+'</small>'+telF+'</span></a>';if(tel2)C+='<a data-a="call2" href="'+telH2+'">'+ic('call')+'<span><small>'+esc(d.phone2_label||'Office')+'</small>'+telF2+'</span></a>';
   /* 11/5/2026 text_phone: a texting-only number (owner's own page 122) */
   if(d.text_phone){var tp=String(d.text_phone).replace(/\D/g,'');C+='<a data-a="text" href="sms:+1'+tp+'">'+ic('msg')+'<span><small>'+esc(d.text_label||'For texting')+'</small>'+tp.replace(/(\d{3})(\d{3})(\d{4})/,'$1-$2-$3')+'</span></a>'}
   if(d.email)C+='<a data-a="email" href="mailto:'+esc(d.email)+'">'+ic('mail')+'<span><small>Email</small>'+esc(d.email)+'</span></a>';
@@ -112,7 +112,7 @@ function render(d){
      '<a class="b b2" data-a="review" href="'+review+'">Review '+esc(d.first||d.short||'them')+' on 3VL</a></div></section>';
   /* final cta */
   var FN='';if(d.final)FN+='<section class="s fin up">'+K(d.final.k)+H2(d.final.t)+'<p class="lead">'+esc(d.final.text)+'</p><div class="row">'+
-     (tel?'<a class="b bg2" data-a="call" href="'+telH+'">Call '+telF+'</a>':'')+'<a class="b b2" data-a="contact" href="'+esc(contact)+'"'+ext(contact)+'>'+esc(d.final.btn||'Contact')+'</a></div></section>';
+     (tel?'<a class="b bg2" data-a="call" href="'+telH+'">Call '+telF+'</a>':'')+(tel2?'<a class="b b2" data-a="call2" href="'+telH2+'">Call '+telF2+'</a>':'')+'<a class="b b2" data-a="contact" href="'+esc(contact)+'"'+ext(contact)+'>'+esc(d.final.btn||'Contact')+'</a></div></section>';
   /* 11/5/2026 final_first:true swaps the final call-to-action and the reviews band (owner, Green Machine 931) */
   if(d.final_first)h+=FN;else h+=RV;
   /* faq */
@@ -146,7 +146,7 @@ function render(d){
   var side=document.querySelector('.member_profile .sidebar-section');
   if(side){var sd=document.createElement('div');sd.id='pv3s';if(d.m2)sd.className='m2';sd.style.cssText=css;
     sd.innerHTML='<div class="c"><div class="who"><img'+(d.headshot?'':' class="lg"')+' src="'+src(d.headshot||d.logo)+'" alt=""><div><b>'+esc(d.side_name||d.short||d.name)+'</b><span>'+esc(d.side_sub||d.category||'')+'</span></div></div>'+
-      (tel?'<a class="b b1" data-a="call" href="'+telH+'">Call '+telF+'</a>':'')+
+      (tel?'<a class="b b1" data-a="call" href="'+telH+'">Call '+telF+'</a>':'')+(tel2?'<a class="b b2" data-a="call2" href="'+telH2+'">'+esc(d.phone2_label||'Office')+': '+telF2+'</a>':'')+
       '<a class="b b2" data-a="contact" href="'+esc(contact)+'"'+ext(contact)+'>'+esc(d.side_contact||'Contact')+'</a>'+
       (d.side_extra?'<a class="b b2" data-a="'+esc(d.side_extra.a||'extra')+'" href="'+esc(d.side_extra.u)+'"'+ext(d.side_extra.u)+'>'+esc(d.side_extra.t)+'</a>':'')+'</div>'+
       '<div class="c"><h4>'+esc(d.address_label||'Find them')+'</h4>'+
@@ -176,7 +176,7 @@ function render(d){
   document.body.appendChild(sb);
   /* vCard */
   [].forEach.call(box.querySelectorAll('[data-vcard]'),function(a){var v='BEGIN:VCARD\r\nVERSION:3.0\r\nN:'+(d.vcard&&d.vcard.n||d.name)+'\r\nFN:'+(d.vcard&&d.vcard.fn||d.name)+'\r\n'+(d.vcard&&d.vcard.org?'ORG:'+d.vcard.org+'\r\n':'')+(d.vcard&&d.vcard.title?'TITLE:'+d.vcard.title+'\r\n':'')+
-    (tel?'TEL;TYPE=WORK:+1-'+tel.slice(0,3)+'-'+tel.slice(3,6)+'-'+tel.slice(6)+(d.phone_ext?' ext. '+d.phone_ext:'')+'\r\n':'')+(d.email?'EMAIL;TYPE=WORK:'+d.email+'\r\n':'')+'URL:'+location.origin+'/'+slug+'\r\nNOTE:Found on Three Village Local\r\nEND:VCARD\r\n';a.href='data:text/vcard;charset=utf-8,'+encodeURIComponent(v)});
+    (tel?'TEL;TYPE=WORK:+1-'+tel.slice(0,3)+'-'+tel.slice(3,6)+'-'+tel.slice(6)+(d.phone_ext?' ext. '+d.phone_ext:'')+'\r\n':'')+(tel2?'TEL;TYPE=WORK,VOICE:+1-'+tel2.slice(0,3)+'-'+tel2.slice(3,6)+'-'+tel2.slice(6)+'\r\n':'')+(d.email?'EMAIL;TYPE=WORK:'+d.email+'\r\n':'')+'URL:'+location.origin+'/'+slug+'\r\nNOTE:Found on Three Village Local\r\nEND:VCARD\r\n';a.href='data:text/vcard;charset=utf-8,'+encodeURIComponent(v)});
   /* goal tabs */
   var gp=box.querySelector('.gp');
   function showG(i){var g=d.goals.items[i],u=g.u||contact;gp.innerHTML='<div class="pn"><div><h3>'+esc(g.h)+'</h3><p>'+esc(g.d)+'</p><ul>'+g.b.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul></div><div class="sc"><div><small>'+esc(d.goals.chips_k||'Ask about')+'</small><div class="chips">'+(g.c||[]).map(function(x){return '<span>'+esc(x)+'</span>'}).join('')+'</div></div><a class="b b1" data-a="goal_'+i+'" href="'+esc(u)+'"'+ext(u)+'>'+esc(g.cta||'Ask about '+g.t.toLowerCase())+'</a></div></div>';

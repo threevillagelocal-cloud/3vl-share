@@ -1,0 +1,287 @@
+{
+ "uid": "939",
+ "layout": "v3",
+ "tier": "vip",
+ "name": "Disaster Cleanup Services",
+ "short": "Disaster Cleanup Services",
+ "first": "DCS",
+ "brand": "Disaster Cleanup Services, Inc.",
+ "category": "Water, Fire & Mold Restoration",
+ "kicker": "Family-owned · Bohemia · Since 2011",
+ "sub": "Water · Fire · Mold · Waterproofing · Rebuild",
+ "pills": [
+  "🚨 24/7 emergency response",
+  "⭐ 5.0 on Google · 30 reviews"
+ ],
+ "theme": {
+  "navy": "#0B0B09",
+  "navy2": "#1E1D1A",
+  "blue": "#D7262F",
+  "sky": "#FBEEEE",
+  "gold": "#F5CB36",
+  "fonts": "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap",
+  "bf": "Inter, 'Radio Canada', system-ui, sans-serif"
+ },
+ "hero": {
+  "img": "img/939-banner.webp",
+  "alt": "Disaster Cleanup Services van at a Long Island home",
+  "pos": "50% 50%",
+  "banner": true,
+  "sw": [
+   900,
+   1300,
+   2400
+  ]
+ },
+ "logo": "img/939-logo.png",
+ "phone": "18002979283",
+ "phone_label": "24/7 emergency line",
+ "address": "1556 Ocean Ave, Unit 3, Bohemia, NY 11716",
+ "address_label": "Find them",
+ "maps": "Disaster Cleanup Services, 1556 Ocean Ave, Bohemia, NY 11716",
+ "website": "https://disastercleanupservicesinc.com/",
+ "contact_cta": {
+  "k": "Not an emergency?",
+  "t": "Send them a message"
+ },
+ "actions": [
+  {
+   "t": "Call 24/7",
+   "i": "call",
+   "u": "tel:+18002979283",
+   "a": "call",
+   "pri": 1
+  },
+  {
+   "t": "Call office",
+   "i": "call",
+   "u": "tel:+16315736300",
+   "a": "call2"
+  },
+  {
+   "t": "Message",
+   "i": "msg",
+   "u": "/disaster-cleanup-services-inc/connect",
+   "a": "contact"
+  },
+  {
+   "t": "Website",
+   "i": "web",
+   "u": "https://disastercleanupservicesinc.com/",
+   "a": "website"
+  }
+ ],
+ "vcard": {
+  "n": "Disaster Cleanup Services;;;;",
+  "fn": "Disaster Cleanup Services",
+  "org": "Disaster Cleanup Services, Inc.",
+  "title": "24/7 water, fire and mold restoration"
+ },
+ "ticker": [
+  "24/7 emergency response",
+  "Family-owned since 2011",
+  "NYS licensed mold remediation contractor",
+  "5.0 stars on Google",
+  "Works directly with your insurance carrier",
+  "Cleanup through reconstruction",
+  "Long Island and the NYC metro area"
+ ],
+ "intro": {
+  "k": "Meet your neighbor",
+  "t": "When disaster hits, *Pete's crew shows up.*",
+  "text": "Peter D'Allessandro founded Disaster Cleanup Services in 2011, and it's still family-owned and run out of Bohemia. Pete started in 2005, traveling the country to help towns recover from hurricanes and floods, and his crews worked Hurricanes Irene and Sandy right here on Long Island. Today the team handles water damage, mold remediation, fire and smoke cleanup, waterproofing and the rebuild, for homes and businesses, around the clock.",
+  "quote": "We had a water leak in our office and Pete responded incredibly fast. Professional, efficient, and reliable.",
+  "by": "Justin T., Google review"
+ },
+ "gallery_k": "On the job",
+ "gallery_t": "Real jobs, *real crews*",
+ "gallery": [
+  {
+   "img": "img/939-g1.webp",
+   "alt": "Disaster Cleanup Services van and truck at a Long Island home"
+  },
+  {
+   "img": "img/939-g2.webp",
+   "alt": "Two Disaster Cleanup Services vans on a city job"
+  },
+  {
+   "img": "img/939-g3.webp",
+   "alt": "Technician extracting water from a flooded warehouse floor"
+  },
+  {
+   "img": "img/939-g4.webp",
+   "alt": "Plastic containment set up for mold remediation in a home"
+  },
+  {
+   "img": "img/939-g5.webp",
+   "alt": "Technician in protective suit treating an opened ceiling"
+  },
+  {
+   "img": "img/939-g6.webp",
+   "alt": "Drying equipment running in a gutted room"
+  },
+  {
+   "img": "img/939-g7.webp",
+   "alt": "Foundation waterproofing membrane going in"
+  },
+  {
+   "img": "img/939-g8.webp",
+   "alt": "Air movers drying a basement after water damage"
+  }
+ ],
+ "goals": {
+  "k": "What happened?",
+  "t": "Tell them *what you're dealing with*",
+  "chips_k": "They handle",
+  "items": [
+   {
+    "t": "Water damage",
+    "h": "Water moves fast. So do they.",
+    "d": "Burst pipes, flooded basements and sewage backups: emergency extraction, structural drying and full restoration.",
+    "b": [
+     "Water extraction",
+     "Structural drying",
+     "Sewage backup cleanup"
+    ],
+    "c": [
+     "Burst pipes",
+     "Flooded basements",
+     "Sewage"
+    ],
+    "u": "tel:+18002979283",
+    "cta": "Call 24/7: 1-800-297-9283 now"
+   },
+   {
+    "t": "Mold",
+    "h": "Licensed by New York State.",
+    "d": "Mold remediation and air quality restoration by a NYS licensed mold remediation contractor, including crawl spaces and black mold.",
+    "b": [
+     "Containment",
+     "Removal",
+     "Crawl space mold"
+    ],
+    "c": [
+     "Basements",
+     "Crawl spaces",
+     "Attics"
+    ],
+    "u": "tel:+18002979283",
+    "cta": "Call 24/7: 1-800-297-9283"
+   },
+   {
+    "t": "Fire & smoke",
+    "h": "Board-up to rebuild.",
+    "d": "Emergency board-up, smoke and soot cleanup, then the reconstruction.",
+    "b": [
+     "Board-up",
+     "Smoke and soot cleanup",
+     "Reconstruction"
+    ],
+    "c": [
+     "Kitchen fires",
+     "Smoke damage",
+     "Soot"
+    ],
+    "u": "tel:+18002979283",
+    "cta": "Call 24/7: 1-800-297-9283"
+   },
+   {
+    "t": "Waterproofing",
+    "h": "Stop it from happening again.",
+    "d": "Basement and crawl space waterproofing, including foundation and interior drainage work, so water stays out.",
+    "b": [
+     "Foundation waterproofing",
+     "Crawl space work",
+     "Drainage"
+    ],
+    "c": [
+     "Wet basements",
+     "Crawl spaces",
+     "Foundations"
+    ]
+   },
+   {
+    "t": "Rebuild",
+    "h": "One team, start to finish.",
+    "d": "After the cleanup they handle the reconstruction too, so you aren't juggling contractors.",
+    "b": [
+     "Reconstruction",
+     "Repairs",
+     "Project management"
+    ],
+    "c": [
+     "Walls and ceilings",
+     "Floors",
+     "Kitchens and baths"
+    ]
+   }
+  ]
+ },
+ "advantage": {
+  "k": "Why neighbors call DCS",
+  "t": "One team, *start to finish.*",
+  "text": "Emergency cleanup, drying, mold work and the rebuild, handled by the same family-owned company. They work directly with the major insurance carriers to make your claim simpler."
+ },
+ "stats": [
+  {
+   "n": "2011",
+   "l": "Family-owned since"
+  },
+  {
+   "n": "24/7",
+   "l": "Emergency response"
+  },
+  {
+   "n": "5.0",
+   "l": "Stars on Google"
+  },
+  {
+   "n": "20+",
+   "l": "Years of Pete's experience"
+  }
+ ],
+ "reviews": {
+  "t": "Neighbors trust Pete's team",
+  "text": "30 five-star Google reviews and counting. Had DCS help you through a tough day? Your review helps the next neighbor know who to call.",
+  "url": "https://www.google.com/maps/place/Disaster+Cleanup+Services,+Inc/@40.7831158,-73.1215596,17z/data=!4m6!3m5!1s0x89e8364dc2243795:0x2dd5c5a307d57ba5!8m2!3d40.7831158!4d-73.1215596"
+ },
+ "faq_t": "Restoration *FAQ*",
+ "faq": [
+  [
+   "Do they answer at night?",
+   "Yes. Disaster Cleanup Services offers 24/7 emergency response. Call the emergency line, 1-800-297-9283, any time. For everything else, the local office line is 631-573-6300."
+  ],
+  [
+   "Are they licensed for mold work?",
+   "Yes. They hold a New York State Department of Labor Mold Remediation Contractor License (26-6Z16G-SHMO), valid through April 2028."
+  ],
+  [
+   "Will they work with my insurance?",
+   "Yes. They work directly with the major insurance carriers to simplify your claim."
+  ],
+  [
+   "Where are they?",
+   "Their shop is at 1556 Ocean Ave in Bohemia, and they serve Long Island and the NYC metro area."
+  ],
+  [
+   "Do they do the repairs too?",
+   "Yes. They handle the emergency cleanup, then the reconstruction, so one team takes it start to finish."
+  ]
+ ],
+ "final": {
+  "k": "Disaster Cleanup Services",
+  "t": "Water, fire or mold? *Call now.*",
+  "text": "24/7 emergency line 1-800-297-9283 · Local office 631-573-6300",
+  "btn": "Send a message"
+ },
+ "side_sub": "24/7 water, fire & mold restoration",
+ "side_contact": "Send a message",
+ "sticky_extra": {
+  "t": "Website",
+  "u": "https://disastercleanupservicesinc.com/",
+  "a": "website"
+ },
+ "m2": true,
+ "phone2": "6315736300",
+ "phone2_label": "Local office line"
+}
