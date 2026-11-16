@@ -120,7 +120,7 @@ function render(d){
   if(d.final_first)h+=RV;else h+=FN;
   if(d.compliance)h+='<p class="comp">'+esc(d.compliance)+(d.compliance_logo?'<img src="'+src(d.compliance_logo)+'" alt="Equal Housing Opportunity" loading="lazy">':'')+'</p>';
 
-  var box=document.createElement('div');box.id='pv3';if(d.m2){box.className='m2';document.documentElement.classList.add('pv3-m2')}box.innerHTML=h;
+  var box=document.createElement('div');box.id='pv3';if(d.m2){box.className='m2'+(d.phone2?' p2':'');document.documentElement.classList.add('pv3-m2')}box.innerHTML=h;
 
   /* real 3VL reviews (owner 10/24/2026: "show reviews in these new profile designs"); reviews.json is rebuilt from BD */
   fetch(BASE+'vip/reviews.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(R){var v=R&&R[uid],el=box.querySelector('#pv3rvl'),top=box.querySelector('.h .top');
