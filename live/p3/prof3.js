@@ -146,7 +146,7 @@ function render(d){
   var side=document.querySelector('.member_profile .sidebar-section');
   if(side){var sd=document.createElement('div');sd.id='pv3s';if(d.m2)sd.className='m2';sd.style.cssText=css;
     sd.innerHTML='<div class="c"><div class="who"><img'+(d.headshot?'':' class="lg"')+' src="'+src(d.headshot||d.logo)+'" alt=""><div><b>'+esc(d.side_name||d.short||d.name)+'</b><span>'+esc(d.side_sub||d.category||'')+'</span></div></div>'+
-      (tel?'<a class="b b1" data-a="call" href="'+telH+'">Call '+telF+'</a>':'')+(tel2?'<a class="b b2" data-a="call2" href="'+telH2+'">'+esc(d.phone2_label||'Office')+': '+telF2+'</a>':'')+
+      (tel?'<a class="b b1" data-a="call" href="'+telH+'">Call '+telF+'</a>':'')+(tel2?'<a class="b b2" data-a="call2" href="'+telH2+'">Office '+telF2+'</a>':'')+
       '<a class="b b2" data-a="contact" href="'+esc(contact)+'"'+ext(contact)+'>'+esc(d.side_contact||'Contact')+'</a>'+
       (d.side_extra?'<a class="b b2" data-a="'+esc(d.side_extra.a||'extra')+'" href="'+esc(d.side_extra.u)+'"'+ext(d.side_extra.u)+'>'+esc(d.side_extra.t)+'</a>':'')+'</div>'+
       '<div class="c"><h4>'+esc(d.address_label||'Find them')+'</h4>'+
