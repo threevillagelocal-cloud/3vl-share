@@ -821,7 +821,7 @@ go();
     var head='<div class="lg2-head"><img class="lg2-logo" src="'+LOGO+'" alt="Three Village Local" width="176" height="61">'+
       '<span class="lg2-kick"><i></i>MEMBER DASHBOARD</span>'+
       '<h1 class="lg2-h">'+(retr?'Let’s get you <em>back in.</em>':'Welcome back, <em>neighbor.</em>')+'</h1>'+
-      '<p class="lg2-sub">'+(retr?'Enter the email you signed up with and we will send you a link to reset your password.':'Your new member dashboard is here. Log in to see how neighbors are finding your business.')+'</p></div>';
+      '<p class="lg2-sub">'+(retr?'Enter the email you signed up with and we will send you a link to reset your password.':signed?'Your new member dashboard is ready. See how neighbors are finding your business.':'Your new member dashboard is here. Log in to see how neighbors are finding your business.')+'</p></div>';
     var feat='<div class="lg2-feat"><ul class="lg2-list">'+
       '<li><span class="lg2-ic">'+IC.chart+'</span><div><b>See your stats</b><span>Banner views, homepage spotlight days and every promotion we run for you, updated nightly.</span></div></li>'+
       '<li><span class="lg2-ic">'+IC.edit+'</span><div><b>Edit your profile in one place</b><span>Photos, hours, services and contact info, all on one screen.</span></div></li>'+
