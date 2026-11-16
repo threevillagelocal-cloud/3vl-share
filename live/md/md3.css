@@ -665,3 +665,7 @@ html.md-on .md-wrap:has(#mdx){margin:8px 0 28px}
 #mdtour#mdtour button:focus-visible{outline:3px solid #ffc53d;outline-offset:2px}
 @media (max-width:600px){#mdtour.center .mdt-card{width:calc(100vw - 24px);padding:26px 20px 20px}#mdtour.center h3{font-size:23px}#mdtour h3{font-size:19px}#mdtour p{font-size:14px;margin-bottom:14px}#mdtour .mdt-card{padding:18px 16px 16px}#mdtour#mdtour button.mdt-b{padding:10px 15px}}
 @media (prefers-reduced-motion:reduce){#mdtour,#mdtour .mdt-hole,#mdtour .mdt-card{transition:none}}
+/* 11/16 owner: "up to 11,000+" wrapped onto two lines in the Banner reach tile; keep every KPI value on one line */
+.mdx .kpi .value{white-space:nowrap}
+.mdx .kpi .value[data-pre]:not([data-pre=""]){font-size:20px;letter-spacing:-.02em}
+@media (max-width:860px){.mdx .kpi .value[data-pre]:not([data-pre=""]){font-size:17px}}
