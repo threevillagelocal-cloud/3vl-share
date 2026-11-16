@@ -681,3 +681,16 @@ html.md-on .md-wrap:has(#mdx){margin:8px 0 28px}
 .mdx .g-ov.r3 .sfeat h2{font-size:24px;margin:0 0 6px}
 .mdx .g-ov.r3 .sfeat p{margin:0 0 10px}
 .mdx .g-ov.r3 .sf-frame img{max-height:130px}
+/* 11/16 owner: "everything on the dashboard should end at the same height". Bottom row: all columns stretch to the tallest
+   (normally the 3VL Digital box); the activity list fills whatever space it has (extra rows hidden behind a soft fade) and never sets the height. */
+.mdx .g-ov.r3{align-items:stretch}
+.mdx .g-ov.r3>*{align-self:stretch!important}
+.mdx .stack.fill{display:flex;flex-direction:column}
+.mdx .stack.fill>.card:last-child{flex:1 1 auto!important;display:flex;flex-direction:column}
+.mdx .stack.fill>.card:last-child .upc{flex:1 1 auto}
+.mdx .stack.fill>.card:last-child .card-foot{margin-top:auto}
+.mdx .actc{display:flex;flex-direction:column}
+.mdx .actc .acts{flex:1 1 0!important;min-height:0;overflow:hidden;-webkit-mask-image:linear-gradient(#000 calc(100% - 28px),transparent);mask-image:linear-gradient(#000 calc(100% - 28px),transparent)}
+.mdx .actc .card-foot{margin-top:auto}
+.mdx .g-ov.r3 .sfeat{justify-content:space-between}
+@media (max-width:1180px){.mdx .actc .acts{flex:0 0 auto!important;max-height:360px}}
