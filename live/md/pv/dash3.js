@@ -109,6 +109,30 @@
       else if(ev.target.closest('.x-inst-go')&&bip){bip.prompt();bip.userChoice.then(function(){ib.hidden=true})}})}
   /* GA4 (after load, never blocks first paint) */
   window.addEventListener('load',function(){setTimeout(function(){r.classList.add('ready')},900)});
+  /* One-time announcement popups (data: #mdann, built nightly from announcements.json). Once per browser per id, max one per visit, max one new popup every 3 days. ?reset=1 re-shows. */
+  (function(){
+    var el=document.getElementById('mdann');if(!el)return;var list=[];try{list=JSON.parse(el.textContent)||[]}catch(x){return}
+    function g(k){try{return localStorage.getItem(k)}catch(x){return null}}function s(k,v){try{localStorage.setItem(k,v)}catch(x){}}
+    if(/[?&]reset=1/.test(location.search)){list.forEach(function(a){try{localStorage.removeItem('md_ann_'+a.id)}catch(x){}});try{localStorage.removeItem('md_ann_last')}catch(x){}}
+    var last=+g('md_ann_last')||0;if(Date.now()-last<3*864e5)return;
+    var a=null;for(var i=0;i<list.length;i++){if(!g('md_ann_'+list[i].id)){a=list[i];break}}if(!a)return;
+    function esc(t){return String(t||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+    function open(){
+      var ins=document.querySelector('.x-inst');if(document.querySelector('#drawer:not([hidden]),.mdann')||(ins&&!ins.hidden&&ins.offsetParent))return;
+      var w=document.createElement('div');w.className='mdann';w.setAttribute('role','dialog');w.setAttribute('aria-modal','true');w.setAttribute('aria-labelledby','mdann-t');
+      var img=a.image?('<div class="mdann-v'+(a.frame==='laptop'?' lap':'')+'"><div class="mdann-scr"><img src="'+esc(a.image_640||a.image)+'"'+(a.image_640?' srcset="'+esc(a.image_640)+' 640w, '+esc(a.image)+' 960w" sizes="420px"':'')+' alt="" width="640" height="400" decoding="async"></div>'+(a.frame==='laptop'?'<div class="mdann-base"></div>':'')+'</div>'):'';
+      var btn=a.button&&a.button.url?'<a class="mdann-b" href="'+esc(a.button.url)+'" target="_blank" rel="noopener" data-ga="dash_announcement_click">'+esc(a.button.label||'Take a look')+' <span aria-hidden="true">&rarr;</span></a>':'';
+      w.innerHTML='<div class="mdann-card"><button type="button" class="mdann-x" aria-label="Close">&times;</button>'+img+'<div class="mdann-t"><h3 id="mdann-t">'+esc(a.title)+(a.emoji?' <span aria-hidden="true">'+esc(a.emoji)+'</span>':'')+'</h3>'+(a.body?'<p>'+esc(a.body)+'</p>':'')+'<div class="mdann-act">'+btn+'<button type="button" class="mdann-ok">Close</button></div></div></div>';
+      document.body.appendChild(w);s('md_ann_'+a.id,String(Date.now()));s('md_ann_last',String(Date.now()));
+      requestAnimationFrame(function(){w.classList.add('in')});
+      var prev=document.activeElement;function close(){w.classList.remove('in');document.removeEventListener('keydown',kd);setTimeout(function(){w.remove()},260);try{prev&&prev.focus&&prev.focus()}catch(x){}}
+      function kd(e){if(e.key==='Escape')close()}document.addEventListener('keydown',kd);
+      w.addEventListener('click',function(e){if(e.target===w||e.target.closest('.mdann-x,.mdann-ok'))close();else if(e.target.closest('.mdann-b'))setTimeout(close,200)});
+      w.querySelector('.mdann-x').focus();
+      try{if(window.gtag)gtag('event','dash_announcement_view',{id:a.id})}catch(x){}
+    }
+    window.addEventListener('load',function(){setTimeout(open,1300)});
+  })();
   window.addEventListener('load',function(){setTimeout(function(){if(!window.gtag&&document.body.classList.contains('x-page')){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-ERG4CN7V3E',{send_page_view:true,page_title:'Member Dashboard'});
     var gs=document.createElement('script');gs.async=true;gs.src='https://www.googletagmanager.com/gtag/js?id=G-ERG4CN7V3E';document.head.appendChild(gs)}},1500)});
   r.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('[data-ga]');if(a&&!a.hasAttribute('data-sample')&&!a.hasAttribute('data-open'))ga(a.getAttribute('data-ga'),{product:a.getAttribute('data-product')||'',member_tier:tier})},true);
