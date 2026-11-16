@@ -109,6 +109,105 @@
       else if(ev.target.closest('.x-inst-go')&&bip){bip.prompt();bip.userChoice.then(function(){ib.hidden=true})}})}
   /* GA4 (after load, never blocks first paint) */
   window.addEventListener('load',function(){setTimeout(function(){r.classList.add('ready')},900)});
+  /* ===== First-visit welcome tour (owner 11/16/2026: "do the popup tour"). Once per member per device (localStorage md3tour:<uid|basic>,
+     sessionStorage/window fallback). Replay: "Take the tour" in Account + More, or ?tour=1. Runs before announcement popups; on a tour
+     visit announcements are skipped (window.__mdTourVisit). Works when md3.js loads after window.load (signed-in BD page). */
+  (function(){
+    var TK='md3tour:'+(uid||'basic'),inBD=!!r.closest('.md-wrap'),vip=(tier==='v'||tier==='p');
+    function seen(){try{if(localStorage.getItem(TK))return true}catch(x){}try{if(sessionStorage.getItem(TK))return true}catch(x){}return !!window['__'+TK]}
+    function mark(){try{localStorage.setItem(TK,String(Date.now()))}catch(x){}try{sessionStorage.setItem(TK,'1')}catch(x){}window['__'+TK]=1}
+    function esc(t){return String(t||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+    var nmEl=r.querySelector('.side-foot .me b')||r.querySelector('[data-md-name]');
+    var NM=((nmEl&&nmEl.textContent)||'').replace(/\s+/g,' ').trim();if(!NM||/^your business$/i.test(NM))NM='';
+    var biz=NM||'your business';
+    function vis(el){if(!el||!el.getClientRects().length)return false;var b=el.getBoundingClientRect();if(b.width<2||b.height<2)return false;var cs=getComputedStyle(el);return cs.visibility!=='hidden'&&cs.display!=='none'}
+    function pick(sels){for(var i=0;i<sels.length;i++){var els=[].filter.call(r.querySelectorAll(sels[i]),vis);if(els.length)return els}return null}
+    var STEPS=[
+      {sel:['.view.on .kpis'],h:'Your numbers, updated every night',p:'See how often neighbors see '+esc(biz)+' across our website, mobile app, social media and emails. Fresh every morning.'},
+      {sel:['.topbar .edit-btn'],h:'Edit your profile in one place',p:'Tap the green button to update your contact info, logo and photos, hours, services and more. Every option is on one screen.'},
+      {sel:['.topbar a[data-go="actions"]','.tabbar a[data-go="actions"]','.view.on .qa'],h:'Send us your news',p:'Events, specials, new services, hiring? Send them here and we will promote them to the community.'},
+      {sel:['.sidebar a[data-go="promotions"]','.tabbar a[data-go="promotions"]'],h:'Everything we do for you',p:'Every homepage spotlight, social post and email feature for '+esc(biz)+', all in one place.'},
+      vip?{sel:['.view.on .card.seen'],h:'Your VIP spotlight',p:'Your banner ad rotates on every page of threevillagelocal.com and our mobile app, and your Business Spotlight card shows on our homepage. Watch the reach add up here.'}
+         :{sel:['.view.on .card.seen','.sidebar a[data-go="grow"]','.tabbar a[data-go="grow"]'],h:'Want even more exposure?',p:'See what VIP members get: a banner ad on every page and a spot in our homepage Business Spotlight.'}
+    ];
+    var ov,hole,card,steps=[],idx=-1,prevFocus=null,raf=0;
+    function topOff(){var o=inBD?62:12,tb=r.querySelector('.topbar');if(tb&&vis(tb)){var p=getComputedStyle(tb).position;if(p==='sticky'||p==='fixed')o+=tb.offsetHeight}return o}
+    function union(els){var t=1e9,l=1e9,b=-1e9,rt=-1e9;els.forEach(function(e){var q=e.getBoundingClientRect();t=Math.min(t,q.top);l=Math.min(l,q.left);b=Math.max(b,q.bottom);rt=Math.max(rt,q.right)});return{top:t,left:l,bottom:b,right:rt,width:rt-l,height:b-t}}
+    function fixedish(el){for(var e=el;e&&e!==document.body;e=e.parentElement){var p=getComputedStyle(e).position;if(p==='fixed'||p==='sticky')return true}return false}
+    function build(){
+      ov=document.createElement('div');ov.id='mdtour';ov.className='mdtour';ov.setAttribute('role','dialog');ov.setAttribute('aria-modal','true');ov.setAttribute('aria-labelledby','mdtour-h');
+      ov.innerHTML='<div class="mdt-dim"></div><div class="mdt-hole" aria-hidden="true"></div><div class="mdt-card" tabindex="-1"></div>';
+      document.body.appendChild(ov);hole=ov.querySelector('.mdt-hole');card=ov.querySelector('.mdt-card');
+      ov.addEventListener('click',onClick);document.addEventListener('keydown',onKey,true);window.addEventListener('resize',sched);window.addEventListener('scroll',sched,{passive:true});
+      requestAnimationFrame(function(){if(ov)ov.classList.add('in')});
+    }
+    function dots(){var s='';for(var i=0;i<steps.length;i++)s+='<i class="'+(i===idx?'on':'')+'"></i>';return '<div class="mdt-dots" aria-hidden="true">'+s+'</div>'}
+    var X='<button type="button" class="mdt-x" data-t="skip" aria-label="Close tour">&times;</button>';
+    function render(){
+      var welcome=idx<0,end=idx>=steps.length;
+      ov.classList.toggle('center',welcome||end);
+      if(welcome){card.innerHTML=X+'<span class="mdt-k">Welcome</span><h3 id="mdtour-h">Welcome to your new member dashboard</h3>'+
+        '<p>This is home base for <b>'+esc(biz)+'</b> on Three Village Local: your numbers, your listing and everything we do to promote you. Here is a quick 30 second tour.</p>'+
+        '<div class="mdt-row"><button type="button" class="mdt-b ghost" data-t="skip">Skip for now</button><button type="button" class="mdt-b" data-t="next">Show me around</button></div>'}
+      else if(end){card.innerHTML=X+'<span class="mdt-k">All set</span><h3 id="mdtour-h">You&#8217;re all set</h3>'+
+        '<p>Your dashboard updates every night, so check back anytime. A great place to start: make sure your profile shows '+esc(biz)+' at its best.</p>'+
+        '<div class="mdt-row"><button type="button" class="mdt-b ghost" data-t="skip">Done</button><button type="button" class="mdt-b green" data-t="edit">Edit your profile</button></div>'+
+        '<p class="mdt-note">Replay this tour anytime from the Account menu.</p>'}
+      else{var s=steps[idx];card.innerHTML=X+'<span class="mdt-k">Step '+(idx+1)+' of '+steps.length+'</span><h3 id="mdtour-h">'+s.h+'</h3><p>'+s.p+'</p>'+
+        '<div class="mdt-row">'+dots()+'<span class="mdt-sp"></span>'+(idx>0?'<button type="button" class="mdt-b ghost" data-t="back">Back</button>':'')+'<button type="button" class="mdt-b" data-t="next">'+(idx===steps.length-1?'Finish':'Next')+'</button></div>'}
+      if(welcome||end){hole.style.display='none';card.style.cssText='';card.focus({preventScroll:true});return}
+      hole.style.display='';
+      var els=steps[idx].els,vh=innerHeight,off=topOff();if(els.length>1&&union(els).height>vh*.6)els=steps[idx].els=[els[0]];var u=union(els);
+      if(!fixedish(els[0])&&(u.top<off||u.bottom>vh-40)){window.scrollTo(0,Math.max(0,scrollY+u.top-off-24))}
+      requestAnimationFrame(function(){requestAnimationFrame(function(){place();if(card)card.focus({preventScroll:true})})});
+    }
+    function place(){
+      if(!ov||idx<0||idx>=steps.length)return;
+      var els=steps[idx].els.filter(vis);if(!els.length)return;
+      var u=union(els),pad=8,vw=document.documentElement.clientWidth,vh=innerHeight;
+      var top=Math.max(4,u.top-pad),left=Math.max(4,u.left-pad),w=Math.min(vw-4,u.right+pad)-left,h=Math.min(vh-4,u.bottom+pad)-top;
+      hole.style.cssText='top:'+top+'px;left:'+left+'px;width:'+w+'px;height:'+h+'px';
+      var gap=14,ct,cl,cw;
+      if(vw<600){cw=vw-24;card.style.width=cw+'px';var ch=card.offsetHeight;cl=12;
+        if(top+h/2>vh/2)ct=Math.max(8,top-gap-ch);else ct=Math.min(vh-ch-8,top+h+gap)}
+      else{cw=Math.min(360,vw-24);card.style.width=cw+'px';var ch2=card.offsetHeight;
+        if(top+h+gap+ch2<vh-8)ct=top+h+gap;else if(top-gap-ch2>8)ct=top-gap-ch2;else ct=Math.max(8,(vh-ch2)/2);
+        cl=Math.min(Math.max(12,left),vw-cw-12);
+        if(ct<top+h&&ct+ch2>top){cl=(left+w+gap+cw<vw-8)?left+w+gap:Math.max(12,left-gap-cw)}}
+      card.style.top=Math.round(ct)+'px';card.style.left=Math.round(cl)+'px';
+    }
+    function sched(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;place()})}
+    function go(i){idx=i;if(idx>=0&&idx<steps.length)ga('dash_tour_step',{step:idx+1,member_tier:tier});render()}
+    function close(how){if(!ov)return;mark();ga(how==='done'?'dash_tour_done':'dash_tour_skip',{step:idx+1,member_tier:tier});
+      document.removeEventListener('keydown',onKey,true);window.removeEventListener('resize',sched);window.removeEventListener('scroll',sched);
+      var o=ov;ov=null;o.classList.remove('in');setTimeout(function(){o.remove()},reduce?0:220);try{prevFocus&&prevFocus.focus&&prevFocus.focus({preventScroll:true})}catch(x){}}
+    function onClick(e){var b=e.target.closest('[data-t]');if(!b)return;var t=b.getAttribute('data-t');
+      if(t==='next')go(idx+1);else if(t==='back')go(Math.max(0,idx-1));else if(t==='skip')close(idx>=steps.length?'done':'skip');
+      else if(t==='edit'){close('done');show('edit')}}
+    function onKey(e){if(!ov)return;
+      if(e.key==='Escape'){e.preventDefault();close(idx>=steps.length?'done':'skip')}
+      else if(e.key==='ArrowRight'&&idx<steps.length){e.preventDefault();go(idx+1)}
+      else if(e.key==='ArrowLeft'&&idx>0){e.preventDefault();go(idx-1)}
+      else if(e.key==='Enter'&&!(e.target&&e.target.closest&&e.target.closest('button'))){e.preventDefault();if(idx<steps.length)go(idx+1);else close('done')}
+      else if(e.key==='Tab'){var f=[].slice.call(card.querySelectorAll('button'));if(!f.length)return;var a=document.activeElement,i=f.indexOf(a);
+        if(e.shiftKey){if(i<=0){e.preventDefault();f[f.length-1].focus()}}else if(i===f.length-1||i<0){e.preventDefault();f[0].focus()}}}
+    function start(force){
+      if(ov)return;if(!force&&seen())return;
+      window.__mdTourVisit=true;var m=document.querySelector('.mdann');if(m)m.remove();
+      closeDr();show('overview',false);window.scrollTo(0,0);
+      steps=STEPS.map(function(s){var els=pick(s.sel);return els?{h:s.h,p:s.p,els:els}:null}).filter(Boolean);
+      prevFocus=document.activeElement;build();idx=-1;render();mark();ga('dash_tour_start',{member_tier:tier,replay:force?1:0});
+    }
+    window.__mdTourStart=start;
+    /* replay links: Account menu (sidebar) + More pane (phones) */
+    var IC='<svg class="x-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>';
+    [].forEach.call(r.querySelectorAll('.nav-grp, .morelinks'),function(box){var a=document.createElement('a');a.className='nav-acct';a.href='#';a.setAttribute('data-tour','');a.innerHTML=IC+'<span>Take the tour</span>';
+      var first=box.querySelector('.nav-acct');if(first)first.parentNode.insertBefore(a,first);else box.appendChild(a)});
+    r.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('[data-tour]');if(!t)return;e.preventDefault();e.stopPropagation();var d=t.closest('details');if(d)d.open=false;start(true)},true);
+    if(/[?&]tour=1/.test(location.search)){try{localStorage.removeItem(TK)}catch(x){}try{sessionStorage.removeItem(TK)}catch(x){}window['__'+TK]=0}
+    function kick(){setTimeout(function(){start(false)},inBD?700:900)}
+    if(!seen()){window.__mdTourVisit=true;if(document.readyState==='complete')kick();else window.addEventListener('load',kick)}
+  })();
   /* One-time announcement popups (data: #mdann, built nightly from announcements.json). Once per browser per id, max one per visit, max one new popup every 3 days. ?reset=1 re-shows. */
   (function(){
     var el=document.getElementById('mdann');if(!el)return;var list=[];try{list=JSON.parse(el.textContent)||[]}catch(x){return}
@@ -116,8 +215,10 @@
     if(/[?&]reset=1/.test(location.search)){list.forEach(function(a){try{localStorage.removeItem('md_ann_'+a.id)}catch(x){}});try{localStorage.removeItem('md_ann_last')}catch(x){}}
     var last=+g('md_ann_last')||0;if(Date.now()-last<3*864e5)return;
     var a=null;for(var i=0;i<list.length;i++){if(!g('md_ann_'+list[i].id)){a=list[i];break}}if(!a)return;
+    if(window.__mdTourVisit)return;   /* the first-visit tour owns this visit */
     function esc(t){return String(t||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
     function open(){
+      if(window.__mdTourVisit||document.getElementById('mdtour'))return;
       var ins=document.querySelector('.x-inst');if(document.querySelector('#drawer:not([hidden]),.mdann')||(ins&&!ins.hidden&&ins.offsetParent))return;
       var w=document.createElement('div');w.className='mdann';w.setAttribute('role','dialog');w.setAttribute('aria-modal','true');w.setAttribute('aria-labelledby','mdann-t');
       var img=a.image?('<div class="mdann-v'+(a.frame==='laptop'?' lap':'')+'"><div class="mdann-scr"><img src="'+esc(a.image_640||a.image)+'"'+(a.image_640?' srcset="'+esc(a.image_640)+' 640w, '+esc(a.image)+' 960w" sizes="420px"':'')+' alt="" width="640" height="400" decoding="async"></div>'+(a.frame==='laptop'?'<div class="mdann-base"></div>':'')+'</div>'):'';
