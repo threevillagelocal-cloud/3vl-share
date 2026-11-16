@@ -663,3 +663,7 @@ max-width:1120px;margin:0 auto;padding:4px 0 44px;color:var(--ink);font-family:'
 .member_admin_sidemenu .panel:has(a[href^="/account/coupons/"]),.member_admin_sidemenu .panel:has(a[href^="/account/digital-products/"]),
 .member_admin_sidemenu .panel:has(a[href^="/account/products/"]),.member_admin_sidemenu .panel:has(a[href^="/account/discussions/"]),
 .member_admin_sidemenu .panel:has(a[href^="/account/additional_locations/"]),.recent-transactions-dashboard{display:none!important}
+/* 11/16 member dashboard v3: no flash of BD's old account home. Hidden until p3.js adds html.md-ready (dashboard + its CSS in,
+   or no dashboard for this member); fallback reveal after 2.5 s. ONLY while MDV2=true in p3.js: remove this block if MDV2 goes false. */
+@keyframes mdRv{to{visibility:visible}}
+html:not(.md-ready) .container:has(.dashboard_home_title)>.member_sidebar,html:not(.md-ready) .member_accounts:has(>.dashboard_home_title){visibility:hidden;animation:mdRv 0s 2.5s forwards}
