@@ -620,3 +620,21 @@ html.md-on .md-wrap:has(#mdx){margin:8px 0 28px}
 .md-wrap #mdx#mdx button.btn{border-radius:9px!important}.md-wrap #mdx#mdx button.qa{border-radius:12px!important}.md-wrap #mdx#mdx button.tile-l,.md-wrap #mdx#mdx button.x-btn{border-radius:10px!important}
 .md-wrap #mdx#mdx button.me-app{border-radius:8px!important}.md-wrap #mdx#mdx button.chip,.md-wrap #mdx#mdx button.sf-cta{border-radius:999px!important}.md-wrap #mdx#mdx button.dr-x{border-radius:50%!important}
 .md-wrap #mdx#mdx button.on,.md-wrap #mdx#mdx .seg button{border-radius:7px!important}
+/* 11/16 owner: prominent "Edit your profile" + its own screen */
+.mdx .btn.edit-btn{background:linear-gradient(135deg,#12915f,#18b374);color:#fff!important;border:0;font-weight:700;box-shadow:0 6px 16px -6px rgba(18,145,95,.6)}
+.mdx .btn.edit-btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.mdx .btn.edit-btn .x-i{width:15px;height:15px}
+.mdx .ed-grid{align-items:start}
+.mdx .ed-card .card-head{margin-bottom:6px}
+.mdx .ed-list{display:flex;flex-direction:column;gap:6px;padding:0 4px 4px}
+.mdx .ed-row{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:var(--surface-2);color:var(--text)!important;text-decoration:none!important;transition:transform .15s var(--ease),border-color .15s,box-shadow .15s}
+.mdx .ed-row:hover{transform:translateY(-1px);border-color:#bcd3f2;box-shadow:var(--shadow-lg)}
+.mdx .ed-row .card-icon{flex:0 0 auto;width:34px;height:34px}
+.mdx .ed-t{flex:1 1 auto;min-width:0;display:flex;flex-direction:column}
+.mdx .ed-t b{font-size:14px;font-weight:700}
+.mdx .ed-t i{font-style:normal;font-size:12.5px;color:var(--text-2)}
+.mdx .ed-go{flex:0 0 auto;color:var(--text-3)}.mdx .ed-go .x-i{width:16px;height:16px}
+.mdx .ed-help{margin:18px 2px 0;font-size:13.5px;color:var(--text-2)}
+@media (max-width:860px){.mdx .ed-grid{grid-template-columns:1fr}}
+@media (max-width:700px){.mdx .topbar .btn.edit-btn{padding:0 10px}}
+@media (max-width:420px){.mdx .topbar .btn.edit-btn span{font-size:12.5px}}
