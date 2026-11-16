@@ -408,3 +408,8 @@ body.x-page{margin:0;background:#f4f5f7}
 
 .mdx .sf-cta{font-size:13.5px;padding:12px 14px;white-space:nowrap;gap:8px}
 .mdx .sfeat h2{font-size:25px}
+
+/* speed 11/15: looping decoration starts after load; blur-in only on desktop; off-screen cards skip layout */
+.mdx:not(.ready) .sfeat::before,.mdx:not(.ready) .sf-streak,.mdx:not(.ready) .sf-lg .lg,.mdx:not(.ready) .sf-cta,.mdx:not(.ready) .hero-ph img{animation-play-state:paused}
+@media (max-width:860px){@keyframes mdIn2{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.mdx .tabbar{backdrop-filter:none;background:#fff}}
+.mdx .view.on .grid.g-ov>.card:not(.sfeat){content-visibility:auto;contain-intrinsic-size:auto 420px}
