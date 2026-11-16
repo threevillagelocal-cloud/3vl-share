@@ -790,7 +790,7 @@ go();
   X+'.lg2-card .form-actions{margin:4px 0 0!important;padding:0!important;background:none!important;border:0!important}',
   X+'.lg2-card input[type=submit]{display:block!important;width:100%!important;height:52px!important;margin:0!important;border:0!important;border-radius:12px!important;background:linear-gradient(135deg,#1d5fbf,#2f7fe0)!important;color:#fff!important;font-size:16.5px!important;font-weight:700!important;letter-spacing:.01em;box-shadow:0 10px 22px -10px rgba(29,95,191,.7)!important;transition:transform .15s,filter .15s;cursor:pointer}',
   X+'.lg2-card input[type=submit]:hover{filter:brightness(1.06);transform:translateY(-1px)}',
-  X+'.lg2-card form p.help-block{display:none!important}',
+  X+'.lg2-card form p.help-block,'+X+'.lg2-card form>a[href="/login"],'+X+'.lg2-card form>hr{display:none!important}',
   X+'.lg2-join{margin:22px 0 0!important;padding:16px 0 0;border-top:1px solid var(--bd);font-size:14.5px;color:var(--t2);text-align:center}',
   X+'.lg2-join a{font-weight:700;color:var(--bl2)!important;text-decoration:none;white-space:nowrap!important;display:inline-block}',
   X+'.lg2-trust{display:flex;align-items:center;justify-content:center;gap:7px;margin:14px 0 0!important;font-size:12.5px;color:#7a8597}',
@@ -839,7 +839,7 @@ go();
       card.appendChild(form);   /* moved, never cloned: keeps BD handlers, captcha and hidden inputs */
       var sb=form.querySelector('input[type=submit]');if(sb)sb.value=retr?'Send reset link':'Log in';
       var fp=form.querySelector('a[href*="/login/retrieval"]');if(fp)fp.textContent='Forgot password?';
-      var em=form.querySelector('input[type=email]');if(em){em.setAttribute('autocomplete','email');em.placeholder='you@yourbusiness.com'}
+      var em=form.querySelector('input[type=email]');if(em){em.setAttribute('autocomplete','email');em.placeholder='you@email.com'}
       var pw=form.querySelector('input[type=password]');if(pw){pw.setAttribute('autocomplete','current-password');pw.placeholder='Your password'}
       card.insertAdjacentHTML('beforeend',retr?'<p class="lg2-back"><a href="/login">Back to log in</a></p>':
         '<p class="lg2-join">New business in Three Village? <a href="/join">Get your free listing</a></p>');
