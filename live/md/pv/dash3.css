@@ -433,3 +433,28 @@ body.x-page{margin:0;background:#f4f5f7}
 .mdann-b{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:linear-gradient(120deg,#2b7bff,#1d5fd1);color:#fff;font-weight:800;font-size:14px;text-decoration:none;box-shadow:0 10px 24px -10px rgba(43,123,255,.9)}
 .mdann-ok{border:0;background:none;color:#5b6b7c;font-weight:700;font-size:14px;cursor:pointer;padding:10px 6px}
 @media (prefers-reduced-motion:reduce){.mdann,.mdann-card{transition:none}}
+
+/* sidebar trim 11/15 (owner): 5 main items, Account collapsed, app icon on the member card */
+.mdx .nav a,.mdx .nav summary{padding-top:9px;padding-bottom:9px}
+.mdx .nav-leads{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(120deg,rgba(43,123,255,.28),rgba(43,123,255,.08));border:1px solid rgba(124,196,255,.3);margin:2px 0}
+.mdx .nav-leads:hover{background:linear-gradient(120deg,rgba(43,123,255,.42),rgba(43,123,255,.14))}
+.mdx .nav-leads .x-i{width:18px;height:18px}
+.mdx .nb.lead{margin-left:auto;font-style:normal;font-size:10.5px;font-weight:800;background:#f2c94c;color:#3b2a00;border-radius:999px;padding:2px 8px}
+.mdx .nav-grp{margin-top:10px;border-top:1px solid rgba(255,255,255,.08);padding-top:6px}
+.mdx .nav-grp summary{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:10px;cursor:pointer;list-style:none;color:var(--side-fg);font-weight:600;font-size:14px}
+.mdx .nav-grp summary::-webkit-details-marker{display:none}
+.mdx .nav-grp summary:hover{background:rgba(255,255,255,.06)}
+.mdx .nav-grp summary .x-i{width:18px;height:18px}
+.mdx .nav-chev{margin-left:auto;display:inline-flex;transition:transform .2s;transform:rotate(90deg)}
+.mdx .nav-grp[open] .nav-chev{transform:rotate(-90deg)}
+.mdx .nav-grp .nav-acct{padding-left:22px}
+.mdx .side-dig{margin-top:auto}
+.mdx .me{position:relative}
+.mdx .me-app{margin-left:auto;flex:none;width:34px;height:34px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:#fff;display:grid;place-items:center;cursor:pointer}
+.mdx .me-app:hover{background:rgba(255,255,255,.16);box-shadow:0 0 16px rgba(77,163,255,.45)}
+.mdx .me-app .x-i{width:18px;height:18px}
+.mdx .me-logo{width:64px;height:64px}
+.mdx .grid.mb{margin-bottom:16px}
+.mdx .me{padding-right:30px}.mdx .me b.ellip{white-space:normal;overflow:visible;text-overflow:clip;line-height:1.2;display:block}
+.mdx .tierb{white-space:nowrap}
+.mdx .me-app{position:absolute;top:-2px;right:0;width:28px;height:28px;border-radius:8px}.mdx .me-app .x-i{width:15px;height:15px}
