@@ -218,3 +218,5 @@ html.md-on #dc3 .dc3-vip{display:none!important}
 #md .md-soc-r{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--ink)}
 #md .md-soc-r em{font-style:normal;font-weight:800}
 #md .md-brandlogo{width:20px;height:20px;flex:0 0 auto;display:block}
+
+#md .md-life{margin:-2px 0 10px!important;font-size:14px;color:var(--mut)}#md .md-life b{color:var(--navy);font-size:15px}
