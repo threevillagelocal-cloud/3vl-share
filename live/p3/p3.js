@@ -231,6 +231,12 @@ if(isResults||SMARTQ){
   /* top-spot limit: a featured member whose vip_meta priority is 0 shows as a regular card when VMAX others are featured here */
   function yieldSpots(){if(SM||!META)return;var ws=[].slice.call(VL.querySelectorAll('.p3-vwrap')),hi=ws.filter(function(w){var m=META[w.getAttribute('data-uid')];return !m||m.pri!==0});
     if(hi.length<VMAX)return;ws.forEach(function(w){var m=META[w.getAttribute('data-uid')];if(m&&m.pri===0){var b=vips[+w.getAttribute('data-i')];if(b){RG.insertAdjacentHTML('afterbegin',card(b,0));w.parentNode.removeChild(w)}}})}
+  /* competitors never share the top spots (owner 11/16/2026, weekender/compete.json): one per group per page view, picked at random; the others show as regular cards */
+  var CGRP=null,CPICK={};
+  function oneCompetitor(){if(SM||!CGRP)return;var by={};[].slice.call(VL.querySelectorAll('.p3-vwrap')).forEach(function(w){var g=CGRP[w.getAttribute('data-uid')];if(g)(by[g]=by[g]||[]).push(w)});
+    Object.keys(by).forEach(function(g){var ws=by[g];if(ws.length<2)return;var keep=CPICK[g];if(!keep||!ws.some(function(w){return w.getAttribute('data-uid')===keep}))keep=CPICK[g]=ws[Math.floor(Math.random()*ws.length)].getAttribute('data-uid');
+      ws.forEach(function(w){if(w.getAttribute('data-uid')===keep)return;var b=vips[+w.getAttribute('data-i')];if(b){RG.insertAdjacentHTML('afterbegin',card(b,0));w.parentNode.removeChild(w)}})})}
+  fetch('https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/weekender/compete.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(J){var m={},G=J.groups||{};Object.keys(G).forEach(function(g){G[g].forEach(function(u){m[String(u)]=g})});CGRP=m;oneCompetitor()}).catch(function(){});
   /* value panel from vip_meta.json (public listing details) */
   var META=null;
   function yrs(y){var n=new Date().getFullYear()-(+y);return n>0?n:0}
@@ -267,7 +273,7 @@ if(isResults||SMARTQ){
     var vh='',rh='';
     items.forEach(function(it){it.setAttribute('data-p3','1');it.style.display='none';var b=read(it);if(!b.n)return;
       if(b.vip){vips.push(b);vh+=vipCard(b,vips.length-1)}else{rh+=card(b,nRest++)}});
-    if(vh)VL.insertAdjacentHTML('beforeend',vh);if(rh)RG.insertAdjacentHTML('beforeend',rh);if(vh&&META)yieldSpots();
+    if(vh)VL.insertAdjacentHTML('beforeend',vh);if(rh)RG.insertAdjacentHTML('beforeend',rh);if(vh&&META)yieldSpots();if(vh)oneCompetitor();
     MORE.hidden=!(vips.length&&nRest);wireImgs(root);fillSides();hideChrome();eqSoon();
     if(typeof sent!=='undefined'){sent.classList.remove('is-on');root.appendChild(sent);busy=false;
       var r=sent.getBoundingClientRect();if(r.top<innerHeight+900)setTimeout(loadMore,400)}}
