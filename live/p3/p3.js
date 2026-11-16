@@ -727,3 +727,130 @@ go();
   if(m)m.setAttribute('content','noindex, follow');
   else{m=document.createElement('meta');m.name='robots';m.content='noindex, follow';document.head.appendChild(m)}
 })();
+
+/* ===== Login page v2 (owner 11/16/2026: "the login page could use a design refresh"). PREVIEW: ?lg=1 turns it on for this
+   browser (cookie tvllg, 7 days), ?lg=0 turns it off. GO LIVE: set LG2_ON=true here, uncomment the no-flash block at the end of
+   p3.css, publish_live.py. BD's own form element is MOVED (not copied) into our card, so every field name, hidden input,
+   captcha handler and the login_direct_url redirect keep working exactly as before. Covers /login, /login/retrieval and the
+   signed-in state ("You are currently logged in as"). Selectors use #lg2 #lg2i (two ids) to beat BD's !important rules. */
+(function(){
+  var LG2_ON=false;
+  var path=location.pathname.replace(/\/+$/,'');
+  if(path!=='/login'&&path!=='/login/retrieval')return;
+  var q=location.search,on=LG2_ON;
+  try{
+    if(/[?&]lg=1(&|$)/.test(q)){document.cookie='tvllg=1;path=/;max-age=604800;samesite=lax';on=true}
+    else if(/[?&]lg=0(&|$)/.test(q)){document.cookie='tvllg=;path=/;max-age=0';on=false}
+    else if(/(^|;\s*)tvllg=1/.test(document.cookie))on=true;
+  }catch(e){}
+  if(!on)return;
+  var DE=document.documentElement;DE.classList.add('lg2');
+  var IMG='https://threevillagelocal-cloud.github.io/3vl-share/live/p3/img/',LOGO='https://threevillagelocal-cloud.github.io/3vl-share/live/hdr/logo-white.webp';
+  function svg(d){return '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+d+'</svg>'}
+  var IC={chart:svg('<path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/>'),edit:svg('<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/>'),
+    send:svg('<path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/>'),lock:svg('<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/>'),
+    check:svg('<path d="M20 6L9 17l-5-5"/>'),arrow:svg('<path d="M5 12h14"/><path d="M13 6l6 6-6 6"/>'),out:svg('<path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/>')};
+  var X='#lg2 #lg2i ';
+  var CSS=[
+  'html.lg2 #tvllogin,html.lg2 .hero_section_container{display:none!important}',
+  '#lg2,#lg2 *{box-sizing:border-box;word-break:normal!important;overflow-wrap:normal!important;-webkit-hyphens:none!important;hyphens:none!important}',
+  '#lg2{--nv:#0f1f3a;--nv2:#173563;--bl:#2f7fe0;--bl2:#1d5fbf;--yl:#ffc53d;--tx:#16202e;--t2:#5a6678;--bd:#e3e9f1;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tx);max-width:1180px;margin:22px auto 40px;padding:0 16px}',
+  X+'.lg2-g{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);grid-template-areas:"head card" "feat card";border-radius:26px;overflow:hidden;box-shadow:0 24px 60px -28px rgba(15,31,58,.55);background:#fff}',
+  X+'.lg2-head,'+X+'.lg2-feat{background:#13284a linear-gradient(160deg,#22477e 0%,#173563 45%,#0f1f3a 100%) fixed;color:#fff}',
+  X+'.lg2-head{grid-area:head;padding:36px 40px 8px}',
+  X+'.lg2-feat{grid-area:feat;padding:18px 40px 36px}',
+  X+'.lg2-logo{display:block;width:176px;height:auto;margin:0 0 22px}',
+  X+'.lg2-kick{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);font-size:12px;font-weight:800;letter-spacing:.14em;color:#fff}',
+  X+'.lg2-kick i{width:7px;height:7px;border-radius:50%;background:#4bd18a;box-shadow:0 0 0 3px rgba(75,209,138,.25)}',
+  X+'.lg2-h{margin:14px 0 8px!important;padding:0!important;font-family:Fraunces,Georgia,serif!important;font-size:44px!important;line-height:1.06!important;font-weight:700!important;letter-spacing:-.02em;color:#fff!important;text-shadow:none!important;text-transform:none!important}',
+  X+'.lg2-h em{font-style:normal;color:var(--yl)}',
+  X+'.lg2-sub{margin:0!important;font-size:17px;line-height:1.5;color:rgba(255,255,255,.86)}',
+  X+'.lg2-list{list-style:none;margin:6px 0 24px!important;padding:0!important;display:grid;gap:14px}',
+  X+'.lg2-list li{display:flex;gap:13px;align-items:flex-start;margin:0!important}',
+  X+'.lg2-ic{flex:0 0 auto;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);color:#9cc8ff}',
+  X+'.lg2-list b{display:block;font-size:15.5px;font-weight:700;color:#fff}',
+  X+'.lg2-list span{display:block;font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.74)}',
+  X+'.lg2-shot{margin:0;border-radius:14px;overflow:hidden;background:#0b1730;border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 40px -16px rgba(0,0,0,.6)}',
+  X+'.lg2-bar{display:flex;gap:6px;padding:8px 11px;background:#13284a}'+X+'.lg2-bar i{width:8px;height:8px;border-radius:50%;background:#ff7b6b}'+X+'.lg2-bar i+i{background:#ffc85a}'+X+'.lg2-bar i+i+i{background:#4bd18a}',
+  X+'.lg2-shot img{display:block;width:100%;height:auto}',
+  X+'.lg2-cap{margin:12px 2px 0!important;font-size:12.5px;color:rgba(255,255,255,.62)}',
+  X+'.lg2-card{grid-area:card;padding:44px 44px 34px;display:flex;flex-direction:column;justify-content:center;background:#fff}',
+  X+'.lg2-card h2.lg2-t{margin:0 0 4px!important;padding:0!important;font-family:Fraunces,Georgia,serif!important;font-size:30px!important;font-weight:700!important;letter-spacing:-.01em;color:var(--tx)!important;text-align:left!important;text-transform:none!important}',
+  X+'.lg2-card p.lg2-ts{margin:0 0 22px!important;font-size:14.5px;color:var(--t2)}',
+  X+'.lg2-card form>h2,'+X+'.lg2-card form>hr,'+X+'.lg2-card .social-login-row,'+X+'.lg2-card .cta-hr,'+X+'.lg2-card .login-cta-buttons{display:none!important}',
+  X+'.lg2-card form{display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important;float:none!important}',
+  X+'.lg2-card .form-group{position:relative;margin:0 0 16px!important;padding:0!important}',
+  X+'.lg2-card label{display:block!important;margin:0 0 6px!important;padding:0!important;font-size:13.5px!important;font-weight:600!important;color:var(--tx)!important;text-align:left!important;width:auto!important;float:none!important}',
+  X+'.lg2-card label .required{display:none!important}',
+  X+'.lg2-card input.form-control{display:block!important;width:100%!important;height:50px!important;margin:0!important;padding:0 46px 0 15px!important;border:1px solid #cfd8e4!important;border-radius:12px!important;background:#f8fafd!important;font-size:16px!important;color:var(--tx)!important;box-shadow:none!important;transition:border-color .15s,box-shadow .15s,background .15s}',
+  X+'.lg2-card input.form-control:focus{outline:0!important;border-color:var(--bl)!important;background:#fff!important;box-shadow:0 0 0 4px rgba(47,127,224,.16)!important}',
+  X+'.lg2-card #togglePassword{position:absolute!important;right:6px!important;top:auto!important;bottom:6px!important;width:38px!important;height:38px!important;padding:0!important;border-radius:10px!important;color:var(--t2)!important;background:transparent!important;box-shadow:none!important;z-index:2}',
+  X+'.lg2-card .help-block{display:block;margin:-6px 0 16px!important;text-align:right!important;font-size:13px}',
+  X+'.lg2-card .help-block a{font-size:13.5px;font-weight:600;color:var(--bl2)!important;text-decoration:none}',
+  X+'.lg2-card .form-actions{margin:4px 0 0!important;padding:0!important;background:none!important;border:0!important}',
+  X+'.lg2-card input[type=submit]{display:block!important;width:100%!important;height:52px!important;margin:0!important;border:0!important;border-radius:12px!important;background:linear-gradient(135deg,#1d5fbf,#2f7fe0)!important;color:#fff!important;font-size:16.5px!important;font-weight:700!important;letter-spacing:.01em;box-shadow:0 10px 22px -10px rgba(29,95,191,.7)!important;transition:transform .15s,filter .15s;cursor:pointer}',
+  X+'.lg2-card input[type=submit]:hover{filter:brightness(1.06);transform:translateY(-1px)}',
+  X+'.lg2-card form p.help-block{display:none!important}',
+  X+'.lg2-join{margin:22px 0 0!important;padding:16px 0 0;border-top:1px solid var(--bd);font-size:14.5px;color:var(--t2);text-align:center}',
+  X+'.lg2-join a{font-weight:700;color:var(--bl2)!important;text-decoration:none;white-space:nowrap!important;display:inline-block}',
+  X+'.lg2-trust{display:flex;align-items:center;justify-content:center;gap:7px;margin:14px 0 0!important;font-size:12.5px;color:#7a8597}',
+  X+'.lg2-trust svg{width:14px;height:14px;flex:0 0 auto}',
+  X+'.lg2-in{display:flex;flex-direction:column;align-items:stretch}',
+  X+'.lg2-ok{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:#e3f5ea;color:#18794e;margin:0 0 16px}',
+  X+'.lg2-name{display:block;margin:2px 0 22px;font-size:17px;font-weight:700;color:var(--tx)}',
+  X+'a.lg2-b1,'+X+'a.lg2-b2{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;height:52px;border-radius:12px;font-size:16px;font-weight:700;text-decoration:none!important}',
+  X+'a.lg2-b1{background:linear-gradient(135deg,#12915f,#18b374);color:#fff!important;box-shadow:0 10px 22px -10px rgba(18,145,95,.7)}',
+  X+'a.lg2-b2{margin-top:10px;background:#f4f7fb;border:1px solid var(--bd);color:var(--tx)!important}',
+  X+'.lg2-back{margin:18px 0 0!important;font-size:14px;text-align:center}'+X+'.lg2-back a{color:var(--bl2)!important;font-weight:600;text-decoration:none}',
+  'html.lg2 .member-login-page-container.lg2-emptied{display:none!important}',
+  '@media (max-width:900px){#lg2{margin:12px auto 28px;padding:0 12px}'+X+'.lg2-g{grid-template-columns:1fr;grid-template-areas:"head" "card" "feat";border-radius:22px}',
+  ' '+X+'.lg2-head{padding:26px 22px 24px}'+X+'.lg2-logo{width:140px;margin-bottom:16px}'+X+'.lg2-h{font-size:34px!important}'+X+'.lg2-sub{font-size:15.5px}',
+  ' '+X+'.lg2-card{padding:26px 22px 26px}'+X+'.lg2-feat{padding:26px 22px 28px}'+X+'.lg2-head,'+X+'.lg2-feat{background-attachment:scroll}}',
+  '@media (max-width:360px){'+X+'.lg2-h{font-size:30px!important}'+X+'.lg2-head,'+X+'.lg2-card,'+X+'.lg2-feat{padding-left:18px;padding-right:18px}}'
+  ].join('');
+  function build(){
+    if(document.getElementById('lg2'))return true;
+    var box=document.querySelector('.member-login-page-container');if(!box||!document.body)return false;
+    var retr=path==='/login/retrieval',signed=/\buser-session\b/.test(document.body.className)&&!retr;
+    var dest='/account/home';try{var m=q.match(/[?&]login_direct_url=([^&]+)/);if(m){var d0=decodeURIComponent(m[1]);if(d0.charAt(0)==='/'&&d0.charAt(1)!=='/')dest=d0}}catch(e){}
+    if(signed&&/login_direct_url=/.test(q)){location.replace(dest);return true}   /* already signed in: go straight where the link meant to go */
+    var form=null;
+    if(!signed){form=box.querySelector('form[name^="member_login"],form[name^="password_retrieval"]');if(!form)return false}
+    var st=document.createElement('style');st.id='lg2css';st.textContent=CSS;document.head.appendChild(st);
+    if(!document.getElementById('lg2font')){var f=document.createElement('link');f.id='lg2font';f.rel='stylesheet';f.href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap';document.head.appendChild(f)}
+    var head='<div class="lg2-head"><img class="lg2-logo" src="'+LOGO+'" alt="Three Village Local" width="176" height="61">'+
+      '<span class="lg2-kick"><i></i>MEMBER DASHBOARD</span>'+
+      '<h1 class="lg2-h">'+(retr?'Let’s get you <em>back in.</em>':'Welcome back, <em>neighbor.</em>')+'</h1>'+
+      '<p class="lg2-sub">'+(retr?'Enter the email you signed up with and we will send you a link to reset your password.':'Your new member dashboard is here. Log in to see how neighbors are finding your business.')+'</p></div>';
+    var feat='<div class="lg2-feat"><ul class="lg2-list">'+
+      '<li><span class="lg2-ic">'+IC.chart+'</span><div><b>See your stats</b><span>Banner views, homepage spotlight days and every promotion we run for you, updated nightly.</span></div></li>'+
+      '<li><span class="lg2-ic">'+IC.edit+'</span><div><b>Edit your profile in one place</b><span>Photos, hours, services and contact info, all on one screen.</span></div></li>'+
+      '<li><span class="lg2-ic">'+IC.send+'</span><div><b>Send us your news</b><span>Submit events and specials and we get them out to the community.</span></div></li></ul>'+
+      '<figure class="lg2-shot"><div class="lg2-bar"><i></i><i></i><i></i></div><img src="'+IMG+'login-dash-900.webp" srcset="'+IMG+'login-dash-900.webp 900w, '+IMG+'login-dash-1360.webp 1360w" sizes="(max-width:900px) 92vw, 560px" width="900" height="371" alt="Preview of the Three Village Local member dashboard" loading="lazy" decoding="async" data-processed="true"></figure>'+
+      '<p class="lg2-cap">Your own dashboard opens right after you log in.</p></div>';
+    var card=document.createElement('div');card.className='lg2-card';
+    if(signed){
+      var txt=(box.innerText||box.textContent||'').replace(/\s+/g,' ');var nm=(txt.match(/Logged In As\s*(.+?)\s*(?:Go To Dashboard|Logout|$)/i)||[])[1]||'';
+      card.innerHTML='<div class="lg2-in"><span class="lg2-ok">'+IC.check+'</span><h2 class="lg2-t">You’re signed in</h2><span class="lg2-name">&nbsp;</span>'+
+        '<a class="lg2-b1" href="'+dest+'">Go to your dashboard '+IC.arrow+'</a><a class="lg2-b2" href="/logout">'+IC.out+' Log out</a></div>';
+      if(nm)card.querySelector('.lg2-name').textContent=nm.trim();
+    }else{
+      card.innerHTML='<h2 class="lg2-t">'+(retr?'Reset your password':'Log in')+'</h2><p class="lg2-ts">'+(retr?'We will email you a reset link.':'Use the email you signed up with.')+'</p>';
+      card.appendChild(form);   /* moved, never cloned: keeps BD handlers, captcha and hidden inputs */
+      var sb=form.querySelector('input[type=submit]');if(sb)sb.value=retr?'Send reset link':'Log in';
+      var fp=form.querySelector('a[href*="/login/retrieval"]');if(fp)fp.textContent='Forgot password?';
+      var em=form.querySelector('input[type=email]');if(em){em.setAttribute('autocomplete','email');em.placeholder='you@yourbusiness.com'}
+      var pw=form.querySelector('input[type=password]');if(pw){pw.setAttribute('autocomplete','current-password');pw.placeholder='Your password'}
+      card.insertAdjacentHTML('beforeend',retr?'<p class="lg2-back"><a href="/login">Back to log in</a></p>':
+        '<p class="lg2-join">New business in Three Village? <a href="/join">Get your free listing</a></p>');
+      card.insertAdjacentHTML('beforeend','<p class="lg2-trust">'+IC.lock+' Secure login. We never share your information.</p>');
+    }
+    var sec=document.createElement('section');sec.id='lg2';sec.setAttribute('aria-label',retr?'Reset your password':'Member login');
+    sec.innerHTML='<div id="lg2i"><div class="lg2-g">'+head+feat+'</div></div>';
+    sec.querySelector('.lg2-g').insertBefore(card,sec.querySelector('.lg2-feat'));
+    box.parentNode.insertBefore(sec,box);box.classList.add('lg2-emptied');
+    DE.classList.add('lg2-ready');
+    return true;
+  }
+  if(!build()){var n=0,t=setInterval(function(){if(build()||++n>80){clearInterval(t);DE.classList.add('lg2-ready')}},50)}
+})();

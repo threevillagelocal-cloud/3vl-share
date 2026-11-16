@@ -667,3 +667,7 @@ max-width:1120px;margin:0 auto;padding:4px 0 44px;color:var(--ink);font-family:'
    or no dashboard for this member); fallback reveal after 2.5 s. ONLY while MDV2=true in p3.js: remove this block if MDV2 goes false. */
 @keyframes mdRv{to{visibility:visible}}
 html:not(.md-ready) .container:has(.dashboard_home_title)>.member_sidebar,html:not(.md-ready) .member_accounts:has(>.dashboard_home_title){visibility:hidden;animation:mdRv 0s 2.5s forwards}
+/* Login page v2 GO-LIVE no-flash (11/16): uncomment together with LG2_ON=true in p3.js. Hides BD login box + old hero until p3.js builds the new page (html.lg2-ready); 2.5 s fallback.
+@keyframes lgRv{to{visibility:visible}}
+html:not(.lg2-ready) .member-login-page-container,html:not(.lg2-ready) #tvllogin,html:not(.lg2-ready) .hero_section_container:has(~ * .member-login-page-container){visibility:hidden;animation:lgRv 0s 2.5s forwards}
+*/
