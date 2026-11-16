@@ -734,7 +734,7 @@ go();
    captcha handler and the login_direct_url redirect keep working exactly as before. Covers /login, /login/retrieval and the
    signed-in state ("You are currently logged in as"). Selectors use #lg2 #lg2i (two ids) to beat BD's !important rules. */
 (function(){
-  var LG2_ON=false;
+  var LG2_ON=true;
   var path=location.pathname.replace(/\/+$/,'');
   if(path!=='/login'&&path!=='/login/retrieval')return;
   var q=location.search,on=LG2_ON;
