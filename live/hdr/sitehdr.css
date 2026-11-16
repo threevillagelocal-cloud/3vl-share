@@ -139,4 +139,5 @@ html.tvl-inapp #tvl-sh .yh-in{padding-top:8px}
 .yf-credit{display:flex;align-items:center;justify-content:center;gap:10px;text-align:center;padding:14px 16px 4px;margin-top:14px;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6)!important;font-size:13.5px;text-decoration:none!important}
 .yf-credit b{color:#fff;font-weight:700}
 .yf-credit:hover b{color:#ffc53d}
-.yf-credit img{width:26px!important;height:26px!important;display:block;flex:0 0 auto;margin:0!important}
+.yf-credit img{height:28px!important;width:auto!important;display:block;flex:0 0 auto;margin:0!important;opacity:.92;transition:opacity .2s}
+.yf-credit:hover img{opacity:1}
