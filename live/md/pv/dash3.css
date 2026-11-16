@@ -314,4 +314,4 @@ body.x-page{margin:0;background:#f4f5f7}
 .mdx .pv-status{position:fixed;left:16px;bottom:16px;z-index:75;max-width:330px;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-lg);padding:10px 14px;font-size:12.5px}
 .mdx .pv-status summary{cursor:pointer;font-weight:750;color:var(--amber)}.mdx .pv-status ul{margin:4px 0 8px;padding-left:18px}.mdx .pv-status p{margin:8px 0 0}
 .mdx .pv-status ul.ok li::marker{color:var(--green)}.mdx .pv-status ul.todo li::marker{color:var(--amber)}
-@media (max-width:860px){.mdx .pv-status{bottom:84px;left:10px;right:10px;max-width:none}}
+@media (max-width:860px){.mdx .pv-status{top:70px;bottom:auto;left:auto;right:10px;max-width:260px;padding:6px 10px}}
