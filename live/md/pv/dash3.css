@@ -315,3 +315,67 @@ body.x-page{margin:0;background:#f4f5f7}
 .mdx .pv-status summary{cursor:pointer;font-weight:750;color:var(--amber)}.mdx .pv-status ul{margin:4px 0 8px;padding-left:18px}.mdx .pv-status p{margin:8px 0 0}
 .mdx .pv-status ul.ok li::marker{color:var(--green)}.mdx .pv-status ul.todo li::marker{color:var(--amber)}
 @media (max-width:860px){.mdx .pv-status{top:70px;bottom:auto;left:auto;right:10px;max-width:260px;padding:6px 10px}}
+
+/* ===== 11/15 go-live pass: sample feature, tier pills, member card, app panel, account nav, richer motion ===== */
+.mdx .pv-status{left:auto;right:16px}
+.mdx .side-foot{padding:14px 8px 4px}
+.mdx .me{gap:12px}.mdx .me-logo{width:60px;height:60px;border-radius:16px;padding:5px;box-shadow:0 8px 22px -10px rgba(0,0,0,.6)}
+.mdx .me b{font-size:14.5px}
+.mdx .tierb{font-size:11px;padding:4px 10px;margin-top:6px}
+.mdx .tierb.t-v,.mdx .tierb.t-p{box-shadow:0 0 0 1px rgba(255,214,102,.5),0 6px 16px -6px rgba(242,201,76,.7)}
+.mdx .nav .nav-acct{font-size:13px;opacity:.82}.mdx .nav .nav-acct:hover{opacity:1}
+.mdx .tpill{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--text-2);background:#f1f4f9;border:1px solid var(--border);border-radius:999px;padding:5px 10px;white-space:nowrap}
+.mdx .tpill a{color:var(--accent);font-weight:800;text-decoration:none}
+.mdx .tpill.vip{background:linear-gradient(120deg,#f6d36b,#e2a72e);color:#3b2a00;border:0;letter-spacing:.06em;box-shadow:0 6px 18px -8px rgba(226,167,46,.9)}
+@media (max-width:860px){.mdx .tpill{font-size:10.5px;padding:4px 8px}.mdx .tpill a{display:none}}
+.mdx .sfeat{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:18px;align-items:center;margin:14px 0;padding:28px 30px 24px;border-radius:22px;color:#fff;overflow:hidden;isolation:isolate;background:#081428}
+.mdx .sfeat::before{content:"";position:absolute;inset:-60%;z-index:-2;background:conic-gradient(from 0deg,#2b7bff,#7cc4ff,#f2c94c,#2b7bff);animation:mdSpin 7s linear infinite}
+.mdx .sfeat::after{content:"";position:absolute;inset:2px;z-index:-1;border-radius:20px;background:radial-gradient(120% 140% at 85% 10%,#1d4fa8 0,#10264a 45%,#081428 100%)}
+@keyframes mdSpin{to{transform:rotate(360deg)}}
+.mdx .sf-streak{position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(105deg,transparent 40%,rgba(124,196,255,.22) 50%,transparent 60%);transform:translateX(-100%);animation:mdStreak 5.5s 1.2s ease-in-out infinite}
+@keyframes mdStreak{to{transform:translateX(100%)}}
+.mdx .sf-ribbon{position:absolute;top:20px;right:-40px;z-index:3;transform:rotate(35deg);background:linear-gradient(120deg,#f6d36b,#e2a72e);color:#3b2a00;font:900 13px/1 system-ui;letter-spacing:.2em;padding:8px 48px;box-shadow:0 8px 20px -8px rgba(0,0,0,.6)}
+.mdx .sf-t{position:relative;z-index:2}.mdx .sf-k{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#9cc8ff;margin-bottom:10px}
+.mdx .sfeat h2{margin:0 0 10px;font-family:"Anton","Oswald","Bebas Neue",Impact,"Arial Narrow",system-ui;font-weight:400;text-transform:uppercase;font-size:clamp(28px,3.2vw,44px);line-height:1.02;color:#fff}
+.mdx .sfeat h2 em{font-style:normal;color:#4da3ff;text-shadow:0 0 22px rgba(77,163,255,.55)}
+.mdx .sfeat p{margin:0 0 16px;font-size:15px;line-height:1.5;color:#d4e3fb;max-width:520px}
+.mdx .sf-cta{display:inline-flex;align-items:center;gap:10px;border:0;cursor:pointer;font:800 16.5px/1 system-ui;color:#fff;padding:16px 24px;border-radius:999px;background:linear-gradient(120deg,#2b7bff,#1d5fd1 55%,#3aa0ff);box-shadow:0 0 0 2px rgba(255,214,102,.65),0 14px 34px -10px rgba(43,123,255,.9);animation:mdCta 2.4s ease-in-out infinite;transition:transform .2s}
+.mdx .sf-cta:hover{transform:translateY(-2px)}.mdx .sf-cta:disabled{opacity:.75;cursor:default;animation:none}
+@keyframes mdCta{50%{box-shadow:0 0 0 2px rgba(255,214,102,.95),0 0 34px 4px rgba(77,163,255,.75)}}
+.mdx .sf-fine{display:block;margin-top:10px;font-size:12.5px;color:#a9c2e6}
+.mdx .sf-v{position:relative;z-index:1;perspective:1100px}
+.mdx .sf-frame{border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 40px 70px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.18);transform:rotateY(-14deg) rotateX(6deg) rotateZ(1deg);transition:transform .6s var(--ease)}
+.mdx .sfeat:hover .sf-frame{transform:rotateY(-6deg) rotateX(3deg)}
+.mdx .sf-bar{display:flex;align-items:center;gap:5px;padding:7px 10px;background:#eef2f7}.mdx .sf-bar i{width:7px;height:7px;border-radius:50%;background:#d3dbe6}
+.mdx .sf-bar span{margin-left:8px;font-size:10.5px;color:#7a8696;background:#fff;border-radius:999px;padding:2px 10px}
+.mdx .sf-frame img{display:block;width:100%;height:auto}
+.mdx .sf-logos{margin-top:18px}.mdx .sf-lk{display:block;font-size:12px;font-weight:700;color:#cfe0ff;margin-bottom:8px}
+.mdx .sf-lg{display:flex;flex-wrap:wrap;gap:8px}
+.mdx .sf-lg .lg{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:#fff;box-shadow:0 6px 14px -6px rgba(0,0,0,.5);animation:mdBob 4.6s ease-in-out infinite;animation-delay:calc(var(--d) * -.37s)}
+.mdx .sf-lg .lg img{width:22px;height:22px;object-fit:contain}
+.mdx .sf-lg .lg.more{width:auto;padding:0 10px;font:800 12px system-ui;color:#10264a}
+@keyframes mdBob{50%{transform:translateY(-5px)}}
+@media (max-width:860px){.mdx .sfeat{grid-template-columns:1fr;padding:22px 18px}.mdx .sf-frame{transform:rotateY(-6deg) rotateX(3deg)}.mdx .sf-cta{width:100%;justify-content:center;font-size:15.5px}}
+.mdx .sfeat .ups-t b{display:block;font-size:22px;margin-bottom:6px}.mdx .sfeat .ups-t i{display:block;font-style:normal;color:#d4e3fb}
+.mdx .apppane{text-align:center;padding:6px 4px}.mdx .apppane h3{margin:10px 0 4px}.mdx .apppane .card-icon{margin:0 auto}
+.mdx .appqr{margin:16px auto 6px;display:inline-flex;flex-direction:column;align-items:center;gap:6px;padding:12px;border-radius:16px;background:#fff;box-shadow:var(--shadow-lg)}
+.mdx .appqr i{font-size:12px;color:var(--text-3);font-style:normal}
+.mdx .appsteps{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left;margin:14px 0}.mdx .appsteps>div{background:#f6f8fb;border-radius:14px;padding:12px 14px}
+.mdx .appsteps ol{margin:6px 0 0;padding-left:18px;font-size:13px;line-height:1.5}
+@media (max-width:520px){.mdx .appsteps{grid-template-columns:1fr}}
+.mdx .view.on .card,.mdx .view.on .kpi,.mdx .view.on .sfeat{animation:mdIn2 .62s var(--ease) both}
+@keyframes mdIn2{from{opacity:0;transform:translateY(14px) scale(.985);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
+.mdx .kpis>*:nth-child(2){animation-delay:.05s!important}.mdx .kpis>*:nth-child(3){animation-delay:.1s!important}.mdx .kpis>*:nth-child(4){animation-delay:.15s!important}.mdx .kpis>*:nth-child(5){animation-delay:.2s!important}
+.mdx .kpi{position:relative;overflow:hidden}
+.mdx .kpi::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.75) 50%,transparent 65%);transform:translateX(-120%)}
+.mdx .view.on .kpi::after{animation:mdShim 1.4s .55s ease-out 1}@keyframes mdShim{to{transform:translateX(120%)}}
+.mdx .view.on .spark .draw{filter:drop-shadow(0 0 4px rgba(47,127,224,.55))}
+.mdx .card.tilt{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-3px);transition:transform .15s ease-out}
+.mdx .card.tilt::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(77,163,255,.12),transparent 60%)}
+.mdx .card{position:relative}
+.mdx .sp-a.hl{box-shadow:0 0 0 2px var(--accent);transform:translateX(3px);transition:all .4s}
+.mdx .burst{position:fixed;z-index:200;pointer-events:none;width:8px;height:8px;border-radius:2px;animation:mdBurst .9s ease-out forwards}
+@keyframes mdBurst{to{transform:translate(var(--bx),var(--by)) rotate(220deg);opacity:0}}
+.mdx .x-form-ok.good{color:#18794e;font-weight:700}
+@media (prefers-reduced-motion:reduce){.mdx .sfeat::before,.mdx .sf-streak,.mdx .sf-lg .lg,.mdx .sf-cta,.mdx .kpi::after{animation:none!important}.mdx .card.tilt{transform:none}}
+@media (display-mode:standalone){.mdx .topbar{padding-top:max(10px,env(safe-area-inset-top))}.mdx .tabbar{padding-bottom:max(8px,env(safe-area-inset-bottom))}}
