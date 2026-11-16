@@ -608,3 +608,15 @@ body.x-page{margin:0;background:#f4f5f7}
 @media (max-width:700px){.mdx .bn-frame,.mdx .bn-hero.big .bn-frame{max-width:100%}.mdx .kpi .kt-top{min-height:34px}.mdx .kpi .kt-img{width:34px;height:34px}}
 @media (prefers-reduced-motion:reduce){.mdx .bn-frame{animation:none}}
 @media (max-width:700px){.mdx .kpis .kpi:last-child:nth-child(odd){grid-column:1/-1}}
+/* ===== Inside the real BD account page (/account/home): take over the content area, undo BD's global styles ===== */
+html.md-on .container:has(#mdx)>.member_sidebar{display:none!important}
+html.md-on .member_accounts:has(#mdx){width:100%!important;max-width:100%!important;float:none!important;padding-left:0!important;padding-right:0!important}
+html.md-on .member_accounts:has(#mdx)>:not(.md-wrap):not(style){display:none!important}
+html.md-on .md-wrap:has(#mdx){margin:8px 0 28px}
+.md-wrap #mdx,.md-wrap #mdx *{word-break:normal!important;overflow-wrap:normal!important}
+.md-wrap #mdx .topbar>*,.md-wrap #mdx .pill,.md-wrap #mdx .btn{white-space:nowrap!important;flex-shrink:0}
+.md-wrap #mdx .topbar .search{flex:1 1 auto;min-width:0}
+.md-wrap #mdx .sidebar{top:50px;height:calc(100vh - 50px)}
+.md-wrap #mdx#mdx button.btn{border-radius:9px!important}.md-wrap #mdx#mdx button.qa{border-radius:12px!important}.md-wrap #mdx#mdx button.tile-l,.md-wrap #mdx#mdx button.x-btn{border-radius:10px!important}
+.md-wrap #mdx#mdx button.me-app{border-radius:8px!important}.md-wrap #mdx#mdx button.chip,.md-wrap #mdx#mdx button.sf-cta{border-radius:999px!important}.md-wrap #mdx#mdx button.dr-x{border-radius:50%!important}
+.md-wrap #mdx#mdx button.on,.md-wrap #mdx#mdx .seg button{border-radius:7px!important}
