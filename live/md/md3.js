@@ -1,4 +1,4 @@
-(function(){
+(function(){function onLoaded(f){if(document.readyState==='complete')f();else window.addEventListener('load',f)}/* 11/16: on /account/home this script is injected AFTER load, so a plain load listener never fires */
   var r=document.getElementById('mdx');if(!r)return;
   var preview=r.getAttribute('data-preview')==='1',END=r.getAttribute('data-endpoint')||'',TEST=r.getAttribute('data-test')==='1',TOKEN=r.getAttribute('data-token')||'',
     tier=r.getAttribute('data-tier')||'',uid=r.getAttribute('data-uid')||r.getAttribute('data-md-uid')||'';
@@ -108,7 +108,7 @@
     ib.addEventListener('click',function(ev){if(ev.target.closest('.x-inst-x')){ib.hidden=true;try{localStorage.setItem(KEY,'1')}catch(x){}}
       else if(ev.target.closest('.x-inst-go')&&bip){bip.prompt();bip.userChoice.then(function(){ib.hidden=true})}})}
   /* GA4 (after load, never blocks first paint) */
-  window.addEventListener('load',function(){setTimeout(function(){r.classList.add('ready')},900)});
+  onLoaded(function(){setTimeout(function(){r.classList.add('ready')},900)});
   /* ===== First-visit welcome tour (owner 11/16/2026: "do the popup tour"). Once per member per device (localStorage md3tour:<uid|basic>,
      sessionStorage/window fallback). Replay: "Take the tour" in Account + More, or ?tour=1. Runs before announcement popups; on a tour
      visit announcements are skipped (window.__mdTourVisit). Works when md3.js loads after window.load (signed-in BD page). */
@@ -232,9 +232,9 @@
       w.querySelector('.mdann-x').focus();
       try{if(window.gtag)gtag('event','dash_announcement_view',{id:a.id})}catch(x){}
     }
-    window.addEventListener('load',function(){setTimeout(open,1300)});
+    onLoaded(function(){setTimeout(open,1300)});
   })();
-  window.addEventListener('load',function(){setTimeout(function(){if(!window.gtag&&document.body.classList.contains('x-page')){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-ERG4CN7V3E',{send_page_view:true,page_title:'Member Dashboard'});
+  onLoaded(function(){setTimeout(function(){if(!window.gtag&&document.body.classList.contains('x-page')){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-ERG4CN7V3E',{send_page_view:true,page_title:'Member Dashboard'});
     var gs=document.createElement('script');gs.async=true;gs.src='https://www.googletagmanager.com/gtag/js?id=G-ERG4CN7V3E';document.head.appendChild(gs)}},1500)});
   r.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('[data-ga]');if(a&&!a.hasAttribute('data-sample')&&!a.hasAttribute('data-open'))ga(a.getAttribute('data-ga'),{product:a.getAttribute('data-product')||'',member_tier:tier})},true);
 })();
