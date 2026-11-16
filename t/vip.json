@@ -401,5 +401,15 @@
 "pos": "50% 50%",
 "src": "img/931-banner5.webp",
 "thumb": "t/vip-931-3e96f7ad10-t240.webp"
+},
+"939": {
+"banner": true,
+"big1280": "t/vip-939-9af94dba62-1280.webp",
+"big640": "t/vip-939-9af94dba62-640.webp",
+"big960": "t/vip-939-9af94dba62-960.webp",
+"logo": "t/vip-939-logo-557d96b03f.webp",
+"pos": "50% 50%",
+"src": "img/939-banner.webp",
+"thumb": "t/vip-939-9af94dba62-t240.webp"
 }
 }
