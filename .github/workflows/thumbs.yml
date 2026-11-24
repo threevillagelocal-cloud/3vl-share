@@ -28,3 +28,12 @@ jobs:
           git commit -q -m "Photo copies refresh"
           git pull -q --rebase --autostash
           git push -q
+      - name: Copy new photo copies to files.threevillagelocal.com (Cloudflare)
+        # 11/24/2026: the site moves off GitHub Pages; new copies go straight to Cloudflare as well
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          pip install -q boto3
+          python tools/r2_publish.py --src t --prefix share/t/

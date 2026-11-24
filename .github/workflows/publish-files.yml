@@ -1,0 +1,40 @@
+name: Copy changed files to files.threevillagelocal.com
+# 11/24/2026: the site moves off GitHub Pages to Cloudflare (bucket 3vl-files, folder share/). Every push here copies
+# the files it changed. (Pushes made by this repo's own jobs don't start this; thumbs.yml copies its own files.)
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      paths:
+        description: "Space-separated file paths to copy (relative to the repo)"
+        required: true
+concurrency:
+  group: publish-files
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: blob:none
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q boto3
+      - name: Copy changed files
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          BEFORE: ${{ github.event.before }}
+          PATHS: ${{ github.event.inputs.paths }}
+        run: |
+          if [ -n "$PATHS" ]; then printf '%s\n' $PATHS > changed.txt
+          elif [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then git diff --name-only --diff-filter=AMR HEAD~1 HEAD > changed.txt
+          else git diff --name-only --diff-filter=AMR "$BEFORE" "$GITHUB_SHA" > changed.txt; fi
+          grep -vE '^(\.github/|tools/)|(^|/)CLAUDE\.md$' changed.txt > list.txt || true
+          if [ -s list.txt ]; then python tools/r2_publish.py --src . --prefix share/ --list list.txt; else echo "nothing to copy"; fi

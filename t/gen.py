@@ -10,7 +10,7 @@ from PIL import Image, ImageOps
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://www.threevillagelocal.com"
-RAW = "https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/"
+RAW = "https://files.threevillagelocal.com/assets/"   # 11/24/2026: was raw.githubusercontent (3vl-assets is blocked)
 SIZES = (160, 360, 800)
 UA = {"User-Agent": "Mozilla/5.0 (compatible; 3VL-thumbs/1.0; +https://www.threevillagelocal.com)"}
 MAN = os.path.join(HERE, "manifest.json")
@@ -34,7 +34,7 @@ def norm(u):
 def skip(u):
     """Same rules as sm() in the site JS: leave alone what is already small or ours."""
     return (not u.startswith("http") or re.search(r"\.svg(\?|$)", u, re.I) or "wsrv.nl" in u or "google.com/s2/favicons" in u
-            or "threevillagelocal-cloud.github.io" in u
+            or "files.threevillagelocal.com" in u or "threevillagelocal-cloud.github.io" in u
             or re.match(r"https://cdn\.jsdelivr\.net/gh/threevillagelocal-cloud/.*\.webp$", u, re.I))
 
 
