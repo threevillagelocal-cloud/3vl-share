@@ -1,6 +1,6 @@
 """Small WebP copies of the photos threevillagelocal.com shows (event photos, business logos, story images).
 Some originals are 6 MB; the site shows them as cards. Copies live here and are served by GitHub Pages:
-  https://threevillagelocal-cloud.github.io/3vl-share/t/<fnv1a(url)>-<width>.webp
+  https://files.threevillagelocal.com/share/t/<fnv1a(url)>-<width>.webp
 The site computes the same name in JS (sm() in 3vl-assets events-cal/tvl-cal.js, weekender/weekender.js,
 site/p3/nowhome.js, weekender/nowhome_build.py) and falls back to the original if a copy doesn't exist yet.
 Runs every 30 minutes (.github/workflows/thumbs.yml). Copies unused for 21 days are deleted."""
