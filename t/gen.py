@@ -34,7 +34,7 @@ def norm(u):
 def skip(u):
     """Same rules as sm() in the site JS: leave alone what is already small or ours."""
     return (not u.startswith("http") or re.search(r"\.svg(\?|$)", u, re.I) or "wsrv.nl" in u or "google.com/s2/favicons" in u
-            or "files.threevillagelocal.com" in u or "threevillagelocal-cloud.github.io" in u
+            or "files.threevillagelocal.com/share/" in u or re.match(r"https://files\.threevillagelocal\.com/assets/.*\.webp$", u, re.I) or "threevillagelocal-cloud.github.io" in u
             or re.match(r"https://cdn\.jsdelivr\.net/gh/threevillagelocal-cloud/.*\.webp$", u, re.I))
 
 

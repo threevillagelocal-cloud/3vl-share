@@ -19,7 +19,7 @@ var FEED='https://files.threevillagelocal.com/assets/weekender/live/events.json'
 function $(s,r){return (r||document).querySelector(s)}function $$(s,r){return [].slice.call((r||document).querySelectorAll(s))}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function fnv(s){s=unescape(encodeURIComponent(s));for(var h=0x811c9dc5,i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),0x01000193)>>>0;return ('0000000'+h.toString(16)).slice(-8)}
-function sm(u,w){u=String(u||'');if(!u||/\.svg(\?|$)|^data:|threevillagelocal-cloud\.github\.io|cdn\.jsdelivr\.net\/gh\/threevillagelocal-cloud\/.*\.webp$/i.test(u))return u;if(u.charAt(0)==='/'&&u.charAt(1)!=='/')u=location.origin+u;
+function sm(u,w){u=String(u||'');if(!u||/\.svg(\?|$)|^data:|threevillagelocal-cloud\.github\.io|files\.threevillagelocal\.com\/share\/|files\.threevillagelocal\.com\/assets\/.*\.webp$|cdn\.jsdelivr\.net\/gh\/threevillagelocal-cloud\/.*\.webp$/i.test(u))return u;if(u.charAt(0)==='/'&&u.charAt(1)!=='/')u=location.origin+u;
   return /^https?:/i.test(u)?'https://files.threevillagelocal.com/share/t/'+fnv(u)+'-'+(w>400?800:360)+'.webp':u}
 window.__tvlEvImg=function(im){if(im.dataset.o&&im.src!==im.dataset.o){im.src=im.dataset.o}else{im.style.display='none'}};
 var SHARE="<svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v14\"/></svg>";
