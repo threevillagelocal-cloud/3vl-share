@@ -23,7 +23,7 @@ function show(why){
 if(shown||document.getElementById('tvl-getapp'))return;shown=true;
 if(!document.getElementById('tga2css')){var st=document.createElement('style');st.id='tga2css';st.textContent='#tvl-getapp.v2 .tga-t b{white-space:normal!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:14px!important;line-height:1.2!important}#tvl-getapp.v2 a.tga-btn{padding:0 12px!important;height:36px!important;font-size:12.5px!important;letter-spacing:.04em!important;white-space:nowrap}@media(max-width:374px){#tvl-getapp.v2 .tg2f{display:none}#tvl-getapp.v2 .tga-t b{font-size:13px!important;-webkit-line-clamp:3}#tvl-getapp.v2 a.tga-btn{padding:0 14px!important;font-size:14px!important}}';document.head.appendChild(st)}
 var b=document.createElement('div');b.id='tvl-getapp';b.className='v2';b.setAttribute('role','region');b.setAttribute('aria-label','Get the Three Village Local mobile app');
-b.innerHTML='<div class="tga-ic"><img src="https://cdn.jsdelivr.net/gh/threevillagelocal-cloud/3vl-assets@ff2b1c9100c8/badges/3vl-logo-160.png" alt="" width="42" height="42"></div>'+
+b.innerHTML='<div class="tga-ic"><img src="https://files.threevillagelocal.com/assets/badges/3vl-logo-160.png" alt="" width="42" height="42"></div>'+
 '<div class="tga-t"><b>'+LINE+'</b><span><i>Free</i> mobile app</span></div>'+
 '<a class="tga-btn" href="'+url+'" target="_blank" rel="noopener">Get<span class="tg2f">&nbsp;it free</span></a>'+
 '<button class="tga-x" type="button" aria-label="Close">&times;</button>';
@@ -40,6 +40,6 @@ var t=setTimeout(function(){show('time')},25000);
 function sc(){var h=document.documentElement.scrollHeight-innerHeight;if(h>0&&scrollY/h>=.33){removeEventListener('scroll',sc);clearTimeout(t);show('scroll')}}
 addEventListener('scroll',sc,{passive:true});
 }
-function go(){fetch('https://threevillagelocal-cloud.github.io/3vl-share/live/app/line.json?d='+new Date().toISOString().slice(0,10)).then(function(r){return r.json()}).then(pick).catch(function(){}).then(arm)}
+function go(){fetch('https://files.threevillagelocal.com/share/live/app/line.json?d='+new Date().toISOString().slice(0,10)).then(function(r){return r.json()}).then(pick).catch(function(){}).then(arm)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
 })();

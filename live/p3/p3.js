@@ -12,7 +12,7 @@
     var st=document.createElement('style');st.textContent='@keyframes tvlshshow{to{opacity:1}}html.tvl-sh:not(.tvl-sh-on) body>.header{opacity:0;animation:tvlshshow .2s linear 6s forwards}'+
       'html.tvl-sh:not(.tvl-sh-on) body{padding-top:164px}@media (max-width:900px){html.tvl-sh:not(.tvl-sh-on) body{padding-top:168px}}html.tvl-sh:not(.tvl-sh-on) body>.header{position:absolute!important;left:0;right:0;top:0}';
     (document.head||H).appendChild(st);
-    var B='https://threevillagelocal-cloud.github.io/3vl-share/live/hdr/';
+    var B='https://files.threevillagelocal.com/share/live/hdr/';
     var l=document.createElement('link');l.rel='preload';l.as='style';l.href=B+'sitehdr.css';(document.head||H).appendChild(l);
     var s=document.createElement('script');s.async=true;s.fetchPriority='high';s.src=B+'sitehdr.js';(document.head||H).appendChild(s);
   }catch(e){}})();
@@ -34,7 +34,7 @@ if(!ran){mo=new MutationObserver(tick);mo.observe(H,{childList:true,subtree:true
 /* ---------- SMART SEARCH ENGINE (shared: homepage search box in smartsearch.js + keyword results page below) ----------
    Index = search/index.json, built nightly from BD members + Member Match + AI neighbor words (3vl-site-guard member-db). */
 var SS=(function(){
-var IDX='https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/search/index.json';
+var IDX='https://files.threevillagelocal.com/assets/search/index.json';
 var STOP={the:1,a:1,an:1,and:1,of:1,'for':1,near:1,me:1,'in':1,best:1,local:1,good:1,my:1,to:1,at:1,on:1,with:1,service:1,services:1,company:1,ny:1,no:1,not:1,wont:1,cant:1,dont:1,need:1,needs:1,help:1,want:1,find:1,get:1,someone:1,who:1,can:1,i:1,is:1,it:1,im:1,please:1};
 var TIER={vip:3,noticed:2,house:1,basic:0,claim:0};
 var data=null,loading=null;
@@ -188,7 +188,7 @@ if(isResults||SMARTQ){
   var root=mount(h,first?(first.closest('[itemprop="mainEntity"]')||first):($('.content_w_sidebar.member_results [itemprop="mainEntity"]')||$('.content_w_sidebar.member_results .grid-container')||$('.member_results_header')));
   /* specialty row under the hero on category + specialty pages (data: search/subcats.json, published nightly by 3vl-site-guard member-db) */
   (function(){var segs=path.split('/').filter(Boolean);if(q||segs.length!==1)return;var cur=segs[0];
-    try{fetch('https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/search/subcats.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(d){
+    try{fetch('https://files.threevillagelocal.com/assets/search/subcats.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(d){
       if(!d||!d.cats)return;var top=d.cats[cur]?cur:(d.sub||{})[cur];var c=top&&d.cats[top];if(!c||!c.s||c.s.length<2)return;
       var tw=(c.n||'').replace(/s$/,'').toLowerCase();
       function short(n){var l=n.toLowerCase(),e=[' '+tw,' '+tw+'s'];for(var k=0;k<e.length;k++){if(tw&&l.length>e[k].length+2&&l.slice(-e[k].length)===e[k])return n.slice(0,n.length-e[k].length)}return n}
@@ -236,7 +236,7 @@ if(isResults||SMARTQ){
   function oneCompetitor(){if(SM||!CGRP)return;var by={};[].slice.call(VL.querySelectorAll('.p3-vwrap')).forEach(function(w){var g=CGRP[w.getAttribute('data-uid')];if(g)(by[g]=by[g]||[]).push(w)});
     Object.keys(by).forEach(function(g){var ws=by[g];if(ws.length<2)return;var keep=CPICK[g];if(!keep||!ws.some(function(w){return w.getAttribute('data-uid')===keep}))keep=CPICK[g]=ws[Math.floor(Math.random()*ws.length)].getAttribute('data-uid');
       ws.forEach(function(w){if(w.getAttribute('data-uid')===keep)return;var b=vips[+w.getAttribute('data-i')];if(b){RG.insertAdjacentHTML('afterbegin',card(b,0));w.parentNode.removeChild(w)}})})}
-  fetch('https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/weekender/compete.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(J){var m={},G=J.groups||{};Object.keys(G).forEach(function(g){G[g].forEach(function(u){m[String(u)]=g})});CGRP=m;oneCompetitor()}).catch(function(){});
+  fetch('https://files.threevillagelocal.com/assets/weekender/compete.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(J){var m={},G=J.groups||{};Object.keys(G).forEach(function(g){G[g].forEach(function(u){m[String(u)]=g})});CGRP=m;oneCompetitor()}).catch(function(){});
   /* value panel from vip_meta.json (public listing details) */
   var META=null;
   function yrs(y){var n=new Date().getFullYear()-(+y);return n>0?n:0}
@@ -250,7 +250,7 @@ if(isResults||SMARTQ){
     L.push('<a class="p3-vrev" data-act="review" href="'+esc(u.replace(/\/$/,''))+'/writeareview">&#9733; '+(m.reviews?'Review':'First review')+'</a>');
     return h+'<div class="p3-vlinks">'+L.join('')+'</div>'}
   function fillSides(){if(!META)return;$$('.p3-vside:not(.is-filled)',root).forEach(function(a){var m=META[a.getAttribute('data-uid')];a.classList.add('is-filled');if(m){a.innerHTML=side(m,a.getAttribute('data-u'));a.parentNode.classList.add('has-side')}});eqSoon()}
-  fetch('https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/search/vip_meta.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).catch(function(){return fetch(BASE+'vip_meta.json').then(function(r){return r.json()})}).then(function(M){META=M;yieldSpots();fillSides()}).catch(function(){});  /* nightly from 3vl-site-guard member-db (10/4/2026) */
+  fetch('https://files.threevillagelocal.com/assets/search/vip_meta.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).catch(function(){return fetch(BASE+'vip_meta.json').then(function(r){return r.json()})}).then(function(M){META=M;yieldSpots();fillSides()}).catch(function(){});  /* nightly from 3vl-site-guard member-db (10/4/2026) */
 
   /* logos: trim baked-in white margins so they fill the box */
   function trim(img){try{var w=img.naturalWidth,h=img.naturalHeight;if(!w||!h)return;var c=document.createElement('canvas'),k=Math.min(1,600/Math.max(w,h));c.width=Math.round(w*k);c.height=Math.round(h*k);
@@ -343,7 +343,7 @@ if(path==='/categories'){
     '<span class="p3-credit">Photo: Shixart1985, CC BY 2.0</span></header>'+
     '<div class="p3-chips">'+quick.map(function(q){return '<a class="p3-chip" href="'+esc(q.h)+'">'+esc(q.n)+'</a>'}).join('')+'</div>'+
     /* 10/10/2026 (owner): The Back Office hub for business owners gets its own button on this page */
-    '<a class="p3-bo" href="/back-office"><img src="https://threevillagelocal-cloud.github.io/3vl-share/site/back-office/t3-accounting-540.webp" alt="" width="540" height="360" loading="lazy"><span class="p3-bo-t"><em>For business owners</em><b>The Back Office</b><small>Accountants, payroll, benefits, insurance, lending, legal, IT and more</small></span><span class="p3-bo-go">&rarr;</span></a>'+
+    '<a class="p3-bo" href="/back-office"><img src="https://files.threevillagelocal.com/share/site/back-office/t3-accounting-540.webp" alt="" width="540" height="360" loading="lazy"><span class="p3-bo-t"><em>For business owners</em><b>The Back Office</b><small>Accountants, payroll, benefits, insurance, lending, legal, IT and more</small></span><span class="p3-bo-go">&rarr;</span></a>'+
     '<div class="p3-cgrid">'+cats.map(function(c,i){return '<a class="p3-ctile" href="'+esc(c.h)+'" data-n="'+esc((c.n+' '+c.subs.map(function(s){return s.n}).join(' ')).toLowerCase())+'" style="--c:'+c.c+';--i:'+(i%12)+'"><span class="p3-cic">'+iconFor(c.slug)+'</span><span class="p3-ctx"><b>'+esc(c.n).replace(/\//g,'/<wbr>')+'</b><small>'+(c.subs.length?c.subs.length+' specialt'+(c.subs.length===1?'y':'ies'):'Browse all')+'</small></span><em>&rarr;</em></a>'}).join('')+'</div>'+
     '<p class="p3-none" id="p3none"></p>';
   var anchor=$('.category_filter_module')||panels[0];var root=mount(h,anchor);
@@ -368,7 +368,7 @@ if(path==='/blog'){
   function hide(it){it.style.display='none';it.setAttribute('data-p3','1');var n=it.nextElementSibling;while(n&&(n.tagName==='HR'||/^clearfix$/.test(n.className))){n.style.display='none';n=n.nextElementSibling}}
   /* our small WebP copies (3vl-share/t/gen.py, same naming as sm() in weekender.js); a missing copy falls back to BD's full photo, then its thumbnail */
   function fnv(s){s=unescape(encodeURIComponent(s));for(var h=0x811c9dc5,i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),0x01000193)>>>0;return ('0000000'+h.toString(16)).slice(-8)}
-  function sm(u,w){u=String(u||'');if(!u)return u;if(u.charAt(0)==='/'&&u.charAt(1)!=='/')u=location.origin+u;return /^https?:/i.test(u)?'https://threevillagelocal-cloud.github.io/3vl-share/t/'+fnv(u)+'-'+w+'.webp':u}
+  function sm(u,w){u=String(u||'');if(!u)return u;if(u.charAt(0)==='/'&&u.charAt(1)!=='/')u=location.origin+u;return /^https?:/i.test(u)?'https://files.threevillagelocal.com/share/t/'+fnv(u)+'-'+w+'.webp':u}
   window.__p3be=function(im){var d=im.dataset,n=+(d.e||0);im.removeAttribute('srcset');d.e=n+1;if(n===0&&d.t)im.src=d.t;else if(n<2)im.src=d.f};
   /* BD's 525px thumbnail is already downloaded with the page, so it is the base; phones (sharper screens) take the 800px copy, or BD's full photo for posts loaded later (no copy of those) */
   function pic(p,extra,cp){return '<img src="'+esc(p.thumb||p.img)+'"'+(p.thumb?' srcset="'+esc(p.thumb)+' 525w, '+esc(cp?sm(p.img,800):p.img)+(cp?' 800w':' 1200w')+'" sizes="(max-width:700px) 92vw, (max-width:1100px) 46vw, 380px"':'')+' alt="'+esc(p.t)+'" '+extra+' onerror="__p3be(this)" data-f="'+esc(p.img)+'" data-t="'+esc(p.thumb)+'">'}
@@ -425,7 +425,7 @@ var h=document.querySelector('.dashboard_home_title');if(!h||document.getElement
    fetches live/md/k/<hash>.txt (holds only their token) and shows live/md/v/<token>.html. Anyone else would need both the id and the email. */
 var MDV2=true;var MDV3=true;/* v3 design (md3.css/js); only matters once MDV2 is on */
 if(MDV2)(function(){var sb=document.querySelector('.member_sidebar');var mt=sb&&(sb.textContent||'').match(/Member ID #(\d+)/);var mid=mt&&mt[1];if(!mid||document.getElementById('mdx'))return;
-var B='https://threevillagelocal-cloud.github.io/3vl-share/live/md/',d=new Date(),v=''+d.getFullYear()+(d.getMonth()+1)+d.getDate();document.documentElement.classList.add('md-on');
+var B='https://files.threevillagelocal.com/share/live/md/',d=new Date(),v=''+d.getFullYear()+(d.getMonth()+1)+d.getDate();document.documentElement.classList.add('md-on');
 var MDN=MDV3?'md3':'md2';var cssOk=false,shown=false,DE=document.documentElement;function rdy(){if(cssOk&&shown)DE.classList.add('md-ready')}function bare(){DE.classList.remove('md-on');DE.classList.add('md-ready')}var l=document.createElement('link');l.rel='stylesheet';l.onload=l.onerror=function(){cssOk=true;rdy()};l.href=B+MDN+'.css?v='+v;document.head.appendChild(l);
 if(MDV3){var gf=document.createElement('link');gf.rel='stylesheet';gf.href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Anton&display=swap';document.head.appendChild(gf)}
 var nm=((sb.querySelector('h1,h2,h3,h4,b,strong')||{}).textContent||'').replace(/\s+/g,' ').trim();
@@ -438,7 +438,7 @@ fetch('/account/contact',{credentials:'same-origin'}).then(function(r){return r.
 var em=(new DOMParser().parseFromString(t,'text/html').querySelector('input[name="email"]')||{}).value||'';
 if(!em||!window.crypto||!crypto.subtle)return '';return sha('3vlmd|'+mid+'|'+em.trim().toLowerCase()).then(function(k){return txt(B+'k/'+k+'.txt')})}).then(function(tok){
 tok=(tok||'').trim();if(!/^[A-Za-z0-9_-]{24,}$/.test(tok)&&/session-plan-level-(1|2|8|9)/.test(document.body.className))return '';return /^[A-Za-z0-9_-]{24,}$/.test(tok)?txt(B+'v/'+tok+'.html'):txt(B+'basic2.html?v='+v)}).then(show).catch(function(){txt(B+'basic2.html?v='+v).then(show).catch(function(){show('')})});})();
-if(!MDV2)(function(){var sb=document.querySelector('.member_sidebar');var mt=sb&&(sb.textContent||'').match(/Member ID #(\d+)/);var mid=mt&&mt[1];if(!mid||document.getElementById('md'))return;var pl=(document.body.className.match(/session-plan-level-(\d+)/)||[])[1]||'';var own=/^(1|2|8|9)$/.test(pl);document.documentElement.classList.add('md-on');var B='https://threevillagelocal-cloud.github.io/3vl-share/live/md/',d=new Date(),v=''+d.getFullYear()+(d.getMonth()+1)+d.getDate();var l=document.createElement('link');l.rel='stylesheet';l.href=B+'md.css?v='+v;document.head.appendChild(l);function show(t){if(!t){document.documentElement.classList.remove('md-on');return}var w=document.createElement('div');w.className='md-wrap';w.innerHTML=t;var nm=(sb.querySelector('h1,h2,h3,h4,b,strong')||{}).textContent||'';nm=nm.replace(/\s+/g,' ').trim();[].forEach.call(w.querySelectorAll('[data-md-name]'),function(x){if(nm)x.textContent=nm});h.insertAdjacentElement('afterend',w);var sc=document.createElement('script');sc.src=B+'md.js?v='+v;document.body.appendChild(sc);w.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('[data-vip-pop]');if(!t)return;e.preventDefault();if(window.jvOpen){window.jvOpen('vip',null,t);return}var s2=document.createElement('script');s2.src='https://threevillagelocal-cloud.github.io/3vl-share/site/vip-pop/pop.js?v=1';s2.onload=function(){if(window.jvOpen)window.jvOpen('vip',null,t);else location.href='/join#plan-vip'};s2.onerror=function(){location.href='/join#plan-vip'};document.head.appendChild(s2)});try{if(window.gtag)gtag('event','member_dashboard_view',{plan:pl})}catch(x){}}function get(u){return fetch(u).then(function(r){return r.ok?r.text():''})}(own?get(B+'m/'+mid+'.html?v='+v).then(function(t){return t||get(B+'basic.html?v='+v)}):get(B+'basic.html?v='+v)).then(show).catch(function(){show('')});})();
+if(!MDV2)(function(){var sb=document.querySelector('.member_sidebar');var mt=sb&&(sb.textContent||'').match(/Member ID #(\d+)/);var mid=mt&&mt[1];if(!mid||document.getElementById('md'))return;var pl=(document.body.className.match(/session-plan-level-(\d+)/)||[])[1]||'';var own=/^(1|2|8|9)$/.test(pl);document.documentElement.classList.add('md-on');var B='https://files.threevillagelocal.com/share/live/md/',d=new Date(),v=''+d.getFullYear()+(d.getMonth()+1)+d.getDate();var l=document.createElement('link');l.rel='stylesheet';l.href=B+'md.css?v='+v;document.head.appendChild(l);function show(t){if(!t){document.documentElement.classList.remove('md-on');return}var w=document.createElement('div');w.className='md-wrap';w.innerHTML=t;var nm=(sb.querySelector('h1,h2,h3,h4,b,strong')||{}).textContent||'';nm=nm.replace(/\s+/g,' ').trim();[].forEach.call(w.querySelectorAll('[data-md-name]'),function(x){if(nm)x.textContent=nm});h.insertAdjacentElement('afterend',w);var sc=document.createElement('script');sc.src=B+'md.js?v='+v;document.body.appendChild(sc);w.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('[data-vip-pop]');if(!t)return;e.preventDefault();if(window.jvOpen){window.jvOpen('vip',null,t);return}var s2=document.createElement('script');s2.src='https://files.threevillagelocal.com/share/site/vip-pop/pop.js?v=1';s2.onload=function(){if(window.jvOpen)window.jvOpen('vip',null,t);else location.href='/join#plan-vip'};s2.onerror=function(){location.href='/join#plan-vip'};document.head.appendChild(s2)});try{if(window.gtag)gtag('event','member_dashboard_view',{plan:pl})}catch(x){}}function get(u){return fetch(u).then(function(r){return r.ok?r.text():''})}(own?get(B+'m/'+mid+'.html?v='+v).then(function(t){return t||get(B+'basic.html?v='+v)}):get(B+'basic.html?v='+v)).then(show).catch(function(){show('')});})();
 var basic=/\bsession-plan-level-6\b/.test(document.body.className),done=get();
 var css='#dc3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:4px 0 22px;font-family:"Radio Canada",sans-serif}'
 +'#dc3 .dc3-c{position:relative;overflow:hidden;border-radius:20px;padding:20px 20px 18px;background:#fff;border:1px solid #e3e9f0;box-shadow:0 10px 28px rgba(27,47,69,.08);color:#1b2f45}'
@@ -463,7 +463,7 @@ var spm=document.body.className.match(/session-plan-level-(\d+)/),spp=spm?spm[1]
 var promo='',_spOld=spPaid
  ?'<div class="dc3-c"><div class="dc3-ic">&#10024;</div><p class="dc3-k">New &middot; 3VL Smart Publisher</p><b>Promote something in minutes</b><p>Tell us the basics about your event, special or news. We write it, design it and publish it on Three Village Local when you choose. '+(spp==='2'?'1 page a month on your plan.':'One every two weeks on your plan.')+'</p><a class="dc3-b" href="/smart-publisher">Open Smart Publisher</a></div>'
  :'<div class="dc3-c"><div class="dc3-ic">&#128227;</div><p class="dc3-k">Free for members</p><b>Got something you want to promote?</b><p>Send us a special, an event or big news and we will help put it in front of Three Village. Want us to write and publish a full page for you? That is 3VL Smart Publisher, included with Featured and VIP.</p><a class="dc3-b" href="/checkout/2">Upgrade now</a> <a href="/join" style="margin-left:12px;font-weight:700">See the plans</a><p style="margin:10px 0 0;font-size:14px">Or <a href="/promotion#pr3-form">send us a free tip</a> and our team decides what to feature.</p></div>';
-var isVip=spp==='1'||spp==='8'||spp==='9',vipc='';if(!isVip){vipc='<div class="dc3-c dc3-vip"><div class="dc3-ic">&#11088;</div><p class="dc3-k">Three Village VIP</p><b>Be seen everywhere in Three Village</b><p>Your banner ad across the whole website, the top spot in search, a custom article every quarter, VIP of the Week and your own Member Dashboard.</p><a class="dc3-b" href="/join#plan-vip" data-vip-pop>See what the VIP plan gets you</a></div>';}if(!(mm+vipc))return;var box=document.createElement('div');box.id='dc3';box.innerHTML=vipc+mm+promo;box.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('[data-vip-pop]');if(!t)return;e.preventDefault();if(window.jvOpen){window.jvOpen('vip',null,t);return;}var sc=document.createElement('script');sc.src='https://threevillagelocal-cloud.github.io/3vl-share/site/vip-pop/pop.js?v=1';sc.onload=function(){if(window.jvOpen)window.jvOpen('vip',null,t);else location.href='/join#plan-vip';};sc.onerror=function(){location.href='/join#plan-vip';};document.head.appendChild(sc);try{if(window.gtag)gtag('event','dash_vip_popup',{plan:spp});}catch(x){}});
+var isVip=spp==='1'||spp==='8'||spp==='9',vipc='';if(!isVip){vipc='<div class="dc3-c dc3-vip"><div class="dc3-ic">&#11088;</div><p class="dc3-k">Three Village VIP</p><b>Be seen everywhere in Three Village</b><p>Your banner ad across the whole website, the top spot in search, a custom article every quarter, VIP of the Week and your own Member Dashboard.</p><a class="dc3-b" href="/join#plan-vip" data-vip-pop>See what the VIP plan gets you</a></div>';}if(!(mm+vipc))return;var box=document.createElement('div');box.id='dc3';box.innerHTML=vipc+mm+promo;box.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('[data-vip-pop]');if(!t)return;e.preventDefault();if(window.jvOpen){window.jvOpen('vip',null,t);return;}var sc=document.createElement('script');sc.src='https://files.threevillagelocal.com/share/site/vip-pop/pop.js?v=1';sc.onload=function(){if(window.jvOpen)window.jvOpen('vip',null,t);else location.href='/join#plan-vip';};sc.onerror=function(){location.href='/join#plan-vip';};document.head.appendChild(sc);try{if(window.gtag)gtag('event','dash_vip_popup',{plan:spp});}catch(x){}});
 h.insertAdjacentElement('afterend',box);
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
@@ -638,7 +638,7 @@ function find(){var all=[].filter.call(document.querySelectorAll('input[type=rad
    (member id from the dashboard's "Member ID #"), falling back to their public listing's category link. */
 function isRestaurant(cb){
   var m=(document.body.innerText.match(/Member ID #(\d+)/)||[])[1];if(!m){cb(false);return}
-  var IDX='https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/search/index.json';
+  var IDX='https://files.threevillagelocal.com/assets/search/index.json';
   function viaListing(){var a=[].filter.call(document.querySelectorAll('a'),function(x){return /View Public Listing/i.test(x.textContent)})[0];
     if(!a||!window.fetch){cb(false);return}
     fetch(a.href,{credentials:'same-origin'}).then(function(r){return r.text()}).then(function(t){cb(/href="[^"]*\/restaurant"/.test(t))}).catch(function(){cb(false)})}
@@ -745,7 +745,7 @@ go();
   }catch(e){}
   if(!on)return;
   var DE=document.documentElement;DE.classList.add('lg2');
-  var IMG='https://threevillagelocal-cloud.github.io/3vl-share/live/p3/img/',LOGO='https://threevillagelocal-cloud.github.io/3vl-share/live/hdr/logo-white.webp';
+  var IMG='https://files.threevillagelocal.com/share/live/p3/img/',LOGO='https://files.threevillagelocal.com/share/live/hdr/logo-white.webp';
   function svg(d){return '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+d+'</svg>'}
   var IC={chart:svg('<path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/>'),edit:svg('<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/>'),
     send:svg('<path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/>'),lock:svg('<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/>'),

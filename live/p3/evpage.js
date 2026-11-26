@@ -8,19 +8,19 @@ if(window.__tvlEv)return;
 var path=location.pathname.replace(/\/+$/,'');
 var isEvent=/^\/events\/[^\/]+$/.test(path),isPost=/^\/blog\/[^\/]+$/.test(path);
 if(!isEvent&&!isPost)return;
-var H=document.documentElement,BASE='https://threevillagelocal-cloud.github.io/3vl-share/live/p3/';
+var H=document.documentElement,BASE='https://files.threevillagelocal.com/share/live/p3/';
 /* the styles ride along with this file; the new layout is shown only once they are in (or after 2.5s) */
 var cssOK=false,cssWait=[];
 (function(){var l=document.createElement('link');l.rel='stylesheet';l.href=BASE+'evpage.css';
   function done(){if(cssOK)return;cssOK=true;cssWait.forEach(function(f){f()});cssWait=[]}
   l.onload=done;l.onerror=done;setTimeout(done,2500);(document.head||H).appendChild(l)})();
 function whenCss(f){if(cssOK)f();else cssWait.push(f)}
-var FEED='https://raw.githubusercontent.com/threevillagelocal-cloud/3vl-assets/master/weekender/live/events.json';
+var FEED='https://files.threevillagelocal.com/assets/weekender/live/events.json';
 function $(s,r){return (r||document).querySelector(s)}function $$(s,r){return [].slice.call((r||document).querySelectorAll(s))}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function fnv(s){s=unescape(encodeURIComponent(s));for(var h=0x811c9dc5,i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),0x01000193)>>>0;return ('0000000'+h.toString(16)).slice(-8)}
 function sm(u,w){u=String(u||'');if(!u||/\.svg(\?|$)|^data:|threevillagelocal-cloud\.github\.io|cdn\.jsdelivr\.net\/gh\/threevillagelocal-cloud\/.*\.webp$/i.test(u))return u;if(u.charAt(0)==='/'&&u.charAt(1)!=='/')u=location.origin+u;
-  return /^https?:/i.test(u)?'https://threevillagelocal-cloud.github.io/3vl-share/t/'+fnv(u)+'-'+(w>400?800:360)+'.webp':u}
+  return /^https?:/i.test(u)?'https://files.threevillagelocal.com/share/t/'+fnv(u)+'-'+(w>400?800:360)+'.webp':u}
 window.__tvlEvImg=function(im){if(im.dataset.o&&im.src!==im.dataset.o){im.src=im.dataset.o}else{im.style.display='none'}};
 var SHARE="<svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v14\"/></svg>";
 var DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],MON=['Jan','Feb','Mar','Apr','May','June','July','Aug','Sept','Oct','Nov','Dec'];
